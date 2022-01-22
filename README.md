@@ -1,41 +1,25 @@
-# Website
+# MecSimCalc Docs
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+> Built using [docusaurus.io](https://docusaurus.io/)
 
-### Installation
+> [Markdown docs](https://www.markdownguide.org/basic-syntax/)
 
-```
-$ yarn
-```
+## Initial setup
 
-### Local Development
+1. Install [Node.JS](https://nodejs.org/en/download/)
+2. Open a terminal and install use `cd` to go to the code directory
+3. Install packages: `npm install`
 
-```
-$ yarn start
-```
+## Running local development site
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+1. Run server `npm run start`
+2. Go to http://localhost:3000/
 
-### Build
+## Deployment Site
 
-```
-$ yarn build
-```
+1. Build the site `npm run build`
+2. Deploy the site `npm run serve`
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Deploying to Github Pages public site
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+1. `npm run deploy`
