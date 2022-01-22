@@ -15,7 +15,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'MecSim', // Usually your GitHub org/user name.
   projectName: 'MecSimCalc-docs', // Usually your repo name.
-  deploymentBranch: "main",
   trailingSlash: false,
 
   presets: [
