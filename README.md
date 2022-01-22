@@ -19,12 +19,3 @@
 
 1. Build the site `npm run build`
 2. Deploy the site `npm run serve`
-
-## Deploying to Github Pages
-
-1. `cmd /C "set GIT_USER=w3ichen && npm run deploy"`
-
-### Running "git push" command failed. Does the GitHub user account you are using have push access to the repository?
-
-1. Copy your SSH public key: `cat ~/.ssh/id_rsa.pub`
-2.
