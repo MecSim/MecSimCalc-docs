@@ -19,7 +19,3 @@
 
 1. Build the site `npm run build`
 2. Deploy the site `npm run serve`
-
-## Deploying to Github Pages public site
-
-1. `npm run deploy`
