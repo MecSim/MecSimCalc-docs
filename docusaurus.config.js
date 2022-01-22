@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'MecSimCalc Docs',
   tagline: 'The simplest way to build and share computational tools on the web. Create and share your python apps in minutes using our intuitive and simple platform.',
-  url: 'http://docs.mecsimcalc.com',
+  url: 'https://docs.mecsimcalc.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
