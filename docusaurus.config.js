@@ -8,14 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'MecSimCalc Docs',
   tagline: 'The simplest way to build and share computational tools on the web. Create and share your python apps in minutes using our intuitive and simple platform.',
-  url: 'http://docs.mecsimcalc.com',
-  baseUrl: '/',
+  url: 'http://mecsim.github.io',
+  baseUrl: '/MecSimCalc-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'MecSim', // Usually your GitHub org/user name.
   projectName: 'MecSimCalc-docs', // Usually your repo name.
-  deploymentBranch: "main", // The name of deployment branch.
+
   trailingSlash: false,
 
   presets: [
