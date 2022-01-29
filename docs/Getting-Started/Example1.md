@@ -21,7 +21,7 @@ The “Physics” tag is already available, so, you don’t need to create a new
 
 ## Step 2: Inputs
 
-Start by creating an input group by hovering over the ![img alt](plus.png) sign and choosing `input group`. A new input group will be created with the name: “New Input Group Title”. Click on the title and change it to: “Converter”
+Start by creating an input group by hovering over the ![img alt](Plus.png) sign and choosing `input group`. A new input group will be created with the name: “New Input Group Title”. Click on the title and change it to: “Converter”
 
 <div style={{textAlign: 'center'}}>
 
@@ -29,7 +29,7 @@ Start by creating an input group by hovering over the ![img alt](plus.png) sign 
 
 </div>
 
-However over the ![img alt](plus.png) sign again and now choose `input`. An input with the label: “New Input” will appear in the “Converter” group.
+However over the ![img alt](Plus.png) sign again and now choose `input`. An input with the label: “New Input” will appear in the “Converter” group.
 
 <div style={{textAlign: 'center'}}>
 

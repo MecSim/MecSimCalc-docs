@@ -17,7 +17,7 @@ In the Info stage, the _**developer**_ specifies the _**app’s**_ name, descrip
 
 In the Inputs stage, the _**developer**_ specifies the types and format of the inputs required from the _**user**_ to run the _**app**_. This stage also allows the developer to test how the inputs page responds to the _**user’s**_ input.
 
-By hovering over the ![img alt](plus.png) sign, the _**developer**_ can add "input groups" and different types of input. “Input groups” are used for visually grouping inputs. The _**developer**_ starts by adding an input group under which different inputs can be added. The following example shows two input groups: “Input Group 1” and “Input Group 2”. “Input Group 1” has two numerical inputs with default values of 2 and 10 while “Input Group 2” has a text input with a default value of: “DefaultText”.
+By hovering over the ![img alt](Plus.png) sign, the _**developer**_ can add "input groups" and different types of input. “Input groups” are used for visually grouping inputs. The _**developer**_ starts by adding an input group under which different inputs can be added. The following example shows two input groups: “Input Group 1” and “Input Group 2”. “Input Group 1” has two numerical inputs with default values of 2 and 10 while “Input Group 2” has a text input with a default value of: “DefaultText”.
 
 <div style={{textAlign: 'center'}}>
 
