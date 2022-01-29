@@ -9,11 +9,11 @@ This tutorial provides instructions to create a web-based python _**app**_ to co
 
 ## Step 1: Info
 
-You can fill in the required fields as shown in the following figure. You can use the default `Favicon Image`. The image available [here](Ex1Converter.png) was used as the `Primary Image`.
+You can fill in the required fields as shown in the following figure. You can use the default `Favicon Image`. The image available [here](/docs/Getting-Started/Ex1Converter.png) was used as the `Primary Image`.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](Ex1.png)
+![img alt](/docs/Getting-Started/Ex1.png)
 
 </div>
 
@@ -21,27 +21,27 @@ The “Physics” tag is already available, so, you don’t need to create a new
 
 ## Step 2: Inputs
 
-Start by creating an input group by hovering over the ![img alt](Plus.png) sign and choosing `input group`. A new input group will be created with the name: “New Input Group Title”. Click on the title and change it to: “Converter”
+Start by creating an input group by hovering over the ![img alt](/docs/Getting-Started/Plus.png) sign and choosing `input group`. A new input group will be created with the name: “New Input Group Title”. Click on the title and change it to: “Converter”
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](IG.png)
+![img alt](/docs/Getting-Started/IG.png)
 
 </div>
 
-However over the ![img alt](Plus.png) sign again and now choose `input`. An input with the label: “New Input” will appear in the “Converter” group.
+However over the ![img alt](/docs/Getting-Started/Plus.png) sign again and now choose `input`. An input with the label: “New Input” will appear in the “Converter” group.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](IGI.png)
+![img alt](/docs/Getting-Started/IGI.png)
 
 </div>
 
-Hover over “New Input” and click on the edit button ![img alt](edit.png). Change the label to “Distance” and type “m” in the units. Set the default value to 10. In the Advanced options, change the minimum value to 0. Keep the step set as 0.001 allowing the precision to be in mm. Afterwards, click on: “Apply Changes” to confirm these changes.
+Hover over “New Input” and click on the edit button ![img alt](/docs/Getting-Started/Edit.png). Change the label to “Distance” and type “m” in the units. Set the default value to 10. In the Advanced options, change the minimum value to 0. Keep the step set as 0.001 allowing the precision to be in mm. Afterwards, click on: “Apply Changes” to confirm these changes.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](I.png)
+![img alt](/docs/Getting-Started/I.png)
 
 </div>
 
@@ -55,7 +55,7 @@ The inputs should now look like:
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](I2.png)
+![img alt](/docs/Getting-Started/I2.png)
 
 </div>
 
@@ -72,7 +72,7 @@ Click on `<> Input Variables` to get the list of available inputs:
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](IVAR.png)
+![img alt](/docs/Getting-Started/IVAR.png)
 
 </div>
 
@@ -114,7 +114,7 @@ In the preview section, confirm that the app works as expected:
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](pub1.png)
+![img alt](/docs/Getting-Started/Pub1.png)
 
 </div>
 

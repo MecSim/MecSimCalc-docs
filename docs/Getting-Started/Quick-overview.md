@@ -17,11 +17,11 @@ In the Info stage, the _**developer**_ specifies the _**app’s**_ name, descrip
 
 In the Inputs stage, the _**developer**_ specifies the types and format of the inputs required from the _**user**_ to run the _**app**_. This stage also allows the developer to test how the inputs page responds to the _**user’s**_ input.
 
-By hovering over the ![img alt](Plus.png) sign, the _**developer**_ can add "input groups" and different types of input. “Input groups” are used for visually grouping inputs. The _**developer**_ starts by adding an input group under which different inputs can be added. The following example shows two input groups: “Input Group 1” and “Input Group 2”. “Input Group 1” has two numerical inputs with default values of 2 and 10 while “Input Group 2” has a text input with a default value of: “DefaultText”.
+By hovering over the ![img alt](/docs/Getting-Started/Plus.png) sign, the _**developer**_ can add "input groups" and different types of input. “Input groups” are used for visually grouping inputs. The _**developer**_ starts by adding an input group under which different inputs can be added. The following example shows two input groups: “Input Group 1” and “Input Group 2”. “Input Group 1” has two numerical inputs with default values of 2 and 10 while “Input Group 2” has a text input with a default value of: “DefaultText”.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](Inputs.png)
+![img alt](/docs/Getting-Started/Inputs.png)
 
 </div>
 
@@ -29,11 +29,11 @@ The _**developer**_ can navigate to the preview section to view how the input pa
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](Inputs2.png)
+![img alt](/docs/Getting-Started/Inputs2.png)
 
 </div>
 
-When hovering over any of the added inputs, the edit icon ![img alt](edit.png) appears allowing the _**developer**_ to edit the variable specifying its type, variable name (to be used at the later stages), default values, precision for numerical inputs, and other settings.
+When hovering over any of the added inputs, the edit icon ![img alt](/docs/Getting-Started/Edit.png) appears allowing the _**developer**_ to edit the variable specifying its type, variable name (to be used at the later stages), default values, precision for numerical inputs, and other settings.
 
 ## Step 3: Code
 
@@ -58,7 +58,7 @@ In the output stage, the **_developer_** designs a **smart** output page of the 
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](Out1.png)
+![img alt](/docs/Getting-Started/Out1.png)
 
 </div>
 
@@ -66,7 +66,7 @@ The _**developer**_ can also use conditional logic in designing the output page.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](Out2.png)
+![img alt](/docs/Getting-Started/Out2.png)
 
 </div>
 
