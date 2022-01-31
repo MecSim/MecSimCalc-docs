@@ -72,7 +72,7 @@ The _**developer**_ can also use conditional logic in designing the output page.
 
 ## Step 5: Docs
 
-In this stage, the **_developer_** can provide a documentation page on how to use the _**app**_, or any references or other relevant information for the _**app**_
+In this stage, the **_developer_** can provide a documentation page on how to use the _**app**_, or any references or other relevant information for the _**app**_.
 
 ## Step 6: Preview
 
