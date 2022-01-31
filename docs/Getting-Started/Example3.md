@@ -13,7 +13,7 @@ You can fill in the required fields as shown in the following figure. You can us
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/Ex3.png)
+![img alt](/docs/Getting-Started/ex3.png)
 
 </div>
 
