@@ -19,3 +19,7 @@
 
 1. Build the site `npm run build`
 2. Deploy the site `npm run serve`
+
+## Notes
+
+1. Run `git config core.ignorecase false` in command line so github picks up on capitalization in file/folder names
