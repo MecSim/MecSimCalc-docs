@@ -3,7 +3,7 @@ sidebar_label: "Generating Graphics"
 sidebar_position: 3
 ---
 
-MecsimCalc platform is built over [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) allowing embedding of many python elements into an HTML file. If a _**developer**_ wishes to display graphics such as those generated using [matplotlib](https://matplotlib.org/), they can use a utility function `plt_show` provided in the following snippet of code, that exports the matplotlib object into an image embeddable into the output page.
+MecSimCalc platform is built over [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) allowing embedding of many python elements into an HTML file. If a _**developer**_ wishes to display graphics such as those generated using [matplotlib](https://matplotlib.org/), they can use a utility function `plt_show` provided in the following snippet of code, that exports the matplotlib object into an image embeddable into the output page.
 
 ```python
 import matplotlib.pyplot as plt

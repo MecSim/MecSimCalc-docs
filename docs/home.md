@@ -1,5 +1,7 @@
 ---
-sidebar_position: 7
+id: home
+slug: /
+sidebar_position: 0
 ---
 
 # Tutorial Intro!!

@@ -29,6 +29,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          routeBasePath: "/"
         },
         blog: {
           showReadingTime: true,
@@ -52,16 +53,11 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'home',
             position: 'left',
             label: 'Tutorial',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -71,8 +67,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Docs',
+                to: '/docs/home',
               },
             ],
           },

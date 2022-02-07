@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Quick Overview
 
-**MecsimCalc** is a platform that enables building and sharing computational tools or _**apps**_ using Python on the web. To use **MecsimCalc**, one does not require prior knowledge of HTML, CSS, or Javascript. In a matter of minutes, one can transform any snippet of Python code to a computational _**app**_ available to the entire world wide web.
+**MecSimCalc** is a platform that enables building and sharing computational tools or _**apps**_ using Python on the web. To use **MecSimCalc**, one does not require prior knowledge of HTML, CSS, or Javascript. In a matter of minutes, one can transform any snippet of Python code to a computational _**app**_ available to the entire world wide web.
 
 In the documentation, the term _**developer**_ is used to refer to the person who is developing an _**app**_ on the platform, while the term _**user**_ is used to refer to the person who would be using the _**app**_ after development. Following six simple steps, as described below, the _**developer**_ can create an _**app**_ available to categories of _**users**_ on the world wide web.
 
