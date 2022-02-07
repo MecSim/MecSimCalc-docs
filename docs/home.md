@@ -4,34 +4,23 @@ slug: /
 sidebar_position: 0
 ---
 
-# Tutorial Intro!!
+# Welcome
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Documentation for [MecSimCalc](https://mecsimcalc.com/)
+
+> The simplest way to build and share computational tools on the web. Create and share your Python apps in minutes using our intuitive and simple platform.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Get started with your first app within minutes by following our [step-by-step guide](/Getting-Started/Quick-overview). :blush:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Blog
 
-## Generate a new site
+Check out how other users are using MecSimCalc on our [blog](/blog)! :heart_eyes:
 
-Generate a new Docusaurus site using the **classic template**:
+## About
 
-```shell
-npm init docusaurus@latest my-website classic
-```
+[docs.mecsimcalc.com](https://docs.mecsimcalc.com/) contains detailed documentation on how to use [mecsimcalc.com](https://mecsimcalc.com/).
+These pages contain a rich collection of examples with images and code.
 
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+_Please send any suggestions, questions, or inquiries to info@mecsimcalc.com_

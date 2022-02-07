@@ -10,7 +10,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MecSimCalc Docs',
-  tagline: 'The simplest way to build and share computational tools on the web. Create and share your python apps in minutes using our intuitive and simple platform.',
+  tagline: 'The simplest way to build and share computational tools on the web. Create and share your Python apps in minutes using our intuitive and simple platform.',
   url: 'https://docs.mecsimcalc.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -45,17 +45,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: '',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'MecSimCalc',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'home',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
         ],
@@ -64,28 +64,19 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Links',
             items: [
               {
-                label: 'Docs',
-                to: '/docs/home',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: "MecSimCalc",
+                href: "https://mecsimcalc.com"
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/MecSim/MecSimCalc-docs',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/MecSimCalc',
               },
             ],
           },
@@ -93,17 +84,21 @@ const config = {
             title: 'More',
             items: [
               {
+                label: 'Docs',
+                to: '/',
+              },
+              {
                 label: 'Blog',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Email',
+                href: 'mailto:info@mecsimcalc.com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © MecSimCalc ${new Date().getFullYear()}`,
       },
       prism: {
         theme: lightCodeTheme,
