@@ -4,6 +4,8 @@
 
 > [Markdown docs](https://www.markdownguide.org/basic-syntax/)
 
+> [Markdown Emoji](https://gist.github.com/rxaviers/7360908)
+
 ## Initial setup
 
 1. Install [Node.JS](https://nodejs.org/en/download/)
