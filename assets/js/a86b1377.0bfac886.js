@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[4034],{327:function(s){s.exports=JSON.parse('{"name":"greetings","permalink":"/docs/tags/greetings","docs":[{"id":"samer-blog-post","title":"Greetings!","description":"Congratulations, you have made your first post!","permalink":"/docs/greetings"}],"allTagsPath":"/docs/tags"}')}}]);
