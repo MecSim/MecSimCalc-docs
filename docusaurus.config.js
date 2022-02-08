@@ -123,12 +123,15 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       // https://docsearch.algolia.com/docs/legacy/run-your-own/
-      algolia: {
-        appId: process.env.ALGOLIA_APP_ID, // The application ID provided by Algolia
-        apiKey: process.env.ALGOLIA_API_KEY, // Public API key: it is safe to commit it
-        indexName: 'MecSimCalc-docs',
-        contextualSearch: true,
-      }
+      ...(process.env.NODE_ENV === "production" ? {
+        algolia: {
+          appId: process.env.ALGOLIA_APP_ID, // The application ID provided by Algolia
+          apiKey: process.env.ALGOLIA_API_KEY, // Public API key: it is safe to commit it
+          indexName: 'MecSimCalc-docs',
+          contextualSearch: true,
+        }
+      } : {})
+
     }),
   stylesheets: [
     {
