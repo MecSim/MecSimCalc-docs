@@ -122,11 +122,13 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      // algolia: {
-      //   appId: 'YOUR_APP_ID', // The application ID provided by Algolia
-      //   apiKey: 'YOUR_SEARCH_API_KEY', // Public API key: it is safe to commit it
-      //   indexName: 'YOUR_INDEX_NAME',
-      // }
+      // https://docsearch.algolia.com/docs/legacy/run-your-own/
+      algolia: {
+        appId: 'S6SZWIY25E', // The application ID provided by Algolia
+        apiKey: '506b16eb07a1cb4fc89c72d5c110914c', // Public API key: it is safe to commit it
+        indexName: 'MecSimCalc-docs',
+        contextualSearch: true,
+      }
     }),
   stylesheets: [
     {

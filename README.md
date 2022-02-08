@@ -25,3 +25,21 @@
 ## Notes
 
 1. Run `git config core.ignorecase false` in command line so github picks up on capitalization in file/folder names
+
+## Algolia DocSearch
+
+> Algolia is used to implement the search bar
+
+- [Docusaurus & Algolia](https://docusaurus.io/docs/search#using-algolia-docsearch)
+- [Running our own Algolia](https://docsearch.algolia.com/docs/legacy/run-your-own/)
+- [Video on how to setup Algolia](https://www.youtube.com/watch?v=F_jqADu-izk&ab_channel=CalebCurry)
+
+### Crawler
+
+Whenever text changes, Algolia needs to run a crawler to collect all the data
+
+1. Need to install [jq](https://github.com/stedolan/jq/wiki/Installation)
+
+```
+docker run -it --env-file=.env -e "CONFIG=$(cat algolia.config.json | jq -r tostring)" algolia/docsearch-scraper
+```
