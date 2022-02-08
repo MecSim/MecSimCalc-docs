@@ -47,8 +47,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Create env file
+        run: |
+          touch .env
+          echo APPLICATION_ID=${{ secrets.ALGOLIA_API_KEY }} >> .env
+          echo API_KEY=${{ secrets.ALGOLIA_APP_ID }} >> .env
       - name: "Crawler"
-        env:
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
         run: docker run --env-file=.env -e "CONFIG=$(cat algolia.config.json | jq -r tostring)" algolia/docsearch-scraper
