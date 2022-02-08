@@ -50,8 +50,7 @@ jobs:
       - name: Create env file
         run: |
           touch .env
-          echo APPLICATION_ID=${{ secrets.ALGOLIA_API_KEY }} >> .env
-          echo API_KEY=${{ secrets.ALGOLIA_APP_ID }} >> .env
-          cat .env
+          echo APPLICATION_ID=${{ secrets.ALGOLIA_APP_ID }} >> .env
+          echo API_KEY=${{ secrets.ALGOLIA_API_KEY }} >> .env
       - name: "Crawler"
         run: docker run --env-file=.env -e "CONFIG=$(cat algolia.config.json | jq -r tostring)" algolia/docsearch-scraper
