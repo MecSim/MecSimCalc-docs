@@ -37,6 +37,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        googleAnalytics: {
+          trackingID: "292168509"
+        }
       }),
     ],
   ],
@@ -46,18 +49,33 @@ const config = {
     ({
       navbar: {
         title: '',
+        style: "dark",
         logo: {
           alt: 'MecSimCalc',
           src: 'img/logo.png',
+          href: "https://mecsimcalc.com/",
+          target: '_self',
         },
         items: [
           {
+            label: "EXPLORE",
+            to: "https://mecsimcalc.com/explore",
+            position: "left",
+            target: '_self',
+          },
+          {
+            label: "CREATE",
+            to: "https://mecsimcalc.com/create",
+            position: "left",
+            target: '_self',
+          },
+          {
             type: 'doc',
             docId: 'home',
+            label: "DOCS",
             position: 'left',
-            label: 'Docs',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          { label: 'BLOG', to: 'blog', position: 'left' },
         ],
       },
       footer: {
