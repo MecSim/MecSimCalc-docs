@@ -38,7 +38,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
-          trackingID: "G-7XDM6R2S5S",
+          trackingID: process.env.GOOGLE_ANALYTICS,
         }
       }),
     ],
@@ -124,8 +124,8 @@ const config = {
       },
       // https://docsearch.algolia.com/docs/legacy/run-your-own/
       algolia: {
-        appId: 'S6SZWIY25E', // The application ID provided by Algolia
-        apiKey: '506b16eb07a1cb4fc89c72d5c110914c', // Public API key: it is safe to commit it
+        appId: process.env.ALGOLIA_APP_ID, // The application ID provided by Algolia
+        apiKey: process.env.ALGOLIA_API_KEY, // Public API key: it is safe to commit it
         indexName: 'MecSimCalc-docs',
         contextualSearch: true,
       }
