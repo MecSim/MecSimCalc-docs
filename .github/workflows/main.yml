@@ -38,8 +38,9 @@ jobs:
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
   algolia:
     name: Algolia Search
-    needs: deploy
+    # needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: "Crawler"
-        run: docker run -it --env-file=.env -e "CONFIG=$(cat /algolia.config.json | jq -r tostring)" algolia/docsearch-scraper
+        working-directory: ./
+        run: docker run -it --env-file=.env -e "CONFIG=$(cat algolia.config.json | jq -r tostring)" algolia/docsearch-scraper
