@@ -37,8 +37,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        googleAnalytics: {
-          trackingID: "292168509"
+        gtag: {
+          trackingID: "292168509",
+
         }
       }),
     ],
@@ -122,6 +123,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      // algolia: {
+      //   appId: 'YOUR_APP_ID', // The application ID provided by Algolia
+      //   apiKey: 'YOUR_SEARCH_API_KEY', // Public API key: it is safe to commit it
+      //   indexName: 'YOUR_INDEX_NAME',
+      // }
     }),
   stylesheets: [
     {
