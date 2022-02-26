@@ -59,13 +59,13 @@ const config = {
         items: [
           {
             label: "EXPLORE",
-            to: "https://mecsimcalc.com/explore",
+            to: "https://mecsimcalc.com/explore/",
             position: "left",
             target: '_self',
           },
           {
             label: "CREATE",
-            to: "https://mecsimcalc.com/create",
+            to: "https://mecsimcalc.com/create/",
             position: "left",
             target: '_self',
           },
@@ -74,6 +74,12 @@ const config = {
             docId: 'home',
             label: "DOCS",
             position: 'left',
+          },
+          {
+            label: "COMMUNITY",
+            to: "https://community.mecsimcalc.com/",
+            position: "left",
+            target: '_self',
           },
           { label: 'BLOG', to: 'blog', position: 'left' },
         ],
