@@ -29,7 +29,7 @@ Start by creating an input group by hovering over the ![img alt](/docs/Getting-S
 
 </div>
 
-However over the ![img alt](/docs/Getting-Started/Plus.png) sign again and now choose `input`. An input with the label: “New Input” will appear in the “Converter” group.
+However over the ![img alt](/docs/Getting-Started/Plus.png) sign again and now choose `NumberInput`, drag it, and drop it within the input group. An input with the label: “New Input” will appear in the “Converter” group which can be moved and resized within the input group.
 
 <div style={{textAlign: 'center'}}>
 

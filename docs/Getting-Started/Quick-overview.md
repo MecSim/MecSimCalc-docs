@@ -17,7 +17,15 @@ In the Info stage, the _**developer**_ specifies the _**app’s**_ name, descrip
 
 In the Inputs stage, the _**developer**_ specifies the types and format of the inputs required from the _**user**_ to run the _**app**_. This stage also allows the developer to test how the inputs page responds to the _**user’s**_ input.
 
-By hovering over the ![img alt](/docs/Getting-Started/Plus.png) sign, the _**developer**_ can add "input groups" and different types of input. “Input groups” are used for visually grouping inputs. The _**developer**_ starts by adding an input group under which different inputs can be added. The following example shows two input groups: “Input Group 1” and “Input Group 2”. “Input Group 1” has two numerical inputs with default values of 2 and 10 while “Input Group 2” has a text input with a default value of: “DefaultText”.
+By hovering over the ![img alt](/docs/Getting-Started/Plus.png) sign, the _**developer**_ can add "input groups" and different types of input. “Input groups” are used for visually grouping inputs. The _**developer**_ starts by adding an input group under which different inputs can be added.
+
+<div style={{textAlign: 'center'}}>
+
+![img alt](/docs/Getting-Started/inputs1.png)
+
+</div>
+
+The _**developer**_ can then drag and drop any of the available input types such as numerical inputs, text inputs, file inputs, and others. The different inputs within an input group can be arranged, resized, and moved using the mouse. The following example shows two input groups: “Input Group 1” and “Input Group 2”. “Input Group 1” has two numerical inputs with default values of 2 and 10 while “Input Group 2” has a text input with a default value of: “DefaultText”.
 
 <div style={{textAlign: 'center'}}>
 
@@ -59,6 +67,14 @@ In the output stage, the **_developer_** designs a **smart** output page of the 
 <div style={{textAlign: 'center'}}>
 
 ![img alt](/docs/Getting-Started/Out1.png)
+
+</div>
+
+The outputs available for the _**developer**_ to embed in the output page can be accessed by clicking on `<> Output Variables`. The _**developer**_ can then copy any of the available output variables and paste into the output page.
+
+<div style={{textAlign: 'center'}}>
+
+![img alt](/docs/Getting-Started/outputvariables.png)
 
 </div>
 
