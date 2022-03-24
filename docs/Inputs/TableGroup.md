@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Table Group
 
-Similar to an [`Input Group`](InputGroup.md), a [`Table Group`](TableGroup.md) allows the _**developer**_ to visually group any set of inputs. A `Table Group` can be created in the **Inputs** step by clicking on `Add Table Group`.
+Similar to an [`Input Group`](InputGroup.md), a [`Table Group`](TableGroup.md) allows the _**developer**_ to visually group inputs. A `Table Group` can be created in the **Inputs** step by clicking on `Add Table Group`.
 
 <div style={{textAlign: 'center'}}>
 
