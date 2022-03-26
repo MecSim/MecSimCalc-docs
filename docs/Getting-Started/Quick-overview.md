@@ -93,3 +93,13 @@ In this stage, the **_developer_** can provide a documentation page on how to us
 ## Step 6: Preview
 
 In this final stage, the _**developer**_ can test the _**app**_ and publish it once satisfied.
+
+## Main Elements of an App
+
+Steps 2, 3, and 4 are the essential elements for creating an _**app**_. The _**developer**_ designs an inputs page whose variables are then available as input to the Code step function `main`. The output elements of the the function `main` can then be embedded into a cleverly designed output page. The following diagram provides a schematic of how these elements work together to create the [distance converter](<(https://www.mecsimcalc.com/app/4022206/distance_converter)>) web-app. The inputs page requests the variable `input_0` which is then used as an input using the syntax `inputs['input_0']` to the function `main(inputs)` which returns a dictionary of three keys: `Feet`, `Inches`, and `Metre`. These three keys are embedded into the output page using the syntax `{{outputs.Feet}}`, `{{outputs.Inches}}`, and `{{outputs.Metre}}`, respectively. The app is also also explained in details in [Example 1](Example1.md)
+
+<div style={{textAlign: 'center'}}>
+
+![img alt](/docs/Getting-Started/appelements.png)
+
+</div>
