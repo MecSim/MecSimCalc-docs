@@ -90,6 +90,7 @@ The `FileInput` as implied by its name, allows the _**user**_ to upload a file t
 | Checkbox **Required** | If checked, the _**app**_ will not run unless the user specified a value for this input                                       |
 | Checkbox **Multiple** | If checked, the _**user**_ can upload multiple files                                                                          |
 | Checkbox **Disabled** | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to change or edit the input values |
+| **Max size**          | Maximum file size in bytes. The default value is 100,000,000 bytes which is 100MB                                             |
 
 Please check the "Working with Files" section (coming soon) for more details about this input type. Otherwise, you can start exploring how to work with files by choosing the "Files" template when creating a new app:
 
