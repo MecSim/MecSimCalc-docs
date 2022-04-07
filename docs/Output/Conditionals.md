@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Conditionals
 
-**MecsimCalc** platform is built upon [**Django**](https://www.djangoproject.com/); a high-level python web framework. **Django** operations, including `if` and `for` statements, can be performed within curly brackets `{}`. Output variables and their operations are inserted using two sets of curly brackets `{{}}` while conditionals should be typed within `{% %}`. Conditionals be typed in the editor or inserted using the icons.
+**MecsimCalc** platform is built upon [**Jinja**](https://jinja.palletsprojects.com/en/3.1.x/); a full-featured template engine for python. [**Jinja**](https://palletsprojects.com/p/jinja/) operations, including `if` and `for` statements, can be performed within curly brackets `{}`. Output variables and their operations are inserted using two sets of curly brackets `{{}}` while conditionals should be typed within `{% %}`. Conditionals can be typed in the editor or inserted using the icons.
 
 ## If Statement
 
@@ -23,9 +23,9 @@ The `if` statement in the following form can be used in the output editor:
 
 ### Example
 
-In this published [_**app**_](https://mecsimcalc.com/app/9164993/pressure_design_of_pipeline_according_to_csa_z_662), the CSA Z662.19 design equations are used to calculate the design pressure of a pipe. The _**app**_ then compares the design pressure with the operating pressure and `if` condition is used in the output to indicate whether the pipe is safe or unsafe.
+In this published [_**app**_](https://mecsimcalc.com/app/9164993/pressure_design_of_pipeline_according_to_csa_z_662), the CSA Z662.19 design equations are used to calculate the design pressure of a pipe. The _**app**_ then compares the design pressure with the operating pressure and the `if` condition is used in the output to indicate whether the pipe is safe or unsafe.
 
-There are seven inputs used. Four are [**numerical inputs**](../Inputs/Input-Types.md): the Diameter `d`, the Wall Thickness `t`, the Grade `sy`, and the Operating Pressuer `p` while three are [**Single Select**](../Inputs/Input-Types.md): the Location Factor `l`, the Temperature Factor `tf`, and the Joint Factor `j`. The layout of the inputs page is shown in the figure below.
+There are seven inputs used. Four are [**numerical inputs**](../Inputs/Input-Types.md): the Diameter `d`, the Wall Thickness `t`, the Grade `sy`, and the Operating Pressure `p` while three are [**Single Select**](../Inputs/Input-Types.md): the Location Factor `l`, the Temperature Factor `tf`, and the Joint Factor `j`. The layout of the inputs page is shown in the figure below.
 
 <div style={{textAlign: 'center'}}>
 
@@ -55,7 +55,7 @@ def main(inputs):
     return {"Operating Pressure": p, "Design Pressure":dp}
 ```
 
-Notice how the **Single Select** variables which are strings are treated differently from the **Numerical Inputs**. A dictionary is used to find the factors corresponding to the option selected by the _**user**_. TThe code returns a dictionary with two keys: `Operating Pressure` and `Design Pressure`. The `if` condition compares the two variables with each other to display a different message based on this comparison. The following is the text in the **Output** editor (Notice that the output variables were used in the `if` statement without the curly brackets):
+Notice how the **Single Select** variables which are strings are treated differently from the **Numerical Inputs**. A dictionary is used to find the factors corresponding to the options selected by the _**user**_. The code returns a dictionary with two keys: `Operating Pressure` and `Design Pressure`. The `if` condition compares the two variables with each other to display a different message based on this comparison. The following is the text in the **Output** editor (Notice that the output variables were used in the `if` statement without the curly brackets):
 
 <div style={{textAlign: 'center'}}>
 
