@@ -11,7 +11,7 @@ Once an _**app**_ is [published](../Getting-Started/Quick-overview#step-6-previe
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/codeompare.png)
+![img alt](/docs/Getting-Started/codecompare.png)
 
 </div>
 
