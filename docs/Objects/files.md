@@ -98,7 +98,7 @@ def main(inputs):
     }
 ```
 
-Notice that the values of the `Download Original` and `Download New` dictionary keys are given in string format with html The output has the form:
+Notice that the values of the `Download Original` and `Download New` dictionary keys are given in string format with the `<a>` HTML tag concatenated with the file data to generate a link that enables downloading. The output has the form:
 
 ```
 To download original file: {{ outputs["Download Original"] }}
