@@ -92,7 +92,7 @@ In this stage, the **_developer_** can provide a documentation page on how to us
 
 ## Step 6: Preview
 
-In this final stage, the _**developer**_ can test the _**app**_ and publish it once satisfied.
+In this final stage, the _**developer**_ can test the _**app**_ and publish it once satisfied. Before clicking on `PUBLISH`, the _**app**_'s status changes from **draft** to **published** and the _**app**_ acquires a unique web address that can be shared with the _**users**_.
 
 ## Main Elements of an App
 
