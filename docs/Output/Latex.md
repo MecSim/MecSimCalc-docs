@@ -19,7 +19,7 @@ Unlike traditional latex expressions, to display your formulas properly the char
 
 $$P=\frac{2 \sigma_y t}{OD} \times F \times L \times J \times T$$
 
-Alternatively, the _**developer**_ can choose to use the function `main` in the **Code** stage to return a latex expression as a string (with the escape character repeated "\\\") or a [raw string](https://www.journaldev.com/23598/python-raw-string) (which precludes the need to repeat the escape character) and then use this output variable in place of "latex expression".
+Alternatively, the _**developer**_ can choose to use the function `main` in the **Code** stage to return a latex expression as a string (with the escape character repeated "\\\") or a [raw string](https://www.journaldev.com/23598/python-raw-string) (which precludes the need to repeat the escape character) and then use this output variable in place of "latex expression". A [raw string](https://www.journaldev.com/23598/python-raw-string) is simply created by adding the character r before the string quotation marks.
 
 As a demonstration, the online [_**app**_](https://mecsimcalc.com/app/8432496/displaying_katex_equations) provides an example where the _**user**_ inputs a value for $y$ and the _**app**_ then displays the following equation using three different methods:
 $$y=value=\frac{x^2+f(x)+\log(x)}{\cos(x)}$$
