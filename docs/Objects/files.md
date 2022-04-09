@@ -57,7 +57,7 @@ def main(inputs):
 
 ## File Output
 
-In order to create and export a file for the _**user**_ to download, the _**developer**_ can use base64 encoding for data transfer.The function `base64.b64encode()` can convert `Bytes` data into base64 encoded bytes. Then, the `.decode()` method can prepare the bytes data for download. The file type data should be added to the beginning of the file and the resulting string can then be prepared for download using the `<a>` HTML tag.
+In order to create and export a file for the _**user**_ to download, the _**developer**_ can use base64 encoding for data transfer. The function `base64.b64encode()` can convert `Bytes` data into base64 encoded bytes. Then, the `.decode()` method can prepare the bytes data for download. The file type data should be added to the beginning of the file and the resulting string can then be prepared for download using the [`<a>`](https://www.w3schools.com/tags/tag_a.asp) HTML tag. In this case, the `href` attribute can be set equal to the file data while the `download` attribute is set to the filename when the _**user**_ attempts to download the file.
 
 The following code which is implemented in the [import file published demonstration](https://mecsimcalc.com/app/3705244/import_file) _**app**_ uses data obtained from a file uploaded by the _**user**_. The file extension is obtained using the `guess_extension` function available through the `mimetypes` library. The code creates two file data that are then available for download. The first file is prepared using the original data while the second file is prepared by first decoding the original data and then encoding it again. The extension of the second file in the download link is set to `.txt`.
 
