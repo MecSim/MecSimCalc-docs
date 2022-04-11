@@ -82,15 +82,17 @@ As an example, the following figure displays an input group with one text input 
 
 The `FileInput` as implied by its name, allows the _**user**_ to upload a file that can be read in the **Code** step. The following are the options that can be edited for this input type:
 
-| Option                | Description                                                                                                                   |
-| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the function `main`                                        |
-| **Label**             | The label that appears to the _**user**_ once the final _**app**_ is deployed                                                 |
-| **Accept**            | Provide a filter for the file. For example, type `.csv` to only allow `csv` file types                                        |
-| Checkbox **Required** | If checked, the _**app**_ will not run unless the user specified a value for this input                                       |
-| Checkbox **Multiple** | If checked, the _**user**_ can upload multiple files                                                                          |
-| Checkbox **Disabled** | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to change or edit the input values |
-| **Max size**          | Maximum file size in bytes. The default value is 100,000,000 bytes which is 100MB                                             |
+| Option                | Description                                                                                                                               |
+| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the function `main`                                                    |
+| **Label**             | The label that appears to the _**user**_ once the final _**app**_ is deployed                                                             |
+| **Accept**            | Provide a [filter](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept) for the file. Examples are given below the table. |
+| Checkbox **Required** | If checked, the _**app**_ will not run unless the user specified a value for this input                                                   |
+| Checkbox **Multiple** | If checked, the _**user**_ can upload multiple files                                                                                      |
+| Checkbox **Disabled** | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to change or edit the input values             |
+| **Max size**          | Maximum file size in bytes. The default value is 100,000,000 bytes which is 100MB                                                         |
+
+Set the **Accept** option to a particular extension (e.g. `.csv`) or a group of extensions (e.g. `.csv, .xlsx, .png`) to limit the files that can be uploaded by the _**user**_. You can also limit to recognized file types by setting **Accept** to `audio/*`, `video/*`, or `image/*`.
 
 Please check the [Working with Files](../Objects/files) section for more details about this input type. Otherwise, you can start exploring how to work with files by choosing the "Files" template when creating a new app:
 
@@ -111,7 +113,6 @@ Using the `SingleSelect` input, the _**developer**_ provides a few options from 
 | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
 | **Name**              | A unique variable name to be used in the **Code** step as input to the function `main`                                        |
 | **Label**             | The label that appears to the _**user**_ once the final _**app**_ is deployed                                                 |
-| **Accept**            | Provide a filter for the file. For example, type `.csv` to only allow `csv` file types                                        |
 | **Options**           | The _**developer**_ can add and remove as many options as needed                                                              |
 | Checkbox **Disabled** | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to change or edit the input values |
 

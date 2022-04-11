@@ -7,6 +7,10 @@ sidebar_position: 6
 
 This tutorial provides instructions to create an output table either using a utility function or the Pandas library. The first version appears in this [link](https://www.mecsimcalc.com/app/5389912/multiplication_table), while the second appears in this [link](https://www.mecsimcalc.com/app/6325826/multiplication_table).
 
+Here is one version of these two apps:
+
+<iframe src='https://www.mecsimcalc.com/app/6325826/multiplication_table' width="100%" height="500" title="MecSimCalc" frameborder="0"></iframe>
+
 ## Step 1: Info
 
 You can fill in the required fields as shown in the following figure. You can use the default `Favicon Image`. The image available [here](/docs/Getting-Started/MultiplicationTable.png) was used as the `Primary Image`.

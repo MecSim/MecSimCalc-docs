@@ -5,7 +5,11 @@ sidebar_position: 2
 
 # Example 1: Distance Converter App
 
-This tutorial provides instructions to create this [web-based](https://www.mecsimcalc.com/app/4022206/distance_converter) python _**app**_ to convert distance from meters to feet and inches. First, click on create a new blank **_app_**.
+This tutorial provides instructions to create this [web-based](https://www.mecsimcalc.com/app/4022206/distance_converter) python _**app**_ to convert distance from meters to feet and inches.
+
+<iframe src='https://mecsimcalc.com/app/4022206/distance_converter' width="100%" height="500" title="MecSimCalc" frameborder="0"></iframe>
+
+To create the app above, first, click on create a new blank **_app_**.
 
 ## Step 1: Info
 

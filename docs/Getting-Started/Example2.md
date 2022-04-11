@@ -5,7 +5,11 @@ sidebar_position: 4
 
 # Example 2: Exploring the COS Function
 
-This tutorial provides instructions to create this [web-based](https://www.mecsimcalc.com/app/5862152/explore_the_cos_function) python **_app_** to plot the cos function for particular parameters provided by the _**user**_. The _**user**_ is required to provide the parameters $A$ and $B$ in the equation $y=Acos(Bx)$ along with the limits $a$ and $b$ of the plot. Here are the steps to create the _**app**_.
+This tutorial provides instructions to create this [web-based](https://www.mecsimcalc.com/app/5862152/explore_the_cos_function) python **_app_** to plot the cos function for particular parameters provided by the _**user**_. The _**user**_ is required to provide the parameters $A$ and $B$ in the equation $y=Acos(Bx)$ along with the limits $a$ and $b$ of the plot.
+
+<iframe src='https://www.mecsimcalc.com/app/5862152/explore_the_cos_function' width="100%" height="700" title="MecSimCalc" frameborder="0"></iframe>
+
+Here are the steps to create the _**app**_.
 
 ## Step 1. Info
 
