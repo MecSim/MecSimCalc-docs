@@ -9,7 +9,9 @@ This tutorial provides instructions to create an output table either using a uti
 
 Here is one version of these two apps:
 
-<iframe src='https://www.mecsimcalc.com/app/6325826/multiplication_table' width="100%" height="500" title="MecSimCalc" frameborder="0"></iframe>
+<div style={{width: "100%", height: "600px", overflow: "hidden"}}>
+<iframe src='https://www.mecsimcalc.com/app/6325826/multiplication_table' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="600" title="MecSimCalc" frameborder="0"></iframe>
+</div>
 
 ## Step 1: Info
 

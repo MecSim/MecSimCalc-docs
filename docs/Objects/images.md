@@ -7,7 +7,13 @@ sidebar_position: 4
 
 ## Importing and Exporting Images
 
-The [Working with Images](https://mecsimcalc.com/app/0672426/working_with_images) _**app**_ is used here for demonstration. The _**app**_ imports an image, changes its width and height to 200 using the `.thumbnail` function available in the `PIL` python library. One [`FileInput`](../Inputs/Input-Types) is used with variable name set to `file` and the **Accept** option set to `image/*` to limit the uploaded files to those with recognized image extensions. The inputs page is shown in the figure below:
+The [Working with Images](https://mecsimcalc.com/app/0672426/working_with_images) _**app**_ is used here and embedded below for demonstration.
+
+<div style={{width: "100%", height: "550px", overflow: "hidden"}}>
+<iframe src='https://mecsimcalc.com/app/0672426/working_with_images' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="550" title="MecSimCalc" frameborder="0"></iframe>
+</div>
+
+The _**app**_ imports an image, changes its width and height to 200 using the `.thumbnail` function available in the `PIL` python library. One [`FileInput`](../Inputs/Input-Types) is used with variable name set to `file` and the **Accept** option set to `image/*` to limit the uploaded files to those with recognized image extensions. The inputs page is shown in the figure below:
 
 <div style={{textAlign: 'center'}}>
 
