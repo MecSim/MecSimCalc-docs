@@ -28,6 +28,7 @@ git clone https://github.com/MecSim/MecSimCalc-self-hosted
 ## Setting up the back-end server
 
 1. [Download python](https://www.python.org/downloads/) if you do not have it installed
+   - This tutorial has been tested on Python 3.8
 2. Open your terminal, and `cd` into the `back-end` folder
 
 ```
@@ -67,6 +68,7 @@ If `python server.py` does not work, try `python3 server.py`
 ## Setting up the front-end client
 
 1. [Download node.js](https://nodejs.org/en/download/) if you do not have it installed
+   - This tutorial has been tested on Node 16.7
 2. Keep the server process running from before and open another terminal
 3. `cd` into the `front-end` folder
 
@@ -86,7 +88,7 @@ npm install
 npm run dev
 ```
 
-6. Your website should now live at [http://localhost:3000](http://localhost:3000), you can open it in your web browser. The following should be printed to your terminal:
+6. Go to [http://localhost:3000](http://localhost:3000) to see the website. The following should be printed to your terminal:
 
 ```
 ready - started server on 0.0.0.0:3000, url: http://localhost:3000
