@@ -1,5 +1,23 @@
 sadeeb:
   name: Samer Adeeb
-  title: MecSimCalc Cofounder
+  title: MecSimCalc Co-founder
   url: https://sameradeeb.srv.ualberta.ca/
   image_url: https://avatars.githubusercontent.com/u/67557373?v=4
+
+wqiu:
+  name: Weichen Qiu
+  title: MecSimCalc Co-founder
+  url: https://github.com/w3ichen
+  image_url: https://avatars.githubusercontent.com/u/57570491
+
+qzheng:
+  name: Qian Zheng
+  title: PhD student in Civil Engineering
+
+dfang:
+  name: Darius Fang
+  title: University researcher
+
+shusnain:
+  name: Saif Husnain
+  title: University researcher
