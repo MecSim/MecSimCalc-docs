@@ -12,12 +12,14 @@ import base64
 import io
 
 def plt_show(plt, width=500, dpi=100):
-    # Converts matplotlib plt to data string
-    # dpi (dots per inch) is the resolution of the image
-    # width is width of image in pixels
+    # Converts matplotlib plt to image data string
+    #   plt is the matplotlib pyplot or figure
+    #   width is the width of the graph image in pixels
+    #   dpi (dots per inch) is the resolution of the image
     bytes = io.BytesIO()
     plt.savefig(bytes, format='png', dpi=dpi)  # Save as png image
-    plt.close()
+    if hasattr(plt, "close"):
+        plt.close()
     bytes.seek(0)
     base64_string = "data:image/png;base64," + \
         base64.b64encode(bytes.getvalue()).decode("utf-8")
@@ -39,12 +41,14 @@ import base64
 import io
 
 def plt_show(plt, width=500, dpi=100):
-    # Converts matplotlib plt to data string
-    # dpi (dots per inch) is the resolution of the image
-    # width is width of image in pixels
+    # Converts matplotlib plt to image data string
+    #   plt is the matplotlib pyplot or figure
+    #   width is the width of the graph image in pixels
+    #   dpi (dots per inch) is the resolution of the image
     bytes = io.BytesIO()
     plt.savefig(bytes, format='png', dpi=dpi)  # Save as png image
-    plt.close()
+    if hasattr(plt, "close"):
+        plt.close()
     bytes.seek(0)
     base64_string = "data:image/png;base64," + \
         base64.b64encode(bytes.getvalue()).decode("utf-8")
