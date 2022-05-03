@@ -34,7 +34,7 @@ def plt_show(plt, width=500, dpi=100):
 def main(inputs):
     # Code to generate a plot using matplot lib (plt)
     # The following line uses the plt_show function to create an embeddable image
-    img = plt_show(plt, 500)
+    img = plt_show(plt)
     return {"Image": img}
 ```
 

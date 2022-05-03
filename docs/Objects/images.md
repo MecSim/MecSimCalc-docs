@@ -74,4 +74,4 @@ Downloading Image
 
 ## Generating Graphs
 
-Graphs generated using `matplotlib` python library can be converted into an image and embedded in the output page using the `<img>` HTML tag. [Example 2](../getting-started/Example2) in the introduction section provides a detailed example that the _**developer**_ can follow.
+Graphs generated using `matplotlib` python library can be converted into an image and embedded in the output page using the `<img>` HTML tag. [Example 2](../getting-started/example-2) in the introduction section provides a detailed example that the _**developer**_ can follow.

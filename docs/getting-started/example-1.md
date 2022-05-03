@@ -52,7 +52,7 @@ Hover over "New Input" and click on the ![img alt](/docs/getting-started/edit_bt
 - In the Advanced options, change the **minimum value** to 0.
 - Change the step size as 0.001 allowing the precision to be in mm.
 
-Click on **Apply Changes** to apply these new changes.
+Click on **APPLY CHANGES** to apply these new changes.
 
 <div style={{textAlign: 'center'}}>
 
