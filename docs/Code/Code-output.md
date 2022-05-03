@@ -49,7 +49,7 @@ def main(inputs):
 
 ## HTML Output
 
-As described in [Step 4: Output](../getting-started/quick-overview#step-4-output), the _**developer**_ can design a **smart** output page using an **Output** editor which accepts html content. The _**developer**_ can choose to output any string of html format which can then be embedded in the **Output** editor. Please review [Example 3](../getting-started/Example3.md) which provides the details of outputting a table using html.
+As described in [Step 4: Output](../getting-started/quick-overview#step-4-output), the _**developer**_ can design a **smart** output page using an **Output** editor which accepts html content. The _**developer**_ can choose to output any string of html format which can then be embedded in the **Output** editor. Please review [Example 3](../getting-started/example-3.md) which provides the details of outputting a table using html.
 
 ## File Data Output
 

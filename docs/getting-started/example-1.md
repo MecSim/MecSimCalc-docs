@@ -50,7 +50,7 @@ Hover over "New Input" and click on the ![img alt](/docs/getting-started/edit_bt
 - Type "m" in the **units**.
 - Set the **default value** to 10.
 - In the Advanced options, change the **minimum value** to 0.
-- Change the step size as 0.001 allowing the precision to be in mm.
+- Change the step size to 0.001 allowing the precision to be in mm.
 
 Click on **APPLY CHANGES** to apply these new changes.
 

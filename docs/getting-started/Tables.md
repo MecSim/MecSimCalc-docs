@@ -3,7 +3,12 @@ sidebar_label: "Generating Tables"
 sidebar_position: 5
 ---
 
-MecSimCalc provides a flexible platform allowing the **_developer_** to generate tables in a variety of ways. First, the output window enables html tags; a _**developer**_ familiar with [html tables](https://www.w3schools.com/html/html_tables.asp) can use this functionality to design a table in the output page. Alternatively, a _**developer**_ can choose to generate the table using a utility routine in the code step that generates the required html. For example, the following utility function `build_html_table` generates the required html table based on an input array of the table columns and an array of the column headers:
+# Generating Tables
+
+MecSimCalc provides a flexible platform allowing the **_developer_** to generate tables in a variety of ways:
+
+1. The output editor allows for html tags and a _**developer**_ familiar with [html tables](https://www.w3schools.com/html/html_tables.asp) can use this functionality to design a table in the **output** step.
+2. A _**developer**_ can choose to generate the table using a utility function in the **code** step that generates the required html string. For example, the following utility function `build_html_table` generates the required html table based on an input array of the table columns and an array of the column headers:
 
 ```python
 def build_html_table(columns, ColumnHeaders):
@@ -30,11 +35,9 @@ def build_html_table(columns, ColumnHeaders):
 ```
 
 :::caution
-
-The above utility routine works only for a table with multiple columns. It can easily be edited to generate a table with one column.
-
+The above utility function works only for a table with multiple columns. It can easily be edited to generate a table with one column.
 :::
 
-Alternatively, a _**developer**_ can choose many of the python libraries that can output an html table directly. For example, the [Pandas library](https://pandas.pydata.org/) which is available to MecSimCalc _**developers**_ has the built-in functionality of converting [pandas tables to html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_html.html).
+3. A _**developer**_ can use one of the many Python libraries that can output a html table directly. For example, the popular [Pandas library](https://pandas.pydata.org/), which is available on MecSimCalc has the built-in functionality of converting [Pandas tables to html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_html.html).
 
-In the next example, we show how an html table can be generated using both a utility routine and Pandas library.
+In the next example, we will show how an html table can be generated using both a utility function and the Pandas library.
