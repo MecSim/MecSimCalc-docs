@@ -33,7 +33,7 @@ There are seven inputs used. Four are [**numerical inputs**](../Inputs/Input-Typ
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/examplepipe.png)
+![img alt](/docs/getting-started/examplepipe.png)
 
 </div>
 
@@ -63,7 +63,7 @@ Notice how the **Single Select** variables which are strings are treated differe
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/examplepipeoutput.png)
+![img alt](/docs/getting-started/examplepipeoutput.png)
 
 </div>
 
@@ -89,7 +89,7 @@ The _**user**_ is required to input an integer value `a`.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/examplefor.png)
+![img alt](/docs/getting-started/examplefor.png)
 
 </div>
 

@@ -11,7 +11,7 @@ sidebar_position: 1
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/outputeditor.png)
+![img alt](/docs/getting-started/outputeditor.png)
 
 </div>
 
@@ -21,6 +21,6 @@ As described in the [Code Output Section](../Code/Code-output#overview), the dic
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/outputvariables2.png)
+![img alt](/docs/getting-started/outputvariables2.png)
 
 </div>

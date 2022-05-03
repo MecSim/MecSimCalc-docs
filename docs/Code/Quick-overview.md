@@ -13,7 +13,7 @@ In the **Code** step, and through a smart in-browser code editor, the _**develop
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/code2.png)
+![img alt](/docs/getting-started/code2.png)
 
 </div>
 
@@ -34,7 +34,7 @@ Clicking on `Input Variables` provides the _**developer**_ with a list of the in
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/code3.png)
+![img alt](/docs/getting-started/code3.png)
 
 </div>
 
@@ -42,7 +42,7 @@ These outputs correspond to the following inputs page:
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/code4.png)
+![img alt](/docs/getting-started/code4.png)
 
 </div>
 

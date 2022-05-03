@@ -33,13 +33,13 @@ As an example, the following figure displays an input group with one number inpu
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/numberinput1.png)
+![img alt](/docs/getting-started/numberinput1.png)
 
 </div>
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/numberinput2.png)
+![img alt](/docs/getting-started/numberinput2.png)
 
 </div>
 </TabItem>
@@ -65,13 +65,13 @@ As an example, the following figure displays an input group with one text input 
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/textinput1.png)
+![img alt](/docs/getting-started/textinput1.png)
 
 </div>
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/textinput2.png)
+![img alt](/docs/getting-started/textinput2.png)
 
 </div>
 
@@ -98,7 +98,7 @@ Please check the [Working with Files](../Objects/files) section for more details
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/files.png)
+![img alt](/docs/getting-started/files.png)
 
 </div>
 
@@ -120,7 +120,7 @@ Depending on the number of options, once the _**app**_ is deployed, the options 
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/optionselect.png)
+![img alt](/docs/getting-started/optionselect.png)
 
 </div>
 
@@ -144,7 +144,7 @@ The example below shows two of three options selected for a `Multiple Select` in
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/multipleselect.png)
+![img alt](/docs/getting-started/multipleselect.png)
 
 </div>
 
@@ -184,7 +184,7 @@ As an example, the figure below shows a slider with tick marks which returns a v
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/slider.png)
+![img alt](/docs/getting-started/slider.png)
 
 </div>
 
@@ -211,7 +211,7 @@ As an example, the figure below shows a range slider with tick marks which retur
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/rangeslider.png)
+![img alt](/docs/getting-started/rangeslider.png)
 
 </div>
 
@@ -233,7 +233,7 @@ Below is a figure showing the `ColorPicker` input type.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/colour.png)
+![img alt](/docs/getting-started/colour.png)
 
 </div>
 

@@ -7,7 +7,7 @@ sidebar_position: 1
 
 The **Inputs** step enables the _**developer**_ to use a variety of different types of _**user**_ inputs that become available as inputs for the `main` function in the **Code** step. Any combination of inputs can be arranged within either an `Input Group` or an `Table Group` which the _**developer**_ has to create before adding inputs. An input cell can be resized and moved within an `Input Group` window which allows the maximum of 10 inputs on the same row. A single input can occupy the whole or part of the width of the `Input Group`.
 
-Within an `Input Group` or a `Table Group`, sizing and moving the input cells can intuitively be done using the mouse. Once an input has been added, the _**developer**_ can edit its associated options such as default values, labels, and variable name by clicking on the ![img alt](/docs/Getting-Started/Edit.png) icon. The _**developer**_ can delete or duplicate any of the created inputs. When an input is duplicated, the duplicate copy maintains all the options of the original copy except for the variable name which will automatically be appended by a number that differentiates the duplicate from the original.
+Within an `Input Group` or a `Table Group`, sizing and moving the input cells can intuitively be done using the mouse. Once an input has been added, the _**developer**_ can edit its associated options such as default values, labels, and variable name by clicking on the ![img alt](/docs/getting-started/edit_btn.png) icon. The _**developer**_ can delete or duplicate any of the created inputs. When an input is duplicated, the duplicate copy maintains all the options of the original copy except for the variable name which will automatically be appended by a number that differentiates the duplicate from the original.
 
 :::tip
 
@@ -17,7 +17,7 @@ The variable name associated with the input appears when the _**developer**_ hov
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/inputslayout.png)
+![img alt](/docs/getting-started/inputslayout.png)
 
 </div>
 
@@ -27,7 +27,7 @@ The inputs page can be adjusted for **both** desktop and mobile apps by choosing
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/mobile.png)
+![img alt](/docs/getting-started/mobile.png)
 
 </div>
 

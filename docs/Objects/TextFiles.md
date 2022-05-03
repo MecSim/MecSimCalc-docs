@@ -15,7 +15,7 @@ Two inputs are prepared in the inputs page; a text field with variable name: `in
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/textinput.png)
+![img alt](/docs/getting-started/textinput.png)
 
 </div>
 

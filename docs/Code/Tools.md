@@ -7,11 +7,11 @@ The **MecSimCalc** platform provides the _**developer**_ with an in-browser code
 
 ## Code Compare
 
-Once an _**app**_ is [published](../Getting-Started/Quick-overview#step-6-preview), the version of the code in the published version stays unaltered. The _**developer**_ can still edit a published _**app**_ and alter the code, however, the version of the altered code stays in a "draft" mode until the _**developer**_ publishes the new version. **Code Compare** allows the _**developer**_ to compare the current "draft" version with the already "published" version of the _**app**_. As an example, consider the published _**app**_ [Text Spaces Manipulation Function](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function). In the current published version, the code strips the input text off any spaces. The image below indicates that the current "draft" version of the _**app**_'s code attempts to double the spaces within the text. The version of the code on the right-hand-side is the current "draft" version while the one on the left-hand-side is the published version. The published version will only be replaced if the _**developer**_ proceeds to **Step 6** and clicks on **Publish**.
+Once an _**app**_ is [published](../getting-started/quick-overview#step-6-preview), the version of the code in the published version stays unaltered. The _**developer**_ can still edit a published _**app**_ and alter the code, however, the version of the altered code stays in a "draft" mode until the _**developer**_ publishes the new version. **Code Compare** allows the _**developer**_ to compare the current "draft" version with the already "published" version of the _**app**_. As an example, consider the published _**app**_ [Text Spaces Manipulation Function](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function). In the current published version, the code strips the input text off any spaces. The image below indicates that the current "draft" version of the _**app**_'s code attempts to double the spaces within the text. The version of the code on the right-hand-side is the current "draft" version while the one on the left-hand-side is the published version. The published version will only be replaced if the _**developer**_ proceeds to **Step 6** and clicks on **Publish**.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/codecompare.png)
+![img alt](/docs/getting-started/codecompare.png)
 
 </div>
 
@@ -32,6 +32,6 @@ Below is a picture of the debugger with the printed output
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/debugger.png)
+![img alt](/docs/getting-started/debugger.png)
 
 </div>

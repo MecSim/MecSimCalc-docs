@@ -9,7 +9,7 @@ In order to visually organize the inputs, **MecSimCalc** platform allows the _**
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/inputgroup1.png)
+![img alt](/docs/getting-started/inputgroup1.png)
 
 </div>
 
@@ -23,7 +23,7 @@ The _**developer**_ can create as many new `Input Groups` as needed which are ar
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/inputgroup2.png)
+![img alt](/docs/getting-started/inputgroup2.png)
 
 </div>
 
@@ -33,6 +33,6 @@ The _**developer**_ can add as many inputs as needed within an `Input Group`. Th
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/inputgroup3.png)
+![img alt](/docs/getting-started/inputgroup3.png)
 
 </div>

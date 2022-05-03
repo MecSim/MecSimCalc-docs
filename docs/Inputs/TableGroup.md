@@ -9,7 +9,7 @@ Similar to an [`Input Group`](InputGroup.md), a [`Table Group`](TableGroup.md) a
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/tablegroup1.png)
+![img alt](/docs/getting-started/tablegroup1.png)
 
 </div>
 
@@ -27,7 +27,7 @@ The main difference between a `Table Group` and an [`Input Group`](InputGroup.md
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/Getting-Started/tablegroup2.png)
+![img alt](/docs/getting-started/tablegroup2.png)
 
 </div>
 
