@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Conditionals
 
-**MecsimCalc** platform is built upon [**Jinja**](https://jinja.palletsprojects.com/en/3.1.x/); a full-featured template engine for python. [**Jinja**](https://palletsprojects.com/p/jinja/) operations, including `if` and `for` statements, can be performed within curly brackets `{}`. Output variables and their operations are inserted using two sets of curly brackets `{{}}` while conditionals should be typed within `{% %}`. Conditionals can be typed in the editor or inserted using the icons.
+**MecSimCalc** platform is built upon [**Jinja**](https://jinja.palletsprojects.com/en/3.1.x/); a full-featured template engine for python. [**Jinja**](https://palletsprojects.com/p/jinja/) operations, including `if` and `for` statements, can be performed within curly brackets `{}`. Output variables and their operations are inserted using two sets of curly brackets `{{}}` while conditionals should be typed within `{% %}`. Conditionals can be typed in the editor or inserted using the icons.
 
 ## If Statement
 

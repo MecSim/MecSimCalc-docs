@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## Quick Overview
 
-**MecsimCalc** platform has incorporated an in-browser editor that allows the _**developer**_ to easily design a smart output page which can incorporate HTML elements, images, formatted text, latex and many more. The **Output** editor also enables using conditionals for results. Formatting text and inserting objects such as images, videos, and links can be done using the icons available at the top of the editor. Additionally, the figure below, which represents the output stage of the [Text Spaces Manipulation _**App**_](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function), highlights the icons that can be used for adding latex formatted equations, `if` and `for` statements, and the available output variables.
+**MecSimCalc** platform has incorporated an in-browser editor that allows the _**developer**_ to easily design a smart output page which can incorporate HTML elements, images, formatted text, latex and many more. The **Output** editor also enables using conditionals for results. Formatting text and inserting objects such as images, videos, and links can be done using the icons available at the top of the editor. Additionally, the figure below, which represents the output stage of the [Text Spaces Manipulation _**App**_](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function), highlights the icons that can be used for adding latex formatted equations, `if` and `for` statements, and the available output variables.
 
 <div style={{textAlign: 'center'}}>
 

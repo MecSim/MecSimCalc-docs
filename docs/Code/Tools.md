@@ -3,7 +3,7 @@ sidebar_label: "Tools"
 sidebar_position: 3
 ---
 
-The **MecsimCalc** platform provides the _**developer**_ with an in-browser code editor equipped with syntax highlighting, intellisense, **Code Compare**, and **Debugging**. The **Code Compare** functionality allows the _**developer**_ to compare the current (draft) version of the code with the published version. **Debugging** allows the _**developer**_ to run the code with some test inputs to see the output values and to debug runtime errors.
+The **MecSimCalc** platform provides the _**developer**_ with an in-browser code editor equipped with syntax highlighting, intellisense, **Code Compare**, and **Debugging**. The **Code Compare** functionality allows the _**developer**_ to compare the current (draft) version of the code with the published version. **Debugging** allows the _**developer**_ to run the code with some test inputs to see the output values and to debug runtime errors.
 
 ## Code Compare
 
@@ -17,7 +17,7 @@ Once an _**app**_ is [published](../Getting-Started/Quick-overview#step-6-previe
 
 ## Debugging
 
-**MecsimCalc** platform provides the _**developer**_ with an in-browser code debugger. In addition to viewing error messages, the _**developer**_ can use functions such as `print` in different locations within the code which the debugger will print. As an example, the code below is a working version of the published _**app**_ [Text Spaces Manipulation Function](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function). This version of the code uses `print` function whose output can be viewed in the debugger but will not be visible when the _**app**_ runs in the browser.
+**MecSimCalc** platform provides the _**developer**_ with an in-browser code debugger. In addition to viewing error messages, the _**developer**_ can use functions such as `print` in different locations within the code which the debugger will print. As an example, the code below is a working version of the published _**app**_ [Text Spaces Manipulation Function](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function). This version of the code uses `print` function whose output can be viewed in the debugger but will not be visible when the _**app**_ runs in the browser.
 
 ```python
 def main(inputs):

@@ -9,7 +9,7 @@ sidebar_position: 1
 
 In the **Code** step, and through a smart in-browser code editor, the _**developer**_ is expected to code the function `main(inputs)`. All the input variables defined in the **Inputs** step are available as inputs to `main` as a dictionary whose key values are the unique variable names defined in the **Inputs** stage. The `main` function is expected to return a dictionary whose key values are available in the output stage.
 
-**MecsimCalc** provides the _**developer**_ with a smart code editor with syntax highlighting, debugging, keyboard shortcuts, and code comparison. In addition, the input variables defined in the **Inputs** stage can be accessed in the **Code** stage through clicking on `<> Input Variables`. The figure below provides a description of the components of the code editor.
+**MecSimCalc** provides the _**developer**_ with a smart code editor with syntax highlighting, debugging, keyboard shortcuts, and code comparison. In addition, the input variables defined in the **Inputs** stage can be accessed in the **Code** stage through clicking on `<> Input Variables`. The figure below provides a description of the components of the code editor.
 
 <div style={{textAlign: 'center'}}>
 

@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## Overview
 
-The outputs of the function `main` are available to be inserted in the **Output** step. **MecsimCalc** platform expects the function `main` to return a [dictionary](https://www.w3schools.com/python/python_dictionaries.asp) whose keys can be inserted in the **Output** editor. When the _**app**_ is run by the _**user**_, the corresponding values are then displayed. As described in the [Distance Converter Example](Getting-Started\Example1.md), the following figure shows the overall layout of the inputs, code, and output editor. The function `main` returned a dictionary with three keys: `"Feet"`, `"Inches"`, and `"Metre"` with the corresponding variables which were defined within the function itself: `ft`, `inches`, and `m`. The dictionary keys were then inserted in the output editor as `{{outputs.Feet}}`, `{{outputs.Inches}}`, and `{{outputs.Metre}}`. When a _**user**_ runs the _**app**_, the corresponding values are displayed.
+The outputs of the function `main` are available to be inserted in the **Output** step. **MecSimCalc** platform expects the function `main` to return a [dictionary](https://www.w3schools.com/python/python_dictionaries.asp) whose keys can be inserted in the **Output** editor. When the _**app**_ is run by the _**user**_, the corresponding values are then displayed. As described in the [Distance Converter Example](Getting-Started\Example1.md), the following figure shows the overall layout of the inputs, code, and output editor. The function `main` returned a dictionary with three keys: `"Feet"`, `"Inches"`, and `"Metre"` with the corresponding variables which were defined within the function itself: `ft`, `inches`, and `m`. The dictionary keys were then inserted in the output editor as `{{outputs.Feet}}`, `{{outputs.Inches}}`, and `{{outputs.Metre}}`. When a _**user**_ runs the _**app**_, the corresponding values are displayed.
 
 <div style={{textAlign: 'center'}}>
 
@@ -53,4 +53,4 @@ As described in [Step 4: Output](../Getting-Started/Quick-overview#step-4-output
 
 ## File Data Output
 
-The _**developer**_ can also choose to output file data as a string. The data can then be available for the _**user**_ to download as a file. More details are provided at a later section detailing managing files input and output through **MecsimCalc**.
+The _**developer**_ can also choose to output file data as a string. The data can then be available for the _**user**_ to download as a file. More details are provided at a later section detailing managing files input and output through **MecSimCalc**.
