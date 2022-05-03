@@ -29,7 +29,7 @@ In this published [_**app**_](https://mecsimcalc.com/app/9164993/pressure_design
 <iframe src='https://mecsimcalc.com/app/9164993/pressure_design_of_pipeline_according_to_csa_z_662' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="700" title="MecSimCalc" frameborder="0"></iframe>
 </div>
 
-There are seven inputs used. Four are [**numerical inputs**](../Inputs/Input-Types.md): the Diameter `d`, the Wall Thickness `t`, the Grade `sy`, and the Operating Pressure `p` while three are [**Single Select**](../Inputs/Input-Types.md): the Location Factor `l`, the Temperature Factor `tf`, and the Joint Factor `j`. The layout of the inputs page is shown in the figure below.
+There are seven inputs used. Four are [**numerical inputs**](../inputs/Input-Types.md): the Diameter `d`, the Wall Thickness `t`, the Grade `sy`, and the Operating Pressure `p` while three are [**Single Select**](../inputs/Input-Types.md): the Location Factor `l`, the Temperature Factor `tf`, and the Joint Factor `j`. The layout of the inputs page is shown in the figure below.
 
 <div style={{textAlign: 'center'}}>
 

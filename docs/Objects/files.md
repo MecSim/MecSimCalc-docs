@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## File Input
 
-As described in the [input types page](../Inputs/Input-Types), the _**developer**_ can chose `FileInput` when creating the inputs page of an _**app**_ allowing the _**user**_ to upload files whose data can be used within the _**app**_. When a file is imported, **MecSimCalc** platform converts its data into a [base64](https://stackoverflow.com/questions/3538021) string that contains the file data preceded by the data type and the encoding. For example, the resulting string of imported CSV and PNG files have the following respective forms:
+As described in the [input types page](../inputs/Input-Types), the _**developer**_ can chose `FileInput` when creating the inputs page of an _**app**_ allowing the _**user**_ to upload files whose data can be used within the _**app**_. When a file is imported, **MecSimCalc** platform converts its data into a [base64](https://stackoverflow.com/questions/3538021) string that contains the file data preceded by the data type and the encoding. For example, the resulting string of imported CSV and PNG files have the following respective forms:
 
 ```
 "data:text/csv;base64,xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

@@ -17,11 +17,11 @@ Here is a demo using the utility function:
 
 - You can fill in the required fields as shown in the following image.
 - You can use the default **Favicon Image**.
-- The **Primary Image** used is available [here](/docs/getting-started/MultiplicationTable.png).
+- The **Primary Image** used is available [here](/docs/getting-started/ex3_mult_table.png).
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/Ex3.png)
+![img alt](/docs/getting-started/ex3_info.png)
 
 </div>
 
@@ -31,7 +31,7 @@ For this example, create one input group titled "Multiplication Table" with two 
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/Ex3Inputs.png)
+![img alt](/docs/getting-started/ex3_inputs.png)
 
 </div>
 
@@ -39,13 +39,13 @@ The following two images show the settings used for each of the inputs:
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/Multiplier.png)
+![img alt](/docs/getting-started/ex3_edit_input1.png)
 
 </div>
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/range.png)
+![img alt](/docs/getting-started/ex3_edit_input2.png)
 
 </div>
 
@@ -117,7 +117,7 @@ The output page used for this example is shown in the following image:
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/Ex3output.png)
+![img alt](/docs/getting-started/ex3_outputs.png)
 
 </div>
 
@@ -131,7 +131,7 @@ In the preview section, confirm that the app works as expected:
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/Ex3publish.png)
+![img alt](/docs/getting-started/ex3_publish.png)
 
 </div>
 

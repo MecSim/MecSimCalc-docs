@@ -5,9 +5,11 @@ sidebar_position: 1
 
 # Overview
 
-The **Inputs** step enables the _**developer**_ to use a variety of different types of _**user**_ inputs that become available as inputs for the `main` function in the **Code** step. Any combination of inputs can be arranged within either an `Input Group` or an `Table Group` which the _**developer**_ has to create before adding inputs. An input cell can be resized and moved within an `Input Group` window which allows the maximum of 10 inputs on the same row. A single input can occupy the whole or part of the width of the `Input Group`.
+The **Inputs** step enables the _**developer**_ to use a variety of different types of _**user**_ inputs that you would commonly find on a webpage. The values of these user inputs will become available as Python variables in the `main` function when writing the **Code** step.
 
-Within an `Input Group` or a `Table Group`, sizing and moving the input cells can intuitively be done using the mouse. Once an input has been added, the _**developer**_ can edit its associated options such as default values, labels, and variable name by clicking on the ![img alt](/docs/getting-started/edit_btn.png) icon. The _**developer**_ can delete or duplicate any of the created inputs. When an input is duplicated, the duplicate copy maintains all the options of the original copy except for the variable name which will automatically be appended by a number that differentiates the duplicate from the original.
+Any combination of inputs can be arranged within either an `Input Group` or a `Table Group`, which the _**developer**_ has to create before adding inputs. An input cell can be resized and moved within an `Input Group` box, which allows a maximum of 10 inputs on the same row. A single input can occupy the whole or part of the `Input Group` width.
+
+Within an `Input Group` or a `Table Group`, re-sizing and moving the input cells can intuitively be done by drag-and-drop. Once an input has been added, the _**developer**_ can edit its associated options such as default values, labels, and variable name by clicking on the ![img alt](/docs/getting-started/edit_btn.png) button. The _**developer**_ can delete or duplicate any of the created inputs. When an input is duplicated, the duplicate copy maintains all the options of the original copy except for the variable name which will automatically be appended by a number that differentiates the duplicate from the original.
 
 :::tip
 
