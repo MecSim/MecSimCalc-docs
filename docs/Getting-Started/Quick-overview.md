@@ -111,7 +111,7 @@ In the final preview step, the _**developer**_ can test the _**app**_ before pub
 
 The inputs, code, and outputs steps are the 3 layers that make an _**app**_. The _**developer**_ designs an inputs page whose values are then available as input to the Code step function `main`. The outputs of the the function `main` can then be embedded into a nicely formatted output page.
 
-The following diagram show how these steps work together to create the [distance converter](https://www.mecsimcalc.com/app/4022206/distance_converter) web-app. The inputs page requests the value of `input_0` from the user, which is then used as a variable in the Python code (`inputs['input_0']`). The function `main(inputs)` then returns a dictionary of three keys: `Feet`, `Inches`, and `Metre`. These three keys are embedded into the output page using the syntax `{{outputs.Feet}}`, `{{outputs.Inches}}`, and `{{outputs.Metre}}`, respectively. The app is also also explained in details in [Example 1](/getting-started/Example1)
+The following diagram show how these steps work together to create the [distance converter](https://www.mecsimcalc.com/app/4022206/distance_converter) web-app. The inputs page requests the value of `input_0` from the user, which is then used as a variable in the Python code (`inputs['input_0']`). The function `main(inputs)` then returns a dictionary of three keys: `Feet`, `Inches`, and `Metre`. These three keys are embedded into the output page using the syntax `{{outputs.Feet}}`, `{{outputs.Inches}}`, and `{{outputs.Metre}}`, respectively. The app is also also explained in details in [Example 1](/getting-started/example-1)
 
 <div style={{textAlign: 'center'}}>
 

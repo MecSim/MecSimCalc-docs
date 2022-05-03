@@ -25,7 +25,7 @@ You can fill in the required fields as shown in the following figure. You can us
 
 ## Step 2. Inputs
 
-Start by creating the input group: "Function Parameters” and two numerical input variables. Edit the first input variable by assigning it the variable name `capitala`, the label: "A”, default value of 1, and restricting it between -10 and 10 with a precision of 0.001. Click on `APPLY CHANGES` to save your work:
+Start by creating the input group: "Function Parameters" and two numerical input variables. Edit the first input variable by assigning it the variable name `capitala`, the label: "A", default value of 1, and restricting it between -10 and 10 with a precision of 0.001. Click on `APPLY CHANGES` to save your work:
 
 <div style={{textAlign: 'center'}}>
 
@@ -33,7 +33,7 @@ Start by creating the input group: "Function Parameters” and two numerical inp
 
 </div>
 
-Similarly, apply the changes shown in the following figure to the second input under the "Function Parameters” input group.
+Similarly, apply the changes shown in the following figure to the second input under the "Function Parameters" input group.
 
 <div style={{textAlign: 'center'}}>
 
@@ -41,7 +41,7 @@ Similarly, apply the changes shown in the following figure to the second input u
 
 </div>
 
-You can also add a text field to clarify to the _**user**_ the form of the cosine equation used and the limits of the parameters "A” and "B”. You can do so by hovering over ![img alt](/docs/getting-started/add_btn.png) sign and adding an input. Hover over the recently created input and click on the ![img alt](/docs/getting-started/edit_btn.png) icon to edit it and change its type to "Rich Text”. Add the required text and use the latex equation generator if desired as shown in the next figure. Click on `APPLY CHANGES` to save your work:
+You can also add a text field to clarify to the _**user**_ the form of the cosine equation used and the limits of the parameters "A" and "B". You can do so by hovering over ![img alt](/docs/getting-started/add_btn.png) sign and adding an input. Hover over the recently created input and click on the ![img alt](/docs/getting-started/edit_btn.png) icon to edit it and change its type to "Rich Text". Add the required text and use the latex equation generator if desired as shown in the next figure. Click on `APPLY CHANGES` to save your work:
 
 <div style={{textAlign: 'center'}}>
 
@@ -57,7 +57,7 @@ You should see the following list of inputs on your screen:
 
 </div>
 
-Using the mouse, you can drag the rich text field and move it above the parameters "A” and "B”:
+Using the mouse, you can drag the rich text field and move it above the parameters "A" and "B":
 
 <div style={{textAlign: 'center'}}>
 
@@ -65,7 +65,7 @@ Using the mouse, you can drag the rich text field and move it above the paramete
 
 </div>
 
-Now, go ahead and create a new input group titled: "Plot Parameters”. Create two inputs "a” and "b” to specify the left and right boundaries of the plot. Set their variable names as "a” and "b” respectively, to differentiate them from the variables created earlier. You can also change their default values to -10 and 10 respectively. Afterwards, you should see the following on your screen:
+Now, go ahead and create a new input group titled: "Plot Parameters". Create two inputs "a" and "b" to specify the left and right boundaries of the plot. Set their variable names as "a" and "b" respectively, to differentiate them from the variables created earlier. You can also change their default values to -10 and 10 respectively. Afterwards, you should see the following on your screen:
 
 <div style={{textAlign: 'center'}}>
 
@@ -160,7 +160,7 @@ In the preview section, confirm that the app works as expected:
 
 </div>
 
-Once ready, click on "publish” to publish the app on the web.
+Once ready, click on "publish" to publish the app on the web.
 This version of the app is available here:
 
 https://www.mecsimcalc.com/app/5862152/explore_the_cos_function

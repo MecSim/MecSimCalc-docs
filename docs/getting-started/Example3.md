@@ -127,7 +127,7 @@ In the preview section, confirm that the app works as expected:
 
 </div>
 
-Once ready, click on "publish” to publish the app on the web.
+Once ready, click on "publish" to publish the app on the web.
 The two versions of the app are available here:
 
 https://www.mecsimcalc.com/app/5389912/multiplication_table
