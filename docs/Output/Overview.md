@@ -17,7 +17,7 @@ sidebar_position: 1
 
 ## Output Variables
 
-As described in the [Code Output Section](../code/Code-output#overview), the dictionary keys returned by the function `main` can be embedded anywhere within the output page in the form of `{{outputs.xxxx}}` or `{{outputs["xxxx"]}}` where `xxxx` is any of the `keys` of the returned dictionary. In the **Output** stage, the _**developer**_ can retrieve the outputs available from the function `main` by clicking on the `<>Output Variables` icon available at the top of the editor. The figure below shows the output variables available in the [Text Spaces Manipulation _**App**_](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function). The code for this app can be found [here](../code/Tools#debugging).
+As described in the [Code Output Section](../code/code-output#overview), the dictionary keys returned by the `main` function can be embedded anywhere within the output page in the form of `{{outputs.xxxx}}` or `{{outputs["xxxx"]}}` where `xxxx` is any of the `keys` of the returned dictionary. In the **Output** stage, the _**developer**_ can retrieve the outputs available from the `main` function by clicking on the `<>Output Variables` icon available at the top of the editor. The figure below shows the output variables available in the [Text Spaces Manipulation _**App**_](https://mecsimcalc.com/app/6383921/text_spaces_manipulation_function). The code for this app can be found [here](../code/Tools#debugging).
 
 <div style={{textAlign: 'center'}}>
 
