@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## Overview
 
-The outputs of the function `main` are available to be inserted in the **Output** step. **MecSimCalc** platform expects the function `main` to return a [dictionary](https://www.w3schools.com/python/python_dictionaries.asp) whose keys can be inserted in the **Output** editor. When the _**app**_ is run by the _**user**_, the corresponding values are then displayed. As described in the [Distance Converter Example](getting-started\example-1.md), the following figure shows the overall layout of the inputs, code, and output editor. The function `main` returned a dictionary with three keys: `"Feet"`, `"Inches"`, and `"Metre"` with the corresponding variables which were defined within the function itself: `ft`, `inches`, and `m`. The dictionary keys were then inserted in the output editor as `{{outputs.Feet}}`, `{{outputs.Inches}}`, and `{{outputs.Metre}}`. When a _**user**_ runs the _**app**_, the corresponding values are displayed.
+The outputs of the function `main` are available to be inserted in the **Output** step. **MecSimCalc** platform expects the function `main` to return a [dictionary](https://www.w3schools.com/python/python_dictionaries.asp) whose keys can be inserted in the **Output** editor. When the _**app**_ is run by the _**user**_, the corresponding values are then displayed. As described in the [Distance Converter Example](getting-started\example-1), the following figure shows the overall layout of the inputs, code, and output editor. The function `main` returned a dictionary with three keys: `"Feet"`, `"Inches"`, and `"Metre"` with the corresponding variables which were defined within the function itself: `ft`, `inches`, and `m`. The dictionary keys were then inserted in the output editor as `{{outputs.Feet}}`, `{{outputs.Inches}}`, and `{{outputs.Metre}}`. When a _**user**_ runs the _**app**_, the corresponding values are displayed.
 
 <div style={{textAlign: 'center'}}>
 
@@ -49,7 +49,7 @@ def main(inputs):
 
 ## HTML Output
 
-As described in [Step 4: Output](../getting-started/quick-overview#step-4-output), the _**developer**_ can design a **smart** output page using an **Output** editor which accepts html content. The _**developer**_ can choose to output any string of html format which can then be embedded in the **Output** editor. Please review [Example 3](../getting-started/example-3.md) which provides the details of outputting a table using html.
+As described in [Step 4: Output](../getting-started/quick-overview#step-4-output), the _**developer**_ can design a **smart** output page using an **Output** editor which accepts html content. The _**developer**_ can choose to output any string of html format which can then be embedded in the **Output** editor. Please review [Example 3](../getting-started/example-3) which provides the details of outputting a table using html.
 
 ## File Data Output
 

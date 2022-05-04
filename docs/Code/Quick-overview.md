@@ -30,7 +30,7 @@ def main(inputs):
 
 ## Input Variables
 
-Clicking on `Input Variables` provides the _**developer**_ with a list of the input variables that can be copied and pasted in the code editor. As an example, the figure below shows the four input variables `arrayname`, `input_0`, `input_3`, and `input_4`. These are available as output from the three [input types](../inputs/Input-Types.md): `FileInput`, `DateTimePicker`, and `NumberInput`. The `arrayname` on the other hand is a list of outputs of a [**Table Group**](../inputs/TableGroup.md).
+Clicking on `Input Variables` provides the _**developer**_ with a list of the input variables that can be copied and pasted in the code editor. As an example, the figure below shows the four input variables `arrayname`, `input_0`, `input_3`, and `input_4`. These are available as output from the three [input types](../inputs/Input-Types): `FileInput`, `DateTimePicker`, and `NumberInput`. The `arrayname` on the other hand is a list of outputs of a [**Table Group**](../inputs/table-group).
 
 <div style={{textAlign: 'center'}}>
 

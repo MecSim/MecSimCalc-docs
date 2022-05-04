@@ -31,6 +31,6 @@ _This diagram is based on the [distance converter](https://www.mecsimcalc.com/ap
 
 ![img alt](/docs/app_flow.png)
 
-Check out our [quick guide](getting-started/quick-overview.md) to learn more.
+Check out our [quick guide](getting-started/quick-overview) to learn more.
 
 _Please send any suggestions, questions, or inquiries to info@mecsimcalc.com_

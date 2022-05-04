@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Input Group
 
-In order to visually organize the inputs, **MecSimCalc** platform allows the _**developer**_ to visually group inputs into either an **Input Group** or a [**Table Group**](TableGroup.md). An **Input Group** can be created in the **Inputs** step by clicking on **Add Input Group**.
+In order to visually organize the inputs, **MecSimCalc** platform allows the _**developer**_ to visually group inputs into either an **Input Group** or a [**Table Group**](table-group). An **Input Group** can be created in the **Inputs** step by clicking on **Add Input Group**.
 
 <div style={{textAlign: 'center'}}>
 
@@ -13,7 +13,7 @@ In order to visually organize the inputs, **MecSimCalc** platform allows the _**
 
 </div>
 
-:::note
+:::tip
 The different input types appear in the menu only if an **Input Group** or a **Table Group** has already been created.
 :::
 

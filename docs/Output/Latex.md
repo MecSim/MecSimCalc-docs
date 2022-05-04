@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Latex
 
-**MecSimCalc** uses [KateX](https://katex.org/) for displaying equations in latex format within the [Rich Text](../inputs/Input-Types.md) and [**Output**](Overview) in-browser editors. A latex formula can be inserted using the following form:
+**MecSimCalc** uses [KateX](https://katex.org/) for displaying equations in latex format within the [Rich Text](../inputs/Input-Types) and [**Output**](Overview) in-browser editors. A latex formula can be inserted using the following form:
 
 ```
 {{ "latex expression" | katex }}
