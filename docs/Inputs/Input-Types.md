@@ -33,13 +33,13 @@ As an example, the following image displays an input group with one number input
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/numberinput1.png)
+![img alt](/docs/inputs/number_input.png)
 
 </div>
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/numberinput2.png)
+![img alt](/docs/inputs/edit_number_input.png)
 
 </div>
 </TabItem>
@@ -65,13 +65,13 @@ As an example, the following image displays an input group with one text input l
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/textinput1.png)
+![img alt](/docs/inputs/text_input.png)
 
 </div>
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/textinput2.png)
+![img alt](/docs/inputs/edit_text_input.png)
 
 </div>
 
@@ -96,7 +96,7 @@ Please see the [Working with Files](../Objects/files) section for more details a
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/files.png)
+![img alt](/docs/inputs/choose_files.png)
 
 </div>
 
@@ -120,7 +120,7 @@ The following example shows two `SingleSelect` inputs where `Option 1` is chosen
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/optionselect.png)
+![img alt](/docs/inputs/single_select.png)
 
 </div>
 
@@ -144,7 +144,7 @@ The following example shows two of three options selected for a `Multiple Select
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/multipleselect.png)
+![img alt](/docs/inputs/multiple_select.png)
 
 </div>
 
@@ -184,7 +184,7 @@ As an example, the image below shows a slider with tick marks which returns a va
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/slider.png)
+![img alt](/docs/inputs/slider.png)
 
 </div>
 
@@ -211,7 +211,7 @@ As an example, the following image shows a range slider with tick marks that ret
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/rangeslider.png)
+![img alt](/docs/inputs/range_slider.png)
 
 </div>
 
@@ -233,7 +233,7 @@ Below is an image showing the `ColorPicker` input type.
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/colour.png)
+![img alt](/docs/inputs/color_picker.png)
 
 </div>
 
