@@ -15,7 +15,7 @@ This _**app**_ imports an image, changes its width and height to 200 using the `
 
 <div style={{textAlign: 'center'}}>
 
-![img alt](/docs/getting-started/imageinput.png)
+![img alt](/docs/output/image_input.png)
 
 </div>
 
