@@ -96,7 +96,7 @@ As an example, the following output page displays the value of the `Sum` only if
 </div>
 
 :::tip
-The outputs editor leverages the simple styling from a WYSIWYG text editor with the power of [Jinja](https://jinja.palletsprojects.com/en/3.0.x/templates/) and [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) for conditional logic, and [Katex](https://katex.org/docs/api.html) for beautiful math equations.
+The outputs editor leverages the simple styling from a WYSIWYG text editor with the power of [Jinja](https://jinja.palletsprojects.com/en/3.0.x/templates/) and [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) for conditional logic, and [Katex](https://katex.org/docs/supported.html) for beautiful math equations.
 :::
 
 ## Step 5: Docs

@@ -11,7 +11,7 @@ The [text files](https://mecsimcalc.com/app/5545072/text_files) _**app**_ is use
 <iframe src='https://mecsimcalc.com/app/5545072/text_files' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="600" title="MecSimCalc" frameborder="0"></iframe>
 </div>
 
-Two inputs are prepared in the inputs page; a text field with variable name: `input_0` and a file input with variable name: `input_1`. The **Accept** option of the [`FileInput`](../inputs/Input-Types) is set to `.txt` to limit the uploaded files to those with `.txt` extension. The inputs page is shown in the figure below:
+Two inputs are prepared in the inputs page; a text field with variable name: `input_0` and a file input with variable name: `input_1`. The **Accept** option of the [`FileInput`](../inputs/input-types) is set to `.txt` to limit the uploaded files to those with `.txt` extension. The inputs page is shown in the figure below:
 
 <div style={{textAlign: 'center'}}>
 

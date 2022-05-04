@@ -21,7 +21,7 @@ The `NumberInput` enables inputting a _number_ as an integer or a float.
 | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**          | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
 | **Label**         | The label that describes what the input represents to the _**user**_                                                                           |
-| **Units**         | The units that would be displayed to the user. The units will be rendered in [Latex/Katex](https://katex.org/docs/api.html)                    |
+| **Units**         | The units that would be displayed to the user. The units will be rendered in [Latex/Katex](https://katex.org/docs/supported.html)              |
 | **Default Value** | The default value when the _**app**_ is initally loaded without any changes from the _**user**_                                                |
 | **Required**      | If checked, the _**app**_ will not run unless the value is not empty. Otherwise, empty values are allowed                                      |
 | **Disabled**      | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
@@ -256,7 +256,7 @@ The `DateTimePicker` allows the _**user**_ to pick a date and/or a time and is a
 
 #### Rich Text
 
-The `RichText` editor allows the _**developer**_ to add other visual elements to the _**user**_, such as formatted text, images, videos, formulas, hyperlinks, and many more. The text editor toolbar provides an array of icons that the _**developer**_ can use to design a visually pleasing rich text entry. Additionally, mathematical formulas using [katex](https://katex.org/docs/api.html) can also be inputted by the _**developer**_ using this syntax:
+The `RichText` editor allows the _**developer**_ to add other visual elements to the _**user**_, such as formatted text, images, videos, formulas, hyperlinks, and many more. The text editor toolbar provides an array of icons that the _**developer**_ can use to design a visually pleasing rich text entry. Additionally, mathematical formulas using [katex](https://katex.org/docs/supported.html) can also be inputted by the _**developer**_ using this syntax:
 
 ```python
 {{outputs.fx | katex}}

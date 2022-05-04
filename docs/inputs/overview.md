@@ -47,7 +47,7 @@ The inputs inside an **Input Group** are available individually for the `main` f
 
 Use a **Table Group** when you have multiple user inputs that you want condensed into a single nested array variable in the Code step.
 
-Below is a description of the different inputs that are currently available or you can visit the [Input Types](Input-Types) page for more details. You can also explore the behaviour of many of these inputs in our published [All Inputs App](https://mecsimcalc.com/app/0325014/all_inputs):
+Below is a description of the different inputs that are currently available or you can visit the [Input Types](input-types) page for more details. You can also explore the behaviour of many of these inputs in our published [All Inputs App](https://mecsimcalc.com/app/0325014/all_inputs):
 
 ## Input types
 

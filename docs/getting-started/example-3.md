@@ -27,7 +27,7 @@ Here is a demo using the utility function:
 
 ## Step 2: Inputs
 
-For this example, create one input group titled "Multiplication Table" with two numerical inputs: "Multiplier" and "Table Range". The variable names assigned to these inputs are `multiplier` and `range`. The following image shows the inputs stage after creating these inputs:
+For this example, create one input group titled "Multiplication Table" with two numerical inputs: "Multiplier" and "Table Range". The variable names assigned to these inputs are `multiplier` and `range`. The following image shows the inputs step after creating these inputs:
 
 <div style={{textAlign: 'center'}}>
 
