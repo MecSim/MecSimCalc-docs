@@ -92,7 +92,7 @@ The `FileInput` allows the _**user**_ to upload a file that can be read in the *
 | **Disabled** | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable                                                                                                                                                                                                         |
 | **Max size** | Maximum file size in bytes. The default value is 100,000,000 bytes which is 100MB                                                                                                                                                                                                                                                                      |
 
-Please see the [Working with Files](../Objects/files) section for more details about **FileInput**. Otherwise, you can start exploring how to work with files by choosing the "Files" template when creating a new app:
+Please see the [Working with Files](../files/files) section for more details about **FileInput**. Otherwise, you can start exploring how to work with files by choosing the "Files" template when creating a new app:
 
 <div style={{textAlign: 'center'}}>
 

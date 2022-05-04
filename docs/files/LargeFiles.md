@@ -21,23 +21,23 @@ Github is a free to use website that can host your files.
 2. Create an account (if you don't already have one)
 3. On the homepage, click on <strong style={{'color': 'green'}}>New</strong> in the top left corner to create a new repository
    - Repository are similar to folders that store your files
-   - ![new repo](/docs/Objects/new_repo.png)
+   - ![new repo](/docs/files/new_repo.png)
 4. Create a new repository
    - Give your repository a name in "Repository name"
    - Select **Public**
    - Finally, click on **Create repository**
-   - <img src="/docs/Objects/create_repo.png" width="600px"/>
+   - <img src="/docs/files/create_repo.png" width="600px"/>
 5. Click on upload files
    - If you see this screen, click on **uploading an existing file**
-   - ![click upload](/docs/Objects/click_upload_1.png)
+   - ![click upload](/docs/files/click_upload_1.png)
    - If you see this screen, click on **Add file** and then **Upload files**
-   - ![click upload](/docs/Objects/click_upload_2.png)
+   - ![click upload](/docs/files/click_upload_2.png)
 6. Upload your files
    - Upload one or more files and then click on **Commit changes**
-   - ![upload files](/docs/Objects/upload_files.png)
+   - ![upload files](/docs/files/upload_files.png)
 7. Your uploaded files should show up on the homepage of your repository
    - Your uploaded files are viewable at this url: `github.com/<username>/<repo name>/`
-   - ![uploaded files](/docs/Objects/uploaded_files.png)
+   - ![uploaded files](/docs/files/uploaded_files.png)
 
 ## Step 2: Fetching the file
 
@@ -53,9 +53,9 @@ This url can be from anywhere, the following instructions will
 To fetch the url of files hosted on Github:
 
 1. Go to the Github repository with the files
-   - ![uploaded files](/docs/Objects/uploaded_files.png)
+   - ![uploaded files](/docs/files/uploaded_files.png)
 2. Click on the file name to select the file. For example, clicking on _excel_file.xlsx_:
-   - ![excel file](/docs/Objects/excel_file.png)
+   - ![excel file](/docs/files/excel_file.png)
 3. Copy the url of the page
    - For example, `https://github.com/w3ichen/static/blob/main/excel_file.xlsx`
 4. Add `?raw=true` to the end of the url, which fetches the raw data of the file
