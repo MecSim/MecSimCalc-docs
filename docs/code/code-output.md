@@ -55,4 +55,4 @@ As described in [Step 4: Output](../getting-started/quick-overview#step-4-output
 
 ## File Data Output
 
-The _**developer**_ can also choose to output file data as a string. The data can then be available for the _**user**_ to download as a file as described [here](/files/files).
+The _**developer**_ can also choose to output file data as a string. The data can then be available for the _**user**_ to download as a file as described [here](/files/overview).
