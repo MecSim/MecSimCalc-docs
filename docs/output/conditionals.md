@@ -24,7 +24,7 @@ The **Outputs** editor is built upon **Jinja**, a templating engine for Python. 
 In this [_**app**_](https://mecsimcalc.com/app/9164993/pressure_design_of_pipeline_according_to_csa_z_662), the CSA Z662.19 design equations are used to calculate the design pressure of a pipe. The _**app**_ then compares the design pressure with the operating pressure and the `if` condition is used in the output to indicate whether the pipe is safe or unsafe.
 
 <div style={{width: "100%", height: "700px", overflow: "hidden"}}>
-<iframe src='https://mecsimcalc.com/app/9164993/pressure_design_of_pipeline_according_to_csa_z_662' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="700" title="MecSimCalc" frameborder="0"></iframe>
+<iframe src='https://mecsimcalc.com/app/9164993/pressure_design_of_pipeline_according_to_csa_z_662' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="700" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
 
 Seven inputs are used:
@@ -83,7 +83,7 @@ The `if` condition compares the two variables with each other to display a diffe
 In this [_**app**_](https://mecsimcalc.com/app/1535961/using_for_loop), the user inputs an integer value. The _**app**_ then outputs a table of all the numbers up to the integer value along with their squares:
 
 <div style={{width: "100%", height: "500px", overflow: "hidden"}}>
-<iframe src='https://mecsimcalc.com/app/1535961/using_for_loop' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="500" title="MecSimCalc" frameborder="0"></iframe>
+<iframe src='https://mecsimcalc.com/app/1535961/using_for_loop' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="500" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
 
 The _**user**_ is required to input an integer value `a`.

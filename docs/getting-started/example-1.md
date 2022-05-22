@@ -8,7 +8,7 @@ sidebar_position: 2
 This tutorial provides instructions to create this [web-based](https://www.mecsimcalc.com/app/4022206/distance_converter) Python _**app**_ that converts distance from meters to feet and inches.
 
 <div style={{width: "100%", height: "500px", overflow: "hidden"}}>
-<iframe src='https://mecsimcalc.com/app/4022206/distance_converter' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="500" title="MecSimCalc" frameborder="0"></iframe>
+<iframe src='https://mecsimcalc.com/app/4022206/distance_converter' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="500" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
 
 To start, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **The Basics**, and select **Create a new blank app**.

@@ -10,7 +10,7 @@ This tutorial provides two ways to create an output table by either using a [uti
 Here is a demo using the utility function:
 
 <div style={{width: "100%", height: "600px", overflow: "hidden"}}>
-<iframe src='https://www.mecsimcalc.com/app/6325826/multiplication_table' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="600" title="MecSimCalc" frameborder="0"></iframe>
+<iframe src='https://www.mecsimcalc.com/app/6325826/multiplication_table' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="600" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
 
 ## Step 1: Info

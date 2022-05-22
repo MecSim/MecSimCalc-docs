@@ -6,7 +6,7 @@ sidebar_position: 2
 # Text Files
 
 <div style={{width: "100%", height: "600px", overflow: "hidden"}}>
-<iframe src='https://mecsimcalc.com/app/5545072/text_files' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="600" title="MecSimCalc" frameborder="0"></iframe>
+<iframe src='https://mecsimcalc.com/app/5545072/text_files' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="600" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
 
 This app has two inputs: a text field with variable name: `input_0` and a file input with variable name: `input_1`. The **Accept** option of the [`FileInput`](../inputs/input-types) is set to `.txt` in order to limit the uploaded files to those with `.txt` extension. The inputs page is shown in the image below:

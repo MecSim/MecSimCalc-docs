@@ -8,7 +8,7 @@ sidebar_position: 4
 This tutorial provides instructions to create this [web-based](https://www.mecsimcalc.com/app/5862152/explore_the_cos_function) Python **_app_** to plot the cos function for particular parameters provided by the _**user**_. The _**user**_ is required to provide the parameters $A$ and $B$ in the equation $y=Acos(Bx)$ along with the limits $a$ and $b$ of the plot.
 
 <div style={{width: "100%", height: "800px", overflow: "hidden"}}>
-<iframe src='https://www.mecsimcalc.com/app/5862152/explore_the_cos_function' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="800" title="MecSimCalc" frameborder="0"></iframe>
+<iframe src='https://www.mecsimcalc.com/app/5862152/explore_the_cos_function' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="800" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
 
 ## Step 1: Info
