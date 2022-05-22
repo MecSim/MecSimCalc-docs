@@ -5,11 +5,11 @@ sidebar_position: 2
 
 # Example 1: GeoPandas
 
-This example provides a quick overview on how to create a `GeoDataFrame` and visual the data as a Folium map and a Matplotlib plot.
+This example provides a quick overview on how to use [GeoPandas](https://geopandas.org/en/stable/docs/user_guide.html) to create a `GeoDataFrame`, and how to visualize the data as a Folium map and a Matplotlib plot.
 
 <div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/4620929/map_geospatial_data" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
-To start, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **Maps**, and select **Mapping Geospatial data**.
+To get started, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **Maps**, and select **Mapping Geospatial data**.
 
 ## Step 1: Inputs
 
@@ -24,7 +24,7 @@ For the inputs, create a **Single Select** with the following properties:
 
 ## Step 2.1: Code version 1
 
-This code will get data from a GeoPanda's dataset, perform a distance calculation o the data, and then export an interactive Folium map.
+This code will get data from a GeoPanda's dataset, perform a distance calculation on the data, and then visualize it on an interactive Folium map.
 
 <div style={{textAlign: 'center'}}>
 
@@ -34,7 +34,7 @@ This code will get data from a GeoPanda's dataset, perform a distance calculatio
 
 ### Get the data
 
-First, get the geospatial data to visual. Either read in a file, create a Panda's `DataFrame`, or create a new `GeoDataFrame`. In this example, we will use the user input `inputs['dataset']` to select a GeoPanda's and then read it in as a file.
+First, get the geospatial data to visualize. You can either read in a file, create a Panda's `DataFrame`, or create a `GeoDataFrame`. In this example, we will use the user input `inputs['dataset']` to select a GeoPanda's and then read it in as a file.
 
 ```python
 path_to_data = geopandas.datasets.get_path(inputs['dataset'])
@@ -43,33 +43,33 @@ gdf = geopandas.read_file(path_to_data)
 
 ### Manipulate the data
 
-Once the data is loaded, we can manipulate the data using `GeoDataFrame`. `gdf` is short for GeoDataFrame. You can convert your data to a GeoDataFrame by passing it as the input to `geopandas.GeoDataFrame(...)`.
+Once the data is loaded, we can manipulate the data using a [`GeoDataFrame`](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.html). You can convert your data to a GeoDataFrame by passing it as the input to `geopandas.GeoDataFrame(...)`.
 
 In this example, we will create a new column called `distance` that will calculate the distance from the first point to every other point in the dataset.
 
-To get a list of points, set a new column called `centroid` equal to the centroid of all the geometries by using the GeoPandas attribute `.centroid`.
+In order to get a list of points, set a new column called `centroid` equal to the centroid of all the geometries by using the GeoPandas [`.centroid`](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.centroid.html) property.
 
 ```python
 gdf['centroid'] = gdf.centroid
 ```
 
-Then get the first point from the centroid column in the 0th row using `.iloc[0]`. Notice that `iloc` is a Pandas function because `GeoDataFrame` is an extension of Panda's `DataFrame` and therefore, any Pandas function can also be used on `GeoDataFrame`.
+Next, get the first point from the centroid column in the 0th row using `.iloc[0]`. Notice that `iloc` is a Pandas function because `GeoDataFrame` is an extension of Panda's `DataFrame` and therefore, any Pandas function can also be used on `GeoDataFrame`.
 
 ```python
 first_point = gdf['centroid'].iloc[0]
 ```
 
-Now that we have a column of centroid points and the first point, we can perform the calculations. GeoPandas provides many functions for geospatial calculations. We will use the `distance()` function to calculate the distance of each point to the `first_point`.
+Now that we have a column of centroid points and the first point, we can perform the calculations. GeoPandas provides many functions for [geospatial calculations](https://geopandas.org/en/stable/docs/reference/geoseries.html). We will use the [`distance()`](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.distance.html) function to calculate the distance of each point to the `first_point`.
 
 ```python
-    gdf['distance'] = geopandas.GeoSeries(gdf['centroid']).distance(first_point)
+gdf['distance'] = geopandas.GeoSeries(gdf['centroid']).distance(first_point)
 ```
 
 ### Exporting the map
 
-Finally, to export the `GeoDataFrame` data as an interactive Folium map, use the `.explore()` function and pass in `"distance"` as an input. `"distance"` is the name of the column that you want to visual on the map. Then use `._repr_html_()` to convert the Folium map object into HTML string that can be displayed on the web.
+Finally, to export the `GeoDataFrame` data as an interactive Folium map, use the [`.explore()`](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.explore.html) function and pass in `"distance"` as an input, where `"distance"` is the name of the column that you want to "explore" on the map. Then use `._repr_html_()` to convert the Folium map object into an HTML string that can be displayed on the webpage.
 
-```
+```python
 m = gdf.explore("distance", legend=True)
 interactive_map = m._repr_html_()
 ```
@@ -86,7 +86,7 @@ This code will create data as a Panda's `DataFrame`, convert it to a `GeoDataFra
 
 ### Get the data
 
-First create a Panda's `DataFrame` with the values to visualize on the map.
+First, create a Panda's `DataFrame` with the data to visualize on the map.
 
 ```python
 df = pd.DataFrame(
@@ -96,7 +96,7 @@ df = pd.DataFrame(
         'Longitude': [-58.66, -47.91, -70.66, -74.08, -66.86]})
 ```
 
-Convert the `DataFrame` into a `GeoDataFrame`. Pass `df` into `geopandas.GeoDataFrame()`. Then convert the latitude and longitude columns into Points using `geopandas.points_from_xy()`, and set the Points as the `geometry` column.
+Convert the `DataFrame` into a `GeoDataFrame` by passing `df` into `geopandas.GeoDataFrame()`. Then convert the latitude and longitude columns into Points using [`geopandas.points_from_xy()`](https://geopandas.org/en/stable/docs/reference/api/geopandas.points_from_xy.html), and set these Points as the `geometry` column.
 
 ```python
 gdf = geopandas.GeoDataFrame(
@@ -104,7 +104,7 @@ gdf = geopandas.GeoDataFrame(
 )
 ```
 
-Optionally, you can set a background to the plot or just leave it blank. In this example, we will use a map of South America from the geopandas dataset as the background of the plot.
+Optionally, you can set a background for the plot. In this example, we will use a map of South America from the geopandas dataset as the background of the plot.
 
 ```python
 path_to_data = geopandas.datasets.get_path("naturalearth_lowres")
@@ -114,7 +114,7 @@ ax = world[world.continent == 'South America'].plot(color='white', edgecolor='bl
 
 ### Exporting the map
 
-Finally, to export the `GeoDataFrame` as a Matplotlib plot, uses the `.plot()` function, then call `plt_show()` to convert the Matplotlib figure into an image that can be displayed on the web.
+Finally, to export the `GeoDataFrame` as a Matplotlib plot, use the [`.plot()`](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.plot.html) function, and then call `plt_show()` to convert the Matplotlib figure into an image that can be displayed on the webpage.
 
 ```python
 m = gdf.plot(ax=ax, color="red")

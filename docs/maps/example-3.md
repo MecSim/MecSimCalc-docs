@@ -5,11 +5,11 @@ sidebar_position: 4
 
 # Example 3: Folium
 
-This example provides a quick overview on how to create a Folium map with some simple.
+This example provides a quick overview on how to create a [Folium](https://python-visualization.github.io/folium/modules.html) map with some simple shapes.
 
 <div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/2028570/map_drawing_shapes" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
-To start, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **Maps**, and select **Drawing shapes**.
+To get started, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **Maps**, and select **Drawing shapes**.
 
 ## Step 1: Inputs
 
@@ -33,12 +33,12 @@ and create a **Color Picker** with the following properties:
 
 ### Creating a map
 
-Start by creating a Folium map `m` that has the following attributes:
+Start by creating a Folium map instance, `m` that has the following attributes:
 
-- `location`: the initial center of the map iin latitude and longitude.
+- `location`: the initial center of the map in latitude and longitude.
 - `zoom_start`: the initial zoom level.
 - `tiles`: map tiles.
-  - Map tiles are the type of map to use, such as satellite vs. road.
+  - Map tiles specify the type of map to use, such as satellite vs. road.
   - `"OpenStreetMap"` is the standard tile used to see roads.
   - See possible map tiles [here](https://python-visualization.github.io/folium/modules.html).
 
@@ -49,14 +49,14 @@ m = folium.Map(location=[45.372, -121.6972],
 
 ### Adding shapes
 
-To add shapes to your map, create the shape and then use `.add_to(m)` to add it to your map.
+To add shapes to your map, first create the shape and then use `.add_to(m)` to add it to your map.
 
-Add two [`Marker`](https://python-visualization.github.io/folium/modules.html#folium.map.Marker) to your map.
+Add two [`Markers`](https://python-visualization.github.io/folium/modules.html#folium.map.Marker) to your map:
 
 - `location` is the marker position in latitude and longitude.
 - `popup` shows up when you click on the marker. You can use HTML in the string.
-- `tooltip` shows up when the user hovers over the marker.
-- `icon` is the icon of the marker.
+- `tooltip` shows up when you hover over the marker.
+- `icon` is the optional icon for the marker.
 
 ```python
 folium.Marker(
@@ -71,11 +71,11 @@ folium.Marker(  # Marker with icon
 ).add_to(m)
 ```
 
-Add a [`PolyLine](https://python-visualization.github.io/folium/modules.html#folium.vector_layers.PolyLine) to your map.
+Add a [`PolyLine`](https://python-visualization.github.io/folium/modules.html#folium.vector_layers.PolyLine) to your map:
 
 - `locations` is the list of points that when connected makes up the line.
 - `color` is the color of the line as a hex color code.
-- `tooltip` shows up when the user hovers over the PolyLine.
+- `tooltip` shows up when you hover over the PolyLine.
 - `weight` is the line thickness.
 - `opacity` is the transparency of the line.
 
@@ -91,11 +91,11 @@ folium.PolyLine(locations=lat_lng_points,
                 ).add_to(m)
 ```
 
-Add a [`Circle](https://python-visualization.github.io/folium/modules.html#folium.vector_layers.Circle) to your map.
+Add a [`Circle`](https://python-visualization.github.io/folium/modules.html#folium.vector_layers.Circle) to your map:
 
 - `radius` is the radius of the circle.
 - `location` is the center of the circle in latitude and longitude.
-- `tooltip` shows up when the user hovers over the Circle.
+- `tooltip` shows up when you hover over the Circle.
 - `popup` shows up when you click on the circle. You can use HTML in the string.
 - `color` is the color of the circle as a hex color code.
 
@@ -112,7 +112,7 @@ folium.Circle(
 
 ### Exporting the map
 
-Finally to export the map, simply use `._repr_html_()` to convert the Folium map object into HTML that can be displayed in the output.
+Finally to export the map, simply use `._repr_html_()` to convert the Folium map object into HTML that can be displayed in the output step.
 
 ```python
 map_html = m._repr_html_()

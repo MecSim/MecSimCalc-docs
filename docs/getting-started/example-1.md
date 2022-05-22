@@ -11,7 +11,7 @@ This tutorial provides instructions to create this [web-based](https://www.mecsi
 <iframe src='https://mecsimcalc.com/app/4022206/distance_converter' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="500" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
 
-To start, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **The Basics**, and select **Create a new blank app**.
+To get started, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **The Basics**, and select **Create a new blank app**.
 
 ## Step 1: Info
 
