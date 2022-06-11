@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[8069],{4106:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/calculators","name":"Calculators","count":1,"permalink":"/blog/tags/calculators"}')}}]);
