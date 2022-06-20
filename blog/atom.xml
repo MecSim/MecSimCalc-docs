@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.mecsimcalc.com/blog</id>
     <title>MecSimCalc Docs Blog</title>
-    <updated>2022-06-10T00:00:00.000Z</updated>
+    <updated>2022-06-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.mecsimcalc.com/blog"/>
     <subtitle>MecSimCalc Docs Blog</subtitle>
     <icon>https://docs.mecsimcalc.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Pharmacy Tools]]></title>
+        <id>pharmacy-tools-2022</id>
+        <link href="https://docs.mecsimcalc.com/blog/pharmacy-tools-2022"/>
+        <updated>2022-06-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[At MecSimCalc, our hope is to bring industries still using spreadsheets and PDFs online. With MecSimCalc, it is now possible to share tools easier and run calculations faster than ever before.]]></summary>
+        <content type="html"><![CDATA[<p>At MecSimCalc, our hope is to bring industries still using spreadsheets and PDFs online. With MecSimCalc, it is now possible to share tools easier and run calculations faster than ever before.</p><p>This blog post is dedicated to Pharmacy tools that we have converted from PDF files into interactive online tools.</p><table><thead><tr><th>Tool</th><th>Source</th></tr></thead><tbody><tr><td><a href="https://mecsimcalc.com/app/0233855/diabetes_risk">Diabetes Risk</a></td><td><a href="https://health.canada.ca/apps/canrisk-standalone/pdf/canrisk-en.pdf">Health Canada</a></td></tr><tr><td><a href="https://mecsimcalc.com/app/8086574/body_surface_area_bsa">Body Surface Area (BSA)</a></td><td><a href="https://www.pharmacists.ca/cpha-ca/assets/File/education-practice-resources/CalcAndDosing_EN_26Feb08.pdf">Pharmacists.ca</a></td></tr><tr><td><a href="https://mecsimcalc.com/app/5081549/body_surface_area_in_infants_children_or_adults">Body Surface Area in Infants, Children or Adults</a></td><td><a href="https://www.pharmacists.ca/cpha-ca/assets/File/education-practice-resources/CalcAndDosing_EN_26Feb08.pdf">Pharmacists.ca</a></td></tr><tr><td><a href="https://mecsimcalc.com/app/5519816/ideal_body_weight_ibw">Ideal Body Weight (IBW)</a></td><td><a href="https://www.pharmacists.ca/cpha-ca/assets/File/education-practice-resources/CalcAndDosing_EN_26Feb08.pdf">Pharmacists.ca</a></td></tr><tr><td><a href="https://mecsimcalc.com/app/7850429/adjusted_body_weight_abw">Adjusted Body Weight (ABW)</a></td><td><a href="https://www.pharmacists.ca/cpha-ca/assets/File/education-practice-resources/CalcAndDosing_EN_26Feb08.pdf">Pharmacists.ca</a></td></tr><tr><td><a href="https://mecsimcalc.com/app/8292339/creatinine_clearance_cl_cr">Creatinine Clearance (ClCr)</a></td><td><a href="https://www.pharmacists.ca/cpha-ca/assets/File/education-practice-resources/CalcAndDosing_EN_26Feb08.pdf">Pharmacists.ca</a></td></tr><tr><td><a href="https://mecsimcalc.com/app/9081445/framingham_risk_score_frs">Framingham Risk Score (FRS)</a></td><td><a href="https://ccs.ca/app/uploads/2020/12/FRS_eng_2017_fnl_greyscale.pdf">Canadian Cardiovascular Society</a></td></tr><tr><td><a href="https://mecsimcalc.com/app/0114458/ukpds_cardiac_risk_calculator">UKPDS Cardiac Risk Calculator</a></td><td><a href="https://www.mdapp.co/ukpds-cardiac-risk-calculator-215/">MDApp</a></td></tr></tbody></table>]]></content>
+        <author>
+            <name>Weichen Qiu</name>
+            <uri>https://github.com/w3ichen</uri>
+        </author>
+        <author>
+            <name>Samer Adeeb</name>
+            <uri>https://sameradeeb.srv.ualberta.ca/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSA S16-19 CivE Calculators]]></title>
         <id>csa-calculators-2022</id>
