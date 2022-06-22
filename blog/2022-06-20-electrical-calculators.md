@@ -1,6 +1,6 @@
 ---
 slug: electrical-calculators-2022
-title: Electrical Engineering Calculators
+title: Circuit Analysis Calculators
 authors: [dtrinh]
 tags: [Calculators, Electrical Engineering, Engineering]
 ---
