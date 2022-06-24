@@ -122,6 +122,20 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Terms of Service',
+                href: "https://mecsimcalc.com/legal/terms-of-service"
+              },
+              {
+                label: 'Privacy Policy',
+                href: "https://mecsimcalc.com/legal/privacy-policy"
+              },
+           
+            ],
+          },
         ],
         copyright: `Copyright © MecSimCalc ${new Date().getFullYear()}`,
       },
