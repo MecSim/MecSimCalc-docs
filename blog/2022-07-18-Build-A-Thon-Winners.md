@@ -17,8 +17,25 @@ MecSimCalc had it's first ever hackathon in July. This competition sponsored by 
 [2D Heat Equation Visualizer](https://mecsimcalc.com/app/5317027/2_d_heat_equation_visualizer) | Jasper Eitzen | Innovative use of MecSimCalc | $100 CAD |
 [LymeML](https://mecsimcalc.com/app/4663263/lyme_ml) | Soham Jain | Innovative use of MecSimCalc | $100 CAD |
 
-## **LymeML**
+___________________________________________________________________________________________________________
+## **[Grids for artists](https://mecsimcalc.com/app/5416553/grids_for_artists)**
+___________________________________________________________________________________________________________
+### ___Biography___
 
+I am Camilo Andrés Rojas Hernández, mathematics student at the Universidad Nacional de Colombia Medellin, since about 6 years ago I have learned on my own the development in python, its libraries and frameworks, something that identifies me is self-taught learning because over the years I have developed both soft skills and technical skills in the language, I am very motivated by programming and learning things every day.
+
+### ___About Grids for artists___
+
+I made this application because since my sister studies plastic arts, sometimes she has problems when it comes to making guide grids for her canvases, so I wanted to satisfy that need she had using python and the MecSimCalc tool, it is very easy to use, plus it has the main libraries, such as machine learning and image processing, in this case with Pillow, the input and output of data is very comfortable, anyone can share and create applications in record time. Awesome!
+
+___________________________________________________________________________________________________________
+## **[2D Heat Equation Visualizer](https://mecsimcalc.com/app/5317027/2_d_heat_equation_visualizer)**
+___________________________________________________________________________________________________________
+
+My name is Jasper Eitzen, I’m currently a graduate student at the University of Alberta, pursuing a Master of Science in Mechanical Engineering. The work I do for my thesis mostly consists of lab experiments, although I do have experience using Python to analyse experimental data as well as some programming experience from my undergrad and graduate studies. I came up with the idea for 2D Heat Equation Visualizer from having written some simple numerical solvers in the past and seeing that MecSimCalc could provide a convenient way to get inputs from the user. I thought that the results of such an app could look quite interesting since I’ve done similar projects in the past, and I always found it cool to set up an initial condition and see how it evolves over time based on math and physics. With contour plots as outputs, users can play around with the app’s inputs to try and get unique results. I needed quite a few inputs and the input page on MecSimCalc was very useful in letting me lay them all out and provide explanations so that the user could pick values that provide good results. As someone with no experience in web development, I wouldn’t have been able to make something like this app without the interface that MecSimCalc provided.
+___________________________________________________________________________________________________________
+## **[LymeML](https://mecsimcalc.com/app/4663263/lyme_ml)**
+___________________________________________________________________________________________________________
 ### ___Biography___
 
 Soham Jain is currently a sophomore with a passion for machine learning at Thomas Jefferson High School for Science and Technology, a prestigious high school that is ranked #1 in the United States. He works as a Machine Learning Engineer for a local start-up company called Vytal, where he assists in creating novel ML algorithms for fast and comprehensive neurologic and cardiac assessment through smartphone-based applications. In the past, he has worked closely with machine learning models using classification techniques to diagnose medical conditions, such as Malaria and Lyme disease. He has also won several awards from hackathons in the past through developing contemporary algorithms and deploying applications to assist with effective clinical diagnoses. As a technology specialist on the executive committee for his school's Student Government Association, Soham has used his experience in computer science to assist the student body with leading events and initiatives. Soham is also passionate about competition math, as he has competed in numerous national-level contests such as AIME, AMC 10, and MathCounts. Outside of school, Soham likes to tutor other students, play the piano, spend time with friends, and listen to music.
