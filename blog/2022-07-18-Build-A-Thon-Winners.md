@@ -18,6 +18,29 @@ MecSimCalc had it's first ever hackathon in July. This competition sponsored by 
 [LymeML](https://mecsimcalc.com/app/4663263/lyme_ml) | Soham Jain | Innovative use of MecSimCalc | $100 CAD |
 
 ___________________________________________________________________________________________________________
+## **[Javelin Power Saver](https://mecsimcalc.com/app/1569496/javelin_power_saver_cuts_your_electricity_bill_smartly)**
+___________________________________________________________________________________________________________
+### ___Biography___
+
+I am Chetan Tyagi, who will be joining University of Alberta for the undergraduate in Computing Science this fall, and is very keen to learn new things about the subject and keep up to date with the latest technologies.
+
+### ___About Javelin Power Saver___
+
+My app is called "Javelin Power Saver". As the name suggests, this application aims to conserve your energy, and therefore cut your bill. With the help of this easy-to-use app, you will be able to
+-calculate the power your appliances uses per month -the total money you spend on them in a month 
+-compare yourself with the electricity bill of an average citizen 
+-compare your appliances with popular products in the same range
+
+### ___Why I made this app___
+
+As per a report by World Economic Forum, the end use efficiency of electricity in residential environment in USA is a mere 65%, signifying the level of wastage of energy. The waste of electricity ends up in increasing the costs for the user, while also making a carbon footprint on the environment. The application will focus on conserving electricity. The target users of this application will be all the people who use electricity in their homes.
+
+A big proportion of people in both urban and rural areas use electrical appliances and pay the electricity bill. It is common to look at the bill and thinking how the cost can be reduced. But as there is no way of accurately understanding how, we guess on different appliances, which makes the process harder. This application solves this. Also, before getting a new electrical appliance, we will be able to estimate the total power consumption, estimate total costs, compare with average households, and recommend how the user can make the combination of electrical appliances more efficient.
+
+### ___My experience with MecSimCalc___
+
+Compared from my previous experiences of creating web-apps, making apps here is much easier than anywhere else I have seen on the internet. It is completely free, encouraging both beginners and professionals to create apps without any hindrance. Overall, this is a great website to work on and I will recommend it to everyone interested in creating apps using Python.
+___________________________________________________________________________________________________________
 ## **[Grids for artists](https://mecsimcalc.com/app/5416553/grids_for_artists)**
 ___________________________________________________________________________________________________________
 ### ___Biography___
