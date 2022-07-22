@@ -18,6 +18,12 @@ MecSimCalc had it's first ever hackathon in July. This competition sponsored by 
 [LymeML](https://mecsimcalc.com/app/4663263/lyme_ml) | Soham Jain | Innovative use of MecSimCalc | $100 CAD |
 
 ___________________________________________________________________________________________________________
+## **[iMedic](https://mecsimcalc.com/app/6179554/%F0%9D%90%A2_%F0%9D%90%8C_%F0%9D%90%9E_%F0%9D%90%9D_%F0%9D%90%A2_%F0%9D%90%9C_high_tech_accessible_care_%F0%9D%90%85_%F0%9D%90%A8_%F0%9D%90%AB_%F0%9D%90%80_%F0%9D%90%A5_%F0%9D%90%A5)**
+___________________________________________________________________________________________________________
+### ___About iMedic___
+
+From the detection of infectious, cancerous, and cardiovascular diseases using a variety of means; to academic tools such as 3D computations of Chaos Theory, iMedic is a multipurpose platform that uses ML, AI, libraries, and big data. As an app created for Third World countries & rural areas, it is for individuals who do not have access to medical support nor fast and efficient examination. iMedic is designed to be used frequently to evaluate one's risks for the most common medical conditions, and to provide users with knowledge of their current health. In addition, iMedic includes cutting-edge tools for research. By including a chaos calculator—that computes & graphs chaotic systems such as the Lorenz Attractor & Logistic Map with yielded data via input—iMedic has many applications to fields extending far beyond medicine, such as data science, math, and CS as well.
+___________________________________________________________________________________________________________
 ## **[Javelin Power Saver](https://mecsimcalc.com/app/1569496/javelin_power_saver_cuts_your_electricity_bill_smartly)**
 ___________________________________________________________________________________________________________
 ### ___Biography___
