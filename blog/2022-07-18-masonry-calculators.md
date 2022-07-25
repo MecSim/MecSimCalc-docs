@@ -14,6 +14,7 @@ tags: [Calculators, Civil Engineering, Engineering]
 ### Authors
 
 **Dr. Mark D. Hagel** is the Executive Director of Alberta Masonry Council and has kindly made his masonry calculators available on MecSimCalc.
+Mark holds a Bachelor of Science in Actuarial Science and Applied Mathematics, a Bachelor of Science in Civil Engineering, and a Doctor of Philosophy in Civil Engineering all from the University of Calgary. Mark’s fields of expertise include thermal and hygrothermal modeling of building systems, corrosion modeling, Life Cycle Cost Analysis, structural analysis and design, and the durability of building components. In 2018 Mark served on the National Research Council of Canada’s (NRC) working group that developed the Guideline on Design for Durability of the Building Envelope.
 
 **John Yu** is a university researcher who converted Dr. Hagel's excel files into MecSimCalc apps.
 
