@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[3130],{2476:a=>{a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/hackathon","name":"hackathon","count":1,"permalink":"/blog/tags/hackathon"}')}}]);
