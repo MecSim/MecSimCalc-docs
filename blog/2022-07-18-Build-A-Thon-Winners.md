@@ -20,6 +20,14 @@ MecSimCalc had it's first ever hackathon in July. This competition sponsored by 
 ___________________________________________________________________________________________________________
 ## **[iMedic](https://mecsimcalc.com/app/6179554/%F0%9D%90%A2_%F0%9D%90%8C_%F0%9D%90%9E_%F0%9D%90%9D_%F0%9D%90%A2_%F0%9D%90%9C_high_tech_accessible_care_%F0%9D%90%85_%F0%9D%90%A8_%F0%9D%90%AB_%F0%9D%90%80_%F0%9D%90%A5_%F0%9D%90%A5)**
 ___________________________________________________________________________________________________________
+### ___Bio: Dorsa Rohani___
+
+Dorsa Rohani is a current high school student at Pierre Elliott Trudeau High School in Ontario, Canada. From electrical and computer engineering to healthcare and medicine, Dorsa is passionate about the intersection between technology and healthcare. In creating iMedic, Dorsa aimed to define the patient experience, and to address the ongoing predicament surrounding the chronic lack of access to efficient and accurate medical diagnosis. Indeed, across the continuum of care, the execution of ethical medical examination is of high precedence. In her spare time, she enjoys challenging herself, as well as performing the cello with her local string orchestra. 
+
+### ___Bio: Vidheet Mehta___
+
+Videet Mehta is a rising Junior at Dulles High School in Sugar Land Texas. He is passionate about both medicine and technology. For the last four years, he has built robots that have been placed at the top of the First Tech Challenge state and world championships. He also does competitive programming and is currently in the silver division of the USACO competition. He learned python and ML just over a year ago. And since then, he has created many medically related machine learning projects. Additionally, he is the co-founder of two ed-tech companies: Project SUCCEED ([projectsucceed.org](https://projectsucceed.org/)) and Xceleration ([xceleration.org](https://xceleration.org/dl/welcome)). 
+
 ### ___Bio: Zarik Khan___
 
 Hi, I'm Zarik Khan and I'm a rising junior at Dulles High School. I'm passionate about machine learning, bioinformatics, web development, biomedical engineering, and app development. I worked with Videet and Dorsa to create iMedic to contribute to the distribution of medical technology in areas around the world that lack accessible access. Our project was made to detect some of the fatal causes of death in these areas to provide people a way to monitor their health and take necessary action quickly. MecsimCalc allowed us to integrate our python code into an easy, aesthetic, and secure front-end system. We hope to innovate on our current project by improving the accuracy of our calculations, expanding our app's reach, and developing new features. 
