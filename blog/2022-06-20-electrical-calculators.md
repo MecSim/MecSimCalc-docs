@@ -20,8 +20,8 @@ This blog post is dedicated to circuit analysis calculators created for MecSimCa
 <div id='discourse-comments'></div>
 
 <script type="text/javascript">
-  DiscourseEmbed = { discourseUrl: 'https://community.mecsimcalc.com/',
-                     discourseEmbedUrl: 'https://docs.mecsimcalc.com/blog/electrical-calculators-2022' };
+  DiscourseEmbed = { 'discourseUrl': 'https://community.mecsimcalc.com/',
+                     'discourseEmbedUrl': 'https://docs.mecsimcalc.com/blog/electrical-calculators-2022' };
 
   (function() {
     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
