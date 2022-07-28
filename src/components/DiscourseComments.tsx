@@ -1,27 +1,24 @@
-import Head from "@docusaurus/Head";
-import React from "react";
+import React, { useEffect } from "react";
 
 /**
  * https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963
  */
 export default function DiscourseComments() {
-  if (typeof window == "undefined") return null;
+  useEffect(() => {
+    (window as any).DiscourseEmbed = {
+      discourseUrl: "https://community.mecsimcalc.com/",
+      discourseEmbedUrl: window.location.href,
+    };
+    var d = document.createElement("script");
+    d.type = "text/javascript";
+    d.async = true;
+    d.src =
+      (window as any).DiscourseEmbed.discourseUrl + "javascripts/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(d);
+  }, []);
 
-  (window as any).DiscourseEmbed = {
-    discourseUrl: "https://community.mecsimcalc.com/",
-    discourseEmbedUrl: `${window.location.origin}<%= current_page.url %>`,
-  };
-  return (
-    <div id="discourse-comments" style={{ marginTop: "50px" }}>
-      <Head>
-        <script
-          type="text/javascript"
-          src={`${
-            (window as any).DiscourseEmbed.discourseUrl
-          }javascripts/embed.js`}
-          async
-        />
-      </Head>
-    </div>
-  );
+  return <div id="discourse-comments" style={{ marginTop: "50px" }} />;
 }
