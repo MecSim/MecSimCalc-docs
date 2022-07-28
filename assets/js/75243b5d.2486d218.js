@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[2545],{3882:a=>{a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/pharmacy","name":"Pharmacy","count":1,"permalink":"/blog/tags/pharmacy"}')}}]);
