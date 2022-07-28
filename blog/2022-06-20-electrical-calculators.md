@@ -16,16 +16,3 @@ This blog post is dedicated to circuit analysis calculators created for MecSimCa
 | [Op-Amp Gain and Output Voltage Calculator](https://mecsimcalc.com/app/8349728/op_amp_gain_and_output_voltage_calculator) | Operational amplifiers are an active circuit component commonly used in various circuits. This app uses an op-amp in two common configurations, an inverting and non-inverting amplifier. The user selects which configuration they are using, the value of the input resistor (Ω, kΩ, MΩ), the feedback resistor (Ω, kΩ, MΩ) and the input voltage (V). Depending on the circuit chosen, a gain and the corresponding output voltage is calculated and displayed as well as an image of the circuit schematic. |
 | [Parallel Resistance Calculator](https://mecsimcalc.com/app/8934998/parallel_resistance_calculator)                       | This app calculates the equivalent resistance of a circuit containing resistors in parallel. The user inputs up to 8 resistors (Ω) and using the parallel resistance equation, an equivalent resistance for the circuit is returned.                                                                                                                                                                                                                                                                            |
 | [Resistor Color Code Calculator (4 Band)](https://mecsimcalc.com/app/7370385/resistor_color_code_calculator)              | This app decodes the value of a 4 band axial lead resistor. The user selects 4 colors (left to right), and the corresponding resistance value and tolerance is given.                                                                                                                                                                                                                                                                                                                                           |
-
-<div id='discourse-comments'></div>
-
-<script type="text/javascript">
-  DiscourseEmbed = { 'discourseUrl': 'https://community.mecsimcalc.com/',
-                     'discourseEmbedUrl': 'https://docs.mecsimcalc.com/blog/electrical-calculators-2022' };
-
-  (function() {
-    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  })();
-</script>
