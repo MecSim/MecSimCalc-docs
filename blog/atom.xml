@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.mecsimcalc.com/blog</id>
     <title>MecSimCalc Docs Blog</title>
-    <updated>2022-07-18T00:00:00.000Z</updated>
+    <updated>2022-08-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.mecsimcalc.com/blog"/>
     <subtitle>MecSimCalc Docs Blog</subtitle>
     <icon>https://docs.mecsimcalc.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Useful Webtools]]></title>
+        <id>websiteplanet-2022</id>
+        <link href="https://docs.mecsimcalc.com/blog/websiteplanet-2022"/>
+        <updated>2022-08-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This blogpost is dedicated to webtools developed by WebsitePlanet. You can visit all of their webtools at WebsitePlanet.]]></summary>
+        <content type="html"><![CDATA[<p>This blogpost is dedicated to webtools developed by WebsitePlanet. You can visit all of their webtools at <a href="https://www.websiteplanet.com/webtools/" target="_blank" rel="noopener noreferrer">WebsitePlanet</a>.</p><table><thead><tr><th>App</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://www.websiteplanet.com/webtools/jscssminifier/" target="_blank" rel="noopener noreferrer">JS and CSS Minifier</a></td><td>This tool makes your website run faster and take up less data by "minifying" the JavaScript and CSS code.</td></tr><tr><td><a href="https://www.websiteplanet.com/webtools/unminify-js/" target="_blank" rel="noopener noreferrer">JS and CSS Unminifier</a></td><td>This tool unminifies JavaScript and CSS code to be more readable for users.</td></tr><tr><td><a href="https://www.websiteplanet.com/webtools/imagecompressor/" target="_blank" rel="noopener noreferrer">Image Compressor</a></td><td>This tool compresses PNG/JPG images to up to 80% of it's original size, lowering it's data size.</td></tr><tr><td><a href="https://www.websiteplanet.com/webtools/free-qr-code-generator/" target="_blank" rel="noopener noreferrer">QR Code Generator</a></td><td>This tool creates a custom, high-resolution QR code that directs users to websites, emails, social media sites and more.</td></tr><tr><td><a href="https://www.websiteplanet.com/webtools/favicon-generator/" target="_blank" rel="noopener noreferrer">Favicon Generator</a></td><td>This tool automatically resizes an image to a favicon in PNG format.</td></tr></tbody></table>]]></content>
+        <author>
+            <name>Daren Trinh</name>
+            <uri>https://www.linkedin.com/in/daren-trinh-3816b0187/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[MecSimCalc Build-A-Thon (July 9th - July 16th, 2022) Winners]]></title>
         <id>Comp07092022-Winners</id>
