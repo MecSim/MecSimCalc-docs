@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 Dorsa Rohani is a current high school student at Pierre Elliott Trudeau High School in Ontario, Canada. From electrical and computer engineering to healthcare and medicine, Dorsa is passionate about the intersection between technology and healthcare. In creating iMedic, Dorsa aimed to define the patient experience, and to address the ongoing predicament surrounding the chronic lack of access to efficient and accurate medical diagnosis. Indeed, across the continuum of care, the execution of ethical medical examination is of high precedence. In her spare time, she enjoys challenging herself, as well as performing the cello with her local string orchestra. 
 
-### ___Bio: Vidheet Mehta___
+### ___Bio: Videet Mehta___
 
 Videet Mehta is a rising Junior at Dulles High School in Sugar Land Texas. He is passionate about both medicine and technology. For the last four years, he has built robots that have been placed at the top of the First Tech Challenge state and world championships. He also does competitive programming and is currently in the silver division of the USACO competition. He learned python and ML just over a year ago. And since then, he has created many medically related machine learning projects. Additionally, he is the co-founder of two ed-tech companies: Project SUCCEED ([projectsucceed.org](https://projectsucceed.org/)) and Xceleration ([xceleration.org](https://xceleration.org/dl/welcome)). 
 
