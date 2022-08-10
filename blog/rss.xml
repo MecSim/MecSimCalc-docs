@@ -4,10 +4,20 @@
         <title>MecSimCalc Docs Blog</title>
         <link>https://docs.mecsimcalc.com/blog</link>
         <description>MecSimCalc Docs Blog</description>
-        <lastBuildDate>Fri, 05 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 10 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Vivid Hacks v1.5 MecSimCalc Workshop]]></title>
+            <link>https://docs.mecsimcalc.com/blog/Vivid-Hacks-1.5-MecSimCalc-Workshop</link>
+            <guid>Vivid-Hacks-1.5-MecSimCalc-Workshop</guid>
+            <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[This blog post is dedicated to the MecSimCalc Workshop for the Vivid Hacks v1.5 Hackathon on August 6th, 2022. For more info on Vivid Hacks visit Vivid Hacks and to see the project gallery for the hackathon visit their DevPost.]]></description>
+            <content:encoded><![CDATA[<p>This blog post is dedicated to the MecSimCalc Workshop for the Vivid Hacks v1.5 Hackathon on August 6th, 2022. For more info on Vivid Hacks visit <a href="https://www.vividhacks.tech/" target="_blank" rel="noopener noreferrer">Vivid Hacks</a> and to see the project gallery for the hackathon visit their <a href="https://vividhacks-1-5.devpost.com/" target="_blank" rel="noopener noreferrer">DevPost</a>.</p><p>This is a recording of the workshop detailing how to use MecSimCalc. In this workshop, I create a simple app that returns the product of two variables and prints a message in the output specified by the user. The entire process for making an app on MecSimCalc from start to publishing is shown and takes around 10 mintues. Make sure to visit the <a href="https://www.youtube.com/channel/UCh9c4pzjNCNsHMJyv8uYczw/featured" target="_blank" rel="noopener noreferrer">MecSimCalc YouTube Channel</a> and subscribe.</p><iframe width="560" height="315" src="https://www.youtube.com/embed/EvyC54PfJO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+            <category>MecSimCalc</category>
+            <category>hackathon</category>
+        </item>
         <item>
             <title><![CDATA[Johns Apps]]></title>
             <link>https://docs.mecsimcalc.com/blog/Johns-apps</link>

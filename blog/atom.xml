@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.mecsimcalc.com/blog</id>
     <title>MecSimCalc Docs Blog</title>
-    <updated>2022-08-05T00:00:00.000Z</updated>
+    <updated>2022-08-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.mecsimcalc.com/blog"/>
     <subtitle>MecSimCalc Docs Blog</subtitle>
     <icon>https://docs.mecsimcalc.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Vivid Hacks v1.5 MecSimCalc Workshop]]></title>
+        <id>Vivid-Hacks-1.5-MecSimCalc-Workshop</id>
+        <link href="https://docs.mecsimcalc.com/blog/Vivid-Hacks-1.5-MecSimCalc-Workshop"/>
+        <updated>2022-08-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This blog post is dedicated to the MecSimCalc Workshop for the Vivid Hacks v1.5 Hackathon on August 6th, 2022. For more info on Vivid Hacks visit Vivid Hacks and to see the project gallery for the hackathon visit their DevPost.]]></summary>
+        <content type="html"><![CDATA[<p>This blog post is dedicated to the MecSimCalc Workshop for the Vivid Hacks v1.5 Hackathon on August 6th, 2022. For more info on Vivid Hacks visit <a href="https://www.vividhacks.tech/" target="_blank" rel="noopener noreferrer">Vivid Hacks</a> and to see the project gallery for the hackathon visit their <a href="https://vividhacks-1-5.devpost.com/" target="_blank" rel="noopener noreferrer">DevPost</a>.</p><p>This is a recording of the workshop detailing how to use MecSimCalc. In this workshop, I create a simple app that returns the product of two variables and prints a message in the output specified by the user. The entire process for making an app on MecSimCalc from start to publishing is shown and takes around 10 mintues. Make sure to visit the <a href="https://www.youtube.com/channel/UCh9c4pzjNCNsHMJyv8uYczw/featured" target="_blank" rel="noopener noreferrer">MecSimCalc YouTube Channel</a> and subscribe.</p><iframe width="560" height="315" src="https://www.youtube.com/embed/EvyC54PfJO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
+        <author>
+            <name>Daren Trinh</name>
+            <uri>https://www.linkedin.com/in/daren-trinh-3816b0187/</uri>
+        </author>
+        <category label="MecSimCalc" term="MecSimCalc"/>
+        <category label="hackathon" term="hackathon"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Johns Apps]]></title>
         <id>Johns-apps</id>
