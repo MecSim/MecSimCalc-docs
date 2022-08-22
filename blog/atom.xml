@@ -2,11 +2,45 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.mecsimcalc.com/blog</id>
     <title>MecSimCalc Docs Blog</title>
-    <updated>2022-08-10T00:00:00.000Z</updated>
+    <updated>2022-08-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.mecsimcalc.com/blog"/>
     <subtitle>MecSimCalc Docs Blog</subtitle>
     <icon>https://docs.mecsimcalc.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Johns Yu's Apps 2]]></title>
+        <id>JohnYu-apps2</id>
+        <link href="https://docs.mecsimcalc.com/blog/JohnYu-apps2"/>
+        <updated>2022-08-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The following blogposts were written by John Yu for apps he had created on MecSimCalc. John Yu was a student researcher working with MecSimCalc for 8 months. We will miss you John!]]></summary>
+        <content type="html"><![CDATA[<p>The following blogposts were written by John Yu for apps he had created on MecSimCalc. John Yu was a student researcher working with MecSimCalc for 8 months. We will miss you John!</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="algebraic-operation-on-complex-numbers"><strong>Algebraic Operation on Complex Numbers</strong><a class="hash-link" href="#algebraic-operation-on-complex-numbers" title="Direct link to heading">​</a></h2><p>This blog post is dedicated to the <a href="https://mecsimcalc.com/app/3941579/algebraic_operations_on_complex_numbers" target="_blank" rel="noopener noreferrer">Algebraic Operation on Complex Numbers</a> app created by John Yu.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="about-the-app"><strong><em>About the app</em></strong><a class="hash-link" href="#about-the-app" title="Direct link to heading">​</a></h3><p>The Algebraic Operation on Complex Numbers app is intended for students taking a linear
+algebra course. This app helps students better grasp how operations are performed with
+complex numbers. The app lets you perform 4 types of operations: addition, subtraction,
+multiplication, and division. Addition and subtraction using complex numbers is best performed
+using vectors and the app walks users through the steps using visual aids. Multiplication and
+division using complex numbers is best performed using euler form and the app provides
+excellent visual aids to assist students in learning the step-by-step process. Learning how to
+perform operations on complex numbers is very important for any engineering student.
+Complex numbers have many practical applications particularly in electrical and computer
+engineering where these skills will be invaluable. Students who use this app will find themselves
+better prepared for their future engineering courses.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="understanding-vector-fields"><strong>Understanding Vector Fields</strong><a class="hash-link" href="#understanding-vector-fields" title="Direct link to heading">​</a></h2><p>This blog post is dedicated to the <a href="https://mecsimcalc.com/app/9890961/understanding_vector_fields" target="_blank" rel="noopener noreferrer">Understanding Vector Fields</a> app created by John Yu.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="about-the-app-1"><strong><em>About the app</em></strong><a class="hash-link" href="#about-the-app-1" title="Direct link to heading">​</a></h3><p>The Understanding Vector Fields app lets you visually generate a vector field. The app takes in
+an equation representing your vector field and plots each vector on a graph. It is useful in a
+variety of applications. Vector calculus is a very important skill and many engineering students
+take a calculus class dedicated to this subject. You can plot simple equations like the flow of a
+river with the equation . You can plot more complicated vector fields like a magnetic field using
+the equation .</p>]]></content>
+        <author>
+            <name>John Yu</name>
+        </author>
+        <author>
+            <name>Daren Trinh</name>
+            <uri>https://www.linkedin.com/in/daren-trinh-3816b0187/</uri>
+        </author>
+        <category label="MecSimCalc" term="MecSimCalc"/>
+        <category label="Engineering" term="Engineering"/>
+        <category label="Math" term="Math"/>
+        <category label="Linear Algebra" term="Linear Algebra"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Vivid Hacks v1.5 MecSimCalc Workshop]]></title>
         <id>Vivid-Hacks-1.5-MecSimCalc-Workshop</id>
@@ -22,9 +56,9 @@
         <category label="hackathon" term="hackathon"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Johns Apps]]></title>
-        <id>Johns-apps</id>
-        <link href="https://docs.mecsimcalc.com/blog/Johns-apps"/>
+        <title type="html"><![CDATA[John Yu's Apps]]></title>
+        <id>JohnYu-apps</id>
+        <link href="https://docs.mecsimcalc.com/blog/JohnYu-apps"/>
         <updated>2022-08-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The following blogposts were written by John Yu for various apps he had created on MecSimCalc.]]></summary>
         <content type="html"><![CDATA[<p>The following blogposts were written by John Yu for various apps he had created on MecSimCalc. </p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="pairwise-testing-generator"><strong>Pairwise Testing Generator</strong><a class="hash-link" href="#pairwise-testing-generator" title="Direct link to heading">​</a></h2><p>This blog post is dedicated to the <a href="https://mecsimcalc.com/app/8809236/pairwise_testing_generator" target="_blank" rel="noopener noreferrer">Pairwise Testing Generator</a> app created by John Yu.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="about-the-pairwise-testing-generator"><strong><em>About the Pairwise Testing Generator</em></strong><a class="hash-link" href="#about-the-pairwise-testing-generator" title="Direct link to heading">​</a></h3><p>The pairwise testing generator is an app that can generate a set of test cases with up to 5

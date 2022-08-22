@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[2118],{7980:a=>{a.exports=JSON.parse('{"label":"Math","permalink":"/blog/tags/math","allTagsPath":"/blog/tags","count":2}')}}]);
