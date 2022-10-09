@@ -72,6 +72,12 @@ const config = {
             target: "_self",
           },
           {
+            label: "SEARCH",
+            to: "https://mecsimcalc.com/search/",
+            position: "left",
+            target: "_self",
+          },
+          {
             label: "CREATE",
             to: "https://mecsimcalc.com/create/",
             position: "left",
