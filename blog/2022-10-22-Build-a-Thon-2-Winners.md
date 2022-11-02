@@ -7,7 +7,7 @@ tags: [MecSimCalc, Comp10082022, hackathon]
 
 # MecSimCalc Build-A-Thon (October 8th - October 15th, 2022) Winners
 
-After the success of MecSimCalc's first hackathon in July, we had decided to run a Hackathon each month starting in October. This competition sponsored by 1984 Ventures, was aimed to increase the number of users and showcase the versatility of the platform. Users would create an app on the MecSimCalc website, tag it as "Comp10082022" and publish it for a chance to win $100.  Throughout the competition there were 56 sign-ups and 16 submissions. This blog post is dedicated to the top 5 scoring apps from MecSimCalc's October 8th - October 15th, 2022 Build-A-Thon 2.0. To view all apps submitted during the competition on MecSimCalc, look for the tag "Comp10082022" on the MecSimCalc Search page.
+After the success of MecSimCalc's first hackathon in July, we had decided to run a Hackathon each month starting in October. This competition sponsored by 1984 Ventures, was aimed to increase the number of users and showcase the versatility of the platform. Users would create an app on the MecSimCalc website, tag it as "Comp10082022" and publish it for a chance to win $100.  Throughout the competition there were 56 sign-ups and 16 submissions. This blog post is dedicated to the top 5 scoring apps from MecSimCalc's October 8th - October 15th, 2022 Build-A-Thon 2.0. To view all apps submitted during the competition, visit this collection: [Build-a-Thon 2.0 Submissions](https://mecsimcalc.com/collection/ceea08c9-be23-4dfb-8b68-61f7d311d9eb).
 
 ![Hackathon 2.0 Poster](/blog/MecSimCalc_Hackathon_2.png)
 
