@@ -1,5 +1,5 @@
 ---
-slug: Comp07092022-Winners
+slug: Comp010082022-Winners
 title: MecSimCalc Build-A-Thon (October 8th - October 15th, 2022) Winners
 authors: [dtrinh]
 tags: [MecSimCalc, Comp10082022, hackathon]
