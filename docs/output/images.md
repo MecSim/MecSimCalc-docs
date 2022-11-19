@@ -1,11 +1,11 @@
 ---
-sidebar_label: "Images and Graphs"
-sidebar_position: 4
+sidebar_label: "Images"
+sidebar_position: 5
 ---
 
-# Images and Graphs
+# Images
 
-## Importing and Exporting Images
+This page will cover importing and exporting images
 
 <div style={{width: "100%", height: "550px", overflow: "hidden"}}>
 <iframe src='https://mecsimcalc.com/app/0672426/working_with_images' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="550" title="MecSimCalc" frameBorder="0"></iframe>
@@ -72,7 +72,3 @@ Displaying Image
 Downloading Image
 {{ outputs.File}}
 ```
-
-## Generating Graphs
-
-Graphs generated using the `matplotlib`Python library can be converted into an image and embedded in the output page using the `<img>` HTML tag. [Example 2](../getting-started/example-2) in the introduction section provides a detailed example that the _**developer**_ can follow.
