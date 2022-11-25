@@ -79,6 +79,6 @@ In a nutshell, Auto Base64 Decode takes a string, finds any base64-encoded porti
 Building a script or tool and easily sharing it was precisely the original use case for MecSimCalc, and I'm happy to see that come to fruition. I look forward to what comes next, and I hope the MecSimCalc team sees nothing but success!
 ___________________________________________________________________________________________________________
 
-## __We are hosting another hackathon in from November 5th - November 12th 2022, please check out the [DevPost](https://mecsimcalc-hackathon-3.devpost.com/) to find out more!__
+## __We are hosting another hackathon from November 5th - November 12th 2022, please check out the [DevPost](https://mecsimcalc-hackathon-3.devpost.com/) to find out more!__
 
 ![Hackathon 3.0 Poster](/blog/MecSimCalc_Presents_3.png)
