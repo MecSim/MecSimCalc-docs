@@ -4,18 +4,10 @@
         <title>MecSimCalc Docs Blog</title>
         <link>https://docs.mecsimcalc.com/blog</link>
         <description>MecSimCalc Docs Blog</description>
-        <lastBuildDate>Wed, 28 Dec 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Nov 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
-        <item>
-            <title><![CDATA[TEST]]></title>
-            <link>https://docs.mecsimcalc.com/blog/test</link>
-            <guid>test</guid>
-            <pubDate>Wed, 28 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[TEST discourse comments]]></description>
-            <content:encoded><![CDATA[<p>TEST discourse comments</p>]]></content:encoded>
-        </item>
         <item>
             <title><![CDATA[MecSimCalc Hackathon 3.0 (November 5th - November 12th, 2022) Winners]]></title>
             <link>https://docs.mecsimcalc.com/blog/Comp011052022-Winners</link>
