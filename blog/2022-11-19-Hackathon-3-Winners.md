@@ -20,7 +20,7 @@ Being the second competition of our monthly Fall/Winter Hackathons of 2022/2023,
 [Complex Number Solver and Grapher](https://mecsimcalc.com/app/7130470/complex_number_solver_and_grapher) | Akshay Kumar Sharma | Top 5 App |
 
 ___________________________________________________________________________________________________________
-## **[Linaer Algebra Genie (WINNER)](https://mecsimcalc.com/app/7399793/linear_algebra_genie)**
+## **[Linear Algebra Genie (WINNER)](https://mecsimcalc.com/app/7399793/linear_algebra_genie)**
 ___________________________________________________________________________________________________________
 
 ### ___About Vaibhav Thalanki___
