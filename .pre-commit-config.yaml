@@ -1,0 +1,22 @@
+# https://pre-commit.com/hooks.html
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files # prevents giant files from being committed.
+      - id: check-case-conflict # checks for files that would conflict in case-insensitive filesystems.
+      - id: check-json # checks json files for parseable syntax.
+      - id: check-yaml # checks yaml files for parseable syntax.
+      - id: check-ast # simply checks whether the files parse as valid python.
+      - id: check-merge-conflict # checks for files that contain merge conflict strings.
+      - id: detect-private-key # detects the presence of private keys.
+
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      - id: black # The uncompromising Python code formatter
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.7.1
+    hooks:
+      - id: prettier

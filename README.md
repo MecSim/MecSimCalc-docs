@@ -11,6 +11,7 @@
 1. Install [Node.JS](https://nodejs.org/en/download/)
 2. Open a terminal and install use `cd` to go to the code directory
 3. Install packages: `npm install`
+4. Setup pre-commit hooks: `pip install pre-commit && pre-commit install`
 
 ## Running local development site
 
