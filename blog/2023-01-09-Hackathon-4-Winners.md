@@ -1,5 +1,5 @@
 ---
-slug: Comp012172022-Winners
+slug: Comp12172022-Winners
 title: MecSimCalc Hackathon 4.0 (December 17th - December 24th, 2022) Winners
 authors: [dtrinh]
 tags: [MecSimCalc, Comp12172022, hackathon]
@@ -7,7 +7,7 @@ tags: [MecSimCalc, Comp12172022, hackathon]
 
 # MecSimCalc Hackathon 4.0 (December 17th - December 24th, 2022) Winners
 
-During December of 2023 MecSimCalc ran a hackathon the week before Christmas. This competition sponsored by 1984 Ventures, was aimed to increase the number of users and showcase the versatility of the platform, as well as give one lucky winner some cash for the holidays. Users created an app on the MecSimCalc website, tagged it as "Comp12172022" and published it for a chance to win $150. Throughout the competition there were 141 sign-ups and 21 submissions. This blog post is dedicated to the top 5 scoring apps from MecSimCalc's December 17th - December 24th, 2022 Hackathon 4.0. To view all apps submitted during the competition, visit this collection: [Hackathon 4.0 Submissions](https://mecsimcalc.com/collection/a8da9c90-b761-4041-9ee7-80f1a5121d3c).
+During December of 2022 MecSimCalc ran a hackathon the week before Christmas. This competition sponsored by 1984 Ventures, was aimed to increase the number of users and showcase the versatility of the platform, as well as give one lucky winner some cash for the holidays. Users created an app on the MecSimCalc website, tagged it as "Comp12172022" and published it for a chance to win $150. Throughout the competition there were 141 sign-ups and 21 submissions. This blog post is dedicated to the top 5 scoring apps from MecSimCalc's December 17th - December 24th, 2022 Hackathon 4.0. To view all apps submitted during the competition, visit this collection: [Hackathon 4.0 Submissions](https://mecsimcalc.com/collection/a8da9c90-b761-4041-9ee7-80f1a5121d3c).
 
 ![Hackathon 4.0 Poster](/blog/Hackathon_4.0.png)
 
@@ -20,7 +20,7 @@ During December of 2023 MecSimCalc ran a hackathon the week before Christmas. Th
 [Color Pallet Generatior](https://mecsimcalc.com/app/1127600/color_pallet_generator) | Kevin Ohara | Top 5 App |
 
 ___________________________________________________________________________________________________________
-## **[Financial Portal](https://mecsimcalc.com/app/9137239/financial_portal)**
+## **[Financial Portal (Grand Prize Winner)](https://mecsimcalc.com/app/9137239/financial_portal)**
 ___________________________________________________________________________________________________________
 
 ## Braxton Diaz
@@ -122,6 +122,6 @@ ________________________________________________________________________________
 ## **[Color Pallet Generator](https://mecsimcalc.com/app/1127600/color_pallet_generator)**
 ___________________________________________________________________________________________________________
 
-## __We are hosting another hackathon from January 21st - January 28th 2022. For a chance to win $100, please check out the [DevPost](https://mecsimcalc-hackathon-5.devpost.com/) to find out more!__
+## __We are hosting another hackathon from January 21st - January 28th 2023. For a chance to win $100, please check out the [DevPost](https://mecsimcalc-hackathon-5.devpost.com/) to find out more!__
 
 ![Hackathon 5.0 Poster](/blog/Hackathon_5.0.png)
