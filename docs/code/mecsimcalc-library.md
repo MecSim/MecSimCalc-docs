@@ -3,42 +3,59 @@ sidebar_label: "mecsimcalc Library"
 sidebar_position: 4
 ---
 
-# Mecsimcalc 0.0.2 documentation
+# Mecsimcalc 0.0.3 documentation
 
 This library is designed to provide a set of functions for handling and converting various types of data, such as base64 encoded data, Pandas DataFrames, and Pillow images.
 
-```python
-from PIL import Image
-import base64
-import io
-import pandas as pd
-```
+- [GitHub Repository](https://github.com/MecSimCalc/MecSimCalc-utils)
+- [PyPi Page](https://pypi.org/project/mecsimcalc/)
 
 ## General
 
-### decode_file_data
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h3 style={{ margin: 5, padding: 0 }}>decode_file_data</h3>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/MecSimCalc.py#LL8C1-L29C61" style={{ fontSize: 'larger', marginBottom: '2em', margin: 5, padding: 0 }}><strong>[Source]</strong></a>
+</div>
 
 ```python
-def decode_file_data(encoded_data, metadata)
+def decode_file_data(encoded_data, metadata = False)
 ```
 
 #### Description:
 
-Converts a base64 encoded file data into a file object. (e.g. converts data from **`file = inputs['fileInput']`** to a file object)
+Converts a base64 encoded file into a file object and metadata
 
 #### Arguments:
 
-- **`encoded_data`** (str): Base64 encoded file data
-- **`metadata`** (bool, optional): If True, returns a tuple of (fileData, metadata). Defaults to False
+| Argument           | Type                | Description                                                     |
+| ------------------ | ------------------- | --------------------------------------------------------------- |
+| **`encoded_data`** | **str**             | Base64 encoded file data                                        |
+| **`metadata`**     | **bool** (optional) | If True, function returns file and metadata (Defaults to False) |
 
 #### Returns:
 
-- **`io.BytesIO`**: fileData
-- **`(io.BytesIO, str)`**: (fileData, metadata) if metadata is True
+| Return Type             | Description                   | Condition         |
+| ----------------------- | ----------------------------- | ----------------- |
+| **`io.BytesIO`**        | The decoded file data         | metadata is False |
+| **`(io.BytesIO, str)`** | The decoded file and metadata | metadata is True  |
+
+#### Example:
+
+```python
+>>> inputFile = inputs['file']
+>>> file, metadata = decode_file_data(inputFile, metadata = True)
+>>> print(metadata)
+data:image/jpeg;base64,
+>>> print(file)
+<_io.BytesIO object at 0x0000000000000000>
+```
 
 ## Tables/DataFrames
 
-### file_data_to_dataframe
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h3 style={{ margin: 5, padding: 0 }}>file_data_to_dataframe</h3>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/MecSimCalc.py#LL32C1-L52C14" style={{ fontSize: 'larger', marginBottom: '2em', margin: 5, padding: 0 }}><strong>[Source]</strong></a>
+</div>
 
 ```python
 def file_data_to_dataframe(file_data):
@@ -50,17 +67,36 @@ Converts a file object into a pandas DataFrame
 
 #### Arguments:
 
-- **`file_data`** (io.BytesIO): Decoded file data (e.g. from **`decode_file_data`**)
+| Argument        | Type           | Description                                          |
+| --------------- | -------------- | ---------------------------------------------------- |
+| **`file_data`** | **io.BytesIO** | Decoded file data (e.g. from **`decode_file_data`**) |
 
 #### Raises:
 
-- **`pd.errors.ParserError`**: If the file data cannot be converted to a DataFrame (e.g. if the file is not an Excel or CSV file)
+| Exception                   | Description                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **`pd.errors.ParserError`** | If the file data cannot be converted to a DataFrame (i.e. file is not an Excel or CSV file or is corrupted) |
 
 #### Returns:
 
-- **`pd.DataFrame`**: The DataFrame created from the file data
+| Return Type        | Description                      |
+| ------------------ | -------------------------------- |
+| **`pd.DataFrame`** | DataFrame created from file data |
 
-### input_to_dataframe
+#### Example:
+
+```python
+>>> inputFile = inputs['file']
+>>> file, metadata = decode_file_data(inputFile, metadata = True)
+>>> df = file_data_to_dataframe(file)
+>>> print(df)
+   A  B  C
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h3 style={{ margin: 5, padding: 0 }}>input_to_dataframe</h3>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/MecSimCalc.py#LL55C1-L67C44" style={{ fontSize: 'larger', marginBottom: '2em', margin: 5, padding: 0 }}><strong>[Source]</strong></a>
+</div>
 
 ```python
 def input_to_dataframe(file):
@@ -68,17 +104,33 @@ def input_to_dataframe(file):
 
 #### Description:
 
-Converts a base64 encoded file data into a pandas DataFrame. (e.g. converts data from **`file = inputs['fileInput']`** to a DataFrame)
+Converts a base64 encoded file data into a pandas DataFrame
 
 #### Arguments:
 
-- **`file`** (str): Base64 encoded file data
+| Argument   | Type    | Description              |
+| ---------- | ------- | ------------------------ |
+| **`file`** | **str** | Base64 encoded file data |
 
 #### Returns:
 
-- **`pd.DataFrame`**: The DataFrame created from the file data
+| Return Type        | Description                      |
+| ------------------ | -------------------------------- |
+| **`pd.DataFrame`** | DataFrame created from file data |
 
-### dataframe_to_output
+#### Example:
+
+```python
+>>> inputFile = inputs['file']
+>>> df = input_to_dataframe(inputFile)
+>>> print(df)
+   A  B  C
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h3 style={{ margin: 5, padding: 0 }}>dataframe_to_output</h3>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/MecSimCalc.py#LL70C1-L95C1" style={{ fontSize: 'larger', marginBottom: '2em', margin: 5, padding: 0 }}><strong>[Source]</strong></a>
+</div>
 
 ```python
 def dataframe_to_output(
@@ -94,17 +146,74 @@ Creates an HTML table and a download link for a given DataFrame
 
 #### Arguments:
 
-- **`df`** (pd.DataFrame): The DataFrame to be converted
-- **`DownloadText`** (str, optional): The text to be displayed on the download link. Defaults to "Download File"
-- **`DownloadFileName`** (str, optional): The name of the file to be downloaded. Defaults to "myfile"
+| Argument               | Type               | Description                                                             |
+| ---------------------- | ------------------ | ----------------------------------------------------------------------- |
+| **`df`**               | **pd.DataFrame**   | DataFrame to be converted                                               |
+| **`DownloadText`**     | **str** (optional) | Text to be displayed as the download link (Defaults to "Download File") |
+| **`DownloadFileName`** | **str** (optional) | Name of file when downloaded (Defaults to "myfile")                     |
 
 #### Returns:
 
-- **`Tuple[str, str]`**: (HTML table, download link)
+| Return Type | Description |
+|**`Tuple[str, str]`**| (HTML table, download link)|
+
+#### Example:
+
+#### Python Code:
+
+```python
+>>> inputFile = inputs['file']
+>>> df = input_to_dataframe(inputFile)
+>>> table, download = dataframe_to_output(df, DownloadFileName = "mytable", DownloadText = "Download Table")
+>>> return {
+        "table":table,
+        "download"download,
+    }
+```
+
+#### Output using Jinja2 Template:
+
+```python
+# outputs.table is the HTML table
+Displaying Table
+{{ outputs.table }}
+
+# outputs.download is the download link
+Downloading Table
+{{ outputs.download }}
+```
 
 ## Images
 
-### print_img
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h3 style={{ margin: 5, padding: 0 }}>input_to_PIL</h3>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/MecSimCalc.py#LL97C1-L113C25" style={{ fontSize: 'larger', marginBottom: '2em', margin: 5, padding: 0 }}><strong>[Source]</strong></a>
+</div>
+
+```python
+def input_to_PIL(file):
+```
+
+#### Description:
+
+Converts a base64 encoded file data into a pillow image
+
+#### Arguments:
+
+| Argument   | Type    | Description              |
+| ---------- | ------- | ------------------------ |
+| **`file`** | **str** | Base64 encoded file data |
+
+#### Returns:
+
+| Return Type                       | Description              |
+| --------------------------------- | ------------------------ |
+| **`Tuple[PIL.Image.Image, str]`** | (pillow image, metadata) |
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h3 style={{ margin: 5, padding: 0 }}>print_img</h3>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/MecSimCalc.py#LL115C1-L168C31" style={{ fontSize: 'larger', marginBottom: '2em', margin: 5, padding: 0 }}><strong>[Source]</strong></a>
+</div>
 
 ```python
 def print_img(
@@ -124,32 +233,44 @@ Converts a pillow image into an HTML image and a download link
 
 #### Arguments:
 
-- **`img`** (PIL.Image.Image): The pillow image to be converted
-- **`metadata`** (str): The metadata of the image
-- **`WIDTH`** (int, optional): The width of the HTML image. Defaults to 200
-- **`HEIGHT`** (int, optional): The height of the HTML image. Defaults to 200
-- **`OriginalSize`** (bool, optional): If True, the HTML image will be displayed in its original size Defaults to False. (overrides WIDTH and HEIGHT)
-- **`DownloadText`** (str, optional): The text to be displayed on the download link. Defaults to "Download Image"
-- **`ImageName`** (str, optional): The name of the image file when downloaded. Defaults to "myimg"
+| Argument           | Type                | Description                                                                        |
+| ------------------ | ------------------- | ---------------------------------------------------------------------------------- |
+| **`img`**          | **PIL.Image.Image** | Pillow image                                                                       |
+| **`metadata`**     | **str**             | Image metadata                                                                     |
+| **`WIDTH`**        | **int** (optional)  | Output width of the image in pixels (Defaults to 200)                              |
+| **`HEIGHT`**       | **int** (optional)  | Output height of the image in pixels (Defaults to 200)                             |
+| **`OriginalSize`** | **bool** (optional) | If True, the HTML image will be displayed in its original size (Defaults to False) |
+| **`DownloadText`** | **str** (optional)  | The text to be displayed on the download link (Defaults to "Download Image")       |
+| **`ImageName`**    | **str** (optional)  | The name of the image file when downloaded (Defaults to "myimg")                   |
 
 #### Returns:
 
-- **`Tuple[str, str]`**: (HTML image, download link)
+| Return Type           | Description                 |
+| --------------------- | --------------------------- |
+| **`Tuple[str, str]`** | (HTML image, download link) |
 
-### input_to_PIL
+#### Example:
+
+#### Python Code:
 
 ```python
-def input_to_PIL(file):
+>>> inputFile = inputs['file']
+>>> img, metadata = input_to_PIL(inputFile)
+>>> image, download = print_img(img, metadata, OriginalSize = True, DownloadText = "Download Image Here", ImageName = "myimage")
+>>> return {
+        "image":image,
+        "download":download,
+    }
 ```
 
-#### Description:
+#### Output using Jinja2 Template:
 
-Converts a base64 encoded file data into a pillow image. (e.g. converts data from **`file = inputs['fileInput']`** to a pillow image)
+```python
+# outputs.image is the HTML image
+Displaying Image
+{{ outputs.image }}
 
-#### Arguments:
-
-- **`file`** (str): Base64 encoded file data
-
-#### Returns:
-
-- **`Tuple[PIL.Image.Image, str]`**: (pillow image, metadata)
+# outputs.download is the download link
+Downloading Image
+{{ outputs.download }}
+```
