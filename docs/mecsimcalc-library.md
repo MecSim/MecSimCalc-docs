@@ -1,6 +1,6 @@
 ---
 sidebar_label: "mecsimcalc Library"
-sidebar_position: 4
+sidebar_position: 100
 ---
 
 # Mecsimcalc 0.0.4 documentation
@@ -140,6 +140,8 @@ Converts a file object into a pandas DataFrame
 >>> df = file_to_dataframe(file)
 >>> print(df)
    A  B  C
+0  a  b  c
+1  d  e  f
 ```
 
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
