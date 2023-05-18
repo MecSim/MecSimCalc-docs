@@ -287,34 +287,34 @@ Creates a DataFrame from given columns and headers
 </div>
 
 ```python
-print_table(columns: List[List[str]], column_headers: List[str]):
+print_table(rows: List[List[str]], column_headers: List[str]):
 ```
 
 #### Description:
 
-Creates an HTML table from given columns and headers
+Creates an HTML table from given rows and column headers
 
 #### Arguments:
 
-| Argument             | Type                | Description                                                                    |
-| -------------------- | ------------------- | ------------------------------------------------------------------------------ |
-| **`columns`**        | **List[List[str]]** | List of columns to be converted into a table. Each column is a list of strings |
-| **`column_headers`** | **List[str]**       | List of column headers                                                         |
+| Argument             | Type                | Description                                                                 |
+| -------------------- | ------------------- | --------------------------------------------------------------------------- |
+| **`rows`**           | **List[List[str]]** | List of rows to be converted into a table. Each column is a list of strings |
+| **`column_headers`** | **List[str]**       | List of column headers                                                      |
 
 #### Returns:
 
-| Return Type | Description                                 |
-| ----------- | ------------------------------------------- |
-| **`str`**   | HTML table created from columns and headers |
+| Return Type | Description                              |
+| ----------- | ---------------------------------------- |
+| **`str`**   | HTML table created from rows and headers |
 
 #### Example:
 
 #### Python Code:
 
 ```python
->>> columns = [["a", "b", "c"], ["d", "e", "f"]]
+>>> rows = [["a", "b", "c"], ["d", "e", "f"]]
 >>> column_headers = ["A", "B", "C"]
->>> table = print_table(columns, column_headers)
+>>> table = print_table(rows, column_headers)
 >>> return {
         "table":table,
     }
