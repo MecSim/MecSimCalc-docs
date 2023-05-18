@@ -7,7 +7,9 @@ sidebar_position: 2
 
 This example provides a quick overview on how to use [GeoPandas](https://geopandas.org/en/stable/docs/user_guide.html) to create a `GeoDataFrame`, and how to visualize the data as a Folium map and a Matplotlib plot.
 
-<div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/4620929/map_geospatial_data" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
+<div style="width: 100%; height: 600px; overflow: hidden;">
+  <iframe src="https://mecsimcalc.com/app/4620929/map_geospatial_data" title="MecSimCalc" style="position: relative; left: -45px; top: -48px; width: 100%; height: 100%;" frameborder="0"></iframe>
+</div>
 
 To get started, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), click on **Maps**, and select **Mapping Geospatial data**.
 
