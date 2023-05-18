@@ -3,7 +3,7 @@ sidebar_label: "mecsimcalc Library"
 sidebar_position: 100
 ---
 
-# Mecsimcalc 0.0.4 documentation
+# Mecsimcalc 0.0.5 documentation
 
 This library is designed to provide a set of functions for handling and converting various types of data, such as base64 encoded data, Pandas DataFrames, and Pillow images.
 
