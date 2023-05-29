@@ -64,5 +64,5 @@ def main(inputs):
 ```
 
 :::tip
-If your desired Python library is not supported, then add a feature request [here](https://community.mecsimcalc.com/c/feedback/feature-requests/7). If there is enough users wanting to use it, then it will be installed
+If your desired Python library is not supported, then add a feature request [here](https://community.mecsimcalc.com/c/feedback/feature-requests/7). If there is enough users wanting to use it, then it will be installed.
 :::
