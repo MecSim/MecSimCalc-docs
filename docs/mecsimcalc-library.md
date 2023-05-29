@@ -14,7 +14,7 @@ This library is designed to provide a set of functions for handling and converti
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">input_to_file</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/input_utils.py#LL8C1-L30C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/general_utils.py#LL7C1-L31C61" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -58,7 +58,7 @@ data:image/jpeg;base64,
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">metadata_to_filetype</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL182C1-L214C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/general_utils.py#LL34C1-L50C21" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -93,9 +93,11 @@ data:image/jpeg;base64,
 jpeg
 ```
 
+## Text
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">string_to_file</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL182C1-L214C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/text_utils.py#LL4C1-L34C85" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -150,7 +152,7 @@ Generates a downloadable text file containing the given text
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">file_to_dataframe</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/input_utils.py#LL32C1-L52C14" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/spreadsheet_utils.py#LL9C1-L34C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -193,7 +195,7 @@ Converts a base64 encoded file data into a pandas DataFrame
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">input_to_dataframe</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/input_utils.py#LL55C1-L67C39" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/spreadsheet_utils.py#LL35C1-L57C44" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -233,7 +235,7 @@ csv
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">print_dataframe</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL10C1-L67C39" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/spreadsheet_utils.py#LL60C1-L119C39" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -295,10 +297,10 @@ Downloading Table
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">table_to_dataframe</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL182C1-L214C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/table_utils.py#LL4C1-L26C54" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
-## Tables:
+## Tables
 
 ```python
 def table_to_dataframe(column_headers, rows) -> pd.DataFrame:
@@ -336,7 +338,7 @@ Create a DataFrame from given rows and column headers
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">print_table</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL182C1-L214C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/table_utils.py#LL29C1-L44C58" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -385,7 +387,7 @@ Displaying Table
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">file_to_PIL</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL182C1-L214C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/image_utils.py#LL13C1-L30C88" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -437,7 +439,7 @@ Displaying Image
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">input_to_PIL</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/input_utils.py#LL70C1-L87C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/image_utils.py#LL33C1-L57C15" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -475,7 +477,7 @@ jpeg
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">print_img</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL70C1-L129C1 style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/image_utils.py#LL60C1-L126C32" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
@@ -545,7 +547,7 @@ Downloading Image
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h3 style="margin: 5px; padding: 0;">print_plt</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/output_utils.py#LL131C1-L180C1" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/main/mecsimcalc/plotting_utils.py#LL8C1-L63C35" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
 </div>
 
 ```python
