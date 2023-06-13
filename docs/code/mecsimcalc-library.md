@@ -1,6 +1,6 @@
 ---
 sidebar_label: "mecsimcalc Library"
-sidebar_position: 100
+sidebar_position: 4
 ---
 
 # Mecsimcalc v0.1.3 documentation
@@ -189,8 +189,6 @@ Converts a base64 encoded file data into a pandas DataFrame
 >>> df = file_to_dataframe(decoded_file)
 >>> print(df)
    A  B  C
-0  a  b  c
-1  d  e  f
 ```
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
