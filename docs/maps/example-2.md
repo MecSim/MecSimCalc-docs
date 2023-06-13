@@ -50,6 +50,22 @@ df["geometry"] = df[["Easting", "Northing"]].values.tolist()
 | 444247.5912 | 5.465375e+06 | [444247.5912, 5465374.9338] |
 | 444247.8385 | 5.465382e+06 | [444247.8385, 5465381.8589] |
 
+Convert the `geometry` column into points by applying the [`Point`](https://shapely.readthedocs.io/en/stable/manual.html#Point) function from [`shapely.geometry`](https://shapely.readthedocs.io/en/stable/) to all the rows using [`.apply()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html).
+
+```python
+df["geometry"] = df["geometry"].apply(Point)
+```
+
+`df` looks like this:
+
+| Easting     | Northing     | geometry                      |
+| ----------- | ------------ | ----------------------------- |
+| 444246.3500 | 5.465340e+06 | POINT(444246.350 5465340.180) |
+| 444247.0440 | 5.465360e+06 | POINT(444247.044 5465359.612) |
+| 444247.3266 | 5.465368e+06 | POINT(444247.327 5465367.526) |
+| 444247.5912 | 5.465375e+06 | POINT(444247.591 5465374.934) |
+| 444247.8385 | 5.465382e+06 | POINT(444247.839 5465381.859) |
+
 Now, convert the `df` DataFrame into a GeoDataFrame, `gdf`.
 
 ```python
@@ -71,22 +87,6 @@ You shapes must be in the `geometry` column in order for the `crs` projection to
 :::
 
 ### Manipulate the data
-
-Convert the `geometry` column into points by applying the [`Point`](https://shapely.readthedocs.io/en/stable/manual.html#Point) function from [`shapely.geometry`](https://shapely.readthedocs.io/en/stable/) to all the rows using [`.apply()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html).
-
-```python
-gdf["geometry"] = gdf["geometry"].apply(Point)
-```
-
-`gdf` looks like this:
-
-| Easting     | Northing     | geometry                      |
-| ----------- | ------------ | ----------------------------- |
-| 444246.3500 | 5.465340e+06 | POINT(444246.350 5465340.180) |
-| 444247.0440 | 5.465360e+06 | POINT(444247.044 5465359.612) |
-| 444247.3266 | 5.465368e+06 | POINT(444247.327 5465367.526) |
-| 444247.5912 | 5.465375e+06 | POINT(444247.591 5465374.934) |
-| 444247.8385 | 5.465382e+06 | POINT(444247.839 5465381.859) |
 
 Next, we will create more geometries in a separate `GeoDataFrame`, and then append it to the end of the existing `GeoDataFrame`, `gdf`.
 
@@ -251,31 +251,53 @@ def plt_show(plt, width=500, dpi=100):
     if hasattr(plt, "close"):
         plt.close()
     bytes.seek(0)
-    base64_string = "data:image/png;base64," + \
-        base64.b64encode(bytes.getvalue()).decode("utf-8")
+    base64_string = "data:image/png;base64," + base64.b64encode(
+        bytes.getvalue()
+    ).decode("utf-8")
     return "<img src='" + base64_string + "' width='" + str(width) + "'>"
 
 
 def main(inputs):
     # Create data as Panda's DataFrame
-    df = pd.DataFrame({"Easting": [444246.35, 444247.044, 444247.3266, 444247.5912, 444247.8385],
-                       "Northing": [5465340.18, 5465359.6118, 5465367.5256, 5465374.9338, 5465381.8589]})
+    df = pd.DataFrame(
+        {
+            "Easting": [444246.35, 444247.044, 444247.3266, 444247.5912, 444247.8385],
+            "Northing": [
+                5465340.18,
+                5465359.6118,
+                5465367.5256,
+                5465374.9338,
+                5465381.8589,
+            ],
+        }
+    )
     # Merge `Easting` and `Northing` columns into one column called `geometry`
     df["geometry"] = df[["Easting", "Northing"]].values.tolist()
+    # Convert all geometries into Point shapes
+    df["geometry"] = df["geometry"].apply(Point)
 
     # Convert DataFrame to GeoDataFrame and project coordinates to "EPSG:26911"
     gdf = geopandas.GeoDataFrame(df, crs="EPSG:26911")
-    # Convert all geometries into Point shapes
-    gdf["geometry"] = gdf["geometry"].apply(Point)
 
     # Create a new GeoDataFrame with a LineString and a Polygon
     more_geometries = geopandas.GeoDataFrame(
         {
             "geometry": [
-                LineString([[444248.0694, 5.465388e06], [444248.2847,
-                                                         5.465394e06], [444248.4852, 5.465400e06]]),
-                Polygon([[444243.6719, 5.465405e06], [444248.8454, 5.465410e06], [
-                        444249.0068, 5.465415e06], [444299.1569, 5.465419e06]]),
+                LineString(
+                    [
+                        [444248.0694, 5.465388e06],
+                        [444248.2847, 5.465394e06],
+                        [444248.4852, 5.465400e06],
+                    ]
+                ),
+                Polygon(
+                    [
+                        [444243.6719, 5.465405e06],
+                        [444248.8454, 5.465410e06],
+                        [444249.0068, 5.465415e06],
+                        [444299.1569, 5.465419e06],
+                    ]
+                ),
             ]
         }
     )
@@ -307,11 +329,7 @@ def main(inputs):
     m2 = gdf.plot("value", cmap="Spectral", legend=True)
     static_map = plt_show(m2.figure)
 
-    return {
-        "interactive_map": interactive_map,
-        "static_map": static_map
-    }
-
+    return {"interactive_map": interactive_map, "static_map": static_map}
 ```
 
 ## Step 2: Output
