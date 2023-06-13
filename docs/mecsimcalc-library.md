@@ -71,9 +71,9 @@ Extracts the file type from the metadata
 
 #### Arguments:
 
-| Argument       | Type    | Description                                                                                    |
-| -------------- | ------- | ---------------------------------------------------------------------------------------------- |
-| **`metadata`** | **str** | The metadata string in the form "Data:\<MIME type>;base64,"(returned from **`input_to_file`**) |
+| Argument       | Type    | Description                                                                                   |
+| -------------- | ------- | --------------------------------------------------------------------------------------------- |
+| **`metadata`** | **str** | The metadata string in the form "Data:(MIME type);base64,"(returned from **`input_to_file`**) |
 
 #### Returns:
 
