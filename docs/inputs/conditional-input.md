@@ -26,7 +26,7 @@ A set of rules that controls whether the input is visible or not to the _**user*
 
 3. **Value** - the value that the other input is evaluted against
 
-**Notes:**
+:bulb: **Notes:**
 
 - If the rule is TRUE then the input will be visible
 - Multiple rules are combined using AND i.e. all rules have to be TRUE in order for the input to be visible
@@ -75,7 +75,9 @@ When editing an input, don't forget to click on **APPLY CHANGES** at the bottom 
 ## Test it out for youself
 
 Test out the rule we created above for yourself!  
-**Remember:** If the checkbox is TRUE (checked) the slider will become visible.
+:::tip
+If the checkbox is TRUE (checked) the slider will become visible.
+:::
 
 <div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
@@ -87,7 +89,9 @@ We currently do not offer creating a rule based off of the following input types
 ### Adding a rule
 
 To add a rule, simply click the plus button. There can be as many rules as you want.  
-**Don't Forget:** Rules are combined using AND therefore they all have to evaluate to TRUE for the input to be visible.
+:::tip
+Rules are combined using AND, therefore they all have to evaluate to TRUE for the input to be visible.
+:::
 
    <div style={{textAlign: 'center'}}>
 
