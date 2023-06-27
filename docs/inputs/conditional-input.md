@@ -42,7 +42,7 @@ A set of rules that controls whether the input is visible or not to the _**user*
 
    </div>
 
-2. To create a rule the 3 parts must be selected. Let's create a rule where the slider input will only be visible if input checkbox is TRUE (checked).
+2. To create a rule the 3 parts must be selected. Here is an example of creating a rule where the slider input will only be visible if input checkbox is TRUE (checked).
 
    First select the checkbox input
 
@@ -82,7 +82,7 @@ If the checkbox is TRUE (checked) the slider will become visible.
 <div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/3643677/conditional_input_example" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
 :information_source: **Note:**
-We currently do not offer creating a rule based off of the following input types: date, file, rich text.
+We currently do not offer creating rules based on the following input types: date, file, rich text.
 
 ## Additional
 
