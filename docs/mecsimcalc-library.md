@@ -12,9 +12,9 @@ This library is designed to provide a set of functions for handling and converti
 
 ## General
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <h3 style="margin: 5px; padding: 0;">input_to_file</h3>
-  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.4/mecsimcalc/general_utils.py#L7C1-L56C61" style="font-size: larger; margin-bottom: 2em; margin: 5px; padding: 0;"><strong>[Source]</strong></a>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h3 style={{ margin: 5, padding: 0 }}>input_to_file</h3>
+  <a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.4/mecsimcalc/general_utils.py#L7C1-L56C61" style={{ fontSize: 'larger', marginBottom: '2em', margin: 5, padding: 0 }}><strong>[Source]</strong></a>
 </div>
 
 ```python
