@@ -198,22 +198,10 @@ interactive_map = m1._repr_html_()
 We will also export the map as a static Matplotlib plot.
 
 ```python
-def plt_show(plt, width=500, dpi=100):
-    # Converts matplotlib plt to image data string
-    #   plt is the matplotlib pyplot or figure
-    #   width is the width of the graph image in pixels
-    #   dpi (dots per inch) is the resolution of the image
-    bytes = io.BytesIO()
-    plt.savefig(bytes, format="png", dpi=dpi)  # Save as png image
-    if hasattr(plt, "close"):
-        plt.close()
-    bytes.seek(0)
-    base64_string = "data:image/png;base64," + base64.b64encode(bytes.getvalue()).decode("utf-8")
-    return "<img src='" + base64_string + "' width='" + str(width) + "'>"
-
+import mecsimcalc as msc
 
 m2 = gdf.plot("value", cmap="Spectral", legend=True)
-static_map = plt_show(m2.figure)
+static_map = msc.print_plot(m2.figure)
 ```
 
 Where,
@@ -233,28 +221,11 @@ Where,
 ### Full code
 
 ```python
-import io
-import base64
 import folium
 import geopandas
 import pandas as pd
 from shapely.geometry import LineString, Point, Polygon
-
-
-def plt_show(plt, width=500, dpi=100):
-    # Converts matplotlib plt to image data string
-    #   plt is the matplotlib pyplot or figure
-    #   width is the width of the graph image in pixels
-    #   dpi (dots per inch) is the resolution of the image
-    bytes = io.BytesIO()
-    plt.savefig(bytes, format="png", dpi=dpi)  # Save as png image
-    if hasattr(plt, "close"):
-        plt.close()
-    bytes.seek(0)
-    base64_string = "data:image/png;base64," + base64.b64encode(
-        bytes.getvalue()
-    ).decode("utf-8")
-    return "<img src='" + base64_string + "' width='" + str(width) + "'>"
+import mecsimcalc as msc
 
 
 def main(inputs):
@@ -327,7 +298,7 @@ def main(inputs):
 
     # Export gdf as Matplotlib plot image
     m2 = gdf.plot("value", cmap="Spectral", legend=True)
-    static_map = plt_show(m2.figure)
+    static_map = msc.print_plot(m2.figure)
 
     return {"interactive_map": interactive_map, "static_map": static_map}
 ```

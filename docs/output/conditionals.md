@@ -42,21 +42,30 @@ The code for this app is given below:
 
 ```python
 def main(inputs):
-    d = inputs['d']
-    t = inputs['t']
-    sy = inputs['sy']
-    p = inputs['p']
-    lf = inputs['l']
+    d = inputs['d'] # Diameter
+    t = inputs['t'] # Wall Thickness
+    sy = inputs['sy'] # Grade
+    p = inputs['p'] # Operating Pressure
+    lf = inputs['l'] # Location Factor
+    jf = inputs['j'] # Joint Factor
+    tf = inputs['tf'] # Temperature Factor
+
+    # location converted to a number
     ldic = {"1.0":1.0, "0.9":0.90, "0.8":0.80, "0.75":0.75, "0.7":0.7, "0.625":0.625, "0.55":0.55, "0.5":0.5 }
-    ln = ldic[lf]
-    jf = inputs['j']
+    lf = dict[lf]
+
+    # joint factor converted to a number
     jdic = {"Seamless (1.00)":1.0, "Electric Welded (1.00)":1.0, "Submerged arc welded (1.00)":1.0, "Continuous welded (0.60)":0.6}
-    jn = jdic[jf]
-    tf = inputs['tf']
+    jf = jdic[jf]
+
+    # temperature factor converted to a number
     tdic = {"Up to 120 (1.00)": 1.0, "150 (0.97)":0.97, "180 (0.93)":0.93, "200 (0.91)":0.91, "230 (0.87)":0.87}
-    tn = tdic[tf]
-    dp = 2*sy*t/d*0.8*ln*jn*tn
+    tf = tdic[tf]
+
+    # calculating the design pressure
+    dp = 2*sy*t/d*0.8*lf*jf*tf
     dp = round(dp,2)
+
     return {"Operating Pressure": p, "Design Pressure":dp}
 ```
 
