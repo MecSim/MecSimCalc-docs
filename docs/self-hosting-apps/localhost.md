@@ -140,3 +140,17 @@ server.run(debug=False)
 npm run build
 npm run start
 ```
+
+# Quickstart
+
+Once you have completed the initial setup, you can start the application by running the following commands for future runs:
+
+```bash
+# In terminal 1
+cd back-end
+python server.py
+
+# In terminal 2
+cd front-end
+npm run dev
+```
