@@ -48,7 +48,7 @@ To edit the table group, click the pencil icon on the right side of the table gr
    c) **_Row Group Size_** -> the number of rows to 'add' (copy) when the user presses the 'Add Row' button
 
 :::caution
-Don't forget to click on **APPLY** after changing the number of _columns_ or the array _name_ of the **Table Group**
+Don't forget to click on **APPLY** after editing the properties of the **Table Group**
 :::
 
 ### Dynamic Rows
