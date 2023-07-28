@@ -48,7 +48,7 @@ For example, the following **Table Group** has three columns and 1 row. The head
 
 ### Editing a table group
 
-To edit the table group, click the pencil icon at the top right side of the table group. A popup will appear with the following options:
+To edit the table group, click the pencil icon near the top right side of the table group. A popup will appear with the following options:
 
 <div style={{textAlign: 'center'}}>
 
@@ -68,7 +68,7 @@ To edit the table group, click the pencil icon at the top right side of the tabl
    b) **_Min Rows_** -> The minimum number of rows that can be in the table
    (**NOT including the header row**)  
    c) **_Row Group Size_** -> The number of rows that are 'combined' together when the user 'Adds' or 'Deletes' rows. (_This should almost always be set to 1_)
-4. **Conditional Input Group** -> Similar to the [conditional input](https://docs.mecsimcalc.com//inputs/conditional-input) feature but for the entire **Input Group / Table Group**
+4. **Conditional Input Group** -> Similar to the [Conditional Input](https://docs.mecsimcalc.com//inputs/conditional-input) feature but for the entire **Input Group / Table Group**
 
 :::caution
 Don't forget to click on **APPLY** after editing the properties of the **Table Group**
