@@ -18,7 +18,7 @@ To get started, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), cl
 - You can fill in the required fields as shown in the following image.
 - You can use the default **Favicon Image** or upload your own.
 - The **Primary Image** used in this example is available [here](/docs/getting-started/ex1_primary.png).
-- Select the "Physics" tag from the tags dropdown. If your desired tag is not available, type the tag name into the Tags dropdown and click on the add option to add a new tag.
+- Select the "Physics" tag from the tags dropdown. If your desired tag is not available, type the tag name into the Tags field and click on the add option to add a new tag.
 
 <div style={{textAlign: 'center'}}>
 
