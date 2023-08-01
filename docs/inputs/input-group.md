@@ -46,9 +46,9 @@ As an example, the image below shows an input group with 5 different inputs (two
 ### Conditional Input Group
 
 | :trophy: This is a [pro](https://mecsimcalc.com/pricing) feature |
-| --------------------------------------------------------------------- |
+| ---------------------------------------------------------------- |
 
-Click the pencil icon near the top right of an input group and the **Edit Input Group** popup will appear.  
+Click the :pencil2: icon near the top right of an input group and the **Edit Input Group** popup will appear.  
 **Conditional Input Group** is similar to the [Conditional Input](/inputs/conditional-input) feature, but instead controls the visibility of the entire **Input Group**.
 
 :::tip
