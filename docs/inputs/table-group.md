@@ -48,7 +48,7 @@ For example, the following **Table Group** has three columns and 1 row. The head
 
 ### Editing a table group
 
-To edit the table group, click the pencil icon near the top right side of the table group. A popup will appear with the following options:
+To edit the table group, click the :pencil2: icon near the top right side of the table group. A popup will appear with the following options:
 
 <div style={{textAlign: 'center'}}>
 
@@ -60,7 +60,7 @@ To edit the table group, click the pencil icon near the top right side of the ta
 2. **Columns** -> the number of columns in the table
 
 | :trophy: The following are [pro](https://mecsimcalc.com/pricing) features |
-| ----------------------------------------------------------------------------- |
+| ------------------------------------------------------------------------- |
 
 3. **Dynamic Rows** -> check this box if you want the user to be able to add and delete rows from the table  
     After checking this box a list of options will appear:  
