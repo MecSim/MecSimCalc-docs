@@ -40,7 +40,7 @@ For example, the following **Table Group** has three columns and 1 row. The head
 
 </div>
 
-1. Drag the **Table Group** to arrange it vertically
+1. Drag the **Table Group** to order it vertically amongst the other groups
 2. Specify a _**Title**_ that will be visible to the users
 3. Edit the **Table Group** properties (described below)
 4. Delete the **Table Group**
@@ -59,7 +59,7 @@ To edit the table group, click the pencil icon near the top right side of the ta
 1. **Name** -> this is the variable name of the table which will be used in the python code
 2. **Columns** -> the number of columns in the table
 
-| :trophy: The following are [premium](https://mecsimcalc.com/premium) features |
+| :trophy: The following are [pro](https://mecsimcalc.com/pricing) features |
 | ----------------------------------------------------------------------------- |
 
 3. **Dynamic Rows** -> check this box if you want the user to be able to add and delete rows from the table  
@@ -67,8 +67,8 @@ To edit the table group, click the pencil icon near the top right side of the ta
    a) **_Max Rows_** -> The maximum number of rows that can be in the table (**NOT including the header row**)  
    b) **_Min Rows_** -> The minimum number of rows that can be in the table
    (**NOT including the header row**)  
-   c) **_Row Group Size_** -> The number of rows that are 'combined' together when the user 'Adds' or 'Deletes' rows. (_This should almost always be set to 1_)
-4. **Conditional Input Group** -> Similar to the [Conditional Input](https://docs.mecsimcalc.com//inputs/conditional-input) feature but for the entire **Input Group / Table Group**
+   c) **_Row Group Size_** -> The number of rows that are 'combined' together when the user 'Adds' or 'Deletes' rows. (_This should almost always be set to 1 ...unless your row is comprised of multiple lines_)
+4. **Conditional Input Group** -> Similar to the [Conditional Input](/inputs/conditional-input) feature but for the entire **Input Group / Table Group**
 
 :::caution
 Don't forget to click on **APPLY** after editing the properties of the **Table Group**
@@ -76,7 +76,8 @@ Don't forget to click on **APPLY** after editing the properties of the **Table G
 
 ### Dynamic Rows
 
-The following embedded app demonstrates the Dynamic Rows feature using the **Table Group** properties shown above. Enter the values and press submit to calculate the weighted GPA. Try adding and deleting rows to see the output change!
+The following embedded app demonstrates the **Dynamic Rows** feature using the **Table Group** properties shown above. Enter the values and press submit to calculate the weighted GPA.  
+Use the [dynamic table template](https://mecsimcalc.com/create) (in The Basics) to start creating a similar app!
 
 <div style={{width: "100%", height: "900px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/7646727/weighted_gpa_calculator_mobile_friendly" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
@@ -102,7 +103,7 @@ def main(inputs):
 ```
 
 :::tip
-The number of rows in the table will not be known beforehand, therefore using `len('tableName')` in the python code is essential.
+The number of rows in the table will not be known beforehand, therefore using `len(tableName)` in the python code is essential.
 This will allow you to get the # of rows in the table and then you can use it how you like!  
-Try it out for yourself using the [dynamic table template](https://mecsimcalc.com/create)
+**Note**: The range of rows will always be between minRows and maxRows (inclusive)
 :::
