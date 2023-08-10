@@ -28,47 +28,41 @@ The Python `io` library is used to create and edit file objects. The code used i
 
 ```python
 from PIL import Image
-import base64
-import io
-
-def Image_File(data,extension, filename):
-    return "<a href='" + data + "' download='" + filename + "." + extension + "'>Download Image</a>"
-def Image_Embed(data):
-    return "<img src='" + data + "'>"
+import mecsimcalc as msc
 
 def main(inputs):
-    [meta, data] = inputs['file'].split(";base64,")
-    metadata = meta + ";base64,"
+    # Get the file object from the input
+    image_input = inputs['file']
 
-    # Decode the file data
-    file_data = io.BytesIO(base64.b64decode(data))
+    # Convert the file object to a PIL object
+    PIL_object = msc.input_to_PIL(image_input)
 
-    # Convert the file data into a Pillow's Image
-    img = Image.open(file_data)
+    # generate an html image tag, a download link at the original size
+    image_original, download_link_original = msc.print_image(PIL_object, original_size=True, download=True)
 
-    # Manipulate the image
-    WIDTH = HEIGHT = 200
-    img.thumbnail((WIDTH, HEIGHT))  # resize
+    # generate an html image tag, a download link and resizing the image
+    image_resized, download_link_resized = msc.print_image(PIL_object, width=500, height=500, download=True)
 
-    # Get downloadable data
-    buffer = io.BytesIO()
-    img.save(buffer, format=img.format)
-    encoded_data = metadata + base64.b64encode(buffer.getvalue()).decode()
-
-    imagefile = Image_File(encoded_data,img.format,"MyImage")
-    image = Image_Embed(encoded_data)
     return {
-        "Image": image, # Display image using img tag
-        "File": imagefile, # Download using <a> tags
+        "original_image": image_original, # Display original image
+        "original_download": download_link_original # Download link for original image
+        "resized_image": image, # Display resized image
+        "resized_download": download_link, # Download resized image
     }
 ```
 
 Finally, the output page has the following lines:
 
 ```
-Displaying Image
-{{ outputs.Image}}
+Displaying original image
+{{ outputs.original_image }}
 
-Downloading Image
-{{ outputs.File}}
+Downloading original image
+{{ outputs.original_download }}
+
+Displaying resized image
+{{ outputs.resized_image }}
+
+Downloading resized image
+{{ outputs.resized_download }}
 ```

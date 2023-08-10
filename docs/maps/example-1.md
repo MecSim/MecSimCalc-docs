@@ -126,23 +126,7 @@ static_map = plt_show(m.figure)
 ```python
 import geopandas
 import pandas as pd
-import base64
-import io
-
-
-def plt_show(plt, width=500, dpi=100):
-    # Converts matplotlib plt to image data string
-    #   plt is the matplotlib pyplot or figure
-    #   width is the width of the graph image in pixels
-    #   dpi (dots per inch) is the resolution of the image
-    bytes = io.BytesIO()
-    plt.savefig(bytes, format='png', dpi=dpi)  # Save as png image
-    if hasattr(plt, "close"):
-        plt.close()
-    bytes.seek(0)
-    base64_string = "data:image/png;base64," + \
-        base64.b64encode(bytes.getvalue()).decode("utf-8")
-    return "<img src='" + base64_string + "' width='" + str(width) + "'>"
+import mecsimcalc as msc
 
 
 def main(inputs):
@@ -177,7 +161,7 @@ def main(inputs):
     ax = world[world.continent == 'South America'].plot(color='white', edgecolor='black')
     # (b) Export as a static image
     m = gdf.plot(ax=ax, color="red")
-    static_map = plt_show(m.figure)
+    static_map = msc.print_plot(m.figure)
 
     return {"interactive_map": interactive_map, "static_map": static_map, "mean_of_distance": mean_of_distance}
 ```

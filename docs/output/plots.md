@@ -20,30 +20,15 @@ Visit [matplotlib.org](https://matplotlib.org/) for full documentation on how to
 - [Reference](https://matplotlib.org/stable/api/index.html)
 - [Tutorials](https://matplotlib.org/stable/tutorials/index.html)
 
-Once your Matplotlib figure is ready to be displayed, convert it to a HTML string with the `<img>` tag that can be embedded into the outputs step. As follows:
+Once your Matplotlib figure is ready to be displayed, convert it to a HTML string using the mecsimcalc library as follows:
 
 ### Code
 
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
-import base64
-import io
+import mecsimcalc as msc
 
-
-def plt_show(plt, width=500, dpi=100):
-    # Converts matplotlib plt to image data string
-    #   plt is the matplotlib pyplot or figure
-    #   width is the width of the graph image in pixels
-    #   dpi (dots per inch) is the resolution of the image
-    bytes = io.BytesIO()
-    plt.savefig(bytes, format='png', dpi=dpi)  # Save as png image
-    if hasattr(plt, "close"):
-        plt.close()
-    bytes.seek(0)
-    base64_string = "data:image/png;base64," + \
-        base64.b64encode(bytes.getvalue()).decode("utf-8")
-    return "<img src='" + base64_string + "' width='" + str(width) + "'>"
 
 def main(inputs):
     # Create matplotlib figure
@@ -51,8 +36,8 @@ def main(inputs):
     y = 2*(np.cos(4*x))
     plt.plot(x, y)
 
-    # Convert figure to html using plt_show()
-    plot_html = plt_show(plt)
+    # Convert figure to html using msc.print_plot()
+    plot_html = msc.print_plot(plt)
     return {"plot": plot_html}
 ```
 

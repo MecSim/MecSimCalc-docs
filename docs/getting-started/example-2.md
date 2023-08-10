@@ -84,32 +84,18 @@ Now, go ahead and create a new input group titled: "Plot Parameters". Create two
 
 ## Step 3: Code
 
-As described in [Generating Graphics](/getting-started/graphics), you need to first define the `plt_show` utility function which generates an embeddable image before defining the `main` function:
+As described in [Generating Graphics](/getting-started/graphics), you need to first define the `main` function, and then use the `msc.print_plot()` function to generate the required plot:
 
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
-import base64
-import io
-
-def plt_show(plt, width=500, dpi=100):
-    # Converts matplotlib plt to image data string
-    #   plt is the matplotlib pyplot or figure
-    #   width is the width of the graph image in pixels
-    #   dpi (dots per inch) is the resolution of the image
-    bytes = io.BytesIO()
-    plt.savefig(bytes, format='png', dpi=dpi)  # Save as png image
-    if hasattr(plt, "close"):
-        plt.close()
-    bytes.seek(0)
-    base64_string = "data:image/png;base64," + \
-        base64.b64encode(bytes.getvalue()).decode("utf-8")
-    return "<img src='" + base64_string + "' width='" + str(width) + "'>"
+import mecsimcalc as msc
 
 def main(inputs):
-    # Code to generate a plot using matplot lib (plt)
-    # The following line uses the plt_show function to create an embeddable image
-    img = plt_show(plt)
+    # Write code to generate a plot using matplotlib (plt)
+
+    # The following line uses the msc.print_plot() function to create an HTML image
+    img = msc.print_plot(plt)
     return {"Image": img}
 ```
 
@@ -122,26 +108,35 @@ def main(inputs):
     a = inputs['a']
     b = inputs['b']
     # Code to generate a plot using matplotlib (plt)
-    # The following line uses the plt_show function to create an embeddable image
-    img = plt_show(plt)
+
+    # The following line uses the msc.print_plot() function to create an HTML image
+    img = msc.print_plot(plt)
     return {"Image": img}
 ```
 
 You can now use [matplotlib functions](https://matplotlib.org/stable/plot_types/index) to generate the required plot:
 
 ```python
+import matplotlib.pyplot as plt
+import numpy as np
+import mecsimcalc as msc
+
 def main(inputs):
+    # Gather inputs
     A = inputs['capitala']
     B = inputs['capitalb']
     a = inputs['a']
     b = inputs['b']
+
+    # Code to generate a plot using matplotlib (plt)
     x = np.arange(a,b,0.01)
     y = A*(np.cos(B*x))
     plt.plot(x,y)
     plt.xlabel("x")
     plt.ylabel("y")
-    # The following line uses the plt_show function to create an embeddable image
-    img = plt_show(plt)
+
+    # The following line uses the msc.print_plot() function to create an HTML image
+    img = msc.print_plot(plt)
     return {"Image": img}
 ```
 
