@@ -48,9 +48,13 @@ These input variables correspond to the following inputs page:
 
 </div>
 
-## Supported Libraries
+## Supported Packages
 
-The list of supported Python libraries can be shown by clicking on **Supported Libraries** in the toolbar. In order to use any of the supported libraries, the _**developer**_ must first `import` the library as traditionally done in Python programs.
+The most popular Python packages are supported by default. Click on **Python 3.x** in the code toolbar to view the supported packages and its versions for all the default code environments.
+
+If the _**developer's**_ desired library and/or version is not listed, or the _**developer**_ wishes to load a large file, then see the [**Custom Code Environments**](/code/environments) section.
+
+In order to use these packages in the Python code, the _**developer**_ must first `import` the library as traditionally done in Python programs.
 
 For example, the following code imports the `numpy` library and uses one of the associated functions on a numerical input.
 
@@ -62,7 +66,3 @@ def main(inputs):
     l = np.log(a)
     return{"Logarithm",l}
 ```
-
-:::tip
-If your desired Python library is not supported, then add a feature request [here](https://community.mecsimcalc.com/c/feedback/feature-requests/7). If there is enough users wanting to use it, then it will be installed.
-:::

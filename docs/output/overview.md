@@ -17,7 +17,7 @@ The following image highlights the buttons that can be used for adding latex mat
 
 ## Output Variables
 
-As described in the [Code Output Section](../code/code-output#overview), the dictionary keys returned by the `main` function can be embedded anywhere within the output page in the form of `{{outputs.xxxx}}` or `{{outputs["xxxx"]}}`, where `xxxx` is any of the returned dictionary's keys. In the **Output** step, the _**developer**_ can view and copy the outputs returned from the `main` function by clicking on the `<> Output Variables` button, as shown below:
+As described in the [Code Output Section](../code/output#overview), the dictionary keys returned by the `main` function can be embedded anywhere within the output page in the form of `{{outputs.xxxx}}` or `{{outputs["xxxx"]}}`, where `xxxx` is any of the returned dictionary's keys. In the **Output** step, the _**developer**_ can view and copy the outputs returned from the `main` function by clicking on the `<> Output Variables` button, as shown below:
 
 <div style={{textAlign: 'center'}}>
 

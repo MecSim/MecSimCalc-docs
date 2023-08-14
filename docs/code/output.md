@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Code Output"
+sidebar_label: "Output"
 sidebar_position: 2
 ---
 
