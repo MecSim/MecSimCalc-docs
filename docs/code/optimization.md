@@ -168,7 +168,7 @@ In multithreading, threads share the same memory but need to coordinate. In mult
 
 ### Concurrent Futures
 
-Concurrent futures uses a Process Pool Executor as a way to automatically start subprocesses. Concurrent futures is a very beginner friendly library compared to manually starting new subprocesses.
+Concurrent futures uses a [`ProcessPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html#processpoolexecutor) as a way to automatically start subprocesses. Concurrent futures is a very beginner friendly library compared to manually starting new subprocesses.
 
 - [Concurrent Futures Documentation](https://docs.python.org/3/library/concurrent.futures.html)
 
@@ -305,7 +305,9 @@ Multithreading allows a program to run multiple tasks concurrently but within th
 
 ### Concurrent Futures
 
-Here's a sample code snippet to demonstrate how you can use concurrent.futures `ThreadPoolExecutor` for multithreading:
+Here's a sample code snippet to demonstrate how you can use concurrent.futures [`ThreadPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor) for multithreading:
+
+- [Concurrent Futures Documentation](https://docs.python.org/3/library/concurrent.futures.html)
 
 ```python
 from concurrent.futures import ThreadPoolExecutor
@@ -421,7 +423,7 @@ def regular_monte_carlo_pi_approx(nsamples):
     return 4.0 * acc / nsamples
 ```
 
-## Compiling C/C++
+### Compiling C/C++
 
 :::danger
 This section is **advanced** and requires knowledge in writing and compiling C/C++ code. The **_developer_** needs to write their code in C/C++ or must translate existing Python code to C/C++. It's important that the C/C++ code is compiled for a **Linux** operating system and **x86_64** architecture!
@@ -429,7 +431,7 @@ This section is **advanced** and requires knowledge in writing and compiling C/C
 
 C and C++ are very fast, compiled programming languages. C/C++ code can be run on MecSimCalc by using the CTypes or Pybind11 Python libraries.
 
-### Ctypes
+#### Ctypes
 
 - [Ctypes Documentation](https://docs.python.org/3/library/ctypes.html)
 
@@ -507,7 +509,7 @@ def c_sqrt(array):
     return(sqrt_array)
 ```
 
-### Pybind11
+#### Pybind11
 
 - [Pybind11 Documentation](https://pybind11.readthedocs.io/en/stable/)
 
