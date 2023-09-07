@@ -27,7 +27,7 @@ The default setting is that **Anyone** can use your app! (Apps are also searchea
 | :trophy: This is a [pro](https://mecsimcalc.com/pricing) feature |
 | ---------------------------------------------------------------- |
 
-To restrict access to your app, you must have a _**pro account**_.
+To restrict access to your app, you must have a [_**pro account**_](https://mecsimcalc.com/pricing).
 
 1. When editing your app, go to the **_(1) Info_** page and select _'Accounts you share it with'_ from the dropdown options.
    ![img alt](/docs/getting-started/access_control_dropdown.png)
