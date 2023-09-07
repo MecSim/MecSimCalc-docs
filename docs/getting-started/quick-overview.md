@@ -6,8 +6,10 @@ sidebar_position: 1
 # Quick Overview
 
 **MecSimCalc** is a platform that simplifies the building and sharing of Python apps on the web. In a matter of minutes, you can transform any snippet of Python code to a computational _**app**_ available instantly to the entire world wide web.
-:::note
+:::info
+
 **MecSimCalc** gives you all the tools to build a modern online app without having to learn web programming languages, such as HTML, CSS, or Javascript.
+
 :::
 
 In this documentation, the term _**developer**_ is used to refer to the person who is developing an _**app**_ on the platform, while the term _**user**_ is used to refer to the person who would be using the _**app**_ after development.
@@ -15,6 +17,31 @@ In this documentation, the term _**developer**_ is used to refer to the person w
 ## Step 1: Info
 
 In the Info step, the _**developer**_ specifies the _**app's**_ name, description, category, and tags. This information can later help **_users_** to search and find the app. The _**developer**_ can also upload different images of the _**app**_ to appear in MecSimCalc search results.
+
+### Who can use your app?
+
+The default setting is that **Anyone** can use your app! (Apps are also searcheable on Google). You can restrict access to your app by sharing it with only the people you want!
+
+### Sharing
+
+| :trophy: This is a [pro](https://mecsimcalc.com/pricing) feature |
+| ---------------------------------------------------------------- |
+
+To restrict access to your app, you must have a _**pro account**_.
+
+1. When editing your app, go to the **_(1) Info_** page and select _'Accounts you share it with'_ from the dropdown options.
+   ![img alt](/docs/getting-started/access_control_dropdown.png)
+2. You can then enter the **_user_** emails that you want to share your app with!
+
+:::tip
+Access is controlled by user email. If you share it with someone who doesn't have an account they will need to make one in order to gain access.
+:::
+
+![img alt](/docs/getting-started/invite_users.png)
+
+:::note
+You can only manage who has access to your app if you have a pro account, but your access settings will not change if you revert back to the free account!
+:::
 
 ## Step 2: Inputs
 
