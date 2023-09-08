@@ -27,14 +27,12 @@ The default setting is that **Anyone** can use your app! (Apps are also searchea
 | :trophy: This is a [pro](https://mecsimcalc.com/pricing) feature |
 | ---------------------------------------------------------------- |
 
-To restrict access to your app, you must have a [_**pro account**_](https://mecsimcalc.com/pricing).
-
-1. When editing your app, go to the **_(1) Info_** page and select _'Accounts you share it with'_ from the dropdown options.
+1. When editing your app select **_'Accounts you share it with'_** from the dropdown options.
    ![img alt](/docs/getting-started/access_control_dropdown.png)
 2. You can then enter the **_user_** emails that you want to share your app with!
 
 :::tip
-Access is controlled by user email. If you share it with someone who doesn't have an account they will need to make one in order to gain access.
+Access is controlled by user email. If you share it with someone who doesn't have an account they will need to make one [with that email] in order to gain access to your app!
 :::
 
 ![img alt](/docs/getting-started/invite_users.png)
