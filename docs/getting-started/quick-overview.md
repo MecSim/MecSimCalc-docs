@@ -24,21 +24,18 @@ The default setting is that **Anyone** can use your app! (Apps are also searchea
 
 ### Sharing
 
-| :trophy: This is a [pro](https://mecsimcalc.com/pricing) feature |
-| ---------------------------------------------------------------- |
+| :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
+| -------------------------------------------------------------------- |
+
+:information_source: **Note:** You can only manage who has access to your app if you have a premium account, but your access settings WILL NOT CHANGE if you revert back to the free account!
 
 1. When editing your app select **_'Accounts you share it with'_** from the dropdown options.
    ![img alt](/docs/getting-started/access_control_dropdown.png)
 2. You can then enter the **_user_** emails that you want to share your app with!
+   ![invite users](/docs/getting-started/invite_users.png)
 
 :::tip
 Access is controlled by user email. If you share it with someone who doesn't have an account they will need to make one [with that email] in order to gain access to your app!
-:::
-
-![img alt](/docs/getting-started/invite_users.png)
-
-:::note
-You can only manage who has access to your app if you have a pro account, but your access settings will not change if you revert back to the free account!
 :::
 
 ## Step 2: Inputs
