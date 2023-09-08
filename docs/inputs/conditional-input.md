@@ -5,7 +5,7 @@ sidebar_position: 5
 
 # Conditional Input
 
-| :trophy: This is a [pro](https://mecsimcalc.com/pricing) feature |
+| :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
 | -------------------------------------------------------------------- |
 
 The following provides a detailed description about the conditional input feature
