@@ -59,8 +59,8 @@ To edit the table group, click the :pencil2: icon near the top right side of the
 1. **Name** -> this is the variable name of the table which will be used in the python code
 2. **Columns** -> the number of columns in the table
 
-| :trophy: The following are [pro](https://mecsimcalc.com/pricing) features |
-| ------------------------------------------------------------------------- |
+| :trophy: The following are [premium](https://mecsimcalc.com/pricing) features |
+| ----------------------------------------------------------------------------- |
 
 3. **Dynamic Rows** -> check this box if you want the user to be able to add and delete rows from the table  
     After checking this box a list of options will appear:  
@@ -68,7 +68,8 @@ To edit the table group, click the :pencil2: icon near the top right side of the
    b) **_Min Rows_** -> The minimum number of rows that can be in the table
    (**NOT including the header row**)  
    c) **_Row Group Size_** -> The number of rows that are 'combined' together when the user 'Adds' or 'Deletes' rows. (_This should almost always be set to 1 ...unless your row is comprised of multiple lines_)
-4. **Conditional Input Group** -> Similar to the [Conditional Input](/inputs/conditional-input) feature but for the entire **Input Group / Table Group**
+4. **Conditional Input Group** -> [Learn more](/inputs/input-group#conditional-input-group)
+<!-- Similar to the Conditional Input feature but for the entire [**Input Group / Table Group**](/inputs/input-group#conditional-input-group) -->
 
 :::caution
 Don't forget to click on **APPLY** after editing the properties of the **Table Group**

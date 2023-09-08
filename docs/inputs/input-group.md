@@ -45,14 +45,14 @@ As an example, the image below shows an input group with 5 different inputs (two
 
 ### Conditional Input Group
 
-| :trophy: This is a [pro](https://mecsimcalc.com/pricing) feature |
-| ---------------------------------------------------------------- |
+| :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
+| -------------------------------------------------------------------- |
 
 Click the :pencil2: icon near the top right of an input group and the **Edit Input Group** popup will appear.  
-**Conditional Input Group** is similar to the [Conditional Input](/inputs/conditional-input) feature, but instead controls the visibility of the entire **Input Group**.
+**Conditional Input Group** is similar to the [Conditional Input](/inputs/conditional-input) feature, but instead effects the entire **Input Group**.
 
 :::tip
-The visibility of the **Input Group** will override the individual input visibilities.
+The rules for the **Input Group** will effect the entire section (including all the inputs within it)
 :::
 
 <div style={{textAlign: 'center'}}>
