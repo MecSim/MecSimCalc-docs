@@ -77,7 +77,7 @@ Don't forget to click on **APPLY** after editing the properties of the **Table G
 ### Dynamic Rows
 
 The following embedded app demonstrates the **Dynamic Rows** feature using the **Table Group** properties shown above. Enter the values and press submit to calculate the weighted GPA.  
-Use the [dynamic table template](https://mecsimcalc.com/create) (in The Basics) to start creating a similar app!
+Use the [dynamic table template](https://mecsimcalc.com/create) (under **The Basics**) to start creating a similar app!
 
 <div style={{width: "100%", height: "900px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/7646727/weighted_gpa_calculator_mobile_friendly" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
@@ -105,5 +105,18 @@ def main(inputs):
 :::tip
 The number of rows in the table will not be known beforehand, therefore using `len(tableName)` in the python code is essential.
 This will allow you to get the # of rows in the table and then you can use it how you like!  
-**Note**: The range of rows will always be between minRows and maxRows (inclusive)
 :::
+
+### Labeling Rows
+
+If the dynamic rows feature is enabled, the # of rows that will be used is unknown.
+In order to have the rows labeled correctly, you can use the {{row}} placeholder.
+This can be used in two different ways:
+
+1. In an input label
+
+![img alt](/docs/inputs/label_row_placeholder.png)
+
+2. In a rich text input type
+
+![img alt](/docs/inputs/richtext_row_placeholder.png)
