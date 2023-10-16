@@ -28,7 +28,7 @@ To get started, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), cl
 
 ## Step 2: Inputs
 
-Start by creating an input group by clicking on the ![img alt](/docs/getting-started/add_btn.png) button and choosing **Input Group**. A new input group will be created with the title: "New Input Group Title". Click on the title and change it to: "Converter".
+Start by creating an input group by clicking on the ![img alt](/docs/getting-started/add_btn.png) button and choosing **Input Group**. A new input group will be created with the title: "New Input Group Title". Click on the :pencil2: icon (in the top right of the input group) to edit the title and change it to: "Converter".
 
 <div style={{textAlign: 'center'}}>
 
@@ -50,7 +50,7 @@ Hover over "New Input" and click on the ![img alt](/docs/getting-started/edit_bt
 - Type "m" in the **units**.
 - Set the **default value** to 10.
 - In the Advanced options, change the **minimum value** to 0.
-- Change the step size to 0.001 allowing the precision to be in mm.
+- Change the step size to 0.001 (Allowing the precision to be in mm).
 
 Click on **APPLY CHANGES** to apply these new changes.
 
