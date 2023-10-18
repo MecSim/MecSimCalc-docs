@@ -59,7 +59,13 @@ Next, set a price for each app that you want to monetize. Users will be charged 
 Go to the Info step of your app's editor. Find the **Monthly subscription fee (optional)** field and enter a price in USD
 of at least $0.99. Then publish your app to enable the subscription.
 
-You can change the price at any time by editing the price field on the Info step and republishing your app. Existing users will continue to be charged at the old price until they cancel their subscription. New users will be charged at the new price.
+You can change the price at any time by editing the price field on the Info step and republishing your app. Existing users will continue to be charged at the old price until they cancel their subscription, even when the price is lowered. New users will be charged at the new price.
+
+All existing subscription will be cancelled immediately if:
+
+- The price of a paid app is changed to $0 (i.e. free)
+- The app is unpublished
+- The app is deleted
 
 <div style={{textAlign: 'center'}}>
 
@@ -73,7 +79,7 @@ This subscription fee does not apply to you as the app developer. You will not b
 
 ### Fees
 
-Note that a small portion of each subscription will be subtracted in fees to cover transaction fees, currency conversions, and various platform costs. The remaining amount will be paid out to you. The fee percentage is as follows:
+Note that a portion of each subscription will be subtracted in fees to cover transaction fees, currency conversions, and various platform costs. The remaining amount will be paid out to you, in other words, the fees are included in the app price. The fee percentage is as follows:
 
 | Price (USD)   | Fee (%) |
 | ------------- | ------- |
