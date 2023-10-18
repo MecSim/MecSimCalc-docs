@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Example 1"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Example 1: Distance Converter App

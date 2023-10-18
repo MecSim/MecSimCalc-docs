@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Example 2"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Example 2: Exploring the COS Function
