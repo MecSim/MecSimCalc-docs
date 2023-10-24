@@ -43,7 +43,6 @@ jobs:
 
   algolia:
     name: Algolia Search
-    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -58,10 +57,8 @@ jobs:
   langchain:
     name: Langchain DB
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: src/scripts
     steps:
+      - uses: actions/checkout@v3
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -69,7 +66,8 @@ jobs:
       - name: Install Python Dependencies
         run: pip install langchain==0.0.321
       - name: Make Langchain DB
-        run: python make_langchain_db.py
+        run: |
+          python make_langchain_db.py
       # Commit&Push: https://github.com/orgs/community/discussions/26672#discussioncomment-3252794
       - name: Commit files
         id: commit
@@ -80,10 +78,9 @@ jobs:
           if [-z "$(git status --porcelain)"]; then
               echo "::set-output name=push::false"
           else
-              git commit -m "Add changes" -a
+              git commit -m "Langchain db changes" -a
               echo "::set-output name=push::true"
           fi
-        shell: bash
       - name: Push changes
         if: steps.commit.outputs.push == 'true'
         uses: ad-m/github-push-action@master
