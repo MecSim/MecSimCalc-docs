@@ -44,3 +44,17 @@ Whenever text changes, Algolia needs to run a crawler to collect all the data
 ```
 docker run -it --env-file=.env -e "CONFIG=$(cat algolia.config.json | jq -r tostring)" algolia/docsearch-scraper
 ```
+
+## Git Large File Storage (Git LFS)
+
+1. Install Git LFS: https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage
+   - On mac: `brew install git-lfs`
+   - On linux: `sudo apt install git-lfs`
+2. Install it: `git lfs install`
+3. [Configure files to use LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage)
+   - `git lfs track "*.pkl" "*.pickle" "*.jpg" "*jpeg" "*.png" "*.mp4"`
+4. To pull the files:
+
+```bash
+git lfs pull
+```
