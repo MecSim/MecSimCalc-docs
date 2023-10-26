@@ -1,6 +1,5 @@
 """
 Make langchain vector DB for AI to learn from
-Run from root folder: `python src/scripts/make_langchain_db.py`
 https://python.langchain.com/docs/use_cases/question_answering/vector_db_text_generation
 """
 import os
@@ -12,7 +11,7 @@ from langchain.text_splitter import CharacterTextSplitter
 
 def get_github_docs():
     markdown_files = []
-    for dir in ["docs", "blog"]:
+    for dir in ["../../docs", "../../blog"]:
         repo_path = pathlib.Path(os.path.abspath(dir))
         markdown_files.extend(
             list(repo_path.glob("**/*.md")) + list(repo_path.glob("**/*.mdx"))
@@ -36,11 +35,11 @@ if __name__ == "__main__":
         for chunk in splitter.split_text(source.page_content):
             source_chunks.append(Document(page_content=chunk, metadata=source.metadata))
 
-    with open(os.path.abspath("static/assets/langchain_db.pkl"), "wb") as f:
+    with open(os.path.abspath("../../static/assets/langchain_db.pkl"), "wb") as f:
         pickle.dump(source_chunks, f, protocol=5)
         print("<- Saved langchain_db.pkl")
 
-    with open(os.path.abspath("static/assets/langchain_db.pkl"), "rb") as f:
+    with open(os.path.abspath("../../static/assets/langchain_db.pkl"), "rb") as f:
         source_chunks = pickle.load(f)
         print("<- Tested langchain_db.pkl")
         print(f"<- {len(source_chunks)} documents")
