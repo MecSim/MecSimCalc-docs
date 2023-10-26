@@ -67,7 +67,7 @@ jobs:
         run: pip install langchain==0.0.321
       - name: Make Langchain DB
         run: |
-          python make_langchain_db.py
+          python src/scripts/make_langchain_db.py
       # Commit&Push: https://github.com/orgs/community/discussions/26672#discussioncomment-3252794
       - name: Commit files
         id: commit
