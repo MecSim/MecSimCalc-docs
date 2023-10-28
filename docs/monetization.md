@@ -77,6 +77,25 @@ All existing subscription will be cancelled immediately if:
 This subscription fee does not apply to you as the app developer. You will not be charged a subscription fee to access your own apps.
 :::
 
+### Coupons
+
+After setting a price, you can optionally create coupons to give users a discount on their monthly subscription(s). Coupons can be created by clicking on the **Coupons** button next to the Price field.
+
+There are 3 types of coupons:
+
+| Type      | Description                                                                                                                                              | Example                     |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| Once      | Applies to the first charge from a subscription with this coupon applied.                                                                                | 50% off the 1st month.      |
+| Repeating | Applies to charges in the first `duration_in_months` months from a subscription with this coupon applied. Where `duration_in_months` is a numeric field. | 50% off the first 5 months. |
+| Forever   | Applies to all charges from a subscription with this coupon applied.                                                                                     | 50% off forever.            |
+
+There are 2 optional restrictions that can be applied to coupons:
+
+| Restriction     | Description                                                                                                                        | Example                         |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| Redeem by       | The last time at which the coupon can be redeemed. After the redeem_by date, the coupon can no longer be applied to new customers. | Redeem by Dec 31 at 11:59pm.    |
+| Max redemptions | The number of times the coupon can be redeemed before it’s no longer valid.                                                        | 50% off for the first 20 users. |
+
 ### Fees
 
 Note that a portion of each subscription will be subtracted in fees to cover transaction fees, currency conversions, and various platform costs. The remaining amount will be paid out to you, in other words, the fees are included in the app price. The fee percentage is as follows:
