@@ -22,14 +22,17 @@ We offer many free templates! They are a great way to get started with your app.
 | :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
 | -------------------------------------------------------------------- |
 
-We also offer more complex and detailed templates that you can access if you are a premium member. These templates are a great way to learn how to use the more advanced features of the platform.
+We also offer templates for our premium features. These templates are a great way to learn how to use the more advanced features of the platform.
+
+1. **Advanced** -> Templates for premium features such as Conditional inputs and Dynamic tables
+2. **AI Templates** -> Create your very own AI app with our AI templates
 
 ## Create using AI
 
 | :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
 | -------------------------------------------------------------------- |
 
-We are proud to offer a beta AI feature that helps you to get started on an App. This feature is still in development and we are working hard to improve it.
+We are proud to offer a beta AI chatbot that can help you to get started on an App. This feature is still under development and we are working hard to improve it.
 
 You must enter a detailed prompt in order for the feature to work. It can take between 30 seconds and 1 minute to generate an App.
 
@@ -51,8 +54,3 @@ Please enter a detailed prompt and click 'Submit'. It can take between 30 second
 This could drastically change your app. The AI model often makes mistakes. Please check your app carefully before REFRESHING or EXITING the page.
 If there are any errors you can revert back to the previous version of your app using the "Undo The Last Edit" button.
 :::
-
-#### Undoing the last edit
-
-After editing your app using AI, you can undo all the changes that were made. This will revert your app back to a state before it was last edited with AI. All changes you made since then will be
-deleted!

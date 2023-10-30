@@ -62,7 +62,7 @@ To edit the table group, click the :pencil2: icon near the top right side of the
 | :trophy: The following are [premium](https://mecsimcalc.com/pricing) features |
 | ----------------------------------------------------------------------------- |
 
-4. **Dynamic Rows** -> check this box if you want the user to be able to add and delete rows from the table  
+4. **Dynamic Table** -> check this box if you want the user to be able to add and delete rows from the table  
     After checking this box a list of options will appear:  
    a) **_Max Rows_** -> The maximum number of rows that can be in the table (**NOT including the header row**)  
    b) **_Min Rows_** -> The minimum number of rows that can be in the table
@@ -74,32 +74,39 @@ To edit the table group, click the :pencil2: icon near the top right side of the
 Don't forget to click on **APPLY** after editing the properties of the **Table Group**
 :::
 
-### Dynamic Rows
+### Dynamic Table
 
-The following embedded app demonstrates the **Dynamic Rows** feature using the **Table Group** properties shown above. Enter the values and press submit to calculate the weighted GPA.  
-Use the [dynamic table template](https://mecsimcalc.com/create) (under **The Basics**) to start creating a similar app!
+The following embedded app demonstrates the **Dynamic Table** feature using the **Table Group** properties shown above. Enter the values and press submit to calculate the weighted GPA.  
+Use the [Dynamic Table template](https://mecsimcalc.com/create) (under **Advanced**) to start creating a similar app!
 
-<div style={{width: "100%", height: "900px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/7646727/weighted_gpa_calculator_mobile_friendly" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
+<div style={{width: "100%", height: "900px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/7608416/premium_dynamic_table" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
 The code simply loops through each row of the table to get the grade and weight values.
 
 ```python
+import mecsimcalc as msc
+
+
 def main(inputs):
     # get input table (list of rows)
     input_table = inputs['table']
 
+    # make the headers for the table
+    headers = ['Subject', 'Grade']
+
+    # transform the table into an html table using the mecsimcalc library
+    table = msc.print_table(headers, input_table)
+
     # calculate the grade average
     rows = len(input_table)
-    weight = 0
-    gpa_sum = 0
+    sum = 0
     for i in range(0, rows):
-        gpa_sum += input_table[i][1] * input_table[i][2]
-        weight += input_table[i][2]
+        sum += input_table[i][1]
 
-    average = gpa_sum / weight
+    average = sum / rows
 
     # return the table in a dictionary
-    return {'average': f'{average:.2f}'}
+    return {'table': table, 'average': f'{average:.2f}'}
 ```
 
 :::tip
@@ -109,7 +116,7 @@ This will allow you to get the # of rows in the table and then you can use it ho
 
 ### Labeling Rows
 
-If the dynamic rows feature is enabled, the # of rows that will be used is unknown.
+If the Dynamic Table feature is enabled, the # of rows that will be used is unknown.
 In order to have the rows labeled correctly, you can use the {{row}} placeholder.
 This can be used in two different ways:
 
@@ -117,6 +124,6 @@ This can be used in two different ways:
 
 ![img alt](/docs/inputs/label_row_placeholder.png)
 
-2. In a rich text input type
+2. In a Rich Text input
 
 ![img alt](/docs/inputs/richtext_row_placeholder.png)

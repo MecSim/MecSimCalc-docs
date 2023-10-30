@@ -64,3 +64,9 @@ The conditions for the **Input Group** will effect the entire section (including
 :::caution
 Don't forget to click on **APPLY** after editing the properties of the **Input Group**
 :::
+
+The following embedded app demonstrates the **Conditional Input Group** feature!
+Use the [Conditional Input Group template](https://mecsimcalc.com/create) (under **Advanced**) to start creating a similar app!
+Depending on the shape you pick, a different **Input Group** is shown!
+
+<div style={{width: "100%", height: "900px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/8348786/premium_conditional_input_group" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
