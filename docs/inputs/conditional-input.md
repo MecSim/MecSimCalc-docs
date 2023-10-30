@@ -12,20 +12,12 @@ The following provides a detailed description about the Conditional Input featur
 
 ## How does it work?
 
-This feature allows you to hide or disable an Input (or Input Group) based on a set of **_rules_**
-
-<!-- ### :bulb: **Notes:**
-
-- If the _**rule**_ is TRUE then the input will be visible
-- Multiple _**rules**_ are combined using AND i.e. all _**rules**_ have to be TRUE in order for the input to be visible
-- If ANY _**rule**_ is FALSE then the input will be hidden
- -->
+This feature allows you to hide or disable an **Input** based on a set of **_conditions_**
 
 ### :bulb: **Notes:**
 
-- **_Rules_** are evaluated together using AND, therefore if any **_rule_** is FALSE the overall result is FALSE.
-- If the result of the **_rules_** is false you can either hide or disable the Input (or Input Group).
-- Each _**rule**_ is composed of 3 parts and calculates a binary result (TRUE or FALSE) by evaluating the values of other Inputs.
+- The input will be hidden or disabled if any **_condition_** is not satisfied
+- Each **_condition_** is composed of 3 parts and calculates a binary result (TRUE or FALSE) by evaluating the values of other Inputs.
 
 <div style={{textAlign: 'center'}}>
 
@@ -39,7 +31,7 @@ This feature allows you to hide or disable an Input (or Input Group) based on a 
 
 ## Steps
 
-1. When editing an iInput (or Input Group), check the Conditional Input box in order to start creating **_rules_**.
+1. When editing an **Input**, check the Conditional Input box in order to start creating **_conditions_**.
 
    <div style={{textAlign: 'center'}}>
 
@@ -47,14 +39,14 @@ This feature allows you to hide or disable an Input (or Input Group) based on a 
 
    </div>
 
-2. Select the effect of the rules on the Input.
+2. Select the effect on the **Input**
 
-   1. Hide Input (s): If the **_rules_** evaluate to FALSE then this **Input** will be hidden
-   2. Disable Input (s): If the **_rules_** evaluate to FALSE then this Input will be disabled (the **_user_** will be able to see the input but will be able to interact with it)
+   1. Hidden: If any **_condition_** is not satisfied then the **Input** will be hidden
+   2. Disabled: If any **_condition_** is not satisfied then the **Input** will be disabled
 
-3. To create a **_rule_** you must define the 3 subcomponents. Here is an example of creating a **_rule_** where the Slider Input will only be visible if Checkbox Input is TRUE (checked).
-
-   First select the Checkbox Input
+3. To create a **_condition_** you must define the 3 subcomponents. Here is an example of creating a **_condition_** where the **Slider Input** will be hidden if the condition
+   `Checkbox == True` is not satisfied.
+   First select the **Checkbox Input**
 
    <div style={{textAlign: 'center'}}>
 
@@ -62,7 +54,7 @@ This feature allows you to hide or disable an Input (or Input Group) based on a 
 
    </div>
 
-   We want to check if the checkbox is TRUE, therefore select the '==' operator
+   We want to check whether or not the **Checkbox** is TRUE, therefore select the '==' operator
 
    <div style={{textAlign: 'center'}}>
 
@@ -84,7 +76,7 @@ When editing an input, don't forget to click on **APPLY CHANGES** at the bottom 
 
 ## Test it out for youself
 
-Test out the _**rule**_ we created above for yourself!  
+Test out the _**condition**_ we created above!  
 :::tip
 If the Checkbox Input is TRUE (checked) the Slider will be visible.
 :::
@@ -93,14 +85,11 @@ If the Checkbox Input is TRUE (checked) the Slider will be visible.
 
 ## Additional
 
-:information_source: **Note:** We currently do not offer creating rules based on the following input types: date, file, rich text.
+:information_source: **Note:** We currently do not offer creating conditions based on the following input types: date, file, rich text.
 
-### Adding a rule
+### Adding a condition
 
-To add a **_rule_**, simply click the plus button. There can be as many **_rules_** as you want.  
-:::tip
-_**Rules**_ are combined using AND, therefore they all have to evaluate to TRUE for the input to be visible (or enabled).
-:::
+To add a **_condition_**, simply click the plus button. There can be as many **_conditions_** as you want.
 
    <div style={{textAlign: 'center'}}>
 

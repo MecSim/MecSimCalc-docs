@@ -52,7 +52,7 @@ Click the :pencil2: icon near the top right of an input group and the **Edit Inp
 **Conditional Input Group** is similar to the [Conditional Input](/inputs/conditional-input) feature, but instead effects the entire **Input Group**.
 
 :::tip
-The rules for the **Input Group** will effect the entire section (including all the inputs within it)
+The conditions for the **Input Group** will effect the entire section (including all the inputs within it)
 :::
 
 <div style={{textAlign: 'center'}}>
