@@ -49,10 +49,10 @@ This feature allows you to hide or disable an Input (or Input Group) based on a 
 
 2. Select the effect of the rules on the Input.
 
-   1. Hide Input (s): If the rules evaluate to FA:SE then this Input will be hidden
-   2. Disable Input (s): If the rules evaluatre to FALSE then this Input will be disabled (the **_user_** will be able to see the input but will be able to interact with it)
+   1. Hide Input (s): If the **_rules_** evaluate to FALSE then this **Input** will be hidden
+   2. Disable Input (s): If the **_rules_** evaluate to FALSE then this Input will be disabled (the **_user_** will be able to see the input but will be able to interact with it)
 
-3. To create a _**rule**_ you must define the 3 subcomponents. Here is an example of creating a **_rule_** where the Slider Input will only be visible if Checkbox Input is TRUE (checked).
+3. To create a **_rule_** you must define the 3 subcomponents. Here is an example of creating a **_rule_** where the Slider Input will only be visible if Checkbox Input is TRUE (checked).
 
    First select the Checkbox Input
 
@@ -91,10 +91,9 @@ If the Checkbox Input is TRUE (checked) the Slider will be visible.
 
 <div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/3643677/conditional_input_example" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
 
-:information*source: **Note:**
-We currently do not offer creating \*\*\_rules*\*\* based on the following input types: date, file, rich text.
-
 ## Additional
+
+:information_source: **Note:** We currently do not offer creating rules based on the following input types: date, file, rich text.
 
 ### Adding a rule
 
