@@ -41,10 +41,9 @@ For example, the following **Table Group** has three columns and 1 row. The head
 </div>
 
 1. Drag the **Table Group** to order it vertically amongst the other groups
-2. Specify a _**Title**_ that will be visible to the users
-3. Edit the **Table Group** properties (described below)
-4. Delete the **Table Group**
-5. Duplicate the last row in the current **Table Group** (similar to duplicate input but for the whole row)
+2. Edit the **Table Group** properties (described below)
+3. Delete the **Table Group**
+4. Duplicate the last row in the current **Table Group** (similar to duplicate input but for the whole row)
 
 ### Editing a table group
 
@@ -56,20 +55,20 @@ To edit the table group, click the :pencil2: icon near the top right side of the
 
 </div>
 
-1. **Name** -> this is the variable name of the table which will be used in the python code
-2. **Columns** -> the number of columns in the table
+1. **Title** -> the title of the table group
+2. **Name** -> this is the variable name of the table which will be used in the python code
+3. **Columns** -> the number of columns in the table
 
 | :trophy: The following are [premium](https://mecsimcalc.com/pricing) features |
 | ----------------------------------------------------------------------------- |
 
-3. **Dynamic Rows** -> check this box if you want the user to be able to add and delete rows from the table  
+4. **Dynamic Rows** -> check this box if you want the user to be able to add and delete rows from the table  
     After checking this box a list of options will appear:  
    a) **_Max Rows_** -> The maximum number of rows that can be in the table (**NOT including the header row**)  
    b) **_Min Rows_** -> The minimum number of rows that can be in the table
    (**NOT including the header row**)  
    c) **_Row Group Size_** -> The number of rows that are 'combined' together when the user 'Adds' or 'Deletes' rows. (_This should almost always be set to 1 ...unless your row is comprised of multiple lines_)
-4. **Conditional Input Group** -> [Learn more](/inputs/input-group#conditional-input-group)
-<!-- Similar to the Conditional Input feature but for the entire [**Input Group / Table Group**](/inputs/input-group#conditional-input-group) -->
+5. **Conditional Input Group** -> [Learn more](/inputs/input-group#conditional-input-group)
 
 :::caution
 Don't forget to click on **APPLY** after editing the properties of the **Table Group**
