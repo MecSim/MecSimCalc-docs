@@ -29,14 +29,24 @@ The default setting is that **Anyone** can use your app! (Apps are also searchea
 
 :information_source: **Note:** You can only manage who has access to your app if you have a premium account, but your access settings WILL NOT CHANGE if you revert back to the free account!
 
-1. When editing your app select **_'Accounts you share it with'_** from the dropdown options.
+1. When editing your app select **_'Only accounts you give access to'_** from the dropdown options.
    ![img alt](/docs/getting-started/access_control_dropdown.png)
 2. You can then enter the **_user_** emails that you want to share your app with!
    ![invite users](/docs/getting-started/invite_users.png)
 
+Access is controlled by user email. If you share it with someone who doesn't have an account they will need to make one (with that email) in order to gain access to your app!
+
 :::tip
-Access is controlled by user email. If you share it with someone who doesn't have an account they will need to make one [with that email] in order to gain access to your app!
+You must publish any changes you make to the access settings for them to be in effect!
 :::
+
+### Reviewing requests
+
+Sometimes users will request access to your app. You can click the **"Review Requests"** button to deal with any requests.  
+:information_source: **Note:** The button is disabled if there are no requests
+
+You can then accept :heavy_check_mark: or decline :heavy_multiplication_x: the requests.  
+![img alt](/docs/getting-started/review_requests_dialog.png)
 
 ## Step 2: Inputs
 
