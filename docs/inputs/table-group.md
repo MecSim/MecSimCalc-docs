@@ -55,20 +55,20 @@ To edit the table group, click the :pencil2: icon near the top right side of the
 
 </div>
 
-1. **Title** -> the title of the table group
-2. **Name** -> this is the variable name of the table which will be used in the python code
-3. **Columns** -> the number of columns in the table
+1. **Title** &#8594; the title of the table group
+2. **Name** &#8594; this is the variable name of the table which will be used in the python code
+3. **Columns** &#8594; the number of columns in the table
 
 | :trophy: The following are [premium](https://mecsimcalc.com/pricing) features |
 | ----------------------------------------------------------------------------- |
 
-4. **Dynamic Table** -> check this box if you want the user to be able to add and delete rows from the table  
+4. **Dynamic Table** &#8594; check this box if you want the user to be able to add and delete rows from the table  
     After checking this box a list of options will appear:  
-   a) **_Max Rows_** -> The maximum number of rows that can be in the table (**NOT including the header row**)  
-   b) **_Min Rows_** -> The minimum number of rows that can be in the table
+   a) **_Max Rows_** &#8594; The maximum number of rows that can be in the table (**NOT including the header row**)  
+   b) **_Min Rows_** &#8594; The minimum number of rows that can be in the table
    (**NOT including the header row**)  
-   c) **_Row Group Size_** -> The number of rows that are 'combined' together when the user 'Adds' or 'Deletes' rows. (_This should almost always be set to 1 ...unless your row is comprised of multiple lines_)
-5. **Conditional Input Group** -> [Learn more](/inputs/input-group#conditional-input-group)
+   c) **_Row Group Size_** &#8594; The number of lines that make a single row that can be added and deleted (_This should almost always be set to 1 ...unless your row is comprised of multiple lines_)
+5. **Conditional Input Group** &#8594; [Learn more](/inputs/input-group#conditional-input-group)
 
 :::caution
 Don't forget to click on **APPLY** after editing the properties of the **Table Group**
@@ -117,7 +117,7 @@ This will allow you to get the # of rows in the table and then you can use it ho
 ### Labeling Rows
 
 If the Dynamic Table feature is enabled, the # of rows that will be used is unknown.
-In order to have the rows labeled correctly, you can use the {{row}} placeholder.
+In order to have the rows labeled correctly, you can use the `{{row}}` placeholder.
 This can be used in two different ways:
 
 1. In an input label

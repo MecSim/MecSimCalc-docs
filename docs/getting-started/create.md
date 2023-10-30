@@ -3,9 +3,9 @@ sidebar_label: "Create an App"
 sidebar_position: 1
 ---
 
-# How to Create your first App!
+# Creating your first app!
 
-To start creating your first App on **MecSimCalc** head to our [create page](https://mecsimcalc.com/create)
+To start creating your first App on **MecSimCalc** head to our [create page](https://mecsimcalc.com/create).
 
 ![create page](/docs/getting-started/create_options.png)
 
@@ -13,9 +13,9 @@ To start creating your first App on **MecSimCalc** head to our [create page](htt
 
 We offer many free templates! They are a great way to get started with your app. There are 3 main types of templates:
 
-1. [The Basics](./example-1) -> Create a new blank app or use one of our starter templates
-2. [Files](../files/overview) -> Learn how to manipulate spreadsheets and images
-3. [Maps](../maps/overview) -> If you want to draw shapes or display geospatial data
+1. [The Basics](./example-1) &#8594; Create a new blank app or use one of our starter templates that covers the 6 main steps of creating an app
+2. [Files](../files/overview) &#8594; Learn how to manipulate spreadsheets and images
+3. [Maps](../maps/overview) &#8594; Draw shapes or display geospatial data
 
 ## Premium Templates
 
@@ -24,8 +24,8 @@ We offer many free templates! They are a great way to get started with your app.
 
 We also offer templates for our premium features. These templates are a great way to learn how to use the more advanced features of the platform.
 
-1. **Advanced** -> Templates for premium features such as Conditional inputs and Dynamic tables
-2. **AI Templates** -> Create your very own AI app with our AI templates
+1. **Advanced** &#8594; Templates for premium features such as Conditional inputs and Dynamic tables
+2. **AI Templates** &#8594; Create your very own AI app with our AI templates
 
 ## Create using AI
 
