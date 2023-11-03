@@ -53,7 +53,7 @@ The following two images show the settings used for each of the inputs:
 
 We are going to present two different versions of the code that can be used to generate tables.
 
-In the first version, will be using the `print_table` function from the `mecsimcalc` library. This function takes two arguments: the column headers and the columns. The columns are passed as a list of lists, where each list represents a column. The following code snippet shows how to use this function to generate a multiplication table:
+In the first version, we will be using the `print_table` function from the `mecsimcalc` library. This function takes two arguments: the column headers and the rows. The rows are passed as a list of lists, where each list represents a row. The following code snippet shows how to use this function to generate a multiplication table:
 
 ```python
 import mecsimcalc as msc
@@ -62,18 +62,13 @@ def main(inputs):
     m = inputs['multiplier']
     r = inputs['range']
 
-    # Create the columns
-    col1 = [m for _ in range(r)]
-    col2 = [i+1 for i in range(r)]
-    col3 = [col1[i]*col2[i] for i in range(r)]
-
-    # Create the table and headers
-    columns = [col1,col2,col3]
+    # Create the rows and column headers
+    rows = [[m,i+1,m*(i+1)] for i in range(r)]
     ColumnHeaders = ["First Number", "Second Number","Product"]
 
     # Generate the HTML table using the mecsimcalc library
-    table = msc.print_table(ColumnHeaders, columns)
-    return {"Multiplier": m, "Table":table }
+    table = msc.print_table(ColumnHeaders, rows)
+    return { "Multiplier": m, "Table": table }
 ```
 
 In the second version, we are going to use the Pandas library to first create a _Pandas dataframe_, and then convert the dataframe into an HTML table, using `.to_html()`:
