@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Example 3"
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Example 3: Generating a Multiplication Table

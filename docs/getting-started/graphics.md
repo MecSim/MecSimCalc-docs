@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Generating Graphics"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Generating Graphics
