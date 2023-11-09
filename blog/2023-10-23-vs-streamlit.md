@@ -102,7 +102,7 @@ git commit -m "saving my_app.py"
 git push
 ```
 
-**Step 4:** Finally, to deploy the app, create a [Streamlit Cloud](https://streamlit.io/cloud) account and fill out the _Deploy an app_ form with the Github repository link. Once submitted, the app will build for a few minutes before becoming accessible at a streamlit url.
+**Step 5:** Finally, to deploy the app, create a [Streamlit Cloud](https://streamlit.io/cloud) account and fill out the _Deploy an app_ form with the Github repository link. Once submitted, the app will build for a few minutes before becoming accessible at a streamlit url.
 
 <div style={{ width:"100%", overflow: "hidden" }}>
 <video muted="" loop="" controls style={{ width:"100%", overflow: "hidden" }}>
