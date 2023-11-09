@@ -17,9 +17,9 @@ Before diving into the technical details, let's take a look at the basic informa
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Website            | [Anvil Works](https://anvil.works/)                                                                                                                     | [MecSimCalc](https://mecsimcalc.com/)                                                                                 |
 | Description        | "Build web apps with nothing but Python. Build seriously powerful web apps with all the flexibility of Python. No web development experience required." | "The simplest way to build and share computational tools. Create and share your Python web apps in minutes for free." |
-| Target Audience    | Enterprise                                                                                                                                              | Designed for non-technical users                                                                                      |
+| Target Audience    | Businesses                                                                                                                                              | Non-developers, e.g. engineers, consultants, educators, researchers, etc.                                             |
 | Required Knowledge | Python, Anvil library                                                                                                                                   | Python                                                                                                                |
-| Ideal Use Case     | Business websites with database                                                                                                                         | Computational simulation and calculation                                                                              |
+| Ideal Use Case     | Full-fledged business websites with a database                                                                                                          | Computational simulations and calculations                                                                            |
 | Cost               | Free                                                                                                                                                    | Free                                                                                                                  |
 
 ## Features Comparison
@@ -50,57 +50,59 @@ Creating web applications should be a straightforward process. Let's explore how
 
 Anvil runs a web server that communicates with a database and other processes.
 
-**Step 1:** Create a new app by selecting from one of the Anvil templates
+**Step 1:** Create a new app by selecting an Anvil template.
+
 ![Create page](/blog/compare/anvil_create.jpg)
 
-**Step 2:** On the inputs page, use the side menu on the right to configure each input settings and drag-and-drop in more inputs.
+**Step 2:** On the inputs page, use the side menu on the right to configure each input and use drag-and-drop to add more inputs from the toolbox. The inputs are linked to the code by selecting the appropriate code function within each input's side menu.
+
 ![Inputs page](/blog/compare/anvil_inputs.png)
+
+<div style={{textAlign: 'center'}}>
+
 ![New component](/blog/compare/anvil_new_component.png)
 
-**Step 3:** On the code page, use custom anvil functions to write the Python code that uses the input values to execute commands, such as database executions.
+</div>
+
+**Step 3:** On the code page, use custom Anvil functions to write Python code that executes commands, like interacting with databases, using the provided input values.
+
 ![Code page](/blog/compare/anvil_code.png)
 
-**Step 4:** Finally, to deploy the app, open the Publish popup and click on Publish
+**Step 4:** Finally, to deploy the app, click on the _Publish_ button and set the appropriate settings in the popup window.
+
 ![Publish](/blog/compare/anvil_publish.png)
 
-**Step 5:** The app is now deployed and accessible at an Anvil url:
+**Step 5:** The app is now deployed and accessible at an Anvil url.
 Keep in mind that Anvil apps on the free tier come with a banner at the top.
 
 ![Anvil app](/blog/compare/anvil_app.png)
 
 ### MecSimCalc
 
-Internally, MecSimCalc uses serverless functions to run Python functions, make it suitable for computational simulation and calculation, which may require more computing power and longer runtimes.
+Internally, MecSimCalc uses serverless functions to run Python functions, making it suitable for computational simulations and calculations, which may require more compute power and longer runtimes.
 
 Here is a simplified workflow for creating and deploying a basic MecSimCalc app:
 
 **Step 1:** Visit https://mecsimcalc.com/create and select one of the templates to create a new app.
 ![Create page](/blog/compare/mecsimcalc_create.png)
-
-**Step 2:** On the inputs step, use the drag and drop interface to add, delete, and position the inputs. Edit the each input by clicking on it.
+**Step 2:** On the inputs step, use the drag-and-drop interface to add, position, and delete the inputs. Customize each input by clicking on it.
 ![Inputs step](/blog/compare/mecsimcalc_inputs.png)
 ![Edit inputs](/blog/compare/mecsimcalc_edit_inputs.png)
-
-**Step 3:** On the code step, write the Python code that uses the `inputs` to calculate the output. No need for custom functions nor installations. The toolbar on the right allows for installing Python packages, debugging the code, and seeing the input variables.
+**Step 3:** On the code step, write Python code that uses the `inputs` to calculate the outputs. No need to learn new functions nor any installations. Use the toolbar on the right to install Python packages, debug the code, and list the input variables.
 ![Code step](/blog/compare/mecsimcalc_code.png)
-
-**Step 4:** On the outputs step, use the rich text editor to stylize the outputs and embed the outputs variables from the code.
+**Step 4:** On the outputs step, use the rich text editor to stylize the outputs section and embed the output variables generated from the code.
 ![Outputs step](/blog/compare/mecsimcalc_outputs.png)
-
-**Step 5:** Finally, to deploy the app, simply click on the _Publish_ button at the bottom of the Preview step and the app will be accessible at a MecSimCalc url within a few seconds.
+**Step 5:** Finally, to deploy the app, simply click on the _Publish_ button at the bottom of the Preview step and the app will be accessible and searchable on MecSimCalc within a few seconds.
 ![Publish](/blog/compare/mecsimcalc_publish.png)
-
-This is the final app:
+This is what the final app looks like:
 ![MecSimCalc app](/blog/compare/mecsimcalc_app.png)
 
 ## Conclusion
 
-Both Anvil and MecSimCalc aim to simplify web application development, enabling users to leverage the power of Python without the need for extensive web development experience. While Anvil is designed for building full-fledged websites and offers more features, MecSimCalc is geared towards non-technical users and simplifies complex computations.
+Anvil and MecSimCalc present distinct approaches to simplifying web application development, harnessing the capabilities of Python without necessitating extensive programming expertise. Anvil, catering to comprehensive website creation, boasts an array of features, potentially introducing complexity, whereas MecSimCalc targets non-technical users, streamlining intricate computations.
 
-### Key Takeaways
+MecSimCalc specifically excels in simplifying complex calculations using Python, offering a more straightforward learning curve due to its sequential layout and familiar Python code structure. In contrast, Anvil's robust feature set, while powerful for creating full-scale websites, may require a few hours for users to grasp the Anvil web layout and anvil code library.
 
-- MecSimCalc offers a solution for simplifying complex calculations with Python.
-- Anvil's extensive feature set can create complexity, but it is more suitable for building full-fledged websites.
-- MecSimCalc excels at simplifying the app-building process for non-technical users.
+Anvil suits businesses seeking database interaction within a website, while MecSimCalc serves as an optimal choice for non-developers aspiring to create simple web apps like calculators. Its strength lies in facilitating app development for non-technical users.
 
-In summary, the choice between Anvil and MecSimCalc depends on your specific needs and the complexity of the web applications you intend to develop. Both tools offer the power of Python, but with different target audiences and features.
+Ultimately, the selection between Anvil and MecSimCalc hinges on individual needs and the complexity of the intended web applications. Both tools leverage the capabilities of Python but cater to different audiences and offer distinct features.
