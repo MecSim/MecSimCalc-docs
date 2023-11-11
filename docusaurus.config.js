@@ -96,6 +96,12 @@ const config = {
             target: "_self",
           },
           { label: "BLOG", to: "blog", position: "left" },
+          {
+            label: "PRICING",
+            to: "https://mecsimcalc.com/pricing/",
+            position: "left",
+            target: "_self",
+          },
         ],
       },
       footer: {
