@@ -443,6 +443,10 @@ To use a shared library file, the **_developer_** first must compile their C/C++
 cc -fPIC -shared -o [function].so [CCode].c
 ```
 
+:::tip
+The above command requires installing a C compiler. Alternatively, you can compile online [here](https://mecsimcalc.com/app/5682150/c_types_compiler), without any installations.
+:::
+
 Where [function] is the name of the shared library you will call in the Python code, and [CCode] is the name of the C/C++ code file. A C/C++ compiler must be installed.
 
 To compile a shared library file:
@@ -541,6 +545,10 @@ PYBIND11_MODULE(function, m) {
 ```bash
 c++ -O3 -Wall -shared -std=c++11 -fPIC `python3 -m pybind11 --includes` my_func.cpp -o function.so
 ```
+
+:::tip
+The above command requires installing a C compiler. Alternatively, you can compile online [here](https://mecsimcalc.com/app/3537844/pybind_11_compiler), without any installations.
+:::
 
 3. Once compiled, import the `function.so` file into your Python code using `import <.so filename>`
 
