@@ -29,6 +29,7 @@ The `NumberInput` enables inputting a _number_ as an integer or a float.
 | **Step**              | The precision by which the _**user**_ can input a number, ie. the step size                                                                    |
 | **Min**               | The minimum value that the _**user**_ can input                                                                                                |
 | **Max**               | The maximum value that the _**user**_ can input                                                                                                |
+| **Randomized**        | Randomize the default value to a random number within the min and max range, and with the step size.                                           |
 
 As an example, the following image displays an input group with one number input labelled: "Distance" with a default value of $10mm$ and a precision of $0.001mm$. The minimum and maximum values allowed are 0 and 10,000. The variable name to be used in the **Code** step is `dist`.
 
