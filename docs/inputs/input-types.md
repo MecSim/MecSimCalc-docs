@@ -17,19 +17,20 @@ import TabItem from '@theme/TabItem';
 
 The `NumberInput` enables inputting a _number_ as an integer or a float.
 
-| Option                | Description                                                                                                                                    |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
-| **Label**             | The label that describes what the input represents to the _**user**_                                                                           |
-| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                   |
-| **Units**             | The units that would be displayed to the user. The units will be rendered in [Latex/Katex](https://katex.org/docs/supported.html)              |
-| **Default Value**     | The default value when the _**app**_ is initally loaded without any changes from the _**user**_                                                |
-| **Required**          | If checked, the _**app**_ will not run unless the value is not empty. Otherwise, empty values are allowed                                      |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
-| **Step**              | The precision by which the _**user**_ can input a number, ie. the step size                                                                    |
-| **Min**               | The minimum value that the _**user**_ can input                                                                                                |
-| **Max**               | The maximum value that the _**user**_ can input                                                                                                |
-| **Randomized**        | Randomize the default value to a random number within the min and max range, and with the step size.                                           |
+| Option                | Description                                                                                                                       |
+| :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                            |
+| **Label**             | The label that describes what the input represents to the _**user**_                                                              |
+| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                      |
+| **Units**             | The units that would be displayed to the user. The units will be rendered in [Latex/Katex](https://katex.org/docs/supported.html) |
+| **Default Value**     | The default value when the _**app**_ is initally loaded without any changes from the _**user**_                                   |
+| **Required**          | If checked, the _**app**_ will not run unless the value is not empty. Otherwise, empty values are allowed                         |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable                                      |
+| **Read Only**         | If checked, this input will not editable. Differs from disabled in that it's not greyed out                                       |
+| **Step**              | The precision by which the _**user**_ can input a number, ie. the step size                                                       |
+| **Min**               | The minimum value that the _**user**_ can input                                                                                   |
+| **Max**               | The maximum value that the _**user**_ can input                                                                                   |
+| **Randomized**        | Randomize the default value to a random number within the min and max range, and with the step size.                              |
 
 As an example, the following image displays an input group with one number input labelled: "Distance" with a default value of $10mm$ and a precision of $0.001mm$. The minimum and maximum values allowed are 0 and 10,000. The variable name to be used in the **Code** step is `dist`.
 
@@ -59,7 +60,8 @@ The `TextInput` enables inputting text to be available as a string in the **Code
 | **Default Value**     | The default value when the _**app**_ is initally loaded without any changes from the _**user**_                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Placeholder**       | If the input is empty, the Placeholder is a message displayed to the _**user**_ when editing the input. It should hint at a possible input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | **Required**          | If checked, the _**app**_ will not run unless the value is not empty. Otherwise, empty values are allowed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Read Only**         | If checked, this input will not editable. Differs from disabled in that it's not greyed out                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | **Min Length**        | The smallest number of characters that the _**user**_ can input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Max Length**        | The largest number of characters that the _**user**_ can input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **Pattern**           | This is a sequence of characters that are used to validate the input against a specific pattern chosen by the _**developer**_. Pattern must be a [regular expression (regex)](https://regex101.com/) string. For example, the _**developer**_ can force the text input to contain letters without any numbers or special characters. For more information, consult with the [HTML input pattern attributes](https://www.w3schools.com/tags/att_input_pattern.asp) and [JavaScript Regular Expressions](https://www.w3schools.com/js/js_regexp.asp). The default value of `.*` allows any input containing spaces, special characters, letters, and numbers |
@@ -93,7 +95,7 @@ The `FileInput` allows the _**user**_ to upload a file that can be read in the *
 | **Accept**            | Provide a [filter](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept) to limit to only acceptable files in the file explorer. **Accept** can be one particular extension (e.g. `.csv`) or a group of extensions (e.g. `.csv, .xlsx, .png`). You can also limit to recognized file types, such as `audio/*`, `video/*`, or `image/*`. |
 | **Required**          | If checked, the _**app**_ will not run unless the value is not empty. Otherwise, empty values are allowed                                                                                                                                                                                                                                              |
 | **Multiple**          | If checked, the _**user**_ can upload multiple files. Otherwise, only one file can be uploaded                                                                                                                                                                                                                                                         |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable                                                                                                                                                                                                         |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable                                                                                                                                                                                                                                                           |
 | **Max size**          | Maximum file size in bytes. The default value is 100,000,000 bytes which is 100MB                                                                                                                                                                                                                                                                      |
 
 Please see the [Working with Files](../files/overview) section for more details about **FileInput**. Otherwise, you can start exploring how to work with files by choosing the "Files" template when creating a new app:
@@ -111,13 +113,14 @@ Please see the [Working with Files](../files/overview) section for more details 
 
 Using the `SingleSelect` input, the _**developer**_ provides a few options from which the _**user**_ can select a single option from. The value chosen by the _**user**_ is available as a string in the **Code** step.
 
-| Option                | Description                                                                                                                                    |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
-| **Label**             | The label that describes what the input represents to the _**user**_                                                                           |
-| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                   |
-| **Options**           | The list of available options to choose from                                                                                                   |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
+| Option                | Description                                                                                  |
+| :-------------------- | :------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function       |
+| **Label**             | The label that describes what the input represents to the _**user**_                         |
+| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                 |
+| **Options**           | The list of available options to choose from                                                 |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable |
+| **Read Only**         | If checked, this input will not editable. Differs from disabled in that it's not greyed out  |
 
 Depending on the number of available options, the options will be displayed as either radio buttons, or as a dropdown menu.
 
@@ -136,15 +139,16 @@ The following example shows two `SingleSelect` inputs where `Option 1` is chosen
 
 Using the `MultipleSelect` input, the _**developer**_ provides a few options from which the _**user**_ can select multiple options. The options chosen by the _**user**_ are available as a list of strings in the **Code** step.
 
-| Option                | Description                                                                                                                                    |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
-| **Label**             | The label that describes what the input represents to the _**user**_                                                                           |
-| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                   |
-| **Options**           | The list of available options to choose from                                                                                                   |
-| **Required**          | If checked, the _**app**_ will not run unless the user has selected at least one option                                                        |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
-| **Chip**              | If checked, the chosen options will be displayed as chips. Otherwise, they will be displayed as a comma separated list                         |
+| Option                | Description                                                                                                            |
+| :-------------------- | :--------------------------------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                 |
+| **Label**             | The label that describes what the input represents to the _**user**_                                                   |
+| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                           |
+| **Options**           | The list of available options to choose from                                                                           |
+| **Required**          | If checked, the _**app**_ will not run unless the user has selected at least one option                                |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable                           |
+| **Read Only**         | If checked, this input will not editable. Differs from disabled in that it's not greyed out                            |
+| **Chip**              | If checked, the chosen options will be displayed as chips. Otherwise, they will be displayed as a comma separated list |
 
 The following example shows two of three options selected for a `Multiple Select` input with **Chip** checked:
 
@@ -161,13 +165,14 @@ The following example shows two of three options selected for a `Multiple Select
 
 The `Checkbox` input is available in the **Code** step as a `boolean` variable with values of `True` if checked, and `False` if unchecked.
 
-| Option                | Description                                                                                                                                    |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
-| **Label**             | The label that describes what the input represents to the _**user**_                                                                           |
-| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                   |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
-| **Default checked**   | If checked, this `Checkbox` input will be checked by default                                                                                   |
+| Option                | Description                                                                                  |
+| :-------------------- | :------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function       |
+| **Label**             | The label that describes what the input represents to the _**user**_                         |
+| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                 |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable |
+| **Read Only**         | If checked, this input will not editable. Differs from disabled in that it's not greyed out  |
+| **Default checked**   | If checked, this `Checkbox` input will be checked by default                                 |
 
 </TabItem>
 <TabItem value="Slider" label="Slider" >
@@ -176,17 +181,17 @@ The `Checkbox` input is available in the **Code** step as a `boolean` variable w
 
 The `Slider` input allows the _**user**_ to select a number within a range by sliding on a bar using the mouse. The _**developer**_ specifies the minimum and maximum values in addition to the step. The `Slider` input is available as an integer or a float in the **Code** step depending on the step size.
 
-| Option                | Description                                                                                                                                    |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
-| **Label**             | The label that describes what the input represents to the _**user**_                                                                           |
-| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                   |
-| **Default Value**     | The default value of the slider input. It must be within the range of min and max                                                              |
-| **Min**               | The value corresponding to the far left position of the slider                                                                                 |
-| **Max**               | The value corresponding to the far right position of the slider                                                                                |
-| **Step**              | The precision (or step size) of the slider                                                                                                     |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
-| **Marks**             | If checked, tick marks separated by the step size will appear on the slider                                                                    |
+| Option                | Description                                                                                  |
+| :-------------------- | :------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function       |
+| **Label**             | The label that describes what the input represents to the _**user**_                         |
+| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                 |
+| **Default Value**     | The default value of the slider input. It must be within the range of min and max            |
+| **Min**               | The value corresponding to the far left position of the slider                               |
+| **Max**               | The value corresponding to the far right position of the slider                              |
+| **Step**              | The precision (or step size) of the slider                                                   |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable |
+| **Marks**             | If checked, tick marks separated by the step size will appear on the slider                  |
 
 As an example, the image below shows a slider with tick marks which returns a value between 0 and 100 with a step size of 5.
 
@@ -203,18 +208,18 @@ As an example, the image below shows a slider with tick marks which returns a va
 
 The `RangeSlider` allows the _**user**_ to input two numbers by sliding two ends of a bar using the mouse. The _**developer**_ specifies the minimum and maximum values in addition to the step. The `RangeSlider` input is available as a list of two integer/float values in the **Code** step.
 
-| Option                | Description                                                                                                                                    |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
-| **Label**             | The label that describes what the input represents to the _**user**_                                                                           |
-| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                   |
-| **Default min value** | The default value of the first number in the returned list. This is the smaller value                                                          |
-| **Default max value** | The default value of the second number in the returned list. This is the larger value                                                          |
-| **Min**               | The value corresponding to the far left position of the range slider                                                                           |
-| **Max**               | The value corresponding to the far right position of the range slider                                                                          |
-| **Step**              | The precision (or step size) of the range slider input                                                                                         |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
-| **Marks**             | If checked, tick marks separated by the step size will appear on the slider                                                                    |
+| Option                | Description                                                                                  |
+| :-------------------- | :------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function       |
+| **Label**             | The label that describes what the input represents to the _**user**_                         |
+| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                 |
+| **Default min value** | The default value of the first number in the returned list. This is the smaller value        |
+| **Default max value** | The default value of the second number in the returned list. This is the larger value        |
+| **Min**               | The value corresponding to the far left position of the range slider                         |
+| **Max**               | The value corresponding to the far right position of the range slider                        |
+| **Step**              | The precision (or step size) of the range slider input                                       |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable |
+| **Marks**             | If checked, tick marks separated by the step size will appear on the slider                  |
 
 As an example, the following image shows a range slider with tick marks that returns a list of two numbers between 0 and 100 with a step size of 5. The returned value of this range slider is `[25,75]`.
 
@@ -231,13 +236,13 @@ As an example, the following image shows a range slider with tick marks that ret
 
 The `ColorPicker` allows the _**user**_ to pick a color from a color palette and is available in the **Code** step as a hex color code string.
 
-| Option                | Description                                                                                                                                    |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function                                                         |
-| **Label**             | The label that describes what the input represents to the _**user**_                                                                           |
-| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                   |
-| **Default value**     | The default value in the color palette                                                                                                         |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable |
+| Option                | Description                                                                                  |
+| :-------------------- | :------------------------------------------------------------------------------------------- |
+| **Name**              | A unique variable name to be used in the **Code** step as input to the `main` function       |
+| **Label**             | The label that describes what the input represents to the _**user**_                         |
+| **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                 |
+| **Default value**     | The default value in the color palette                                                       |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable |
 
 Below is an image showing the `ColorPicker` input type.
 
@@ -260,7 +265,8 @@ The `DateTimePicker` allows the _**user**_ to pick a date and/or a time and is a
 | **Label**             | The label that describes what the input represents to the _**user**_                                                                                                                                              |
 | **Conditional Input** | A set of conditions that controls whether the input is invisible or disabled                                                                                                                                      |
 | **Type**              | The _**developer**_ specifies whether the _**user**_ should input date and time, date only, or time only. If the _**user**_ is required to input the date only, then the current time will be used and vice versa |
-| **Disabled**          | If checked, this input will be displayed to the _**user**_ without allowing the _**user**_ to edit the value. Otherwise, the input is editable                                                                    |
+| **Disabled**          | If checked, this input will be greyed out and not editable. Otherwise, the input is editable                                                                                                                      |
+| **Read Only**         | If checked, this input will not editable. Differs from disabled in that it's not greyed out                                                                                                                       |
 
 </TabItem>
 <TabItem value="Rich Text" label="Rich Text" >
