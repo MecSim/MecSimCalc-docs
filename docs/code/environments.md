@@ -125,8 +125,8 @@ All uploaded files are saved in the `/home` folder and can be accessing in the P
 To accommodate our infrastructure built on Amazon Linux and AWS, we utilize `yum` for installing system packages. Here's a brief guide to setting up system packages within a Dockerfile:
 
 ```dockerfile
-# Install system packages
-RUN yum install -y package-name
+# Install system packages using yum
+RUN yum install -y package-name 
 ```
 
 Replace `package-name` with the actual packages needed for your project. This setup leverages Amazon Linux's native package manager, `yum`, aligning with our AWS-based environment for streamlined deployment and execution.
