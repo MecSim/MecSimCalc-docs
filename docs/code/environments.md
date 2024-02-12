@@ -14,7 +14,7 @@ Consider building a custom environment for your Python code if you need to:
 
 - Install additional **Python packages** and/or **specific package versions**.
 - Install a specific **Python version** (e.g. `Python 3.10`).
-- Install additional **system packages** (e.g. `apt-get install`).
+- Install additional **system packages** (e.g. `yum install`).
 - Make certain **files** available inside the filesystem.
   - As opposed to downloading necessary files at runtime, which can slow down the code.
 
@@ -54,7 +54,7 @@ Once opened, create a new environment:
 
 </div>
 
-## Step 2: Add packages
+## Step 2: Add Python packages
 
 ### Option 1: Builder
 
@@ -116,13 +116,26 @@ Upload files by either:
 
 </div>
 
+If you want to 
 All uploaded files are saved in the `/home` folder and can be accessing in the Python code by its file path: `/home/<filename>` (e.g. `/home/hello.png`).
 
+
+## Step 4: Add System packages
+
+To accommodate our infrastructure built on Amazon Linux and AWS, we utilize `yum` for installing system packages. Here's a brief guide to setting up system packages within a Dockerfile:
+
+```dockerfile
+# Install system packages
+RUN yum install -y package-name
+```
+
+Replace `package-name` with the actual packages needed for your project. This setup leverages Amazon Linux's native package manager, `yum`, aligning with our AWS-based environment for streamlined deployment and execution.
+
 :::caution
-The Dockerfile can be edited directly to further configure the code environment, by clicking on the **Dockerfile** button. However, this is strongly discouraged as it may cause the build to fail or the environment to break. [Read more on Dockerfiles](https://docs.docker.com/engine/reference/builder/)
+While the **Dockerfile** can be manually edited to customize the code environment, we advise against it. Direct modifications may lead to build failures or unstable environments. [Learn more about Dockerfiles](https://docs.docker.com/engine/reference/builder/). This feature is intended for advanced users due to our project's Python focus.
 :::
 
-## Step 4: Build the environment
+## Step 5: Build the environment
 
 Once you are happy with the environment, click on the **Build Environment** button to start the build. This may take many minutes, so please be patient and do not close the window!
 
