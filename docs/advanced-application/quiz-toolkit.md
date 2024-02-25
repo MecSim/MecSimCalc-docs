@@ -4,6 +4,9 @@ sidebar_position: 1
 ---
 # Quiz Toolkit
 
+| :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
+| -------------------------------------------------------------------- |
+
 **MecSimCalc** now supports online quizzes.
 In this tutorial, we'll learn to build a Quiz App for educational purposes. The app displays scores 
 instantly, saves results to **Google Sheets**, and **sends email** to receivers(professors), streamlining 
@@ -16,7 +19,7 @@ Seamlessly integrates with **[Google Sheets](google-sheet)** for straightforward
 Utilizes **[Gmail](gmail)** for direct communication and data sharing, ensuring immediate feedback and results dissemination.
 ![img alt](/docs/advanced-application/quiz-toolkit/gmail_res.png)
 
-:::tip
+:::info
 You will need to provide additional parameters for these two features. **Don't worry, we will teach you how to obtain them later!**
 :::
 ## Steps 1: Create your quiz App
@@ -55,10 +58,23 @@ def main(inputs):
 ## Steps 2: Store results in Google Sheets
 MecSimCalc has its own function that can be used.Users can append data to their own Google Sheets by calling [`append_to_google_sheet`](../mecsimcalc-library#append_to_google_sheet).
 
+#### Arguments:
+
+| Argument               | Type     | Description                                                                                                                   |
+|------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| **`service_account_info`** | **dict** | The credentials used for Google Sheets API authentication.                                                                    |
+| **`spreadsheet_id`**       | **str**  | The unique identifier of your Google Spreadsheet.                                                                             |
+| **`values`**               | **list of lists** | The data to append. Each list element represents a row of data.                                                               |
+| **`range_name`**           | **str** (optional)  | The A1 notation of the range to start appending data (Defaults to 'Sheet1!A1'). Generally, there is no need to make changes.. |
+| **`include_timestamp`**    | **bool** (optional) | If True, appends the current timestamp to each row of data (Defaults to True).                                                |
+
 
 All you need to do is add:
 ```python
-
+values = [
+    [ inputs['name'], inputs['id'], grade ],
+]  
+    
 msc.append_to_google_sheet(service_account_info, spreadsheet_id, values)
 
 # if you don't want to include timestamp
@@ -127,15 +143,22 @@ The contents of `credentials.json` will be used as the `service_account_info` pa
 
 ## Steps 3: Send email to someone when they submit.
 
-All you need to do is add a single line of code:
-```python
-    msc.send_gmail(sender_email, receiver_email, subject, app_password, values)
-```
-For example, you can retrieve the student's `name` and `id` from the input, calculate the `grade` through code, and this information can be sent to the receiver's email.
+You can use `send_gmail` function.
+#### Arguments:
+
+| Argument            | Type     | Description                                                                |
+|---------------------|----------|----------------------------------------------------------------------------|
+| **`sender_email`**      | **str**  | The email address of the sender.                                           |
+| **`receiver_email`**    | **str**  | The email address of the receiver.                                         |
+| **`subject`**           | **str**  | The subject line of the email.                                             |
+| **`app_password`**      | **str**  | The app-specific password for the sender's email account.                  |
+| **`values`**            | **list** | A list of lists. Each list contains data to be included in the email body. |
+
+For example, you can retrieve the student's `name` and `id` from the input, calculate the `grade` through code, and this information can be sent to the receiver's email. All you need to do is add :
 ```python
 values = [
         ["John", "123456", 96]
-    ]
+]
 msc.send_email(sender_email = "sender_email@gmail.com", 
                receiver_email = "receiver_email@example.ca", 
                subject = "Test Result", 
