@@ -47,7 +47,7 @@ For example, the following **Table Group** has three columns and 1 row. The head
 
 ### Editing a table group
 
-To edit the table group, click the :pencil2: icon near the top right side of the table group. A popup will appear with the following options:
+To edit the table group, click the ![img alt](/docs/getting-started/edit_btn.png) icon near the top right side of the table group. A popup will appear with the following options:
 
 <div style={{textAlign: 'center'}}>
 
