@@ -59,7 +59,7 @@ Click the ![img alt](/docs/getting-started/edit_btn.png) icon near the top right
 **Conditional Input Group** will affect the visibility of the entire **Input Group** (and all of the inputs within it)
 :::
 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'center', margin:'auto 1rem'}}>
 
 ![img alt](/docs/inputs/edit_input_group_dialog.png)
 
