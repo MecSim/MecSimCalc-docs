@@ -12,9 +12,9 @@ sidebar_position: 3
 
 Consider building a custom environment for your Python code if you need to:
 
-- Install additional **Python packages** and/or **specific package versions**.
 - Install a specific **Python version** (e.g. `Python 3.10`).
-- Install additional **system packages** (e.g. `apt-get install`).
+- Install additional **Python packages** and/or **specific package versions**.
+- Install additional **system packages** (e.g. `yum install`).
 - Make certain **files** available inside the filesystem.
   - As opposed to downloading necessary files at runtime, which can slow down the code.
 
@@ -54,7 +54,7 @@ Once opened, create a new environment:
 
 </div>
 
-## Step 2: Add packages
+## Step 2: Add Python packages
 
 ### Option 1: Builder
 
@@ -93,7 +93,27 @@ pip freeze > requirements.txt
 Then open and copy the contents of the `requirements.txt` file into the code editor.
 :::
 
-## Step 3: Add files
+
+## Step 3: Add system packages(advanced)
+
+We utilize `yum` for installing system packages. Here's how to install system packages in a **Dockerfile**:
+
+```dockerfile
+# Install system packages using yum
+RUN yum install -y package-name 
+```
+
+Replace `package-name` with the actual packages needed for your project.
+
+:::danger
+**Do not delete anything else in the Dockerfile!**
+        
+The Dockerfile can be edited directly to further configure the code environment, by clicking on the **Dockerfile** button. 
+However, this is strongly discouraged as it may cause the build to fail or the environment to break. [Read more on Dockerfiles](https://docs.docker.com/engine/reference/builder/)
+:::
+
+
+## Step 4: Add files
 
 Upload any files that you want to be available inside the environment's filesystem. This is useful for:
 
@@ -105,8 +125,8 @@ Upload files by either:
 
 1. A publicly accessible url hosting that file using the **Add File by URL** textfield. This requires:
 
-   - The file to be accessible without a password and with a valid url.
-   - The url must be the raw contents of the file and not a webpage. For example, `https://github.com/MecSimCalc/MecSimCalc-docs/blob/main/README.md` will not work, whereas `https://raw.githubusercontent.com/MecSimCalc/MecSimCalc-docs/main/README.md` will.
+    - The file to be accessible without a password and with a valid url.
+    - The url must be the raw contents of the file and not a webpage. For example, `https://github.com/MecSimCalc/MecSimCalc-docs/blob/main/README.md` will not work, whereas `https://raw.githubusercontent.com/MecSimCalc/MecSimCalc-docs/main/README.md` will.
 
 2. Uploading a local file from your computer using the **Choose File** button.
 
@@ -116,13 +136,11 @@ Upload files by either:
 
 </div>
 
+
 All uploaded files are saved in the `/home` folder and can be accessing in the Python code by its file path: `/home/<filename>` (e.g. `/home/hello.png`).
 
-:::caution
-The Dockerfile can be edited directly to further configure the code environment, by clicking on the **Dockerfile** button. However, this is strongly discouraged as it may cause the build to fail or the environment to break. [Read more on Dockerfiles](https://docs.docker.com/engine/reference/builder/)
-:::
 
-## Step 4: Build the environment
+## Step 5: Build the environment
 
 Once you are happy with the environment, click on the **Build Environment** button to start the build. This may take many minutes, so please be patient and do not close the window!
 
