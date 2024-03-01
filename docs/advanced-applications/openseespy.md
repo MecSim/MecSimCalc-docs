@@ -9,8 +9,10 @@ sidebar_position: 2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Agi65PtFLsI?si=LYQNfEZn3n4uRxYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
-To run **OpenSeesPy** code on Mecsimcalc effectively, please ensure your environment is set up with the compatible versions listed below as of March 1, 2024:
+Follow these steps to prepare your environment for running [**OpenSeesPy**](https://openseespydoc.readthedocs.io/en/latest/) code on Mecsimcalc:  
+:::info
+These versions work as of **March 1, 2024**
+:::
 
 1. **Python Version**: Make sure to use Python 3.10
 
