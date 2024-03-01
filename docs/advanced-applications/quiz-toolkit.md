@@ -161,7 +161,7 @@ values = [
 ]
 msc.send_email(sender_email = "sender_email@gmail.com", 
                receiver_email = "receiver_email@example.ca", 
-               subject = "Test Result", 
+               subject = "Quiz Results", 
                app_password = "xxxx xxxx xxxx xxxx", 
                values = values)
 ```
