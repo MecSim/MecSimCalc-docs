@@ -9,8 +9,7 @@ sidebar_position: 1
 
 **MecSimCalc** now supports online quizzes.
 In this tutorial, we'll learn how to build a Quiz App for educational purposes. The app displays scores 
-instantly, saves results to **Google Sheets**, and **sends email** to students or professors, streamlining 
-feedback and record-keeping.
+instantly, saves results to **Google Sheets**, and **sends email** to students or professors.
 
 Seamlessly integrates with **[Google Sheets](https://www.google.ca/sheets/about/)** for straightforward and organized data compilation.
 ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_ex.png)
@@ -43,16 +42,17 @@ def main(inputs):
         # We will teach you how to get this later, don't worry
     }
     spreadsheet_id = 'your_spreadsheet_id_here'
-    msc.send_gmail(sender_email, receiver_email, subject, app_password, values)
+  
+    msc.append_to_google_sheet(service_account_info, spreadsheet_id, values)
 
     
     # For Gmail:
     sender_email = 'sender@example.com'
     receiver_email = 'receiver@example.com'
-    subject = 'Test Email'
+    subject = 'Quiz Results'
     app_password = 'your_app_password_here'
     
-    msc.append_to_google_sheet(service_account_info, spreadsheet_id, values)
+    msc.send_gmail(sender_email, receiver_email, subject, app_password, values)
     ...
 ```
 ## Steps 2: Store results in Google Sheets
