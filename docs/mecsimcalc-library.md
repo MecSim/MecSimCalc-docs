@@ -757,7 +757,6 @@ def main(inputs):
     receiver_email = 'receiver@example.com'
     subject = 'Test Email'
     app_password = 'your_app_password_here'
-    app_password = 'your_app_password_here'
     
     name = inputs['name']
     grade = inputs['grade']
