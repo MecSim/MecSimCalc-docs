@@ -9,9 +9,10 @@ sidebar_position: 2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Agi65PtFLsI?si=LYQNfEZn3n4uRxYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Follow these steps to prepare your environment for running OpenSeesPy code on Mecsimcalc:
 
-1. **Python Version**: Make sure to use Python 3.10.
+To run **OpenSeesPy** code on Mecsimcalc effectively, please ensure your environment is set up with the compatible versions listed below as of March 1, 2024:
+
+1. **Python Version**: Make sure to use Python 3.10
 
 2. **OpenSeesPy Installation**:
     - Install the `openseespy` and `openseespylinux` packages.
@@ -27,5 +28,5 @@ Version numbers for these packages are optional; Mecsimcalc will choose suitable
 4. **Environment Setup**:
     - Once all packages are installed, your environment is ready to build.
 
-![img alt](/docs/advanced-application/openseespy/openseespy_ex.png)
+![img alt](/docs/advanced-applications/openseespy/openseespy_ex.png)
 

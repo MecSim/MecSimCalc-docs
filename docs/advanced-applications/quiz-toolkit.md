@@ -8,16 +8,16 @@ sidebar_position: 1
 | -------------------------------------------------------------------- |
 
 **MecSimCalc** now supports online quizzes.
-In this tutorial, we'll learn to build a Quiz App for educational purposes. The app displays scores 
-instantly, saves results to **Google Sheets**, and **sends email** to receivers(professors), streamlining 
+In this tutorial, we'll learn how to build a Quiz App for educational purposes. The app displays scores 
+instantly, saves results to **Google Sheets**, and **sends email** to students or professors, streamlining 
 feedback and record-keeping.
 
-Seamlessly integrates with **[Google Sheets](google-sheet)** for straightforward and organized data compilation.
-![img alt](/docs/advanced-application/quiz-toolkit/sheet_res.png)
+Seamlessly integrates with **[Google Sheets](https://www.google.ca/sheets/about/)** for straightforward and organized data compilation.
+![img alt](/docs/advanced-applications/quiz-toolkit/sheet_ex.png)
 
 
-Utilizes **[Gmail](gmail)** for direct communication and data sharing, ensuring immediate feedback and results dissemination.
-![img alt](/docs/advanced-application/quiz-toolkit/gmail_res.png)
+Utilizes **[Gmail](https://www.google.com/gmail/about/)** for direct communication and data sharing, ensuring immediate feedback and results dissemination.
+![img alt](/docs/advanced-applications/quiz-toolkit/gmail_ex.png)
 
 :::info
 You will need to provide additional parameters for these two features. **Don't worry, we will teach you how to obtain them later!**
@@ -83,7 +83,7 @@ include_timestamp=False)
 ```
 
 Quiz values will append to your Google Sheet:
-![img alt](/docs/advanced-application/quiz-toolkit/sheet_ex.png)
+![img alt](/docs/advanced-applications/quiz-toolkit/sheet_ex.png)
 
 
 In this part, we will teach you how to find the `spreadsheet_id` and `service_account_info` parameters for `append_to_google_sheet` function
@@ -101,11 +101,11 @@ Before integrating Google APIs into your project, you must enable them within a 
 
 1. **First**, navigate to the Google Cloud Console and activate the Google Sheets API through the following link: [Enable the Google Sheets API](https://console.cloud.google.com/flows/enableapi?apiid=sheets.googleapis.com).
 
-   ![img alt](/docs/advanced-application/quiz-toolkit/sheet_step_1.png)
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_1.png)
 
 2. **Next**, you'll need to create a Google Cloud Project if you haven't done so already. Detailed instructions can be found here: [Create a Google Cloud Project](https://developers.google.com/workspace/guides/create-project).
 
-   ![img alt](/docs/advanced-application/quiz-toolkit/sheet_step_2.png)
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_2.png)
 
 #### **Step 2: [Create Service Account](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account) Credentials**
 
@@ -117,10 +117,10 @@ To authenticate your application with Google's APIs, follow these steps to creat
 
 2. **Choose your service account**. If you don't have one, create a new service account and assign it the Editor role for adequate permissions.
 
-   ![img alt](/docs/advanced-application/quiz-toolkit/sheet_step_3.png)
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_3.png)
 3. Navigate to **Keys** > **Add Key** > **Create New Key**, and select the **JSON** option. Upon clicking **Create**, a JSON file containing your new key pair will be downloaded.
 
-   ![img alt](/docs/advanced-application/quiz-toolkit/sheet_step_4.png)
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_4.png)
 4. **Save the JSON file** as **`credentials.json`** in your project directory. This file contains your service account's credentials, which you'll use to authenticate your application. Here's what the JSON file looks like:
 
 ```json
@@ -143,7 +143,7 @@ The contents of `credentials.json` will be used as the `service_account_info` pa
 
 ## Steps 3: Send email to someone when they submit.
 
-You can use `send_gmail` function.
+You can use [`send_gmail`](../mecsimcalc-library#send_gmail) function.
 #### Arguments:
 
 | Argument            | Type     | Description                                                                |
@@ -157,7 +157,7 @@ You can use `send_gmail` function.
 For example, you can retrieve the student's `name` and `id` from the input, calculate the `grade` through code, and this information can be sent to the receiver's email. All you need to do is add :
 ```python
 values = [
-        ["John", "123456", 96]
+        ["Joe", "186234", 85]
 ]
 msc.send_email(sender_email = "sender_email@gmail.com", 
                receiver_email = "receiver_email@example.ca", 
@@ -167,7 +167,7 @@ msc.send_email(sender_email = "sender_email@gmail.com",
 ```
 Then receiver will get an email like this:
 
-![img alt](/docs/advanced-application/quiz-toolkit/gmail_ex.png)
+![img alt](/docs/advanced-applications/quiz-toolkit/gmail_ex.png)
 
 In this part, we will teach you how to find the `app_password` parameter for `send_gmail` function
 ### How to Create a Google App Password
@@ -179,11 +179,10 @@ An app password is a 16-digit code that allows less secure apps or devices to ac
 1. Go to your [Google Account](https://myaccount.google.com/).
 2. Select **Security.**
 3. Under "Signing in to Google," select **2-Step Verification**.
-   ![img alt](/docs/advanced-application/quiz-toolkit/gmail_step_1.png)
+   ![img alt](/docs/advanced-applications/quiz-toolkit/gmail_step_1.png)
 4. At the bottom of the page, select **App passwords**.
 5. Enter a name that helps you remember where you’ll use the app password.
-6. Select **Generate**.
-7. To enter the app password, follow the instructions on your screen. The app password is the 16-character code that generates on your device.
-8. Select **Done**.
+6. Click **Generate** to obtain the 16-digit app password.
+7. **Make sure to save the app password** (as you won't be able to see it later) and then copy it into your quiz app
 
 
