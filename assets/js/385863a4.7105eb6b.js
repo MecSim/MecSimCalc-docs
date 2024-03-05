@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[2439],{332:e=>{e.exports=JSON.parse('{"label":"Medicine","permalink":"/blog/tags/medicine","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

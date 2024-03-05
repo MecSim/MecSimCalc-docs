@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[9320],{5322:s=>{s.exports=JSON.parse('{"label":"Statistics","permalink":"/blog/tags/statistics","allTagsPath":"/blog/tags","count":1}')}}]);
