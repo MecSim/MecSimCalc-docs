@@ -12,7 +12,7 @@ The following provides a detailed description about the **Conditional Input** fe
 
 ## Why use it?
 
-The **Conditional Input** feature allows you to create more complex and dynamic user interfaces. You can now hide or disable an **Input** based on the value of other **Inputs**!
+The **Conditional Input** feature allows you to create more complex and dynamic user interfaces. You can now hide or disable an **Input** based on the value of **other Inputs**!
 
 :::tip
 This feature also works with **Input Groups**!
@@ -42,11 +42,11 @@ We have a **Slider** that we only want to show when a **Checkbox** is checked.
 
 </div>
 
-Each **_condition_** is composed of 3 parts and calculates a binary result (TRUE or FALSE) by evaluating the values of other **Inputs**.
+Each **_condition_** is composed of 3 parts and calculates a binary result (TRUE or FALSE) by evaluating the values of **other Inputs**.
 
-1. **Input** - The other **Input** (e.g Checkbox) to be evaluated
-2. **Operator** - How the other **Input** is evaluated (e.g. ==, !=, >=, ...)
-3. **Value** - The value that the other **Input** is evaluated against
+1. **Input** - The **other Input** (e.g Checkbox) to be evaluated
+2. **Operator** - How the **other Input** is evaluated (e.g. ==, !=, >=, ...)
+3. **Value** - The value that the **other Input** is evaluated against
 
 :::tip
 Think of the **_condition_** as a simple equation. For example, `checkbox == True` will evaluate to TRUE if the **Checkbox** is checked and FALSE if it is not.

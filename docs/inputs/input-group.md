@@ -33,7 +33,7 @@ The _**developer**_ can create as many new **Input Groups** as needed, which are
 
 In an **Input Group**:
 
-- The _**developer**_ can add as many inputs as needed..
+- The _**developer**_ can add as many inputs as needed.
 - The inputs can be resized and moved within the input group using the mouse.
 - A maximum of 10 inputs can appear on the same row.
 - There is no restriction on the number of rows that can be used.
@@ -53,7 +53,7 @@ As an example, the image below shows an input group with 5 different inputs (two
 | -------------------------------------------------------------------- |
 
 Click the ![img alt](/docs/getting-started/edit_btn.png) icon near the top right of an **Input Group** and the **Edit Input Group** popup will appear.  
-**Conditional Input Group** is similar to the **[Conditional Input](/inputs/conditional-input)** feature, but instead effects the entire **Input Group**.
+**Conditional Input Group** is similar to the **[Conditional Input](/inputs/conditional-input)** feature, but instead affects the entire **Input Group**.
 
 :::tip
 **Conditional Input Group** will affect the visibility of the entire **Input Group** (and all of the inputs within it)
