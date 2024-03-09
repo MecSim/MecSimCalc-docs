@@ -36,6 +36,26 @@ Follow the example in this video that explains how to upload an ANN .h5 file usi
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qpGAe80n4Io?si=0UnDCpg0uiDE1eE5&amp;start=158" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
+#### Calling functions from an uploaded Python file
+
+You can upload a Python file to your custom environment and use the functions in your Python code!
+To access the functions from the Python module simply append '/home/' to sys.path and then import all (*) from your module
+
+```python
+import sys
+sys.path.append('/home/')
+from pythonModule import * // import all the functions from the external Python file
+
+def main(inputs):
+   result = pythonFunction() // use a function
+```
+
+Check out the following short video that explains exactly how to do this!
+
+<div style={{textAlign: 'center'}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3oogJI3g3PM?si=pBZfMl1zrEEBMsVZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 ## Option 2: Fetching the file
 
 This option is useful if you do not want to create a new custom code environment, or if you want to use a file that is already hosted on the internet. However, this option will take longer to run the code because it needs to download the file from the internet.
