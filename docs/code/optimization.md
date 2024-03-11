@@ -157,6 +157,15 @@ def pandas_sqrt(df):
 Multiprocessing is a form of parallel computing that attempts to utilize all the possible computing power available to a program by splitting tasks into separate processes. This method tends to be better if you are doing many operations in a single process as creating a process requires time and resources. Multiprocessing also works better when using more CPU cores.
 For all multiprocessing libraries, it is good practice to use `if __name__ == '__main__':` to prevent subprocesses from creating more subprocesses.
 
+:::caution
+Due to the way that Python code is run via AWS Lambda, some multiprocessing functions are not compatible with AWS. This includes:
+
+- `concurrent.futures.ProcessPoolExecutor()` should be replaced with `concurrent.futures.ThreadPoolExecutor()`
+- `multiprocessing.Pool` and `multiprocessing.Queue` are **not** compatible, whereas `multiprocessing.Process` and `multiprocessing.Pipe` are compatible.
+
+[source](https://stackoverflow.com/questions/34005930/multiprocessing-semlock-is-not-implemented-when-running-on-aws-lambda)
+:::
+
 :::tip
 Multiprocessing and Multithreading are similar, so here's an analogy to help you remember the difference:
 
