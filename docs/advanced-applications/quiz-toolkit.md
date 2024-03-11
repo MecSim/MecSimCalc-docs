@@ -7,6 +7,17 @@ sidebar_position: 1
 | :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
 | -------------------------------------------------------------------- |
 
+<div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/0554567/test_quiz_demo_google_sheet" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/1XX2gWauVwkACsIWUiF7cIpIlrL1eOjS3_Ub30tqet5o/edit?usp=sharing" style={{
+width: '100%',
+height: '400px',
+border: '0',
+}}
+frameborder="0">
+</iframe>
+
 **MecSimCalc** now supports online quizzes.
 In this tutorial, we'll learn how to build a Quiz App for educational purposes. The app displays scores 
 instantly, saves results to **Google Sheets**, and **sends email** to students or professors.
@@ -21,7 +32,8 @@ Utilizes **[Gmail](https://www.google.com/gmail/about/)** for direct communicati
 :::info
 You will need to provide additional parameters for these two features. **Don't worry, we will teach you how to obtain them later!**
 :::
-## Steps 1: Create your quiz App
+## Create a general quiz
+### Steps 1: Create your quiz App
 For example, you can get student's `name` and `id` from the input, and calculate `grade` through code. If you want this information to be exported to your own Google Sheet, you can do it like this:
 ```python
 """
@@ -55,7 +67,7 @@ def main(inputs):
     msc.send_gmail(sender_email, receiver_email, subject, app_password, values)
     ...
 ```
-## Steps 2: Store results in Google Sheets
+### Steps 2: Store results in Google Sheets
 MecSimCalc has its own function that can be used.Users can append data to their own Google Sheets by calling [`append_to_google_sheet`](../mecsimcalc-library#append_to_google_sheet).
 
 #### Arguments:
@@ -86,43 +98,6 @@ Quiz values will append to your Google Sheet:
 ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_ex.png)
 
 
-In this part, we will teach you how to find the `spreadsheet_id` and `service_account_info` parameters for `append_to_google_sheet` function
-### How to Get Spreadsheet ID
-You need to create a Spreadsheet first.
-The Spreadsheet ID is **the last string of characters in the URL for your spreadsheet**.
-
-For example, in the URL https://docs.google.com/spreadsheets/d/1qpyC0XzvTcKT6wQoFDE8p-Bll4hps/edit#gid=0 , the spreadsheet ID is **1qpyC0XzvTcKT6wQoFDE8p-Bll4hps**
-
-### How to Get Service Account Info
-
-#### **Step 1: Enable the Google Sheets API**
-
-Before integrating Google APIs into your project, you must enable them within a Google Cloud project. This process allows you to activate one or multiple APIs under the same project umbrella.
-
-1. **First**, navigate to the Google Cloud Console and activate the Google Sheets API through the following link: [Enable the Google Sheets API](https://console.cloud.google.com/flows/enableapi?apiid=sheets.googleapis.com).
-
-   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_1.png)
-
-2. **Next**, you'll need to create a Google Cloud Project if you haven't done so already. Detailed instructions can be found here: [Create a Google Cloud Project](https://developers.google.com/workspace/guides/create-project).
-
-   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_2.png)
-
-#### **Step 2: [Create Service Account](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account) Credentials**
-
-To authenticate your application with Google's APIs, follow these steps to create and obtain service account credentials:
-
-1. In the Google Cloud console, go to Menu  > **IAM & Admin** > **Service Accounts**.
-
-   [Go to Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts)
-
-2. **Choose your service account**. If you don't have one, create a new service account and assign it the Editor role for adequate permissions.
-
-   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_3.png)
-3. Navigate to **Keys** > **Add Key** > **Create New Key**, and select the **JSON** option. Upon clicking **Create**, a JSON file containing your new key pair will be downloaded.
-
-   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_4.png)
-4. **Save the JSON file** as **`credentials.json`** in your project directory. This file contains your service account's credentials, which you'll use to authenticate your application. Here's what the JSON file looks like:
-
 ```json
 {
   "type": "service_account",
@@ -141,7 +116,7 @@ To authenticate your application with Google's APIs, follow these steps to creat
 The contents of `credentials.json` will be used as the `service_account_info` parameter. Simply copy this information and pass it to the `append_to_sheet()` function as the `service_account_info` argument.
 
 
-## Steps 3: Send email to someone when they submit.
+### Steps 3: Send email to someone when they submit.
 
 You can use [`send_gmail`](../mecsimcalc-library#send_gmail) function.
 #### Arguments:
@@ -169,6 +144,101 @@ Then receiver will get an email like this:
 
 ![img alt](/docs/advanced-applications/quiz-toolkit/gmail_ex.png)
 
+
+## Connect quiz result with Canvas
+
+
+## Algebraic Expression Comparison
+Mecsimcalc allows you to **verify if two algebraic expressions are mathematically equivalent**. 
+All you need to do is to install `sympy` library.
+
+Check out this example:
+<div style={{width: "100%", height: "600px", overflow: "hidden"}}><iframe src="https://mecsimcalc.com/app/8080021/algebraic_expression_comparison_demo" width="100%" height="100%" title="MecSimCalc" style={{position:"relative", left:"-45px", top:"-48px"}} frameBorder="0"></iframe></div>
+
+#### Code:   
+```python
+import sympy as sp
+
+def check_expressions_equal(expr1_str, expr2_str):
+"""
+Check if two mathematical expressions, given as strings, are equal.
+"""# Convert the string representations to SymPy expressions
+expr1 = sp.sympify(expr1_str)
+expr2 = sp.sympify(expr2_str)
+
+    # Simplify the difference between the two expressions# and check if the result is equal to zeroreturn sp.simplify(expr1 - expr2) == 0, expr1, expr2
+
+
+def main(inputs):
+expr1=inputs['func_1']
+expr2=inputs['func_2']
+
+    res, expr1, expr2 = check_expressions_equal(expr1,expr2)
+
+
+    # convert to latex expression
+    latex_expr1 = sp.latex(expr1)
+    latex_expr2 = sp.latex(expr2)
+
+
+    return {"result": res, "String1": latex_expr1, "String2": latex_expr2}
+```
+#### Output:   
+```python
+{% if outputs.result %}
+These two equations are the same
+{% else %}
+These two equations are not the same
+{% endif %}
+
+Equation 1: {{ outputs.String1 | katex}}
+Equation 2: {{ outputs.String2 | katex}}
+```
+## Multiple vs Single attempts
+
+
+
+## Appendix
+
+
+In this part, we will teach you how to find the `spreadsheet_id` and `service_account_info` parameters for `append_to_google_sheet` function
+### How to Get Spreadsheet ID
+You need to create a Spreadsheet first.
+The Spreadsheet ID is **the last string of characters in the URL for your spreadsheet**.
+
+For example, in the URL https://docs.google.com/spreadsheets/d/1qpyC0XzvTcKT6wQoFDE8p-Bll4hps/edit#gid=0 , the spreadsheet ID is **1qpyC0XzvTcKT6wQoFDE8p-Bll4hps**
+
+### How to Get Service Account Info
+
+**Step 1: Enable the Google Sheets API**
+
+Before integrating Google APIs into your project, you must enable them within a Google Cloud project. This process allows you to activate one or multiple APIs under the same project umbrella.
+
+1. **First**, navigate to the Google Cloud Console and activate the Google Sheets API through the following link: [Enable the Google Sheets API](https://console.cloud.google.com/flows/enableapi?apiid=sheets.googleapis.com).
+
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_1.png)
+
+2. **Next**, you'll need to create a Google Cloud Project if you haven't done so already. Detailed instructions can be found here: [Create a Google Cloud Project](https://developers.google.com/workspace/guides/create-project).
+
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_2.png)
+
+**Step 2: [Create Service Account](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account) Credentials**
+
+To authenticate your application with Google's APIs, follow these steps to create and obtain service account credentials:
+
+1. In the Google Cloud console, go to Menu  > **IAM & Admin** > **Service Accounts**.
+
+   [Go to Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts)
+
+2. **Choose your service account**. If you don't have one, create a new service account and assign it the Editor role for adequate permissions.
+
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_3.png)
+3. Navigate to **Keys** > **Add Key** > **Create New Key**, and select the **JSON** option. Upon clicking **Create**, a JSON file containing your new key pair will be downloaded.
+
+   ![img alt](/docs/advanced-applications/quiz-toolkit/sheet_step_4.png)
+4. **Save the JSON file** as **`credentials.json`** in your project directory. This file contains your service account's credentials, which you'll use to authenticate your application. Here's what the JSON file looks like:
+
+
 In this part, we will teach you how to find the `app_password` parameter for `send_gmail` function
 ### How to Create a Google App Password
 
@@ -184,5 +254,3 @@ An app password is a 16-digit code that allows less secure apps or devices to ac
 5. Enter a name that helps you remember where you’ll use the app password.
 6. Click **Generate** to obtain the 16-digit app password.
 7. **Make sure to save the app password** (as you won't be able to see it later) and then copy it into your quiz app
-
-
