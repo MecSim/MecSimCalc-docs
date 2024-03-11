@@ -159,7 +159,9 @@ Check out this example:
 ```python
 import sympy as sp
 
-def check_expressions_equal(expr1_str, expr2_str):
+def check_expressions_equal(expr1_str, expr2_
+
+str):
 """
 Check if two mathematical expressions, given as strings, are equal.
 """# Convert the string representations to SymPy expressions

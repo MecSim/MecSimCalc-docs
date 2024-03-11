@@ -5,7 +5,11 @@ sidebar_position: 2
 
 # Input Group
 
-In order to visually organize the inputs, **MecSimCalc** platform allows the _**developer**_ to visually group inputs into either an **Input Group** or a [**Table Group**](table-group). An **Input Group** can be created in the **Inputs** step by clicking on **Add Input Group**.
+On **MecSimCalc** you can visually group inputs using either an **Input Group** or a [**Table Group**](table-group). In **Step 2: Inputs** (when editing an app) click on ![img alt](/docs/getting-started/add_btn.png) and then **Add Input Group**.
+
+The **Input Group** is a container for inputs, and must be used to visually organize inputs. The **Input Group** can be used to group inputs that are related to each other, or to group inputs that are used to define a specific section of the app.
+
+Inputs can be freely moved and resized within the **Input Group**.
 
 <div style={{textAlign: 'center'}}>
 
@@ -29,11 +33,11 @@ The _**developer**_ can create as many new **Input Groups** as needed, which are
 
 In an **Input Group**:
 
-- The _**developer**_ can add as many inputs as needed..
+- The _**developer**_ can add as many inputs as needed.
 - The inputs can be resized and moved within the input group using the mouse.
 - A maximum of 10 inputs can appear on the same row.
-- There is no restriction on the number of rows to be used.
-- The height of the **Input Group** will automatically adjust as more inputs are added, removed, or dragged.
+- There is no restriction on the number of rows that can be used.
+- The height of the **Input Group** will automatically adjust as inputs are added, removed, or dragged.
 
 As an example, the image below shows an input group with 5 different inputs (two numerical inputs, two text inputs, and one single select input).
 
@@ -48,14 +52,14 @@ As an example, the image below shows an input group with 5 different inputs (two
 | :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
 | -------------------------------------------------------------------- |
 
-Click the :pencil2: icon near the top right of an input group and the **Edit Input Group** popup will appear.  
-**Conditional Input Group** is similar to the [Conditional Input](/inputs/conditional-input) feature, but instead effects the entire **Input Group**.
+Click the ![img alt](/docs/getting-started/edit_btn.png) icon near the top right of an **Input Group** and the **Edit Input Group** popup will appear.  
+**Conditional Input Group** is similar to the **[Conditional Input](/inputs/conditional-input)** feature, but instead affects the entire **Input Group**.
 
 :::tip
-The conditions for the **Input Group** will effect the entire section (including all the inputs within it)
+**Conditional Input Group** will affect the visibility of the entire **Input Group** (and all of the inputs within it)
 :::
 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'center', margin:'auto 1rem'}}>
 
 ![img alt](/docs/inputs/edit_input_group_dialog.png)
 

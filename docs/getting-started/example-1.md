@@ -28,7 +28,7 @@ To get started, go to [mecsimcalc.com/create](https://mecsimcalc.com/create), cl
 
 ## Step 2: Inputs
 
-Start by creating an input group by clicking on the ![img alt](/docs/getting-started/add_btn.png) button and choosing **Input Group**. A new input group will be created with the title: "New Input Group Title". Click on the :pencil2: icon (in the top right of the input group) to edit the title and change it to: "Converter".
+Start by creating an input group by clicking on the ![img alt](/docs/getting-started/add_btn.png) button and choosing **Add Input Group**. A new input group will be created with the title: "New Input Group Title". Click on the ![img alt](/docs/getting-started/edit_btn.png) icon (in the top right of the input group) to edit the title and change it to: "Converter".
 
 <div style={{textAlign: 'center'}}>
 

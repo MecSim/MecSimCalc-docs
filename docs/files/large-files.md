@@ -21,7 +21,7 @@ This is the recommended way to load in large files because the file will be avai
 ### Step 1: Create a new custom code environment
 
 1. Follow [these instructions](/code/environments) on building a custom environment.
-   - Add the large files in the [Add files](/code/environments#step-3-add-files) section.
+   - Add the large files in the [Add files](/code/environments#step-4-add-files) section.
 2. Once the environment is built and selected, read the file into the Python code:
 
 ```python
@@ -29,6 +29,32 @@ with open("/home/hello.png", "r") as f:
    data = f.read()
 print(data)
 ```
+
+Follow the example in this video that explains how to upload an ANN .h5 file using a custom environment:
+
+<div style={{textAlign: 'center'}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qpGAe80n4Io?si=0UnDCpg0uiDE1eE5&amp;start=158" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+#### Calling functions from an uploaded Python file
+
+You can upload a Python file to your custom environment and use the functions in your Python code!
+To access the functions from the Python module simply append '/home/' to sys.path and then import all (*) from your module
+
+```python
+import sys
+sys.path.append('/home/')
+from pythonModule import * // import all the functions from the external Python file
+
+def main(inputs):
+   result = pythonFunction() // use a function
+```
+
+Check out the following short video that explains exactly how to do this!
+
+<div style={{textAlign: 'center'}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3oogJI3g3PM?si=pBZfMl1zrEEBMsVZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Option 2: Fetching the file
 

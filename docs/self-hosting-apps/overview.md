@@ -24,7 +24,7 @@ We recommend that you publish directly to the MecSimCalc platform for ease-of-us
 This self-hosted version only allows for the **viewing** and **running** of existing apps. Creating new apps and editing apps can only be done on [mecsimcalc.com](https://mecsimcalc.com/).
 :::
 
-The self-hosted [source code](https://github.com/MecSim/MecSimCalc-self-hosted) is a NextJS website application with ReactJS and Typescript. This application has two pages.
+The self-hosted [source code](https://github.com/MecSimCalc/MecSimCalc-self-hosted) is a NextJS website application with ReactJS and Typescript. This application has two pages.
 
 The first page is the explore page, which lists all of the apps:
 
@@ -36,7 +36,7 @@ The second page is the app page, where the _**user**_ can run the apps:
 
 | Hosting                                   | Description               |
 | ----------------------------------------- | ------------------------- |
-| [Localhost](/self-hosting-apps/Localhost) | Run on your local machine |
+| [localhost](/self-hosting-apps/localhost) | Run on your local machine |
 
 ## Architecture
 
