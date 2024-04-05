@@ -45,7 +45,7 @@ import multiprocessing
 3. **Create a Shared Object**  
    An object with shared memory between the processes will be required to store any function return data. The shared object can be any data type and must be created in main. This can be done using the manager object from the multiprocessing module.
 
-The example below creates a list with shared data that can be accessed between all processes.
+   The example below creates a list with shared data that can be accessed between all processes.
 
 ```python
 def main(inputs):
@@ -66,10 +66,41 @@ def main(inputs):
     ### Other Code
 ```
 
-5. **Divide Tasks Among Each Process**  
-   Work-In-Progress
+5. **Divide Tasks Among Each Process**
+   In the following example, The simulation is repeated `num_simulations` number of times.
+
+```python
+def main(inputs):
+    ### Other Code
+    num_processes = num_cores # num_processes can also be a manually chosen int
+    simulations_per_process = num_simulations // num_processes # Floor divide the tasks into each process
+    remainder = num_simulations % num_processes # Determine the remainder if there is one
+    ### Other Code
+```
+
 6. **Create the Processes**  
-   Work-In-Progress
+   Create processes by using a for loop to iterate over the number of processes you have determined in step 4 and 5. In this example, `simulation()` is the function to run the simulation and is used to create each process by setting `target=simulation`. `simulation_args` is a placeholder for any other arguments the `simulation()` function requires.
+
+```python
+def main(inputs):
+    ### Other Code
+    processes = []
+    for i in range(num_processes):
+        # Create the process
+        if i < remainder:
+            p = mp.Process(target=simulation, args=(simulations_per_process+1, simulation_args))
+            # Add another simulation for each remainder found in step 5
+        else:
+            p = mp.Process(target=simulation, args=(simulations_per_process, simulation_args))
+
+        processes.append(p) # Add the process to the list of processes
+        p.start() # Starts the process
+
+    for p in processes:
+        p.join()
+        # This waits for other processes to finish executing before continuing
+    ### Other Code
+```
 
 ## Sample Implementation of Multiprocessing
 
@@ -240,20 +271,18 @@ def main(inputs):
     # Count the number of CPUs
     num_cores = mp.cpu_count()
 
-    # Determine the number of processes
-    num_processes = num_cores
-
     # Divide the tasks (number of simulations) for each process
-    num_simulations = num_simulations // numprocesses
-    remainder = num_simulations % numprocesses
+    num_processes = num_cores # Determine the number of processes
+    simulations_per_process = num_simulations // num_processes
+    remainder = num_simulations % num_processes
 
     # Create the processes
     processes = []
-    for i in range(numprocesses):
+    for i in range(num_processes):
         if i < remainder:
-            p = mp.Process(target=simulate, args=(num_simulations+1, max_num_rolls, bet, results))
+            p = mp.Process(target=simulate, args=(simulations_per_process+1, max_num_rolls, bet, results))
         else:
-            p = mp.Process(target=simulate, args=(num_simulations, max_num_rolls, bet, results))
+            p = mp.Process(target=simulate, args=(simulations_per_process, max_num_rolls, bet, results))
         processes.append(p)
         p.start()
 
@@ -288,6 +317,6 @@ def main(inputs):
         "time_taken": elapsed_time,
         "win_prob": overall_win_probability,
         "end_bal": overall_end_balance,
-        "cpu_count": numprocesses
+        "cpu_count": num_processes
     }
 ```
