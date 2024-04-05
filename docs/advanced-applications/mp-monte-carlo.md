@@ -5,8 +5,8 @@ sidebar_position: 3
 
 # Parallelizing Monte Carlo Simulation
 
-| :trophy: This is a [premium](https://mecsimcalc.com/pricing) feature |
-| -------------------------------------------------------------------- |
+| :trophy: This feature requires [compute resources](https://mecsimcalc.com/account) |
+| ---------------------------------------------------------------------------------- |
 
 **MecSimCalc** supports multiprocessing when higher compute resources are chosen. For more information, visit the [code optimization page](../code/optimization).
 
@@ -19,25 +19,22 @@ The Monte Carlo Simulation can be parallelized by implementing [multiprocessing]
 ![alt text](image.png)
 
 Here is a comparison in the time the program takes to run between using multiprocessing and running the program serially in a simple Monte Carlo Simulation program with O(n) time complexity:  
-![alt text](image-1.png)
-
-<!-- insert plot image -->
+![alt text](image-1.png) <!--Plot 1-->
 
 Multiprocessing will exponentially reduce the time taken to run the program as the number of CPU cores increase, whereas the execution time remains constant without multiprocessing.
 
 Here is another comparison between sequential and parallel execution time in a Monte Carlo Simulation program used to determine strain demand in pipes subject to ground movement. More details can be found [here](https://era.library.ualberta.ca/items/f8d6a447-85af-452a-b905-4b22415bc925).  
-![alt text](image-2.png)
-
-<!-- insert plot image -->
-
+![alt text](image-2.png) <!--Plot 2-->
 Similar to the previous example, parallelization significantly reduces program execution time if multiple CPU cores are available.
 
 ## Implementing Multiprocessing
 
 This tutorial requires a working Monte Carlo simulation program implemented on MecSimCalc. For more information on how to port your Python program to MecSimCalc, visit [Getting Started](../getting-started/create).
 
+_There are multiple ways to implement multiprocessing and the methods shown may not work for all programs. Use these instructions as a rough guide._
+
 1. **Modularize the Program**  
-   Arrange the program into functions so there is a function that runs one iteration of the Monte Carlo Simulation. This will make it easier to implement multiprocessing.
+   Arrange the program into functions so there is one function that runs the simulation. This will make it easier to implement multiprocessing.
 
 2. **Import the Multiprocessing Module**
 
@@ -69,4 +66,228 @@ def main(inputs):
     ### Other Code
 ```
 
+5. **Divide Tasks Among Each Process**  
+   Work-In-Progress
+6. **Create the Processes**  
+   Work-In-Progress
+
 ## Sample Implementation of Multiprocessing
+
+The following is a Monte Carlo Simulation of a simple dice game adapted from [here](https://medium.com/@matthew1992/an-introduction-to-monte-carlo-simulations-using-python-46c07eb11b6d).
+
+- Each player starts with $1000
+- When the two dices rolls the same number, the player gets 4 times their bet amount
+- If the dices do not roll the same number, the player loses their bet
+
+The following Monte Carlo Simulation divides each simulation into `max_num_rolls` number of dice rolls, and repeats the simulations `num_simulations` times.
+
+### Before Implementing Multiprocessing
+
+```python
+import matplotlib.pyplot as plt
+import random
+import time
+import mecsimcalc as msc
+
+def roll_dice():
+    die1 = random.randint(1,6)
+    die2 = random.randint(1,6)
+
+    if die1==die2:
+        same_num = True
+    else:
+        same_num = False
+    return same_num
+
+def simulate(num_simulations, max_num_rolls, bet):
+
+    win_probability = []
+    end_balance = []
+    results = []
+
+    for _ in range(num_simulations):
+        balance = [1000]
+        num_rolls = [0]
+        num_wins = 0
+
+        while num_rolls[-1] < max_num_rolls:
+
+            if roll_dice(): #If both dices roll the same number
+                balance.append(balance[-1] + 4 * bet)
+                num_wins += 1
+
+            else:
+                balance.append(balance[-1] - bet)
+
+            num_rolls.append(num_rolls[-1] + 1)
+
+        win_probability.append(num_wins/num_rolls[-1])
+        end_balance.append(balance[-1])
+        results.append([num_rolls, balance])
+
+    # Tracking variables
+    overall_win_probability = sum(win_probability)/len(win_probability)
+    overall_end_balance = sum(end_balance)/len(end_balance)
+
+    return results, overall_win_probability, overall_end_balance
+
+def main(inputs):
+    start = time.time()
+
+    # Inputs
+    num_simulations = inputs['num_simulations']
+    max_num_rolls = inputs['max_num_rolls']
+    bet = inputs['bet']
+
+    # Simulation
+    results, overall_win_probability, overall_end_balance = simulate(num_simulations, max_num_rolls, bet)
+
+    # Plotting
+    plt.figure()
+    plt.title("Monte Carlo Dice Game [" + str(num_simulations) + " simulations]")
+    plt.xlabel("Roll Number")
+    plt.ylabel("Balance [$]")
+    plt.xlim(0, max_num_rolls)
+
+    for result in results:
+        num_rolls, balance = result
+        plt.plot(num_rolls, balance)
+
+    end = time.time()
+
+    elapsed_time = end - start
+
+    img, download = msc.print_plot(plt, download=True)
+
+    return {
+        "plot": img,
+        "download": download,
+        "time_taken": elapsed_time,
+        "win_prob": overall_win_probability,
+        "end_bal": overall_end_balance
+    }
+```
+
+### After Implementing Multiprocessing
+
+```python
+import matplotlib.pyplot as plt
+import random
+import time
+import multiprocessing as mp
+import mecsimcalc as msc
+
+# Rolls the dices and checks if they are the same number
+def roll_dice():
+    die1 = random.randint(1,6)
+    die2 = random.randint(1,6)
+
+    if die1==die2:
+        same_num = True
+    else:
+        same_num = False
+    return same_num
+
+def simulate(num_simulations, max_num_rolls, bet, shared_list):
+
+    for _ in range(num_simulations):
+
+        balance = [1000]
+        num_rolls = [0]
+        num_wins = 0
+
+        while num_rolls[-1] < max_num_rolls:
+            if roll_dice(): #If both dices roll the same number
+                balance.append(balance[-1] + 4*bet)
+                num_wins += 1
+
+            # Result if the dice are different numbers
+            else:
+                balance.append(balance[-1] - bet)
+
+            num_rolls.append(num_rolls[-1] + 1)
+
+        # Tracking variables
+        win_probability = num_wins/num_rolls[-1]
+        end_balance = balance[-1]
+        shared_list.append([num_rolls, balance, win_probability, end_balance])
+        #Return by appending to shared list
+
+    return # Function return must be null
+
+def main(inputs):
+    start = time.time()
+
+    # Inputs
+    num_simulations = inputs['num_simulations']
+    max_num_rolls = inputs['max_num_rolls']
+    bet = inputs['bet']
+
+    # Plotting
+    plt.figure()
+    plt.title("Monte Carlo Dice Game [" + str(num_simulations) + " simulations]")
+    plt.xlabel("Roll Number")
+    plt.ylabel("Balance [$]")
+    plt.xlim(0, max_num_rolls)
+
+
+    ### Multiprocessing
+
+    # Create shared list between processes
+    manager = mp.Manager()
+    results = manager.list()
+
+    # Count the number of CPUs
+    num_cores = mp.cpu_count()
+
+    # Determine the number of processes
+    num_processes = num_cores
+
+    # Divide the tasks (number of simulations) for each process
+    num_simulations = num_simulations // numprocesses
+    remainder = num_simulations % numprocesses
+
+    # Create the processes
+    processes = []
+    for i in range(numprocesses):
+        if i < remainder:
+            p = mp.Process(target=simulate, args=(num_simulations+1, max_num_rolls, bet, results))
+        else:
+            p = mp.Process(target=simulate, args=(num_simulations, max_num_rolls, bet, results))
+        processes.append(p)
+        p.start()
+
+    for p in processes:
+        p.join()
+
+    ###
+
+    overall_win_probability = 0
+    overall_end_balance = 0
+
+    for result in results:
+        num_rolls, balance, win_probability, end_balance = result
+        overall_win_probability += win_probability
+        overall_end_balance += end_balance
+        plt.plot(num_rolls, balance)
+
+    overall_win_probability /= len(results)
+    overall_end_balance /= len(results)
+
+
+    end = time.time()
+    # Averaging win probability and end balance
+
+    elapsed_time = end - start
+
+    img, download = msc.print_plot(plt, download=True)
+
+    return {
+        "plot": img,
+        "download": download,
+        "time_taken": elapsed_time,
+        "win_prob": overall_win_probability,
+        "end_bal": overall_end_balance,
+        "cpu_count": numprocesses
+    }
+```
