@@ -14,20 +14,20 @@ sidebar_position: 3
 
 <!-- Monte Carlo simulation is a computational technique used to estimate the probability of different outcomes in a process that involves variables that change by random amounts. For computations where the underlying system is too complex to be solved analytically, the Monte Carlo simulation can be used to simulate several outcomes with various random input variables. This allows us to build a general model that reflects the results of the system without solving the system.  -->
 
-The Monte Carlo Simulation can be parallelized by implementing [multiprocessing](../code/optimization). This can significantly enhance the speed of the Monte Carlo Simulation.  
+The Monte Carlo Simulation can be parallelized by implementing [multiprocessing](../code/optimization#manual-multiprocessing). This can significantly enhance the speed of the Monte Carlo Simulation.  
 **Note: This only applies to greater than 2 vCPUs and requires subscription to higher compute resources on MecSimCalc.**
-![alt text](image.png)
+![alt text](./mp-monte-carlo/resources.png)
 
 Here is a comparison in the time the program takes to run between using multiprocessing and running the program serially in a simple Monte Carlo Simulation program with O(n) time complexity:  
-![alt text](image-1.png) <!--Plot 1-->
+![alt text](./mp-monte-carlo/simplemcs.png) <!--Plot 1-->
 
 Multiprocessing will exponentially reduce the time taken to run the program as the number of CPU cores increase, whereas the execution time remains constant without multiprocessing.
 
-Here is another comparison between sequential and parallel execution time in a Monte Carlo Simulation program used to determine strain demand in pipes subject to ground movement. More details can be found [here](https://era.library.ualberta.ca/items/f8d6a447-85af-452a-b905-4b22415bc925).  
-![alt text](image-2.png) <!--Plot 2-->
-![alt text](image-3.png) <!--Plot 3-->
-![alt text](image-4.png) <!--Plot 4-->
-Similar to the previous example, parallelization significantly reduces program execution time if multiple CPU cores are available.
+Here is another comparison between sequential and parallel execution time in a computationally heavy Monte Carlo Simulation program used to determine strain demand in pipes subject to ground movement. More details can be found [here](https://era.library.ualberta.ca/items/f8d6a447-85af-452a-b905-4b22415bc925).  
+![alt text](./mp-monte-carlo/mcs100.png) <!--Plot 2-->
+![alt text](./mp-monte-carlo/mcs1000.png) <!--Plot 3-->
+![alt text](./mp-monte-carlo/mcs10000.png) <!--Plot 4-->
+Similar to the previous example, parallelization consistently reduces program execution time as CPU cores increase regardless of the number of simulations.
 
 ## Implementing Multiprocessing
 
@@ -94,10 +94,8 @@ def main(inputs):
             # Add another simulation for each remainder found in step 5
         else:
             p = mp.Process(target=simulation, args=(simulations_per_process, simulation_args))
-
         processes.append(p) # Add the process to the list of processes
         p.start() # Starts the process
-
     for p in processes:
         p.join()
         # This waits for other processes to finish executing before continuing
