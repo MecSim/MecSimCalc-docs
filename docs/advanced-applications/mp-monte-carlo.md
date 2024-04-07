@@ -26,6 +26,7 @@ Multiprocessing will exponentially reduce the time taken to run the program as t
 Here is another comparison between sequential and parallel execution time in a Monte Carlo Simulation program used to determine strain demand in pipes subject to ground movement. More details can be found [here](https://era.library.ualberta.ca/items/f8d6a447-85af-452a-b905-4b22415bc925).  
 ![alt text](image-2.png) <!--Plot 2-->
 ![alt text](image-3.png) <!--Plot 3-->
+![alt text](image-4.png) <!--Plot 4-->
 Similar to the previous example, parallelization significantly reduces program execution time if multiple CPU cores are available.
 
 ## Implementing Multiprocessing
