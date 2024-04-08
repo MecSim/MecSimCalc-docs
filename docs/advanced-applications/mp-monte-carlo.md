@@ -71,14 +71,18 @@ def main(inputs):
 ```
 
 5. **Divide Tasks Among Each Process**
-   In the following example, The simulation is repeated `num_simulations` number of times.
+   In the following example, the simulation is repeated `num_simulations` number of times.
 
 ```python
+def split_list(lst, n):
+    k, m = divmod(len(lst), n)
+    return (lst[i*k+min(i, m):(i+1)*k+min(i+1, m)] for i in range(n))
+
 def main(inputs):
     ### Other Code
-    num_processes = num_cores # num_processes can also be a manually chosen int
-    simulations_per_process = num_simulations // num_processes # Floor divide the tasks into each process
-    remainder = num_simulations % num_processes # Determine the remainder if there is one
+    arr = range(num_simulations)
+    simulations_per_process = list(split_list(arr, num_cores))
+    num_processes = min(num_cores, num_simulations)
     ### Other Code
 ```
 
@@ -91,11 +95,7 @@ def main(inputs):
     processes = []
     for i in range(num_processes):
         # Create the process
-        if i < remainder:
-            p = mp.Process(target=simulation, args=(simulations_per_process+1, simulation_args))
-            # Add another simulation for each remainder found in step 5
-        else:
-            p = mp.Process(target=simulation, args=(simulations_per_process, simulation_args))
+        p = mp.Process(target=simulation, args=(simulations_per_process, simulation_args))
         processes.append(p) # Add the process to the list of processes
         p.start() # Starts the process
     for p in processes:
@@ -248,6 +248,10 @@ def simulate(num_simulations, max_num_rolls, bet, shared_list):
 
     return # Function return must be null
 
+def split_list(lst, n):
+    k, m = divmod(len(lst), n)
+    return (lst[i*k+min(i, m):(i+1)*k+min(i+1, m)] for i in range(n))
+
 def main(inputs):
     start = time.time()
 
@@ -274,17 +278,14 @@ def main(inputs):
     num_cores = mp.cpu_count()
 
     # Divide the tasks (number of simulations) for each process
-    num_processes = num_cores # Determine the number of processes
-    simulations_per_process = num_simulations // num_processes
-    remainder = num_simulations % num_processes
+    arr = range(num_simulations)
+    simulations_per_process = list(split_list(arr, num_cores))
+    num_processes = min(num_cores, num_simulations)
 
     # Create the processes
     processes = []
     for i in range(num_processes):
-        if i < remainder:
-            p = mp.Process(target=simulate, args=(simulations_per_process+1, max_num_rolls, bet, results))
-        else:
-            p = mp.Process(target=simulate, args=(simulations_per_process, max_num_rolls, bet, results))
+        p = mp.Process(target=simulate, args=(len(arr_partitions[i]), max_num_rolls, bet, results))
         processes.append(p)
         p.start()
 
