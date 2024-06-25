@@ -12,10 +12,20 @@ This library is designed to provide a set of functions for handling and converti
 
 ## General
 
-
 ### input_to_file
 
 [**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/mecsimcalc/general_utils.py#L7C1-L56C61)
+
+<!-- This is JSX format for the site version of the documentation (looks better but you can't find it on the navigation-->
+
+<!--
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontWeight: 'bold' }}>
+  <h3 style={{ fontSize: '1.5em'}}>input_to_file</h3>
+  <div><a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/mecsimcalc/general_utils.py#L7C1-L56C61"><strong>[Source]</strong></a></div>
+</div>
+
+<br />
+-->
 
 ```python
 input_to_file(input_file, metadata = False)
@@ -101,7 +111,6 @@ def main(inputs):
 
 ## Text
 
-
 ### string_to_file
 
 [**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/mecsimcalc/text_utils.py#L4C1-L67C85)
@@ -158,7 +167,6 @@ def main(inputs):
 ```
 
 ## Spreadsheets
-
 
 ### file_to_dataframe
 
@@ -318,7 +326,6 @@ Downloading Table
 
 ## Tables
 
-
 ### table_to_dataframe
 
 [**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/mecsimcalc/table_utils.py#L5C1-L44C54)
@@ -359,7 +366,6 @@ def main(inputs):
   # 1  d  e  f
   return {"df":df}
 ```
-
 
 ---
 
@@ -412,7 +418,6 @@ Displaying Table
 ```
 
 ## Images
-
 
 ### file_to_PIL
 
@@ -507,7 +512,6 @@ def main(inputs):
   return {"image":image}
 ```
 
-
 ---
 
 ### print_image
@@ -582,7 +586,6 @@ Downloading Image
 
 ## Plots
 
-
 ### print_plot
 
 [**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/mecsimcalc/plotting_utils.py#L9C1-L99C35)
@@ -655,9 +658,10 @@ Downloading Image
 ```
 
 ## Quiz Toolkit
+
 ### append_to_google_sheet
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/mecsimcalc/quiz_utils.py#L12) 
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/mecsimcalc/quiz_utils.py#L12)
 
 ```python
 append_to_google_sheet(
@@ -673,21 +677,20 @@ append_to_google_sheet(
 
 This function appends given values to a specified Google Sheet and optionally includes a current timestamp with each entry. It transforms data into a Google Sheets document, facilitating dynamic data entry directly from your application.
 
-
 #### Arguments:
 
-| Argument               | Type     | Description                                                                                                                                  |
-|------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| **`service_account_info`** | **dict** | The service account credentials used for Google Sheets API authentication.  |
-| **`spreadsheet_id`**       | **str**  | The unique identifier of the target Google Spreadsheet.                     |
-| **`values`**               | **list of lists** | The data to append. Each list element represents a row of data.                                                                              |
-| **`range_name`**           | **str** (optional)  | The A1 notation of the range to start appending data (Defaults to 'Sheet1!A1').                                                              |
-| **`include_timestamp`**    | **bool** (optional) | If True, appends the current timestamp to each row of data (Defaults to True).                                                               |
+| Argument                   | Type                | Description                                                                     |
+| -------------------------- | ------------------- | ------------------------------------------------------------------------------- |
+| **`service_account_info`** | **dict**            | The service account credentials used for Google Sheets API authentication.      |
+| **`spreadsheet_id`**       | **str**             | The unique identifier of the target Google Spreadsheet.                         |
+| **`values`**               | **list of lists**   | The data to append. Each list element represents a row of data.                 |
+| **`range_name`**           | **str** (optional)  | The A1 notation of the range to start appending data (Defaults to 'Sheet1!A1'). |
+| **`include_timestamp`**    | **bool** (optional) | If True, appends the current timestamp to each row of data (Defaults to True).  |
 
 #### Returns:
 
-| Return Type | Description                              |
-|-------------|------------------------------------------|
+| Return Type | Description                                                                          |
+| ----------- | ------------------------------------------------------------------------------------ |
 | **`dict`**  | The response from the Google Sheets API, containing details of the append operation. |
 
 #### Example:
@@ -704,11 +707,10 @@ def main(inputs):
     spreadsheet_id = 'your_spreadsheet_id_here'
     values = [
     [ inputs['input_1'], inputs['input_2'], inputs['input_3'] ],
-    ]    
+    ]
     result = msc.append_to_google_sheet(service_account_info, spreadsheet_id, values)
 
 ```
-
 
 ### send_gmail
 
@@ -716,33 +718,34 @@ def main(inputs):
 
 ```python
 send_gmail(
-	sender_email='sender@example.com', 
-	receiver_email='receiver@example.com', 
-	subject="Quiz", 
-	app_password = "xxxx xxxx xxxx xxxx", 
+	sender_email='sender@example.com',
+	receiver_email='receiver@example.com',
+	subject="Quiz",
+	app_password = "xxxx xxxx xxxx xxxx",
 	values = [
 	["name", "grade"]
 	]
 )
 ```
+
 #### Description:
 
 This function sends an email with specified values formatted in the message body, utilizing a service account for authentication.
 
 #### Arguments:
 
-| Argument            | Type     | Description                                                                |
-|---------------------|----------|----------------------------------------------------------------------------|
-| **`sender_email`**      | **str**  | The email address of the sender.                                           |
-| **`receiver_email`**    | **str**  | The email address of the receiver.                                         |
-| **`subject`**           | **str**  | The subject line of the email.                                             |
-| **`app_password`**      | **str**  | The app-specific password for the sender's email account.                  |
-| **`values`**            | **list** | A list of lists. Each list contains data to be included in the email body. |
+| Argument             | Type     | Description                                                                |
+| -------------------- | -------- | -------------------------------------------------------------------------- |
+| **`sender_email`**   | **str**  | The email address of the sender.                                           |
+| **`receiver_email`** | **str**  | The email address of the receiver.                                         |
+| **`subject`**        | **str**  | The subject line of the email.                                             |
+| **`app_password`**   | **str**  | The app-specific password for the sender's email account.                  |
+| **`values`**         | **list** | A list of lists. Each list contains data to be included in the email body. |
 
 #### Returns:
 
-| Return Type | Description                     |
-|-------------|---------------------------------|
+| Return Type | Description                                                       |
+| ----------- | ----------------------------------------------------------------- |
 | **`bool`**  | Returns True if the email was sent successfully, otherwise False. |
 
 #### Example Usage:
@@ -757,10 +760,10 @@ def main(inputs):
     receiver_email = 'receiver@example.com'
     subject = 'Test Email'
     app_password = 'your_app_password_here'
-    
+
     name = inputs['name']
     grade = inputs['grade']
-    
+
     values = [
     [name, grade]
     ]
@@ -769,5 +772,3 @@ def main(inputs):
     msc.send_gmail(sender_email, receiver_email, subject, app_password, values)
 
 ```
-
-
