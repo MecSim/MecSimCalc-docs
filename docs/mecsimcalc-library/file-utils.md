@@ -12,8 +12,6 @@ This library is designed to provide a set of functions for handling and converti
 
 ## General
 
-<!-- This is JSX format for the site version of the documentation (looks better but you can't find it on the navigation-->
-
 <!--
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontWeight: 'bold' }}>
   <h3 style={{ fontSize: '1.5em'}}>input_to_file</h3>
@@ -58,12 +56,17 @@ Converts a base64 encoded string into a file object and metadata
 #### Example:
 
 ```python
->>> input_file = inputs['file']
->>> file, metadata = input_to_file(input_file, metadata = True)
->>> print(metadata)
-data:image/jpeg;base64,
->>> type(file)
-<class '_io.BytesIO'>
+import io
+import mecsimcalc as msc
+
+def main(inputs):
+    input_file = inputs['file']
+    file, metadata = msc.input_to_file(input_file, metadata=True)
+    return {"file_type": type(file).__name__, "metadata": metadata}
+
+# Expected output:
+# {"file_type": "_io.BytesIO", "metadata": "data:image/jpeg;base64,"}
+
 ```
 
 ### metadata_to_filetype
@@ -93,13 +96,17 @@ Extracts the file type from the metadata
 #### Example:
 
 ```python
->>> input_file = inputs['file']
->>> file, metadata = input_to_file(input_file, metadata = True)
->>> print(metadata)
-data:image/jpeg;base64,
->>> download_file_type = metadata_to_filetype(metadata)
->>> print(download_file_type)
-jpeg
+import mecsimcalc as msc
+
+def main(inputs):
+    input_file = inputs['file']
+    file, metadata = msc.input_to_file(input_file, metadata=True)
+    download_file_type = msc.metadata_to_filetype(metadata)
+    return {"file_type": download_file_type}
+
+# Expected output:
+# {"file_type": "jpeg"}
+
 ```
 
 ## Text
@@ -145,8 +152,15 @@ Generates a downloadable text file containing the given text
 #### Python
 
 ```python
->>> download_link = string_to_file("Hello World!")
->>> return {"download": download_link}
+import mecsimcalc as msc
+
+def main(inputs):
+    download_link = msc.string_to_file("Hello World!")
+    return {"download": download_link}
+
+# Expected output:
+# {"download": "<a href='data:text/plain;base64,SGVsbG8gV29ybGQh' download='myfile.txt'>Download File</a>"}
+
 ```
 
 #### Jinja2
@@ -191,13 +205,20 @@ Converts a base64 encoded file data into a pandas DataFrame
 #### Example:
 
 ```python
->>> input_file = inputs['file']
->>> decoded_file = input_to_file(input_file)
->>> df = file_to_dataframe(decoded_file)
->>> print(df)
-   A  B  C
-0  a  b  c
-1  d  e  f
+import mecsimcalc as msc
+
+def main(inputs):
+    input_file = inputs['file']
+    decoded_file = msc.input_to_file(input_file)
+    df = msc.file_to_dataframe(decoded_file)
+    return {"dataframe": df.to_dict()}
+
+# Expected output:
+# {"dataframe": {
+# "A": {0: "a", 1: "d"},
+# "B": {0: "b", 1: "e"},
+# "C": {0: "c", 1: "f"}}}
+
 ```
 
 ### input_to_dataframe
@@ -229,14 +250,19 @@ Converts a base64 encoded file data into a pandas DataFrame
 #### Example:
 
 ```python
->>> input_file = inputs['file']
->>> df, file_type = input_to_dataframe(input_file, get_file_type = True)
->>> print(df)
-   A  B  C
-0  a  b  c
-1  d  e  f
->>> print(file_type)
-csv
+import mecsimcalc as msc
+
+def main(inputs):
+    input_file = inputs['file']
+    df, file_type = msc.input_to_dataframe(input_file, get_file_type=True)
+    return {"dataframe": df.to_dict(), "file_type": file_type}
+
+# Expected output:
+# {"dataframe": {
+# "A": {0: "a", 1: "d"},
+# "B": {0: "b", 1: "e"},
+# "C": {0: "c", 1: "f"}}, "file_type": "csv"}
+
 ```
 
 ### print_dataframe
@@ -279,14 +305,18 @@ Creates an HTML table and a download link for a given DataFrame
 #### Python Code:
 
 ```python
->>> input_file = inputs['file']
->>> df = input_to_dataframe(input_file)
->>> table, download = print_dataframe(df, download = True, download_file_name = "FunkyTable", download_text = "Download My Funky Table HERE!", download_file_type = "xlsx")
+import mecsimcalc as msc
 
->>> return {
-        "table":table,
-        "download":download,
-    }
+def main(inputs):
+    input_file = inputs['file']
+    df = msc.input_to_dataframe(input_file)
+    table, download = msc.print_dataframe(df, download=True, download_file_name="Table", download_text="Download My Table HERE!", download_file_type="xlsx")
+    return {"table": table, "download": download}
+
+# Expected output:
+# {"table": "<table>...</table>",
+# "download": "<a href='data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,...' download='Table.xlsx'>Download My Table HERE!</a>"}
+
 ```
 
 #### Output using Jinja2 Template:
@@ -331,13 +361,20 @@ Create a DataFrame from given rows and column headers
 #### Example:
 
 ```python
->>> column_headers = ["A", "B", "C"]
->>> rows = [["a", "b", "c"], ["d", "e", "f"]]
->>> df = table_to_dataframe(column_headers, rows)
->>> print(df)
-   A  B  C
-0  a  b  c
-1  d  e  f
+import mecsimcalc as msc
+
+def main(inputs):
+    column_headers = ["A", "B", "C"]
+    rows = [["a", "b", "c"], ["d", "e", "f"]]
+    df = msc.table_to_dataframe(column_headers, rows)
+    return {"dataframe": df.to_dict()}
+
+# Expected output:
+# {"dataframe": {
+# "A": {0: "a", 1: "d"},
+# "B": {0: "b", 1: "e"},
+# "C": {0: "c", 1: "f"}}}
+
 
 ```
 
@@ -372,10 +409,10 @@ Creates an HTML table from given rows and column headers
 #### Python Code:
 
 ```python
->>> column_headers = ["A", "B", "C"]
->>> rows = [["a", "b", "c"], ["d", "e", "f"]]
->>> table = print_table(column_headers, rows)
->>> return {
+column_headers = ["A", "B", "C"]
+rows = [["a", "b", "c"], ["d", "e", "f"]]
+table = print_table(column_headers, rows)
+return {
         "table":table,
     }
 ```
@@ -425,12 +462,17 @@ Transforms a file into a Pillow Image object
 #### Python Code:
 
 ```python
->>> input_file = inputs['file']
->>> decoded_file = input_to_file(input_file)
->>> image = file_to_PIL(decoded_file)
->>> return {
-        "image":image,
-    }
+import mecsimcalc as msc
+
+def main(inputs):
+    input_file = inputs['file']
+    decoded_file = msc.input_to_file(input_file)
+    image = msc.file_to_PIL(decoded_file)
+    return {"image": image}
+
+# Expected output:
+# {"image": <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=...>}
+
 ```
 
 #### Output using Jinja2 Template:
@@ -470,12 +512,16 @@ Converts a base64 encoded file data into a pillow image
 #### Example:
 
 ```python
->>> input_file = inputs['file']
->>> image, file_type = input_to_PIL(input_file, get_file_type=True)
->>> print(file_type)
-jpeg
->>> type(image)
-<class 'PIL.JpegImagePlugin.JpegImageFile'>
+import mecsimcalc as msc
+
+def main(inputs):
+    input_file = inputs['file']
+    image, file_type = msc.input_to_PIL(input_file, get_file_type=True)
+    return {"image": image, "file_type": file_type}
+
+# Expected output:
+# {"image": <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=...>, "file_type": "jpeg"}
+
 ```
 
 ### print_image
@@ -524,13 +570,18 @@ Transforms a Pillow image into an HTML image, with an optional download link
 #### Python Code:
 
 ```python
->>> input_file = inputs['file']
->>> image, metadata = input_to_PIL(input_file)
->>> html_image, download = print_image(image, original_size = True, download = True, download_text = "Download Image Here", download_file_name = "myimage", download_file_type = "jpeg")
->>> return {
-        "image":html_image,
-        "download":download,
-    }
+import mecsimcalc as msc
+
+def main(inputs):
+    input_file = inputs['file']
+    image, metadata = msc.input_to_PIL(input_file)
+    html_image, download = msc.print_image(image, original_size=True, download=True, download_text="Download Image Here", download_file_name="myimage", download_file_type="jpeg")
+    return {"image": html_image, "download": download}
+
+# Expected output:
+# {"image": "<img src='data:image/jpeg;base64,...' width='...' height='...'>",
+# "download": "<a href='data:image/jpeg;base64,...' download='myimage.jpeg'>Download Image Here</a>"}
+
 ```
 
 #### Output using Jinja2 Template:
@@ -589,18 +640,23 @@ Converts a matplotlib.pyplot.axis or matplotlib.figure into an HTML image tag an
 #### Python Code:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> import numpy as np
->>> x = np.linspace(0, 2 * np.pi, 400)
->>> y = np.sin(x)
->>> fig, ax = plt.subplots()
->>> ax.plot(x, y)
->>> ax.set_title('A single plot')
->>> image, download = print_plot(fig, width = 500, dpi = 100, download = True, download_text = "Download Sin Function Plot", download_file_name = "sin(x)")
->>> return {
-        "image":image,
-        "download":download,
-    }
+import matplotlib.pyplot as plt
+import numpy as np
+import mecsimcalc as msc
+
+def main(inputs):
+    x = np.linspace(0, 2 * np.pi, 400)
+    y = np.sin(x)
+    fig, ax = plt.subplots()
+    ax.plot(x, y)
+    ax.set_title('A single plot')
+    image, download = msc.print_plot(fig, width=500, dpi=100, download=True, download_text="Download Sin Function Plot", download_file_name="sin(x)")
+    return {"image": image, "download": download}
+
+# Expected output:
+# {"image": "<img src='data:image/png;base64,...' width='500' height='...'>",
+#  "download": "<a href='data:image/png;base64,...' download='sin(x).png'>Download Sin Function Plot</a>"}
+
 ```
 
 #### Output using Jinja2 Template:
@@ -644,21 +700,26 @@ Converts a matplotlib animation into an HTML image tag.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> from matplotlib.animation import FuncAnimation
->>> import numpy as np
->>> import mecsimcalc as msc
->>> def main(inputs):
->>>     fig, ax = plt.subplots()
->>>     x = np.linspace(0, 2*np.pi, 100)
->>>     y = np.sin(x)
->>>     line, = ax.plot(x, y)
->>>     def update(frame):
->>>         line.set_ydata(np.sin(x + frame / 10))
->>>         return line,
->>>     ani = FuncAnimation(fig, update, frames=100)
->>>     animation = msc.print_animation(ani)
->>>     return {"animation": animation}
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import numpy as np
+import mecsimcalc as msc
+
+def main(inputs):
+    fig, ax = plt.subplots()
+    x = np.linspace(0, 2*np.pi, 100)
+    y = np.sin(x)
+    line, = ax.plot(x, y)
+    def update(frame):
+        line.set_ydata(np.sin(x + frame / 10))
+        return line,
+    ani = FuncAnimation(fig, update, frames=100)
+    animation = msc.print_animation(ani)
+    return {"animation": animation}
+
+# Expected output:
+# {"animation": "<img src='data:image/gif;base64,...'>"}
+
 ```
 
 ### animate_plot
@@ -702,13 +763,18 @@ Creates an animated plot from given x and y data and returns it as an HTML image
 #### Example:
 
 ```python
->>> import numpy as np
->>> x = np.linspace(0, 10, 1000)
->>> y = np.sin(x)
->>> animation_html = animate_plot(x, y, duration=5, title="Sine Wave", show_axes=True)
->>> return {
-        "animation": animation_html
-    }
+import numpy as np
+import mecsimcalc as msc
+
+def main(inputs):
+    x = np.linspace(0, 10, 1000)
+    y = np.sin(x)
+    animation_html = msc.animate_plot(x, y, duration=5, title="Sine Wave", show_axes=True)
+    return {"animation": animation_html}
+
+# Expected output:
+# {"animation": "<img src='data:image/gif;base64,...'>"}
+
 ```
 
 ## Quiz Toolkit
@@ -760,9 +826,15 @@ def main(inputs):
     }
     spreadsheet_id = 'your_spreadsheet_id_here'
     values = [
-    [ inputs['input_1'], inputs['input_2'], inputs['input_3'] ],
+        [inputs['input_1'], inputs['input_2'], inputs['input_3']],
     ]
     result = msc.append_to_google_sheet(service_account_info, spreadsheet_id, values)
+    return {"result": result}
+
+# Expected output:
+# {"result": {"spreadsheetId": "your_spreadsheet_id_here",
+#  "updatedRange": "Sheet1!A1:C1",
+#  "updatedRows": 1, "updatedColumns": 3, "updatedCells": 3}}
 
 ```
 
@@ -805,11 +877,9 @@ This function sends an email with specified values formatted in the message body
 #### Example Usage:
 
 ```python
-# Example code to use the send_gmail function
 import mecsimcalc as msc
 
 def main(inputs):
-    # Define parameters
     sender_email = 'sender@example.com'
     receiver_email = 'receiver@example.com'
     subject = 'Test Email'
@@ -819,10 +889,13 @@ def main(inputs):
     grade = inputs['grade']
 
     values = [
-    [name, grade]
+        [name, grade]
     ]
 
-    # Send the email
-    msc.send_gmail(sender_email, receiver_email, subject, app_password, values)
+    result = msc.send_gmail(sender_email, receiver_email, subject, app_password, values)
+    return {"result": result}
+
+# Expected output:
+# {"result": True}
 
 ```
