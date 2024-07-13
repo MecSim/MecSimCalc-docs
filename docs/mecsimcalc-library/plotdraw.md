@@ -11,7 +11,7 @@ This library is designed to provide a set of functions for drawing various types
 
 ### draw_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L7C1-L84C78)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L7C1-L84C78)
 
 ```python
 draw_arrow(
@@ -57,7 +57,7 @@ Draws an arrow between two points on a plot.
 
 ### calculate_midpoint
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L87C1-L121C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L87C1-L121C1)
 
 ```python
 calculate_midpoint(
@@ -87,7 +87,7 @@ Calculates the midpoint between two coordinates.
 
 ### draw_arc_circumference
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L123C1-L167C22)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L123C1-L167C22)
 
 ```python
 draw_arc_circumference(
@@ -121,7 +121,7 @@ Draws an arc of a circumference with a given radius between two angles.
 
 ### create_blank_image
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L170C1-L213C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L170C1-L213C14)
 
 ```python
 create_blank_image(
@@ -151,7 +151,7 @@ Creates a blank image with specified width and height, displaying a grid.
 
 ### draw_three_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L216C1-L343C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L216C1-L343C14)
 
 ```python
 draw_three_axes(
@@ -189,7 +189,7 @@ Draws a set of three axes (x, y, z) with optional negative directions for x and 
 
 ### draw_two_inclined_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L346C1-L460C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L346C1-L460C14)
 
 ```python
 draw_two_inclined_axes(
@@ -229,7 +229,7 @@ Draws two inclined axes (x and y) with optional negative directions.
 
 ### plot_segment_pixels
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L463C1-L549C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L463C1-L549C1)
 
 ```python
 plot_segment_pixels(
@@ -275,7 +275,7 @@ the text. |
 
 ### plot_annotate_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L551C1-L699C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L551C1-L699C1)
 
 ```python
 plot_annotate_arrow(
@@ -334,7 +334,7 @@ Plots an annotated arrow starting from a given point and extending in a given di
 
 ### draw_custom_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L700C1-L785C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L700C1-L785C1)
 
 ```python
 draw_custom_arrow(
@@ -381,7 +381,7 @@ Draws a custom arrow from a start point to another point on a given axis, using 
 
 ### calculate_arrow_endpoint_pixels
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L787C1-L823C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L787C1-L823C1)
 
 ```python
 calculate_arrow_endpoint_pixels(
@@ -412,7 +412,7 @@ Calculates the end point of an arrow in pixel coordinates.
 
 ### plot_segment
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L825C1-L911C21)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L825C1-L911C21)
 
 ```python
 plot_segment(
@@ -457,7 +457,7 @@ Plots a line segment starting from a given point with a specific angle and lengt
 
 ### plot_segment_dashed
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L914C1-L1001C21)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L914C1-L1001C21)
 
 ```python
 plot_segment_dashed(
@@ -506,7 +506,7 @@ Plots a dashed line segment starting from a given point with a specific angle an
 
 ### draw_custom_circle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1004C1-L1041C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1004C1-L1041C1)
 
 ```python
 draw_custom_circle(
@@ -541,7 +541,7 @@ Draws a custom circle on a given axis.
 
 ### draw_rounded_rectangle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1042C1-L1120C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1042C1-L1120C1)
 
 ```python
 draw_rounded_rectangle(
@@ -577,7 +577,7 @@ Draws a rounded rectangle with specified properties.
 
 ### calculate_intersection_point
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1122C1-L1178C44)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1122C1-L1178C44)
 
 ```python
 calculate_intersection_point(
@@ -610,7 +610,7 @@ Calculates the intersection point of two lines defined by points and angles.
 
 ### draw_segment
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1181C1-L1229C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1181C1-L1229C1)
 
 ```python
 draw_segment(
@@ -644,7 +644,7 @@ Draws a segment between two points with a specified line width and color.
 
 ### plot_annotate_arrow_end
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1231C1-L1369C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1231C1-L1369C1)
 
 ```python
 plot_annotate_arrow_end(
@@ -700,7 +700,7 @@ Plots an arrow annotation at the end point of a vector.
 
 ### draw_arc_with_text
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1371C1-L1430C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1371C1-L1430C1)
 
 ```python
 draw_arc_with_text(
@@ -738,7 +738,7 @@ Draws an arc with text annotation.
 
 ### draw_three_axes_rotated
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1431C1-L1566C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1431C1-L1566C1)
 
 ```python
 draw_three_axes_rotated(
@@ -776,7 +776,7 @@ Draws three rotated axes in a 3D coordinate system.
 
 ### draw_double_arrowhead
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1568C1-L1639C6)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1568C1-L1639C6)
 
 ```python
 draw_double_arrowhead(
@@ -810,7 +810,7 @@ Draws a double arrowhead between two points.
 
 ### draw_custom_arrow_end
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1642C1-L1705C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1642C1-L1705C1)
 
 ```python
 draw_custom_arrow_end(
@@ -844,7 +844,7 @@ Draws a custom arrow at the end of a line segment.
 
 ### draw_two_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1706C1-L1815C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1706C1-L1815C14)
 
 ```python
 draw_two_axes(
@@ -882,7 +882,7 @@ Draws two axes representing the x and y directions.
 
 ### vertical_arrow_rain
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1818C1-L1864C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1818C1-L1864C1)
 
 ```python
 vertical_arrow_rain(
@@ -916,7 +916,7 @@ Draws a specific quantity of arrows from equidistant points on a segment that ex
 
 ### draw_rain_arrows_horizontal
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1865C1-L1918C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1865C1-L1918C1)
 
 ```python
 draw_rain_arrows_horizontal(
@@ -952,7 +952,7 @@ Draws a specific quantity of arrows from a vertical line at x_origin to equidist
 
 ### calculate_angle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1919C1-L1954C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1919C1-L1954C1)
 
 ```python
 calculate_angle(
@@ -981,7 +981,7 @@ Calculates the angle (in degrees) between two points.
 
 ### draw_segment_1
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1955C1-L1979C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1955C1-L1979C1)
 
 ```python
 draw_segment_1(
@@ -1011,7 +1011,7 @@ Draws a line segment in black ('k').
 
 ### draw_segment_2
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L1981C1-L2004C64)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1981C1-L2004C64)
 
 ```python
 draw_segment_2(
@@ -1043,7 +1043,7 @@ starting point [x1, y1]. |
 
 ### draw_segment_3
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L2007C1-L2031C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L2007C1-L2031C1)
 
 ```python
 draw_segment_3(
@@ -1073,7 +1073,7 @@ Draws a line segment in blue ('b').
 
 ### get_arc_points
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.8/mecsimcalc/eng130/plot_draw.py#L2033C1-L2074C16)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L2033C1-L2074C16)
 
 ```python
 get_arc_points(
