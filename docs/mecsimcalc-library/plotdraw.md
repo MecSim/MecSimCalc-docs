@@ -48,11 +48,19 @@ Draws an arrow between two points on a plot.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_arrow((0, 0), (1, 1), thickness=2, color='red', text='Arrow', text_distance=0.1, head_width=0.1, head_length=0.1, fontsize=10)
->>> plt.xlim(-1, 2)
->>> plt.ylim(-1, 2)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_arrow((0, 0), (1, 1), thickness=2, color='red', text='Arrow', text_distance=0.1, head_width=0.1, head_length=0.1, fontsize=10)
+    plt.xlim(-1, 2)
+    plt.ylim(-1, 2)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a red arrow from (0, 0) to (1, 1) with the label "Arrow".
+
 ```
 
 ### calculate_midpoint
@@ -77,12 +85,23 @@ Calculates the midpoint between two coordinates.
 | **`coord1`** | **tuple** | The first coordinate (x, y).  |
 | **`coord2`** | **tuple** | The second coordinate (x, y). |
 
+#### Returns:
+
+| Return Type          | Description                                         |
+| -------------------- | --------------------------------------------------- |
+| **`(float, float)`** | A tuple containing the coordinates of the midpoint. |
+
 #### Example:
 
 ```python
->>> midpoint = calculate_midpoint((0, 0), (2, 2))
->>> print(midpoint)
-(1.0, 1.0)
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    midpoint = plot_draw.calculate_midpoint((0, 0), (2, 2))
+    return {"midpoint": midpoint}
+
+# Expected output: {"midpoint": (1.0, 1.0)}
+
 ```
 
 ### draw_arc_circumference
@@ -114,9 +133,19 @@ Draws an arc of a circumference with a given radius between two angles.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_arc_circumference(5, 0, np.pi/2)
->>> plt.show()
+import matplotlib.pyplot as plt
+import numpy as np
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_arc_circumference(5, 0, np.pi/2)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a quarter-circle arc with a radius of 5.
+
+
 ```
 
 ### create_blank_image
@@ -141,12 +170,25 @@ Creates a blank image with specified width and height, displaying a grid.
 | **`width`**  | **int** | The width of the image in pixels. (Default is 1000)  |
 | **`height`** | **int** | The height of the image in pixels. (Default is 1000) |
 
+#### Returns:
+
+| Return Type    | Description                                 |
+| -------------- | ------------------------------------------- |
+| **`plt.Axes`** | The Axes object of the created blank image. |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> ax = create_blank_image(800, 600)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    ax = plot_draw.create_blank_image(800, 600)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A blank plot with a grid, 800x600 pixels.
 ```
 
 ### draw_three_axes
@@ -182,9 +224,16 @@ Draws a set of three axes (x, y, z) with optional negative directions for x and 
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> ax = draw_three_axes(arrow_length=1, arrow_thickness=2, offset_text=0.1, longx=1.5, axis_y_negative=True, axis_x_negative=True)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+
+def main(inputs):
+    ax = msc.draw_three_axes(arrow_length=1, arrow_thickness=2, offset_text=0.1, longx=1.5, axis_y_negative=True, axis_x_negative=True)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying three axes (x, y, z) with optional negative directions.
+
 ```
 
 ### draw_two_inclined_axes
@@ -217,12 +266,25 @@ Draws two inclined axes (x and y) with optional negative directions.
 | **`axis_y_negative`** | **bool**  | Whether to draw the negative y-axis.                          |
 | **`axis_x_negative`** | **bool**  | Whether to draw the negative x-axis.                          |
 
+#### Returns:
+
+| Return Type    | Description                          |
+| -------------- | ------------------------------------ |
+| **`plt.Axes`** | The Axes object with the drawn axes. |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> ax = draw_two_inclined_axes(arrow_length=1, arrow_thickness=2, offset_text=0.1, longx=1.5, axis_y_negative=True, axis_x_negative=True)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    ax = plot_draw.draw_two_inclined_axes(arrow_length=1, arrow_thickness=2, offset_text=0.1, longx=1.5, axis_y_negative=True, axis_x_negative=True)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying two inclined axes (x and y) with optional negative directions.
 ```
 
 ## Segments
@@ -250,27 +312,39 @@ Plots a line segment between two points and adds a label at the end point.
 
 #### Arguments:
 
-| Argument                 | Type                 | Description                                                         |
-| ------------------------ | -------------------- | ------------------------------------------------------------------- |
-| **`start_point_pixels`** | **tuple**            | The starting point of the line segment (x, y).                      |
-| **`end_point_pixels`**   | **tuple**            | The ending point of the line segment (x, y).                        |
-| **`line_properties`**    | **dict** (optional)  | Properties for the line, including color, linewidth, and linestyle. |
-| **`text`**               | **str** (optional)   | The text to display near the end point of the line segment.         |
-| **`min_spacing`**        | **float** (optional) | Minimum spacing for the text from the end point.                    |
-| **`fontsize`**           | **int** (optional)   | Font size of the text.                                              |
-| **`text_loc`**           | **dict** (optional)  | Dictionary specifying horizontal and vertical alignment of          |
+| Argument                 | Type                 | Description                                                          |
+| ------------------------ | -------------------- | -------------------------------------------------------------------- |
+| **`start_point_pixels`** | **tuple**            | The starting point of the line segment (x, y).                       |
+| **`end_point_pixels`**   | **tuple**            | The ending point of the line segment (x, y).                         |
+| **`line_properties`**    | **dict** (optional)  | Properties for the line, including color, linewidth, and linestyle.  |
+| **`text`**               | **str** (optional)   | The text to display near the end point of the line segment.          |
+| **`min_spacing`**        | **float** (optional) | Minimum spacing for the text from the end point.                     |
+| **`fontsize`**           | **int** (optional)   | Font size of the text.                                               |
+| **`text_loc`**           | **dict** (optional)  | Dictionary specifying horizontal and vertical alignment of the text. |
+| **`alpha`**              | **float** (optional) | Transparency level of the line segment.                              |
 
-the text. |
-| **`alpha`** | **float** (optional) | Transparency level of the line segment. |
+#### Returns:
+
+| Return Type          | Description                               |
+| -------------------- | ----------------------------------------- |
+| **`(float, float)`** | The end point of the line segment (x, y). |
 
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> start = (100, 200)
->>> end = (400, 500)
->>> plot_segment_pixels(start, end, text="Segment", min_spacing=50)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    start = (100, 200)
+    end = (400, 500)
+    end_point = plot_draw.plot_segment_pixels(start, end, text="Segment", min_spacing=50)
+    plot = msc.print_plot(plt)
+    return {'plot': plot, 'end_point': end_point}
+
+# Expected output: A plot displaying a dashed line segment with a label "Segment".
+# The end point of the segment is (400, 500).
 ```
 
 ### plot_annotate_arrow
@@ -297,7 +371,7 @@ plot_annotate_arrow(
     text_in_center: str = "no",
     rev_text: str = "no",
     alpha: float = 0.8
-) -> tuple
+) -> tuple[float, float]
 ```
 
 #### Description:
@@ -321,15 +395,31 @@ Plots an annotated arrow starting from a given point and extending in a given di
 | **`rev_text`**         | **str** (optional)   | Whether to reverse the text orientation. (Default is 'no')                                                |
 | **`alpha`**            | **float** (optional) | Transparency level of the arrow.                                                                          |
 
+#### Returns:
+
+| Return Type          | Description                        |
+| -------------------- | ---------------------------------- |
+| **`(float, float)`** | The end point of the arrow (x, y). |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> start = (100, 200)
->>> angle = 45
->>> length = 100
->>> plot_annotate_arrow(start, angle, length, text="Arrow", min_spacing=50)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    start = (100, 200)
+    angle = 45
+    length = 100
+    end_point = plot_draw.plot_annotate_arrow(start, angle, length, text="Arrow", min_spacing=50)
+    plot = msc.print_plot(plt)
+    return {'plot': plot, 'end_point': end_point}
+
+# Expected output: A plot displaying an annotated arrow starting from (100, 200) at a 45-degree angle.
+# The end point of the arrow is (170.71067811865476, 270.71067811865476)
+
+
 ```
 
 ### draw_custom_arrow
@@ -373,10 +463,18 @@ Draws a custom arrow from a start point to another point on a given axis, using 
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> fig, ax = plt.subplots()
->>> draw_custom_arrow(ax, (0, 0), (100, 100), factor=0.5, max_value=100, arrow_vector_length=50, arrow_width=5, text="Custom Arrow")
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    fig, ax = plt.subplots()
+    plot_draw.draw_custom_arrow(ax, (0, 0), (100, 100), factor=0.5, max_value=100, arrow_vector_length=50, arrow_width=5, text="Custom Arrow")
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a custom arrow with the label "Custom Arrow".
+
 ```
 
 ### calculate_arrow_endpoint_pixels
@@ -388,7 +486,7 @@ calculate_arrow_endpoint_pixels(
     start_point: tuple,
     trig_angle: float,
     vec_length: float
-) -> tuple
+) -> tuple[float, float]
 ```
 
 #### Description:
@@ -403,11 +501,22 @@ Calculates the end point of an arrow in pixel coordinates.
 | **`trig_angle`**  | **float** | The angle of the arrow in degrees.                           |
 | **`vec_length`**  | **float** | The length of the arrow.                                     |
 
+#### Returns:
+
+| Return Type          | Description                                             |
+| -------------------- | ------------------------------------------------------- |
+| **`(float, float)`** | The end point of the arrow (x, y) in pixel coordinates. |
+
 #### Example:
 
 ```python
->>> calculate_arrow_endpoint_pixels((100, 200), 45, 50)
-(135.35533905932738, 235.35533905932738)
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    endpoint = plot_draw.calculate_arrow_endpoint_pixels((100, 200), 45, 50)
+    return {"endpoint": endpoint}
+
+# Expected output: {"endpoint": (135.35533905932738, 235.35533905932738)}
 ```
 
 ### plot_segment
@@ -425,7 +534,7 @@ plot_segment(
     fontsize: int = 15,
     text_loc: dict = {"ha": "center", "va": "top"},
     alpha: float = 0.8
-) -> tuple
+) -> tuple[float, float]
 ```
 
 #### Description:
@@ -446,13 +555,26 @@ Plots a line segment starting from a given point with a specific angle and lengt
 | **`text_loc`**        | **dict** (optional)  | Location parameters for the text.                                 |
 | **`alpha`**           | **float** (optional) | The alpha value for transparency.                                 |
 
+#### Returns:
+
+| Return Type          | Description                               |
+| -------------------- | ----------------------------------------- |
+| **`(float, float)`** | The end point of the line segment (x, y). |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> plot_segment((100, 200), 45, 50, text='Value')
-(135.35533905932738, 235.35533905932738)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    end_point = plot_draw.plot_segment((100, 200), 45, 50, text='Value')
+    plot = msc.print_plot(plt)
+    return {'plot': plot, 'end_point': end_point}
+
+# Expected output: A plot displaying a line segment starting from (100, 200) at a 45-degree angle with the label "Value".
+# The end point of the segment is (135.35533905932738, 235.35533905932738).
 ```
 
 ### plot_segment_dashed
@@ -470,7 +592,7 @@ plot_segment_dashed(
     fontsize: int = 15,
     text_loc: dict = {"ha": "center", "va": "top"},
     alpha: float = 0.8
-) -> tuple
+) -> tuple[float, float]
 ```
 
 #### Description:
@@ -493,13 +615,26 @@ Plots a dashed line segment starting from a given point with a specific angle an
 | **`text_loc`** | **dict** (optional) | Location parameters for the text. |
 | **`alpha`** | **float** (optional) | The alpha value for transparency. |
 
+#### Returns:
+
+| Return Type          | Description                               |
+| -------------------- | ----------------------------------------- |
+| **`(float, float)`** | The end point of the line segment (x, y). |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> plot_segment_dashed((100, 200), 45, 50, text='Value')
-(135.35533905932738, 235.35533905932738)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    end_point = plot_draw.plot_segment_dashed((100, 200), 45, 50, text='Value')
+    plot = msc.print_plot(plt)
+    return {'plot': plot, 'end_point': end_point}
+
+# Expected output: A plot displaying a dashed line segment starting from (100, 200) at a 45-degree angle with the label "Value".
+# The end point of the segment is (135.35533905932738, 235.35533905932738)
 ```
 
 ## Shapes
@@ -533,10 +668,18 @@ Draws a custom circle on a given axis.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> fig, ax = plt.subplots()
->>> draw_custom_circle(ax, (100, 100), circle_size=200, circle_color='red')
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    fig, ax = plt.subplots()
+    plot_draw.draw_custom_circle(ax, (100, 100), circle_size=200, circle_color='red')
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a red circle with a center at (100, 100) and size 200.
+
 ```
 
 ### draw_rounded_rectangle
@@ -570,9 +713,17 @@ Draws a rounded rectangle with specified properties.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_rounded_rectangle((0, 0), 4, 2, 0.5, color='blue')
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_rounded_rectangle((0, 0), 4, 2, 0.5, color='blue')
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a blue rounded rectangle with specified dimensions and corner radius.
+
 ```
 
 ### calculate_intersection_point
@@ -585,7 +736,7 @@ calculate_intersection_point(
     angle1: float,
     point2: tuple,
     angle2: float
-) -> tuple
+) -> tuple[float, float]
 ```
 
 #### Description:
@@ -601,11 +752,22 @@ Calculates the intersection point of two lines defined by points and angles.
 | **`point2`** | **tuple** | The coordinates of the second point (x, y) through which the second line passes. |
 | **`angle2`** | **float** | The angle of the second line in degrees.                                         |
 
+#### Returns:
+
+| Return Type          | Description                                       |
+| -------------------- | ------------------------------------------------- |
+| **`(float, float)`** | The coordinates of the intersection point (x, y). |
+
 #### Example:
 
 ```python
->>> calculate_intersection_point((0, 0), 45, (1, 1), 135)
-(1.0, 0.9999999999999999)
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    intersection = plot_draw.calculate_intersection_point((0, 0), 45, (1, 1), 135)
+    return {"intersection": intersection}
+
+# Expected output: {"intersection": (1.0, 0.9999999999999999)}
 ```
 
 ### draw_segment
@@ -637,9 +799,17 @@ Draws a segment between two points with a specified line width and color.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_segment((0, 0), (1, 1), line_width=0.005, color='blue')
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_segment((0, 0), (1, 1), line_width=0.005, color='blue')
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a blue segment from (0, 0) to (1, 1).
+
 ```
 
 ### plot_annotate_arrow_end
@@ -666,7 +836,7 @@ plot_annotate_arrow_end(
     text_in_center: str = "no",
     rev_text: str = "no",
     alpha: float = 0.8
-) -> tuple
+) -> tuple[float, float]
 ```
 
 #### Description:
@@ -690,12 +860,26 @@ Plots an arrow annotation at the end point of a vector.
 | **`rev_text`**         | **str** (optional)   | Whether to reverse the text. (Default is 'no')                                                                              |
 | **`alpha`**            | **float** (optional) | The transparency of the arrow and text. (Default is 0.8)                                                                    |
 
+#### Returns:
+
+| Return Type          | Description                                             |
+| -------------------- | ------------------------------------------------------- |
+| **`(float, float)`** | The coordinates of the start point (x, y) of the arrow. |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> plot_annotate_arrow_end((1, 1), 45, 1, text="End", text_distance=0.5, fontsize=12, text_loc={'ha': 'center', 'va': 'top'})
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    start_point = plot_draw.plot_annotate_arrow_end((1, 1), 45, 1, text="End", text_distance=0.5, fontsize=12, text_loc={'ha': 'center', 'va': 'top'})
+    plot = msc.print_plot(plt)
+    return {'plot': plot, 'start_point': start_point}
+
+# Expected output: A plot displaying an arrow annotation at the end point (1, 1) with the label "End".
+# The coordinates of the start point of the arrow is (10.899494936611665, 10.899494936611665)
 ```
 
 ### draw_arc_with_text
@@ -729,11 +913,17 @@ Draws an arc with text annotation.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_arc_with_text((0, 0),
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
 
- 5, 30, 120, "Sample Text")
->>> plt.show()
+def main(inputs):
+    plot_draw.draw_arc_with_text((0, 0), 5, 30, 120, "Sample Text")
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying an arc with the text "Sample Text" along it.
+
 ```
 
 ### draw_three_axes_rotated
@@ -766,12 +956,25 @@ Draws three rotated axes in a 3D coordinate system.
 | **`negativeaxis_y`** | **int**   | Whether to include negative y-axis (1 for yes, 0 for no). |
 | **`negativeaxis_x`** | **int**   | Whether to include negative x-axis (1 for yes, 0 for no). |
 
+#### Returns:
+
+| Return Type    | Description                                     |
+| -------------- | ----------------------------------------------- |
+| **`plt.Axes`** | The matplotlib Axes object containing the plot. |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> ax = draw_three_axes_rotated(arrow_length=1.0, line_thickness=1.5, offset_text=0.1, longx=1.5, negativeaxis_y=1, negativeaxis_x=1)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    ax = plot_draw.draw_three_axes_rotated(arrow_length=1.0, line_thickness=1.5, offset_text=0.1, longx=1.5, negativeaxis_y=1, negativeaxis_x=1)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying three rotated axes in a 3D coordinate system.
 ```
 
 ### draw_double_arrowhead
@@ -803,9 +1006,17 @@ Draws a double arrowhead between two points.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_double_arrowhead(start_point=(0, 0), end_point=(1, 1), color='black', line_thickness=1)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_double_arrowhead(start_point=(0, 0), end_point=(1, 1), color='black', line_thickness=1)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a double arrowhead between (0, 0) and (1, 1).
+
 ```
 
 ### draw_custom_arrow_end
@@ -837,9 +1048,16 @@ Draws a custom arrow at the end of a line segment.
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_custom_arrow_end(start_point=(0, 0), end_point=(1, 1), color='black', line_thickness=1)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_custom_arrow_end(start_point=(0, 0), end_point=(1, 1), color='black', line_thickness=1)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a custom arrow at the end of a line segment from (0, 0) to (1, 1).
 ```
 
 ### draw_two_axes
@@ -872,12 +1090,25 @@ Draws two axes representing the x and y directions.
 | **`negativeaxis_y`** | **int**   | Flag indicating whether to draw the negative y-axis. |
 | **`negativeaxis_x`** | **int**   | Flag indicating whether to draw the negative x-axis. |
 
+#### Returns:
+
+| Return Type    | Description  |
+| -------------- | ------------ |
+| **`plt.Axes`** | Axes object. |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> ax = draw_two_axes(arrow_length=1.0, line_thickness=1.5, offset_text=0.1, longx=1.5, negativeaxis_y=1, negativeaxis_x=1)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    ax = plot_draw.draw_two_axes(arrow_length=1.0, line_thickness=1.5, offset_text=0.1, longx=1.5, negativeaxis_y=1, negativeaxis_x=1)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying two axes representing the x and y directions.
 ```
 
 ### vertical_arrow_rain
@@ -909,9 +1140,16 @@ Draws a specific quantity of arrows from equidistant points on a segment that ex
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> vertical_arrow_rain(quantity_arrows=5, start_point=(0, 1), final_point=(1, 1), y_origin=0)
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.vertical_arrow_rain(quantity_arrows=5, start_point=(0, 1), final_point=(1, 1), y_origin=0)
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a vertical arrow rain from the segment (0, 1) to (1, 1) pointing to y=0.
 ```
 
 ### draw_rain_arrows_horizontal
@@ -943,9 +1181,17 @@ Draws a specific quantity of arrows from a vertical line at x_origin to equidist
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_rain_arrows_horizontal(quantity_arrows=5, x_origin=0, start_point=(0, 1), final_point=(1, 1))
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_rain_arrows_horizontal(quantity_arrows=5, x_origin=0, start_point=(0, 1), final_point=(1, 1))
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a horizontal arrow rain from x=0 to the segment (0, 1) to (1, 1).
+
 ```
 
 ## Angles
@@ -972,11 +1218,22 @@ Calculates the angle (in degrees) between two points.
 | **`start_point`** | **tuple** | Tuple (x, y) representing the starting point. |
 | **`final_point`** | **tuple** | Tuple (x, y) representing the final point.    |
 
+#### Returns:
+
+| Return Type | Description                                  |
+| ----------- | -------------------------------------------- |
+| **`float`** | The angle in degrees between the two points. |
+
 #### Example:
 
 ```python
->>> calculate_angle(start_point=(0, 0), final_point=(1, 1))
-45.0
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    angle = plot_draw.calculate_angle(start_point=(0, 0), final_point=(1, 1))
+    return {"angle": angle}
+
+# Expected output: {"angle": 45.0}
 ```
 
 ### draw_segment_1
@@ -1004,9 +1261,17 @@ Draws a line segment in black ('k').
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_segment_1((0, 0), (10, 0))
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_segment_1((0, 0), (10, 0))
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a black line segment from (0, 0) to (10, 0).
+
 ```
 
 ### draw_segment_2
@@ -1036,9 +1301,17 @@ starting point [x1, y1]. |
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_segment_2((0, 2.6), (10, 1))
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_segment_2((0, 2.6), (10, 1))
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a red line segment from (0, 2.6) to (10, 1).
+
 ```
 
 ### draw_segment_3
@@ -1066,9 +1339,17 @@ Draws a line segment in blue ('b').
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> draw_segment_3((0, 2.6), (10, 1))
->>> plt.show()
+import matplotlib.pyplot as plt
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    plot_draw.draw_segment_3((0, 2.6), (10, 1))
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying a blue line segment from (0, 2.6) to (10, 1).
+
 ```
 
 ### get_arc_points
@@ -1081,7 +1362,7 @@ get_arc_points(
     end_angle: float,
     radius: float,
     center: Union[tuple, list]
-) -> Tuple[np.ndarray, np.ndarray]
+) -> tuple[np.ndarray, np.ndarray]
 ```
 
 #### Description:
@@ -1097,12 +1378,26 @@ Calculates points along a circular arc defined by a start angle and an end angle
 | **`radius`**      | **float**         | The radius of the arc.                             |
 | **`center`**      | **tuple or list** | The coordinates of the center of the arc [cx, cy]. |
 
+#### Returns:
+
+| Return Type                         | Description                                |
+| ----------------------------------- | ------------------------------------------ |
+| **`Tuple[np.ndarray, np.ndarray]`** | The x and y coordinates of the arc points. |
+
 #### Example:
 
 ```python
->>> import matplotlib.pyplot as plt
->>> import numpy as np
->>> arc_points_x1, arc_points_y1 = get_arc_points(90, 240, 0.25, (0, -0.25))
->>> plt.plot(arc_points_x1, arc_points_y1, 'k')
->>> plt.show()
+import matplotlib.pyplot as plt
+import numpy as np
+import mecsimcalc as msc
+import mecsimcalc.plot_draw as plot_draw
+
+def main(inputs):
+    arc_points_x1, arc_points_y1 = plot_draw.get_arc_points(90, 240, 0.25, (0, -0.25))
+    plt.plot(arc_points_x1, arc_points_y1, 'k')
+    plot = msc.print_plot(plt)
+    return {'plot': plot}
+
+# Expected output: A plot displaying an arc from 90 to 240 degrees with a radius of 0.25 centered at (0, -0.25).
+
 ```
