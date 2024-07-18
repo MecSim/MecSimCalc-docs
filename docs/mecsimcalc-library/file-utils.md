@@ -1,7 +1,19 @@
 ---
 sidebar_label: "File Utilities"
-sidebar_position: 100
+sidebar_position: 1
 ---
+
+<div style="{{" margin:="" '1em="" 0'="" }}=""><label htmlfor="version-select" style="{{" fontweight:="" 'bold',="" marginright:="" '10px'="" }}="">Select Version:</label>
+  <select id="version-select" onchange="{(e)" ==""> window.location.href = e.target.value}&gt;
+    <option value="">Latest Release (v0.1.9)</option>
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.6/README.md">v0.1.6</option>
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.5/README.md">v0.1.5</option>
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.4/README.md">v0.1.4</option>
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.3/README.md">v0.1.3</option>
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.2/README.md">v0.1.2</option>
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.0.5/README.md">v0.0.5</option>
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.0.4/README.md">v0.0.4</option>
+    &lt;_comment&gt; Add more options as needed <_comment>_comment</_comment></select></div>
 
 # File Utilities
 
@@ -11,15 +23,6 @@ This library is designed to provide a set of functions for handling and converti
 - [PyPi Page](https://pypi.org/project/mecsimcalc/)
 
 ## General
-
-<!--
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontWeight: 'bold' }}>
-  <h3 style={{ fontSize: '1.5em'}}>input_to_file</h3>
-  <div><a href="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/file_utils/general_utils.py#L7C1-L66C1"><strong>[Source]</strong></a></div>
-</div>
-
-<br />
--->
 
 ### input_to_file
 
@@ -66,7 +69,6 @@ def main(inputs):
 
 # Expected output:
 # {"file_type": "_io.BytesIO", "metadata": "data:image/jpeg;base64,"}
-
 ```
 
 ### metadata_to_filetype
@@ -106,7 +108,6 @@ def main(inputs):
 
 # Expected output:
 # {"file_type": "jpeg"}
-
 ```
 
 ## Text
@@ -160,7 +161,6 @@ def main(inputs):
 
 # Expected output:
 # {"download": "<a href='data:text/plain;base64,SGVsbG8gV29ybGQh' download='myfile.txt'>Download File</a>"}
-
 ```
 
 #### Jinja2
@@ -218,7 +218,6 @@ def main(inputs):
 # "A": {0: "a", 1: "d"},
 # "B": {0: "b", 1: "e"},
 # "C": {0: "c", 1: "f"}}}
-
 ```
 
 ### input_to_dataframe
@@ -262,7 +261,6 @@ def main(inputs):
 # "A": {0: "a", 1: "d"},
 # "B": {0: "b", 1: "e"},
 # "C": {0: "c", 1: "f"}}, "file_type": "csv"}
-
 ```
 
 ### print_dataframe
@@ -316,7 +314,6 @@ def main(inputs):
 # Expected output:
 # {"table": "<table>...</table>",
 # "download": "<a href='data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,...' download='Table.xlsx'>Download My Table HERE!</a>"}
-
 ```
 
 #### Output using Jinja2 Template:
@@ -374,8 +371,6 @@ def main(inputs):
 # "A": {0: "a", 1: "d"},
 # "B": {0: "b", 1: "e"},
 # "C": {0: "c", 1: "f"}}}
-
-
 ```
 
 ### print_table
@@ -472,7 +467,6 @@ def main(inputs):
 
 # Expected output:
 # {"image": <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=...>}
-
 ```
 
 #### Output using Jinja2 Template:
@@ -521,7 +515,6 @@ def main(inputs):
 
 # Expected output:
 # {"image": <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=...>, "file_type": "jpeg"}
-
 ```
 
 ### print_image
@@ -581,7 +574,6 @@ def main(inputs):
 # Expected output:
 # {"image": "<img src='data:image/jpeg;base64,...' width='...' height='...'>",
 # "download": "<a href='data:image/jpeg;base64,...' download='myimage.jpeg'>Download Image Here</a>"}
-
 ```
 
 #### Output using Jinja2 Template:
@@ -656,7 +648,6 @@ def main(inputs):
 # Expected output:
 # {"image": "<img src='data:image/png;base64,...' width='500' height='...'>",
 #  "download": "<a href='data:image/png;base64,...' download='sin(x).png'>Download Sin Function Plot</a>"}
-
 ```
 
 #### Output using Jinja2 Template:
@@ -681,7 +672,7 @@ print_animation(ani: FuncAnimation, fps: int = 30, save_dir: str = "/tmp/temp_an
 
 #### Description:
 
-Converts a matplotlib animation into an HTML image tag.
+Converts a matplotlib animation into an animated GIF and returns an HTML image tag to display it in your app.
 
 #### Arguments:
 
@@ -719,7 +710,6 @@ def main(inputs):
 
 # Expected output:
 # {"animation": "<img src='data:image/gif;base64,...'>"}
-
 ```
 
 ### animate_plot
@@ -774,7 +764,6 @@ def main(inputs):
 
 # Expected output:
 # {"animation": "<img src='data:image/gif;base64,...'>"}
-
 ```
 
 ## Quiz Toolkit
@@ -835,7 +824,6 @@ def main(inputs):
 # {"result": {"spreadsheetId": "your_spreadsheet_id_here",
 #  "updatedRange": "Sheet1!A1:C1",
 #  "updatedRows": 1, "updatedColumns": 3, "updatedCells": 3}}
-
 ```
 
 ### send_gmail
@@ -844,13 +832,13 @@ def main(inputs):
 
 ```python
 send_gmail(
-	sender_email='sender@example.com',
-	receiver_email='receiver@example.com',
-	subject="Quiz",
-	app_password = "xxxx xxxx xxxx xxxx",
-	values = [
-	["name", "grade"]
-	]
+    sender_email='sender@example.com',
+    receiver_email='receiver@example.com',
+    subject="Quiz",
+    app_password = "xxxx xxxx xxxx xxxx",
+    values = [
+    ["name", "grade"]
+    ]
 )
 ```
 
@@ -897,5 +885,4 @@ def main(inputs):
 
 # Expected output:
 # {"result": True}
-
 ```

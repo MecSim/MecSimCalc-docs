@@ -1,11 +1,19 @@
 ---
 sidebar_label: "Plot Draw"
-sidebar_position: 101
+sidebar_position: 2
 ---
+
+<div style={{ margin: '1em 0' }}>
+  <label htmlFor="version-select" style={{ fontWeight: 'bold', marginRight: '10px' }}>Select Version:</label>
+  <select id="version-select" onChange={(e) => window.location.href = e.target.value}>
+    <option value="">Latest Release (v0.1.9)</option>
+    <!-- Add more options as needed -->
+  </select>
+</div>
 
 # Plot Draw
 
-This library is designed to provide a set of functions for drawing various types of plots, arrows, segments, and shapes using Matplotlib. The functions allow for customized plotting and annotation of graphical elements.
+This library is designed to provide a set of functions for drawing various types of plots, arrows, segments, and shapes using Matplotlib. These functions allow for customized plotting and annotation of graphical elements.
 
 ## General
 
@@ -218,8 +226,8 @@ Draws a set of three axes (x, y, z) with optional negative directions for x and 
 | **`arrow_thickness`** | **float** | The thickness of the arrows.                                  |
 | **`offset_text`**     | **float** | The distance between the end of the arrow and the label text. |
 | **`longx`**           | **float** | The factor to adjust the length of the diagonal x-axis.       |
-| **`axis_y_negative`** | **bool**  | Whether to draw the negative y-axis.                          |
-| **`axis_x_negative`** | **bool**  | Whether to draw the negative x-axis.                          |
+| **`axis_y_negative`** | **bool**  | Draws negative y-axis if True                                 |
+| **`axis_x_negative`** | **bool**  | draws negative x-axis if True                                 |
 
 #### Example:
 
@@ -263,8 +271,8 @@ Draws two inclined axes (x and y) with optional negative directions.
 | **`arrow_thickness`** | **float** | The thickness of the arrows.                                  |
 | **`offset_text`**     | **float** | The distance between the end of the arrow and the label text. |
 | **`longx`**           | **float** | The factor to adjust the length of the diagonal y-axis.       |
-| **`axis_y_negative`** | **bool**  | Whether to draw the negative y-axis.                          |
-| **`axis_x_negative`** | **bool**  | Whether to draw the negative x-axis.                          |
+| **`axis_y_negative`** | **bool**  | Draws negative y-axis if True                                 |
+| **`axis_x_negative`** | **bool**  | Draws negative x-axis if True                                 |
 
 #### Returns:
 
@@ -1081,14 +1089,14 @@ Draws two axes representing the x and y directions.
 
 #### Arguments:
 
-| Argument             | Type      | Description                                          |
-| -------------------- | --------- | ---------------------------------------------------- |
-| **`arrow_length`**   | **float** | Length of the arrows representing the axes.          |
-| **`line_thickness`** | **float** | Thickness of the arrows representing the axes.       |
-| **`offset_text`**    | **float** | Offset for the axis labels.                          |
-| **`longx`**          | **float** | Length factor for the x-axis.                        |
-| **`negativeaxis_y`** | **int**   | Flag indicating whether to draw the negative y-axis. |
-| **`negativeaxis_x`** | **int**   | Flag indicating whether to draw the negative x-axis. |
+| Argument             | Type      | Description                                    |
+| -------------------- | --------- | ---------------------------------------------- |
+| **`arrow_length`**   | **float** | Length of the arrows representing the axes.    |
+| **`line_thickness`** | **float** | Thickness of the arrows representing the axes. |
+| **`offset_text`**    | **float** | Offset for the axis labels.                    |
+| **`longx`**          | **float** | Length factor for the x-axis.                  |
+| **`negativeaxis_y`** | **int**   | Draws negative y-axis if True.                 |
+| **`negativeaxis_x`** | **int**   | Draws negative x-axis if True                  |
 
 #### Returns:
 
