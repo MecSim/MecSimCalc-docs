@@ -764,7 +764,7 @@ Creates an animated plot from given x and y data and returns it as an HTML image
 | ----------- | ------------------------------------------------ |
 | **`str`**   | The HTML image tag containing the animated plot. |
 
-#### Example 1: Basic Usage
+#### Example:
 
 ```python
 import numpy as np
@@ -778,23 +778,6 @@ def main(inputs):
 
 # Expected output:
 # {"animation": "<img src='data:image/gif;base64,...'>"}
-```
-
-#### Example 2: Follow Tip
-
-```python
-import numpy as np
-import mecsimcalc as msc
-
-def main(inputs):
-    x = np.linspace(0, 10, 100)
-    y = np.sin(x)
-    animation_html = msc.animate_plot(x, y, duration=4, title="Sine Wave", show_axes=True, follow_tip=True, fps=24)
-    return {"animation": animation_html}
-
-# Expected output:
-# {"animation": "<img src='data:image/gif;base64,...'>"}
-
 ```
 
 ### plot_slider
