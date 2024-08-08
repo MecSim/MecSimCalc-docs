@@ -6,11 +6,10 @@ sidebar_position: 2
 <div style={{ margin: '1em 0' }}>
   <label htmlFor="version-select" style={{ fontWeight: 'bold', marginRight: '10px' }}>Select Version:</label>
   <select id="version-select" onChange={(e) => window.location.href = e.target.value}>
-    <option value="">Latest Release (v0.1.9)</option>
-    <!-- Add more options as needed -->
+     <option value="">Latest Release (v0.2.0)</option>s
+    <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/PLOTDRAW_README.md">v0.1.9</option>
   </select>
 </div>
-
 # Plot Draw
 
 This library is designed to provide a set of functions for drawing various types of plots, arrows, segments, and shapes using Matplotlib. These functions allow for customized plotting and annotation of graphical elements.
@@ -19,20 +18,21 @@ This library is designed to provide a set of functions for drawing various types
 
 ### draw_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L7C1-L84C78)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L7C1-L84C78)
 
 ```python
 draw_arrow(
-    start: Union[tuple, list],
-    end: Union[tuple, list],
-    thickness: int = 5,
-    color: str = "black",
-    text: str = None,
-    text_distance: float = 0.5,
-    head_width: float = 0.08,
-    head_length: float = 0.08,
-    fontsize: int = 12
-) -> None
+    start,
+    end,
+    thickness = 5,
+    color = "black",
+    text = None,
+    text_distance = 0.5,
+    head_width = 0.08,
+    head_length = 0.08,
+    fontsize = 12,
+    ax = None
+)
 ```
 
 #### Description:
@@ -41,17 +41,18 @@ Draws an arrow between two points on a plot.
 
 #### Arguments:
 
-| Argument            | Type                 | Description                                                                              |
-| ------------------- | -------------------- | ---------------------------------------------------------------------------------------- |
-| **`start`**         | **tuple or list**    | The starting point of the arrow (x, y).                                                  |
-| **`end`**           | **tuple or list**    | The ending point of the arrow (x, y).                                                    |
-| **`thickness`**     | **int**              | The thickness of the arrow line. (Default is 5)                                          |
-| **`color`**         | **str**              | The color of the arrow. (Default is 'black')                                             |
-| **`text`**          | **str** (optional)   | Text to display near the arrow. (Default is None)                                        |
-| **`text_distance`** | **float** (optional) | Distance factor from the arrow end point where the text will be placed. (Default is 0.5) |
-| **`head_width`**    | **float** (optional) | Width of the arrow head. (Default is 0.08)                                               |
-| **`head_length`**   | **float** (optional) | Length of the arrow head. (Default is 0.08)                                              |
-| **`fontsize`**      | **int** (optional)   | Font size of the text. (Default is 12)                                                   |
+| Argument          | Type                    | Description                                                                       |
+| ----------------- | ----------------------- | --------------------------------------------------------------------------------- |
+| **`start`**       | **tuple or list**       | The starting point of the arrow (x, y).                                           |
+| **`end`**         | **tuple or list**       | The ending point of the arrow (x, y).                                             |
+| **`thickness`**   | **int**                 | The thickness of the arrow line. (Default is 5)                                   |
+| **`color`**       | **str**                 | The color of the arrow. (Default is 'black')                                      |
+| **`text`**        | **str** (optional)      | Text to display near the arrow. (Default is None)                                 |
+| **`text_offset`** | **float** (optional)    | Distance from the arrow end point where the text will be placed. (Default is 0.5) |
+| **`head_width`**  | **float** (optional)    | Width of the arrow head. (Default is 0.08)                                        |
+| **`head_length`** | **float** (optional)    | Length of the arrow head. (Default is 0.08)                                       |
+| **`fontsize`**    | **int** (optional)      | Font size of the text. (Default is 12)                                            |
+| **`ax`**          | **plt.Axes** (optional) | The Axes object to draw the arrow on. (Default is None)                           |
 
 #### Example:
 
@@ -71,15 +72,21 @@ def main(inputs):
 
 ```
 
+#### Output:
+
+<div style={{textAlign: 'center'}}>
+![sine function gif](./images/draw_arrow.png)
+</div>
+
 ### calculate_midpoint
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L87C1-L121C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L87C1-L121C1)
 
 ```python
 calculate_midpoint(
-    coord1: tuple,
-    coord2: tuple
-) -> tuple
+    coord1,
+    coord2
+)
 ```
 
 #### Description:
@@ -114,13 +121,13 @@ def main(inputs):
 
 ### draw_arc_circumference
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L123C1-L167C22)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L123C1-L167C22)
 
 ```python
 draw_arc_circumference(
-    radius: float,
-    initial_angle: float,
-    final_angle: float,
+    radius,
+    initial_angle,
+    final_angle,
     center: tuple = (0, 0)
 ) -> None
 ```
@@ -158,12 +165,12 @@ def main(inputs):
 
 ### create_blank_image
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L170C1-L213C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L170C1-L213C14)
 
 ```python
 create_blank_image(
-    width: int = 1000,
-    height: int = 1000
+    width = 1000,
+    height = 1000
 ) -> plt.Axes
 ```
 
@@ -201,14 +208,14 @@ def main(inputs):
 
 ### draw_three_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L216C1-L343C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L216C1-L343C14)
 
 ```python
 draw_three_axes(
-    arrow_length: float,
-    arrow_thickness: float,
-    offset_text: float,
-    longx: float,
+    arrow_length,
+    arrow_thickness,
+    offset_text,
+    longx,
     axis_y_negative: bool,
     axis_x_negative: bool
 ) -> plt.Axes
@@ -246,14 +253,14 @@ def main(inputs):
 
 ### draw_two_inclined_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L346C1-L460C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L346C1-L460C14)
 
 ```python
 draw_two_inclined_axes(
-    arrow_length: float,
-    arrow_thickness: float,
-    offset_text: float,
-    longx: float,
+    arrow_length,
+    arrow_thickness,
+    offset_text,
+    longx,
     axis_y_negative: bool,
     axis_x_negative: bool
 ) -> plt.Axes
@@ -299,18 +306,18 @@ def main(inputs):
 
 ### plot_segment_pixels
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L463C1-L549C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L463C1-L549C1)
 
 ```python
 plot_segment_pixels(
     start_point_pixels: tuple,
     end_point_pixels: tuple,
     line_properties: dict = {"color": "k", "linewidth": 1, "linestyle": "dashed"},
-    text: str = "",
-    min_spacing: float = 150,
-    fontsize: int = 15,
+    text = "",
+    min_spacing = 150,
+    fontsize = 15,
     text_loc: dict = {"ha": "center", "va": "top"},
-    alpha: float = 0.8
+    alpha = 0.8
 ) -> tuple
 ```
 
@@ -357,16 +364,16 @@ def main(inputs):
 
 ### plot_annotate_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L551C1-L699C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L551C1-L699C1)
 
 ```python
 plot_annotate_arrow(
     start_point: tuple,
-    trig_angle: float,
-    vec_length: float,
-    text: str = "",
-    min_spacing: float = 150,
-    fontsize: int = 11,
+    trig_angle,
+    vec_length,
+    text = "",
+    min_spacing = 150,
+    fontsize = 11,
     text_loc: dict = {"ha": "center", "va": "top"},
     arrow_properties: dict = {
         "width": 2,
@@ -375,10 +382,10 @@ plot_annotate_arrow(
         "fc": "black",
         "ec": "black"
     },
-    reverse_arrow: str = "no",
-    text_in_center: str = "no",
-    rev_text: str = "no",
-    alpha: float = 0.8
+    reverse_arrow = "no",
+    text_in_center = "no",
+    rev_text = "no",
+    alpha = 0.8
 ) -> tuple[float, float]
 ```
 
@@ -432,20 +439,20 @@ def main(inputs):
 
 ### draw_custom_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L700C1-L785C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L700C1-L785C1)
 
 ```python
 draw_custom_arrow(
     ax: plt.Axes,
     start_point: tuple,
     point_2: tuple,
-    factor: float,
-    max_value: float,
-    arrow_vector_length: float,
-    arrow_width: float,
-    arrow_color: str = "blue",
-    line_width: float = 1,
-    text: str = None
+    factor,
+    max_value,
+    arrow_vector_length,
+    arrow_width,
+    arrow_color = "blue",
+    line_width = 1,
+    text = None
 ) -> None
 ```
 
@@ -487,13 +494,13 @@ def main(inputs):
 
 ### calculate_arrow_endpoint_pixels
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L787C1-L823C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L787C1-L823C1)
 
 ```python
 calculate_arrow_endpoint_pixels(
     start_point: tuple,
-    trig_angle: float,
-    vec_length: float
+    trig_angle,
+    vec_length
 ) -> tuple[float, float]
 ```
 
@@ -529,19 +536,19 @@ def main(inputs):
 
 ### plot_segment
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L825C1-L911C21)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L825C1-L911C21)
 
 ```python
 plot_segment(
     start_point: tuple,
-    trig_angle: float,
-    vec_length: float,
+    trig_angle,
+    vec_length,
     line_properties: dict = {"color": "blue", "linewidth": 1},
-    text: str = "",
-    min_spacing: float = 150,
-    fontsize: int = 15,
+    text = "",
+    min_spacing = 150,
+    fontsize = 15,
     text_loc: dict = {"ha": "center", "va": "top"},
-    alpha: float = 0.8
+    alpha = 0.8
 ) -> tuple[float, float]
 ```
 
@@ -587,19 +594,19 @@ def main(inputs):
 
 ### plot_segment_dashed
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L914C1-L1001C21)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L914C1-L1001C21)
 
 ```python
 plot_segment_dashed(
     start_point: tuple,
-    trig_angle: float,
-    vec_length: float,
+    trig_angle,
+    vec_length,
     line_properties: dict = {"color": "blue", "linestyle": "dashed", "linewidth": 1},
-    text: str = "",
-    min_spacing: float = 150,
-    fontsize: int = 15,
+    text = "",
+    min_spacing = 150,
+    fontsize = 15,
     text_loc: dict = {"ha": "center", "va": "top"},
-    alpha: float = 0.8
+    alpha = 0.8
 ) -> tuple[float, float]
 ```
 
@@ -649,14 +656,14 @@ def main(inputs):
 
 ### draw_custom_circle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1004C1-L1041C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1004C1-L1041C1)
 
 ```python
 draw_custom_circle(
     ax: plt.Axes,
     center_point: tuple,
-    circle_size: float = 100,
-    circle_color: str = "black"
+    circle_size = 100,
+    circle_color = "black"
 ) -> None
 ```
 
@@ -692,15 +699,15 @@ def main(inputs):
 
 ### draw_rounded_rectangle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1042C1-L1120C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1042C1-L1120C1)
 
 ```python
 draw_rounded_rectangle(
     middle_point: tuple,
-    width: float,
-    height: float,
-    radius: float,
-    color: str = "black"
+    width,
+    height,
+    radius,
+    color = "black"
 ) -> None
 ```
 
@@ -736,14 +743,14 @@ def main(inputs):
 
 ### calculate_intersection_point
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1122C1-L1178C44)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1122C1-L1178C44)
 
 ```python
 calculate_intersection_point(
     point1: tuple,
-    angle1: float,
+    angle1,
     point2: tuple,
-    angle2: float
+    angle2
 ) -> tuple[float, float]
 ```
 
@@ -773,21 +780,21 @@ import mecsimcalc.plot_draw as plot_draw
 
 def main(inputs):
     intersection = plot_draw.calculate_intersection_point((0, 0), 45, (1, 1), 135)
-    return {"intersection": intersection}
+    return {"intersection"ersection}
 
 # Expected output: {"intersection": (1.0, 0.9999999999999999)}
 ```
 
 ### draw_segment
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1181C1-L1229C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1181C1-L1229C1)
 
 ```python
 draw_segment(
     start_point: tuple,
     final_point: tuple,
-    line_width: float = 0.001,
-    color: str = "black"
+    line_width = 0.001,
+    color = "black"
 ) -> None
 ```
 
@@ -822,16 +829,16 @@ def main(inputs):
 
 ### plot_annotate_arrow_end
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1231C1-L1369C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1231C1-L1369C1)
 
 ```python
 plot_annotate_arrow_end(
     end_point: tuple,
-    trig_angle: float,
-    vec_length: float,
-    text: str = "",
-    text_distance: float = 0.5,
-    fontsize: int = 12,
+    trig_angle,
+    vec_length,
+    text = "",
+    text_distance = 0.5,
+    fontsize = 12,
     text_loc: dict = {"ha": "center", "va": "top"},
     arrow_properties: dict = {
         "width": 2,
@@ -840,10 +847,10 @@ plot_annotate_arrow_end(
         "fc": "black",
         "ec": "black"
     },
-    reverse_arrow: str = "no",
-    text_in_center: str = "no",
-    rev_text: str = "no",
-    alpha: float = 0.8
+    reverse_arrow = "no",
+    text_in_center = "no",
+    rev_text = "no",
+    alpha = 0.8
 ) -> tuple[float, float]
 ```
 
@@ -892,15 +899,15 @@ def main(inputs):
 
 ### draw_arc_with_text
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1371C1-L1430C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1371C1-L1430C1)
 
 ```python
 draw_arc_with_text(
     start_point: tuple,
-    radius: float,
-    start_angle: float,
-    final_angle: float,
-    text: str
+    radius,
+    start_angle,
+    final_angle,
+    text
 ) -> None
 ```
 
@@ -936,16 +943,16 @@ def main(inputs):
 
 ### draw_three_axes_rotated
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1431C1-L1566C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1431C1-L1566C1)
 
 ```python
 draw_three_axes_rotated(
-    arrow_length: float,
-    line_thickness: float,
-    offset_text: float,
-    longx: float,
-    negativeaxis_y: int,
-    negativeaxis_x: int
+    arrow_length,
+    line_thickness,
+    offset_text,
+    longx,
+    negativeaxis_y,
+    negativeaxis_x
 ) -> plt.Axes
 ```
 
@@ -987,14 +994,14 @@ def main(inputs):
 
 ### draw_double_arrowhead
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1568C1-L1639C6)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1568C1-L1639C6)
 
 ```python
 draw_double_arrowhead(
     start_point: tuple,
     end_point: tuple,
-    color: str = "black",
-    line_thickness: float = 1
+    color = "black",
+    line_thickness = 1
 ) -> None
 ```
 
@@ -1029,14 +1036,14 @@ def main(inputs):
 
 ### draw_custom_arrow_end
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1642C1-L1705C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1642C1-L1705C1)
 
 ```python
 draw_custom_arrow_end(
     start_point: tuple,
     end_point: tuple,
-    color: str = "black",
-    line_thickness: float = 1
+    color = "black",
+    line_thickness = 1
 ) -> None
 ```
 
@@ -1070,16 +1077,16 @@ def main(inputs):
 
 ### draw_two_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1706C1-L1815C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1706C1-L1815C14)
 
 ```python
 draw_two_axes(
-    arrow_length: float,
-    line_thickness: float,
-    offset_text: float,
-    longx: float,
-    negativeaxis_y: int,
-    negativeaxis_x: int
+    arrow_length,
+    line_thickness,
+    offset_text,
+    longx,
+    negativeaxis_y,
+    negativeaxis_x
 ) -> plt.Axes
 ```
 
@@ -1121,14 +1128,14 @@ def main(inputs):
 
 ### vertical_arrow_rain
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1818C1-L1864C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1818C1-L1864C1)
 
 ```python
 vertical_arrow_rain(
-    quantity_arrows: int,
+    quantity_arrows,
     start_point: tuple,
     final_point: tuple,
-    y_origin: float
+    y_origin
 ) -> None
 ```
 
@@ -1162,12 +1169,12 @@ def main(inputs):
 
 ### draw_rain_arrows_horizontal
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1865C1-L1918C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1865C1-L1918C1)
 
 ```python
 draw_rain_arrows_horizontal(
-    quantity_arrows: int,
-    x_origin: float,
+    quantity_arrows,
+    x_origin,
     start_point: tuple,
     final_point: tuple
 ) -> None
@@ -1206,7 +1213,7 @@ def main(inputs):
 
 ### calculate_angle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1919C1-L1954C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1919C1-L1954C1)
 
 ```python
 calculate_angle(
@@ -1246,7 +1253,7 @@ def main(inputs):
 
 ### draw_segment_1
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1955C1-L1979C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1955C1-L1979C1)
 
 ```python
 draw_segment_1(
@@ -1284,7 +1291,7 @@ def main(inputs):
 
 ### draw_segment_2
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L1981C1-L2004C64)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1981C1-L2004C64)
 
 ```python
 draw_segment_2(
@@ -1324,7 +1331,7 @@ def main(inputs):
 
 ### draw_segment_3
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L2007C1-L2031C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L2007C1-L2031C1)
 
 ```python
 draw_segment_3(
@@ -1362,13 +1369,13 @@ def main(inputs):
 
 ### get_arc_points
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/eng130/plot_draw.py#L2033C1-L2074C16)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L2033C1-L2074C16)
 
 ```python
 get_arc_points(
-    start_angle: float,
-    end_angle: float,
-    radius: float,
+    start_angle,
+    end_angle,
+    radius,
     center: Union[tuple, list]
 ) -> tuple[np.ndarray, np.ndarray]
 ```
