@@ -6,7 +6,7 @@ sidebar_position: 2
 <div style={{ margin: '1em 0' }}>
   <label htmlFor="version-select" style={{ fontWeight: 'bold', marginRight: '10px' }}>Select Version:</label>
   <select id="version-select" onChange={(e) => window.location.href = e.target.value}>
-     <option value="">Latest Release (v0.2.0)</option>s
+     <option value="">Latest Release (v0.2.0)</option>
     <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/PLOTDRAW_README.md">v0.1.9</option>
   </select>
 </div>
@@ -18,7 +18,7 @@ This library is designed to provide a set of functions for drawing various types
 
 ### draw_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L7C1-L84C78)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L7C1-L84C78)
 
 ```python
 draw_arrow(
@@ -80,7 +80,7 @@ def main(inputs):
 
 ### calculate_midpoint
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L87C1-L121C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L87C1-L121C1)
 
 ```python
 calculate_midpoint(
@@ -121,7 +121,7 @@ def main(inputs):
 
 ### draw_arc_circumference
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L123C1-L167C22)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L123C1-L167C22)
 
 ```python
 draw_arc_circumference(
@@ -165,7 +165,7 @@ def main(inputs):
 
 ### create_blank_image
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L170C1-L213C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L170C1-L213C14)
 
 ```python
 create_blank_image(
@@ -208,7 +208,7 @@ def main(inputs):
 
 ### draw_three_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L216C1-L343C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L216C1-L343C14)
 
 ```python
 draw_three_axes(
@@ -253,7 +253,7 @@ def main(inputs):
 
 ### draw_two_inclined_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L346C1-L460C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L346C1-L460C14)
 
 ```python
 draw_two_inclined_axes(
@@ -306,7 +306,7 @@ def main(inputs):
 
 ### plot_segment_pixels
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L463C1-L549C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L463C1-L549C1)
 
 ```python
 plot_segment_pixels(
@@ -364,7 +364,7 @@ def main(inputs):
 
 ### plot_annotate_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L551C1-L699C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L551C1-L699C1)
 
 ```python
 plot_annotate_arrow(
@@ -439,7 +439,7 @@ def main(inputs):
 
 ### draw_custom_arrow
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L700C1-L785C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L700C1-L785C1)
 
 ```python
 draw_custom_arrow(
@@ -494,7 +494,7 @@ def main(inputs):
 
 ### calculate_arrow_endpoint_pixels
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L787C1-L823C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L787C1-L823C1)
 
 ```python
 calculate_arrow_endpoint_pixels(
@@ -536,7 +536,7 @@ def main(inputs):
 
 ### plot_segment
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L825C1-L911C21)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L825C1-L911C21)
 
 ```python
 plot_segment(
@@ -594,7 +594,7 @@ def main(inputs):
 
 ### plot_segment_dashed
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L914C1-L1001C21)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L914C1-L1001C21)
 
 ```python
 plot_segment_dashed(
@@ -656,7 +656,7 @@ def main(inputs):
 
 ### draw_custom_circle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1004C1-L1041C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1004C1-L1041C1)
 
 ```python
 draw_custom_circle(
@@ -699,7 +699,7 @@ def main(inputs):
 
 ### draw_rounded_rectangle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1042C1-L1120C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1042C1-L1120C1)
 
 ```python
 draw_rounded_rectangle(
@@ -743,7 +743,7 @@ def main(inputs):
 
 ### calculate_intersection_point
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1122C1-L1178C44)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1122C1-L1178C44)
 
 ```python
 calculate_intersection_point(
@@ -787,7 +787,7 @@ def main(inputs):
 
 ### draw_segment
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1181C1-L1229C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1181C1-L1229C1)
 
 ```python
 draw_segment(
@@ -829,7 +829,7 @@ def main(inputs):
 
 ### plot_annotate_arrow_end
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1231C1-L1369C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1231C1-L1369C1)
 
 ```python
 plot_annotate_arrow_end(
@@ -899,7 +899,7 @@ def main(inputs):
 
 ### draw_arc_with_text
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1371C1-L1430C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1371C1-L1430C1)
 
 ```python
 draw_arc_with_text(
@@ -943,7 +943,7 @@ def main(inputs):
 
 ### draw_three_axes_rotated
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1431C1-L1566C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1431C1-L1566C1)
 
 ```python
 draw_three_axes_rotated(
@@ -994,7 +994,7 @@ def main(inputs):
 
 ### draw_double_arrowhead
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1568C1-L1639C6)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1568C1-L1639C6)
 
 ```python
 draw_double_arrowhead(
@@ -1036,7 +1036,7 @@ def main(inputs):
 
 ### draw_custom_arrow_end
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1642C1-L1705C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1642C1-L1705C1)
 
 ```python
 draw_custom_arrow_end(
@@ -1077,7 +1077,7 @@ def main(inputs):
 
 ### draw_two_axes
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1706C1-L1815C14)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1706C1-L1815C14)
 
 ```python
 draw_two_axes(
@@ -1128,7 +1128,7 @@ def main(inputs):
 
 ### vertical_arrow_rain
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1818C1-L1864C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1818C1-L1864C1)
 
 ```python
 vertical_arrow_rain(
@@ -1169,7 +1169,7 @@ def main(inputs):
 
 ### draw_rain_arrows_horizontal
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1865C1-L1918C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1865C1-L1918C1)
 
 ```python
 draw_rain_arrows_horizontal(
@@ -1213,7 +1213,7 @@ def main(inputs):
 
 ### calculate_angle
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1919C1-L1954C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1919C1-L1954C1)
 
 ```python
 calculate_angle(
@@ -1253,7 +1253,7 @@ def main(inputs):
 
 ### draw_segment_1
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1955C1-L1979C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1955C1-L1979C1)
 
 ```python
 draw_segment_1(
@@ -1291,7 +1291,7 @@ def main(inputs):
 
 ### draw_segment_2
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L1981C1-L2004C64)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L1981C1-L2004C64)
 
 ```python
 draw_segment_2(
@@ -1331,7 +1331,7 @@ def main(inputs):
 
 ### draw_segment_3
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L2007C1-L2031C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L2007C1-L2031C1)
 
 ```python
 draw_segment_3(
@@ -1369,7 +1369,7 @@ def main(inputs):
 
 ### get_arc_points
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.1.9/mecsimcalc/plot_draw.py#L2033C1-L2074C16)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/plot_draw.py#L2033C1-L2074C16)
 
 ```python
 get_arc_points(
