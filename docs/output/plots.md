@@ -104,7 +104,8 @@ def parabola(a, x): # a is the value of the slider
     return a * x ** 2
 
 def main(inputs):
-    plot_html = msc.plot_slider(parabola, x_range=(-10, 10), y_range=(-100, 100), initial_value=4, slider_range=(-10,10))
+    a = inputs['a'] # initial value of the slider
+    plot_html = msc.plot_slider(parabola, x_range=(-10, 10), y_range=(-100, 100), initial_value=a, slider_range=(-10,10))
     return {"plot": plot_html}
 ```
 

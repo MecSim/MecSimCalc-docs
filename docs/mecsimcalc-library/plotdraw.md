@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Plot Draw
 
-<div style={{ margin: '1em 0' }}>
+<div style={{ margin: '1em' }}>
   <label htmlFor="version-select" style={{ fontWeight: 'bold', marginRight: '10px' }}>Select Version:</label>
   <select id="version-select" onChange={(e) => window.location.href = e.target.value}>
      <option value="">Latest Release (v0.2.0)</option>

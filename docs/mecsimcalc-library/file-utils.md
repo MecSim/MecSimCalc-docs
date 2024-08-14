@@ -3,7 +3,9 @@ sidebar_label: "File Utilities"
 sidebar_position: 1
 ---
 
-<div style={{ margin: '1em 0' }}>
+# File Utilities
+
+<div style={{ margin: '1em' }}>
   <label htmlFor="version-select" style={{ fontWeight: 'bold', marginRight: '10px' }}>Select Version:</label>
   <select id="version-select" onChange={(e) => window.location.href = e.target.value}>
     <option value="">Latest Release (v0.2.0)</option>
@@ -17,8 +19,6 @@ sidebar_position: 1
     <option value="https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.0.4/README.md">v0.0.4</option>
   </select>
 </div>
-
-# File Utilities
 
 This library is designed to provide a set of functions for handling and converting various types of data, such as base64 encoded data, Pandas DataFrames, and Pillow images.
 
