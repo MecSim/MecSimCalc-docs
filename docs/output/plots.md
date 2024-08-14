@@ -91,7 +91,9 @@ In `.to_html()`, `include_plotlyjs` must be set to `True` for the plot to be dis
 
 ### Plotly Slider
 
-To create a plotly figure with a slider, you can use the `plot_slider` function from the `mecsimcalc` library. The `plot_slider` function takes in a function and returns the plotly figure with a slider. The function has two arguments: the first argument is the value of the slider, and the second argument is the x value.
+Plotly is a plotting library similar to Matplotlib, but it also supports interactive plots. The MecSimCalc library provides a function to simplify creating a plotly figure with a slider.
+
+MecSimCalc's `plot_slider` function takes in a function as an argument and returns the plotly figure with a slider. The function has two arguments: the first argument is the value of the slider, and the second argument is the x value.
 
 ### Code
 
