@@ -595,7 +595,7 @@ Downloading Image
 
 ### print_plot
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L13C1-L97C35)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L15C1-L102C1)
 
 ```python
 print_plot(
@@ -667,7 +667,7 @@ Downloading Image
 
 ### print_animation
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L99C1-L150C1)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L104C1-L156C63)
 
 ```python
 print_animation(
@@ -720,7 +720,7 @@ def main(inputs):
 
 ### animate_plot
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L152C1-L243C105)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L159C1-L278C1)
 
 ```python
 animate_plot(
@@ -732,6 +732,7 @@ animate_plot(
     y_label = "y",
     title = "y = f(x)",
     show_axes = True,
+    follow_tip = False,
     save_dir = "/tmp/temp_animation.gif",
     follow_tip = False,
     hold_last_frame = 1.0,
@@ -744,19 +745,19 @@ Creates an animated plot from given x and y data and returns it as an HTML image
 
 #### Arguments:
 
-| Argument              | Type                 | Description                                                                                                                                                                                                       |
-| --------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`x`**               | **np.ndarray**       | The x-coordinates of the data points.                                                                                                                                                                             |
-| **`y`**               | **np.ndarray**       | The y-coordinates of the data points.                                                                                                                                                                             |
-| **`duration`**        | **float** (optional) | The duration of the animation in seconds. Defaults to `3`.                                                                                                                                                        |
-| **`fps`**             | **float** (optional) | Frames per second for the animation. Defaults to `15`.                                                                                                                                                            |
-| **`x_label`**         | **str** (optional)   | The label for the x-axis. Defaults to `"x"`.                                                                                                                                                                      |
-| **`y_label`**         | **str** (optional)   | The label for the y-axis. Defaults to `"y"`.                                                                                                                                                                      |
-| **`title`**           | **str** (optional)   | Title of the plot. Defaults to `"y = f(x)"`.                                                                                                                                                                      |
-| **`show_axes`**       | **bool** (optional)  | Whether to show the x and y axes. Defaults to `True`.                                                                                                                                                             |
-| **`follow_tip`**      | **bool** (optional)  | Whether to follow the tip of the line as it moves along the x-axis. Defaults to `False`.                                                                                                                          |
-| **`hold_last_frame`** | **float** (optional) | The duration to hold the last frame in seconds. Defaults to `1.0`.                                                                                                                                                |
-| **`save_dir`**        | **str** (optional)   | The directory to save the animation. Defaults to `"/tmp/temp_animation.gif"`. (Note: The file will be deleted after the execution of the app is finished.) You can only write to the tmp directory in mecsimcalc. |
+| Argument              | Type                 | Description                                                                                                                 |
+| --------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **`x`**               | **np.ndarray**       | The x-coordinates of the data points.                                                                                       |
+| **`y`**               | **np.ndarray**       | The y-coordinates of the data points.                                                                                       |
+| **`duration`**        | **float** (optional) | The duration of the animation in seconds. Defaults to `3`.                                                                  |
+| **`fps`**             | **float** (optional) | Frames per second for the animation. Defaults to `15`.                                                                      |
+| **`x_label`**         | **str** (optional)   | The label for the x-axis. Defaults to `"x"`.                                                                                |
+| **`y_label`**         | **str** (optional)   | The label for the y-axis. Defaults to `"y"`.                                                                                |
+| **`title`**           | **str** (optional)   | Title of the plot. Defaults to `"y = f(x)"`.                                                                                |
+| **`show_axes`**       | **bool** (optional)  | Whether to show the x and y axes. Defaults to `True`.                                                                       |
+| **`follow_tip`**      | **bool** (optional)  | Whether to follow the tip of the line as it moves along the x-axis. Defaults to `False`.                                    |
+| **`hold_last_frame`** | **float** (optional) | The duration to hold the last frame in seconds. Defaults to `1.0`.                                                          |
+| **`save_dir`**        | **str** (optional)   | The directory to temporarily. Defaults to `"/tmp/temp_animation.gif" You can only write to the tmp directory in mecsimcalc. |
 
 #### Returns:
 
@@ -782,13 +783,14 @@ def main(inputs):
 
 ### plot_slider
 
-[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L13C1-L97C35)
+[**[Source]**](https://github.com/MecSimCalc/MecSimCalc-utils/blob/v0.2.0/mecsimcalc/file_utils/plotting_utils.py#L280C1-L423C45)
 
 ```python
 plot_slider(
     f_x,
     x_range,
     y_range = None,
+    title = "",
     x_label = "x",
     y_label = "y",
     num_points = 250,
