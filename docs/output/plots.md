@@ -88,3 +88,30 @@ In `.to_html()`, `include_plotlyjs` must be set to `True` for the plot to be dis
 ```html
 {{ outputs.plot }}
 ```
+
+### Plotly Slider
+
+Plotly is a plotting library similar to Matplotlib, but it also supports interactive plots. The MecSimCalc library provides a function to simplify creating a plotly figure with a slider.
+
+MecSimCalc's `plot_slider` function takes in a function as an argument and returns the plotly figure with a slider. The function has two arguments: the first argument is the value of the slider, and the second argument is the x value.
+
+### Code
+
+```python
+import mecsimcalc as msc
+
+def parabola(a, x): # a is the value of the slider
+    return a * x ** 2
+
+def main(inputs):
+    plot_html = msc.plot_slider(parabola, x_range=(-10, 10), y_range=(-100, 100), initial_value=4, slider_range=(-10,10))
+    return {"plot": plot_html}
+```
+
+### Output
+
+<div style={{textAlign: 'center'}}>
+
+![sine function gif](./images/slider.png)
+
+</div>
