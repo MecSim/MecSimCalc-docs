@@ -98,7 +98,7 @@ To create a plotly figure with a slider, you can use the `plot_slider` function 
 ```python
 import mecsimcalc as msc
 
-def parabola(a, x):
+def parabola(a, x): # a is the value of the slider
     return a * x ** 2
 
 def main(inputs):
