@@ -12,7 +12,7 @@ Animated plots are a great way to visualize data that changes over time. In this
 To create an animation, all you need is your x and y values and the `animate_plot` function from the `MecSimCalc` library. The `animate_plot` function takes in the x and y values, the duration of the animation in seconds, and the title of the plot
 
 ```python
-import MecSimCalc as msc
+import mecsimcalc as msc
 import numpy as np
 
 def main(inputs):
@@ -21,9 +21,9 @@ def main(inputs):
   y = np.sin(x)
 
   # Create an animated plot
-  plot = msc.animate_plot(x, y, title='Sine Wave', show_axes=True)
+  animation = msc.animate_plot(x, y, title='Sine Wave', show_axes=True)
 
-  return {'plot': plot}
+  return {'animation': animation}
 ```
 
 ### Output
@@ -69,7 +69,7 @@ If you want to create an animated plot using the `matplotlib` library directly, 
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import numpy as np
-import MecSimCalc as msc
+import mecsimcalc as msc
 
 def main(inputs):
   fig, ax = plt.subplots()
@@ -78,10 +78,11 @@ def main(inputs):
   line, = ax.plot(x, y)
 
   def update(frame): # This function will be called for each frame
-    line.set_ydata(np.sin(x + frame / 10))
+    phase_shift = 2 * np.pi * (frame / 100)
+    line.set_ydata(np.sin(x + phase_shift))
     return line,
 
-  ani = FuncAnimation(fig, animate, frames = 100)
+  ani = FuncAnimation(fig, update, frames = 100)
   animation = msc.print_animation(ani)
 
   return {'animation': animation}
