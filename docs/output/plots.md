@@ -111,8 +111,6 @@ def main(inputs):
 
 ### Output
 
-<div style={{textAlign: 'center'}}>
-
-![sine function gif](./images/slider.png)
-
+<div style={{width: "100%", height: "550px", overflow: "hidden"}}>
+<iframe src='https://mecsimcalc.com/app/1422118/plotly_slider_parabola' style={{position:"relative", left:"-45px", top:"-48px"}} width="100%" height="550" title="MecSimCalc" frameBorder="0"></iframe>
 </div>
