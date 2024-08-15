@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[9661],{1892:(c,e,s)=>{s.r(e),s.d(e,{default:()=>t});s(7294);var r=s(512),a=s(833),u=s(5281),l=s(8790),d=s(7372),n=s(5893);function t(c){return(0,n.jsx)(a.FG,{className:(0,r.Z)(u.k.wrapper.docsPages),children:(0,n.jsx)(d.Z,{children:(0,l.H)(c.route.routes)})})}}}]);

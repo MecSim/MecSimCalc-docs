@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[185],{8616:s=>{s.exports=JSON.parse('{"permalink":"/blog/tags/calculators","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

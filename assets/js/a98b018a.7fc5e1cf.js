@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmec_sim_calc_docs=self.webpackChunkmec_sim_calc_docs||[]).push([[8279],{1966:s=>{s.exports=JSON.parse('{"label":"Comp11052022","permalink":"/blog/tags/comp-11052022","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
